@@ -1,0 +1,42 @@
+H:\My Dropbox\Dropbox\Microsoft Kinect SDK Beta\DTWGestureRecognition\DTWGestureRecognition\bin\Debug\DTWGestureRecognition.exe
+H:\My Dropbox\Dropbox\Microsoft Kinect SDK Beta\DTWGestureRecognition\DTWGestureRecognition\bin\Debug\DTWGestureRecognition.pdb
+H:\My Dropbox\Dropbox\Microsoft Kinect SDK Beta\DTWGestureRecognition\DTWGestureRecognition\bin\Debug\Coding4Fun.Kinect.Wpf.dll
+H:\My Dropbox\Dropbox\Microsoft Kinect SDK Beta\DTWGestureRecognition\DTWGestureRecognition\bin\Debug\Microsoft.Expression.Drawing.dll
+H:\My Dropbox\Dropbox\Microsoft Kinect SDK Beta\DTWGestureRecognition\DTWGestureRecognition\bin\Debug\Coding4Fun.Kinect.Wpf.pdb
+H:\My Dropbox\Dropbox\Microsoft Kinect SDK Beta\DTWGestureRecognition\DTWGestureRecognition\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\My Dropbox\Dropbox\Microsoft Kinect SDK Beta\DTWGestureRecognition\DTWGestureRecognition\obj\x86\Debug\MainWindow.baml
+H:\My Dropbox\Dropbox\Microsoft Kinect SDK Beta\DTWGestureRecognition\DTWGestureRecognition\obj\x86\Debug\MainWindow.g.cs
+H:\My Dropbox\Dropbox\Microsoft Kinect SDK Beta\DTWGestureRecognition\DTWGestureRecognition\obj\x86\Debug\App.g.cs
+H:\My Dropbox\Dropbox\Microsoft Kinect SDK Beta\DTWGestureRecognition\DTWGestureRecognition\obj\x86\Debug\DTWGestureRecognition_MarkupCompile.cache
+H:\My Dropbox\Dropbox\Microsoft Kinect SDK Beta\DTWGestureRecognition\DTWGestureRecognition\obj\x86\Debug\DTWGestureRecognition.g.resources
+H:\My Dropbox\Dropbox\Microsoft Kinect SDK Beta\DTWGestureRecognition\DTWGestureRecognition\obj\x86\Debug\DTWGestureRecognition.Properties.Resources.resources
+H:\My Dropbox\Dropbox\Microsoft Kinect SDK Beta\DTWGestureRecognition\DTWGestureRecognition\obj\x86\Debug\GenerateResource.read.1.tlog
+H:\My Dropbox\Dropbox\Microsoft Kinect SDK Beta\DTWGestureRecognition\DTWGestureRecognition\obj\x86\Debug\GenerateResource.write.1.tlog
+H:\My Dropbox\Dropbox\Microsoft Kinect SDK Beta\DTWGestureRecognition\DTWGestureRecognition\obj\x86\Debug\DTWGestureRecognition.exe
+H:\My Dropbox\Dropbox\Microsoft Kinect SDK Beta\DTWGestureRecognition\DTWGestureRecognition\obj\x86\Debug\DTWGestureRecognition.pdb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Debug\DTWGestureRecognition.exe
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Debug\DTWGestureRecognition.pdb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Debug\MainWindow.baml
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Debug\App.g.cs
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Debug\DTWGestureRecognition_MarkupCompile.cache
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Debug\DTWGestureRecognition.g.resources
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Debug\DTWGestureRecognition.Properties.Resources.resources
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\bin\Debug\DTWGestureRecognition.exe
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\bin\Debug\DTWGestureRecognition.pdb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\mine\Imagination-Labs\DTWGestureRecognition\obj\x86\Debug\DTWGestureRecognition.exe
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\mine\Imagination-Labs\DTWGestureRecognition\obj\x86\Debug\DTWGestureRecognition.pdb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\mine\Imagination-Labs\DTWGestureRecognition\bin\Debug\DTWGestureRecognition.exe
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\mine\Imagination-Labs\DTWGestureRecognition\bin\Debug\DTWGestureRecognition.pdb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\mine\Imagination-Labs\DTWGestureRecognition\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\mine\Imagination-Labs\DTWGestureRecognition\obj\x86\Debug\MainWindow.baml
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\mine\Imagination-Labs\DTWGestureRecognition\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\mine\Imagination-Labs\DTWGestureRecognition\obj\x86\Debug\App.g.cs
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\mine\Imagination-Labs\DTWGestureRecognition\obj\x86\Debug\DTWGestureRecognition_MarkupCompile.cache
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\mine\Imagination-Labs\DTWGestureRecognition\obj\x86\Debug\DTWGestureRecognition.g.resources
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\mine\Imagination-Labs\DTWGestureRecognition\obj\x86\Debug\DTWGestureRecognition.Properties.Resources.resources
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\mine\Imagination-Labs\DTWGestureRecognition\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\mine\Imagination-Labs\DTWGestureRecognition\obj\x86\Debug\GenerateResource.write.1.tlog
