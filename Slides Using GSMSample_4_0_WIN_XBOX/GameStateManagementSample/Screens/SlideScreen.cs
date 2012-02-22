@@ -10,31 +10,16 @@ using Microsoft.Xna.Framework.Input;
 
 namespace GameStateManagement
 {
-    public struct SpriteObject 
-    {
-        public Texture2D texture;
-        public Color color;
-        public Rectangle rec;
-
-
-        public SpriteObject(Texture2D tex,  Rectangle r, Color c)
-        {
-            this.texture = tex;            
-            this.rec = r;
-            this.color = c;
-        }
-    }
-
-
+    
     class SlideScreen : GameScreen
     {
         #region variables
         SlideMenuScreen parentSlideMenu;
         
 
-        List<SpriteObject> slideObjects;
-        SpriteObject tovSprite;
-        SpriteObject questionSprite;
+        List<Sprite2D> slideObjects;
+        Sprite2D tovSprite;
+        Sprite2D questionSprite;
         SpriteBatch spriteBatch;
                
         Color backColor = Color.CornflowerBlue;
@@ -47,7 +32,7 @@ namespace GameStateManagement
         #region Initialization
         public SlideScreen(SlideMenuScreen slideMenu)
         {   
-            this.slideObjects =   new List<SpriteObject>();            
+            this.slideObjects =   new List<Sprite2D>();            
             this.parentSlideMenu = slideMenu;
             this.captured = false;
         }
@@ -58,11 +43,8 @@ namespace GameStateManagement
         {
             if (content == null)
                 content = new ContentManager(ScreenManager.Game.Services, "Content");
-            
-            spriteBatch = new SpriteBatch(ScreenManager.Game.GraphicsDevice);
-           // tovTexture = this.content.Load<Texture2D>("tov");
-           // back
-           // backgroundTexture =  //content.Load<Texture2D>("background");
+
+            spriteBatch = ScreenManager.SpriteBatch;
         }
         #region Handle Input
          /// <summary>
@@ -92,10 +74,25 @@ namespace GameStateManagement
             {
                 parentSlideMenu.NewSlide(requesteeIndex);
             }
+            //press "z" to go to change to avatar1
+            if (input.IsNewKeyPress(Keys.Z, null, out requesteeIndex))
+            {
+                parentSlideMenu.ChangeToAvatar(0);
+            }
+            //press "x" to go to change to avatar2
+            if (input.IsNewKeyPress(Keys.X, null, out requesteeIndex))
+            {
+                parentSlideMenu.ChangeToAvatar(1);
+            }
+            //press "a" to go to change to avatar2
+            if (input.IsNewKeyPress(Keys.X, null, out requesteeIndex))
+            {
+                parentSlideMenu.ChangeToAvatar(2);
+            }
             //press "m" to go to slideMenu
             if (input.IsNewKeyPress(Keys.M, null, out requesteeIndex))
             {
-                
+                //TO DO implement menu!
             }
         }
 
@@ -105,18 +102,21 @@ namespace GameStateManagement
          */
         private void Captured()
         {
+           ///*
             if (captured)//already captured once
             {
                 int offset = 50 * slideObjects.Count;
                 
-                Rectangle rect  = questionSprite.rec;
-                rect.X = questionSprite.rec.X - offset;
-                rect.Y = questionSprite.rec.Y + offset;
+                Rectangle rect  = questionSprite.Rectangle;
+                rect.X = questionSprite.Rectangle.X - offset;
+                rect.Y = questionSprite.Rectangle.Y + offset;
 
-                SpriteObject newQuestionSprite = new SpriteObject(questionSprite.texture, rect, questionSprite.color);
-                slideObjects.Add(newQuestionSprite);              
+                //Sprite2D newQuestionSprite = new Sprite2D(questionSprite.texture, rect, questionSprite.color);
+                Sprite2D newQuestionSprite = new Sprite2D(questionSprite.Texture, rect, questionSprite.Color);
+               slideObjects.Add(newQuestionSprite);
 
-            }
+                
+            }/*
             else
             {
                 captured = true;
@@ -125,41 +125,29 @@ namespace GameStateManagement
                 Rectangle smallRect = new Rectangle(viewport.Width - (viewport.Width / 8), 0, viewport.Width / 8, viewport.Height / 8);
                 Color transColor = new Color(TransitionAlpha, TransitionAlpha, TransitionAlpha);
 
-                tovSprite = new SpriteObject(this.content.Load<Texture2D>("tov"), fullscreen, transColor);
-                questionSprite = new SpriteObject(this.content.Load<Texture2D>("questionIcon"), smallRect, transColor);
+                tovSprite = new Sprite2D(this.content.Load<Texture2D>("tov"), fullscreen, transColor);
+                questionSprite = new Sprite2D(this.content.Load<Texture2D>("questionIcon"), smallRect, transColor);
 
-                slideObjects.Add(tovSprite);
-                slideObjects.Add(questionSprite);
+                //slideObjects.Add(tovSprite);
+               // slideObjects.Add(questionSprite);
             }
+            */
+            //Create a Sprite with the current Avatar
+            Sprite2D curAvatar = new Sprite2D(ScreenManager.CurSekeltonTexture(), ScreenManager.CurSekeltonRectangle(), ScreenManager.CurSekeltonColor());
+            slideObjects.Add(curAvatar);
         }
         #endregion
         #region Display
         public override void Draw(GameTime gameTime)
         {
-            
-           /* GraphicsDevice.Clear(backColor);
-            SpriteBatch spriteBatch = ScreenManager.SpriteBatch;
-            GraphicsDevice graphics = ScreenManager.GraphicsDevice;
-            spriteBatch.Begin();
-            
-
-            spriteBatch.End();
-            base.Draw(gameTime);
-            */
-
-           //spriteBatch = ScreenManager.SpriteBatch;
-           
             ScreenManager.Game.GraphicsDevice.Clear(Color.DeepSkyBlue);
-          //  if(captured){
-                //draws all the sprite objects on the slide
-                spriteBatch.Begin();
-                for(int i = 0; i < slideObjects.Count; i++){
-                    SpriteObject curSprite = slideObjects[i];
-                    spriteBatch.Draw(curSprite.texture, curSprite.rec, curSprite.color);
-                }
-               
-                spriteBatch.End();
-          //  }
+           //draws all the sprite objects on the slide
+            spriteBatch.Begin();
+            for(int i = 0; i < slideObjects.Count; i++){
+               Sprite2D curSprite = slideObjects[i];
+               spriteBatch.Draw(curSprite.Texture, curSprite.Rectangle, curSprite.Color);
+            }
+            spriteBatch.End();
         }
          #endregion
 

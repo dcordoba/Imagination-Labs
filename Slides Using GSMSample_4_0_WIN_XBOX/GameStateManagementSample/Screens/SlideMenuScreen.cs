@@ -160,6 +160,11 @@ namespace GameStateManagement
             }
         }
 
+        public void ChangeToAvatar( int avatarIndex)
+        {
+            ScreenManager.SetCurSkeletonTexture(avatarIndex);
+        }
+
 
         #endregion
 
