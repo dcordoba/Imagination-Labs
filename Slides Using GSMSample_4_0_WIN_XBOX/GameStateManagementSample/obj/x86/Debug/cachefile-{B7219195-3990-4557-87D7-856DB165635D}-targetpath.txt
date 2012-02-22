@@ -1,7 +1,12 @@
 Content\background.xnb
 Content\blank.xnb
 Content\gradient.xnb
-Content\menufont.xnb
-Content\gamefont.xnb
 Content\tov.xnb
 Content\questionIcon.xnb
+Content\menufont.xnb
+Content\gamefont.xnb
+Content\knight.xnb
+Content\batman.xnb
+Content\princess.xnb
+Content\knightSmall.xnb
+Content\stickFig.xnb

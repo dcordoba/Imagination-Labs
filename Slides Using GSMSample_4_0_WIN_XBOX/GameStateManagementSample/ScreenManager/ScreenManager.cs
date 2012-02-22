@@ -37,7 +37,11 @@ namespace GameStateManagement
         SpriteBatch spriteBatch;
         SpriteFont font;
         Texture2D blankTexture;
-
+        Texture2D avatar1;
+        Texture2D avatar2;
+        List<Texture2D> avatars;
+        SkeletonTracker skeleton;
+        
         bool isInitialized;
 
         bool traceEnabled;
@@ -45,7 +49,14 @@ namespace GameStateManagement
         #endregion
 
         #region Properties
-
+        /// <summary>
+        /// A default blankTexture shared by all the screens. This saves
+        /// each screen(and especially the skeleton) having to bother creating their own local instance.
+        /// </summary>
+        public Texture2D BlankTexture
+        {
+            get { return blankTexture; }
+        }
 
         /// <summary>
         /// A default SpriteBatch shared by all the screens. This saves
@@ -56,7 +67,39 @@ namespace GameStateManagement
             get { return spriteBatch; }
         }
 
-
+        /// <summary>
+        /// A default Skeleton shared by all the screens. This saves
+        /// each screen having to bother creating their own local instance.
+        /// </summary>
+       /* public Sprite2D GetSkeletonAvatar()
+        {
+            Sprite2D avatar = new Sprite2D(skeleton.Head.Texture, skeleton.Head.Rectangle, skeleton.Head.Color);
+            return avatar;
+        }
+        * */
+        //Method to get the texture of the current skeleton becuase of class privacy compatabilities
+        public Texture2D CurSekeltonTexture()
+        {
+            return skeleton.Head.Texture;
+        }
+        public void SetCurSkeletonTexture(int textureIndex)
+        {
+            if (textureIndex >= 0 && textureIndex < avatars.Count)
+            {
+                skeleton.Head.Texture = avatars[textureIndex];
+            }
+        }
+        //Method to get the rectangle of the current skeleton becuase of class privacy compatabilities
+        public Rectangle CurSekeltonRectangle()
+        {
+            return skeleton.Head.Rectangle;
+        }
+        //Method to get the color of the current skeleton becuase of class privacy compatabilities
+        public Color CurSekeltonColor()
+        {
+            return skeleton.Head.Color;
+        }
+       
         /// <summary>
         /// A default font shared by all the screens. This saves
         /// each screen having to bother loading their own local copy.
@@ -66,7 +109,14 @@ namespace GameStateManagement
             get { return font; }
         }
 
-
+        /// <summary>
+        /// A default avatar shared by all the screens. This saves
+        /// each screen having to bother loading their own local copy.
+        /// </summary>
+        public Texture2D Avatar1
+        {
+            get { return avatar1; }
+        }
         /// <summary>
         /// If true, the manager prints out a list of all the screens
         /// each time it is updated. This can be useful for making sure
@@ -77,8 +127,9 @@ namespace GameStateManagement
             get { return traceEnabled; }
             set { traceEnabled = value; }
         }
-
-
+        
+       
+        
         #endregion
 
         #region Initialization
@@ -93,6 +144,7 @@ namespace GameStateManagement
             // we must set EnabledGestures before we can query for them, but
             // we don't assume the game wants to read them.
             TouchPanel.EnabledGestures = GestureType.None;
+            avatars = new List<Texture2D>();
         }
 
 
@@ -102,7 +154,6 @@ namespace GameStateManagement
         public override void Initialize()
         {
             base.Initialize();
-
             isInitialized = true;
         }
 
@@ -118,7 +169,10 @@ namespace GameStateManagement
             spriteBatch = new SpriteBatch(GraphicsDevice);
             font = content.Load<SpriteFont>("menufont");
             blankTexture = content.Load<Texture2D>("blank");
-
+            InitAvatars(content);
+           
+            //Texture2D av1 = new Texture2D(GraphicsDevice, 50, 100);
+            skeleton = new SkeletonTracker(this);
             // Tell each of the screens to load their content.
             foreach (GameScreen screen in screens)
             {
@@ -126,7 +180,19 @@ namespace GameStateManagement
             }
         }
 
-
+        private void InitAvatars(ContentManager content)
+        {
+            avatar1 = content.Load<Texture2D>("knight");
+             avatar2 = content.Load<Texture2D>("batman");
+           
+          //  avatar1 = content.Load<Texture2D>("blank");
+            Texture2D avatar3 = content.Load<Texture2D>("princess");
+            Texture2D avatar4 = content.Load<Texture2D>("questionIcon");
+            avatars.Add(avatar1);
+            avatars.Add(avatar2);
+            avatars.Add(avatar3);
+            avatars.Add(avatar4);
+        }
         /// <summary>
         /// Unload your graphics content.
         /// </summary>
@@ -216,6 +282,8 @@ namespace GameStateManagement
         /// <summary>
         /// Tells each screen to draw itself.
         /// </summary>
+        ///  
+      
         public override void Draw(GameTime gameTime)
         {
             foreach (GameScreen screen in screens)
@@ -224,6 +292,8 @@ namespace GameStateManagement
                     continue;
 
                 screen.Draw(gameTime);
+                skeleton.Draw(gameTime);
+
             }
         }
 
@@ -308,6 +378,8 @@ namespace GameStateManagement
 
             spriteBatch.End();
         }
+
+        
 
 
         #endregion

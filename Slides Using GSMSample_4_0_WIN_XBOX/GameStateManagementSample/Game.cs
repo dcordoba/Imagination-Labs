@@ -64,8 +64,12 @@ namespace GameStateManagement
 
             // Activate the first screens.
             screenManager.AddScreen(new BackgroundScreen(), null);
+            //skeleton = new SkeletonTracker();
+           // screenManager.SetSkeleton(new SkeletonTracker());
+            //screenManager.AddScreen(skeleton, null);
             screenManager.AddScreen(new SlideMenuScreen(), null);
-            skeleton = new SkeletonTracker(screenManager);
+            
+            
            // screenManager.AddScreen(new MainMenuScreen(), null);
         }
 

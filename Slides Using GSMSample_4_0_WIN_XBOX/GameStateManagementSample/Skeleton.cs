@@ -20,11 +20,14 @@ namespace GameStateManagement
 
         private Skeleton[] skeletonData;
         public SkeletonFrame skeletonFrame;
-        private Rectangle head = new Rectangle(0,0, 50,50);
         private ScreenManager screenManager;
-
+        private Vector2 midViewPort;
+        private Sprite2D head;
+        // private Rectangle head = new Rectangle(0,0, 50,50);
+        
             // JASON's CODE
         public SkeletonTracker(ScreenManager sManager)
+       //public SkeletonTracker()
         {
             
             screenManager = sManager;
@@ -37,6 +40,11 @@ namespace GameStateManagement
                 kinectSensor.AllFramesReady += new EventHandler<AllFramesReadyEventArgs>(KinectAllFramesReady);
 
                 this.skeletonData = new Skeleton[kinectSensor.SkeletonStream.FrameSkeletonArrayLength];
+
+                //initialize the "head" sprite
+                Color transColor = new Color(255, 255, 255);
+                head = new Sprite2D(screenManager.Avatar1, new Rectangle(0, 0, 100, 150), transColor);//Color.Black);
+
                 Console.WriteLine("created new Skeleton data.\n");
                 //  END JASON's CODE */
             }
@@ -45,18 +53,21 @@ namespace GameStateManagement
         {
             using (SkeletonFrame skeletonFrame = e.OpenSkeletonFrame())
             {
-                if (skeletonFrame != null)
+                if (skeletonFrame != null && screenManager != null)
                 {
                     //  take skeleton data and update avatar state
                     skeletonFrame.CopySkeletonDataTo(skeletonData);
-                    float headX = skeletonData[0].Joints[JointType.Head].Position.X;
+                    float headX = skeletonData[0].Joints[JointType.Head].Position.X; //floats between -1 and 1
                     float headY = skeletonData[0].Joints[JointType.Head].Position.Y;
-                    head.X =(int) headX;
-                    head.Y = (int)headY;
+
+                    midViewPort.X = screenManager.GraphicsDevice.Viewport.Width / 2;
+                    midViewPort.Y = screenManager.GraphicsDevice.Viewport.Height / 2;
+                    //set the posistion of the head's rectangle to be in the center of the screen and move by the joint amount
+                    head.SetRectPos((int)((headX * 100) + midViewPort.X), (int)((headY * 100) + midViewPort.Y));
 //
-Console.WriteLine( headX + ", " + headY );
-                    
-                 
+Console.WriteLine( "head: " + head.Rectangle.X + ", " + head.Rectangle.Y );
+Console.WriteLine("joint: " + headX + ", " + headY);
+
                 }
                 else
                 {
@@ -65,28 +76,23 @@ Console.WriteLine( headX + ", " + headY );
             }
         }
 
-       
+        public void SetScreenManager(ScreenManager sm)
+        {
+            screenManager = sm;
+        }
+        public Sprite2D Head
+        {
+            get { return head; }
+        }
         
         //  END JASON's CODE
 
        
-
-    
-     public  void  Draw(GameTime gameTime) {
-           
-            GraphicsDevice graphics = screenManager.GraphicsDevice;
-            SpriteBatch spriteBatch = screenManager.SpriteBatch;
-            SpriteFont font = screenManager.Font;
-
-            Texture2D blankTexture = new Texture2D(graphics, 50, 50);
-            spriteBatch.Begin();
-            Viewport viewport = graphics.Viewport;
-
-            spriteBatch.Begin();
-
-            spriteBatch.Draw(blankTexture,head, Color.Black);
-
-            spriteBatch.End();
+        public  void  Draw(GameTime gameTime) {           
+            screenManager.SpriteBatch.Begin();
+            screenManager.SpriteBatch.Draw(head.Texture,head.Rectangle, head.Color);            
+            screenManager.SpriteBatch.End();
         }
     }
+     
 }
