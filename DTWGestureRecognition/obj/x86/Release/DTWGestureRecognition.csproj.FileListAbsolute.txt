@@ -1,0 +1,13 @@
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\bin\Release\DTWGestureRecognition.exe
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\bin\Release\DTWGestureRecognition.pdb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Release\MainWindow.baml
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Release\MainWindow.g.cs
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Release\App.g.cs
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Release\DTWGestureRecognition_MarkupCompile.cache
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Release\DTWGestureRecognition.g.resources
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Release\DTWGestureRecognition.Properties.Resources.resources
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Release\DTWGestureRecognition.exe
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\import\kinectdtw-1.0\trunk\DTWGestureRecognition\obj\x86\Release\DTWGestureRecognition.pdb
