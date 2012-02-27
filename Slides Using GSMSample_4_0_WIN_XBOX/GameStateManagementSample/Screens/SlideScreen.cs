@@ -78,16 +78,19 @@ namespace GameStateManagement
             if (input.IsNewKeyPress(Keys.Z, null, out requesteeIndex))
             {
                 parentSlideMenu.ChangeToAvatar(0);
+                Console.Out.WriteLine("Changed to 0");
             }
             //press "x" to go to change to avatar2
             if (input.IsNewKeyPress(Keys.X, null, out requesteeIndex))
             {
                 parentSlideMenu.ChangeToAvatar(1);
+                Console.Out.WriteLine("Changed to 1");
             }
             //press "a" to go to change to avatar2
-            if (input.IsNewKeyPress(Keys.X, null, out requesteeIndex))
+            if (input.IsNewKeyPress(Keys.A, null, out requesteeIndex))
             {
                 parentSlideMenu.ChangeToAvatar(2);
+                Console.Out.WriteLine("changed to 2");
             }
             //press "m" to go to slideMenu
             if (input.IsNewKeyPress(Keys.M, null, out requesteeIndex))
@@ -133,7 +136,7 @@ namespace GameStateManagement
             }
             */
             //Create a Sprite with the current Avatar
-            Sprite2D curAvatar = new Sprite2D(ScreenManager.CurSekeltonTexture(), ScreenManager.CurSekeltonRectangle(), ScreenManager.CurSekeltonColor());
+            Sprite2D curAvatar = new Sprite2D(ScreenManager.CurSkeletonTexture(), ScreenManager.CurSkeletonRectangle(), ScreenManager.CurSekeltonColor());
             slideObjects.Add(curAvatar);
         }
         #endregion

@@ -3,8 +3,6 @@ Content\blank.xnb
 Content\gradient.xnb
 Content\tov.xnb
 Content\questionIcon.xnb
-Content\menufont.xnb
-Content\gamefont.xnb
 Content\knight.xnb
 Content\batman.xnb
 Content\princess.xnb
@@ -13,3 +11,5 @@ Content\stickFig.xnb
 Content\circleLarge.xnb
 Content\circleMedium.xnb
 Content\circleSmall.xnb
+Content\menufont.xnb
+Content\gamefont.xnb

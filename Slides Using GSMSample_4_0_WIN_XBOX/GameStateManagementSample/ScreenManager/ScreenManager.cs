@@ -72,7 +72,7 @@ namespace GameStateManagement
 
      
         //Method to get the texture of the current skeleton becuase of class privacy compatabilities
-        public Texture2D CurSekeltonTexture()
+        public Texture2D CurSkeletonTexture()
         {
             return skeleton.Head.Texture;
         }
@@ -85,7 +85,7 @@ namespace GameStateManagement
         }
 
         //Method to get the rectangle of the current skeleton becuase of class privacy compatabilities
-        public Rectangle CurSekeltonRectangle()
+        public Rectangle CurSkeletonRectangle()
         {
             return skeleton.Head.Rectangle;
         }
