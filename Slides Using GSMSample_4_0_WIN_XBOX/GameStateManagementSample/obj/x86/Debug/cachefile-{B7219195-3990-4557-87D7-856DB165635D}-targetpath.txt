@@ -10,3 +10,6 @@ Content\batman.xnb
 Content\princess.xnb
 Content\knightSmall.xnb
 Content\stickFig.xnb
+Content\circleLarge.xnb
+Content\circleMedium.xnb
+Content\circleSmall.xnb
