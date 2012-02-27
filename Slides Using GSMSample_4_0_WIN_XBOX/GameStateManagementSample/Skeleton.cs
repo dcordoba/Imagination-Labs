@@ -145,10 +145,11 @@ namespace GameStateManagement
             if (sf != null && screenManager != null)
             {
                 Skeleton[] skeletons = new Skeleton[sf.SkeletonArrayLength];
+                sf.CopySkeletonDataTo(skeletons);
+
                 foreach (Skeleton skeleton in skeletons)
                 {
                     //  take skeleton data and update avatar state
-                    sf.CopySkeletonDataTo(skeletonData);
 
                     midViewPort.X = screenManager.GraphicsDevice.Viewport.Width / 2;
                     midViewPort.Y = screenManager.GraphicsDevice.Viewport.Height / 2;
@@ -216,10 +217,7 @@ Console.WriteLine("joint: " + headX + ", " + headY);
             if (jointX != 0 || jointY != 0)
             {
                 skeletonShapes[jointName].SetRectPos((int)((jointX * screenXScale) + midViewPort.X), (int)(midViewPort.Y - (jointY * screenYScale)));
-                Console.Out.WriteLine("jointX: " + jointX + "jointY: " + jointY);
             }
-            else
-                Console.Out.WriteLine("neeto");
         }
 
         public void SetScreenManager(ScreenManager sm)
