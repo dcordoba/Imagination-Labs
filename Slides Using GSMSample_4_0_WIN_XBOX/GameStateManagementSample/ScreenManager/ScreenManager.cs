@@ -37,6 +37,8 @@ namespace GameStateManagement
         SpriteBatch spriteBatch;
         SpriteFont font;
         Texture2D blankTexture;
+       
+
         Texture2D avatar1;
         Texture2D avatar2;
         List<Texture2D> avatars;
@@ -58,6 +60,7 @@ namespace GameStateManagement
             get { return blankTexture; }
         }
 
+        
         /// <summary>
         /// A default SpriteBatch shared by all the screens. This saves
         /// each screen having to bother creating their own local instance.
@@ -67,16 +70,7 @@ namespace GameStateManagement
             get { return spriteBatch; }
         }
 
-        /// <summary>
-        /// A default Skeleton shared by all the screens. This saves
-        /// each screen having to bother creating their own local instance.
-        /// </summary>
-       /* public Sprite2D GetSkeletonAvatar()
-        {
-            Sprite2D avatar = new Sprite2D(skeleton.Head.Texture, skeleton.Head.Rectangle, skeleton.Head.Color);
-            return avatar;
-        }
-        * */
+     
         //Method to get the texture of the current skeleton becuase of class privacy compatabilities
         public Texture2D CurSekeltonTexture()
         {
@@ -89,6 +83,7 @@ namespace GameStateManagement
                 skeleton.Head.Texture = avatars[textureIndex];
             }
         }
+
         //Method to get the rectangle of the current skeleton becuase of class privacy compatabilities
         public Rectangle CurSekeltonRectangle()
         {
