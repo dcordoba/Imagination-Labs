@@ -23,13 +23,9 @@ namespace GameStateManagement
     public class GameStateManagementGame : Microsoft.Xna.Framework.Game
     {
         #region Fields
-
         GraphicsDeviceManager graphics;
         ScreenManager screenManager;
-        SkeletonTracker skeleton;
-      //  ScreenManager slidesManger;
-
-
+       
         // By preloading any assets used by UI rendering, we avoid framerate glitches
         // when they suddenly need to be loaded in the middle of a menu transition.
         static readonly string[] preloadAssets =
@@ -56,17 +52,10 @@ namespace GameStateManagement
 
             // Create the screen manager component.
             screenManager = new ScreenManager(this);
-
             Components.Add(screenManager);
-            //Isabelle added Create slide manager:
-            //SlideScreen = new SlideManager;
-
-
+          
             // Activate the first screens.
             screenManager.AddScreen(new BackgroundScreen(), null);
-            //skeleton = new SkeletonTracker();
-           // screenManager.SetSkeleton(new SkeletonTracker());
-            //screenManager.AddScreen(skeleton, null);
             screenManager.AddScreen(new SlideMenuScreen(), null);
             
             

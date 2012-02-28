@@ -109,6 +109,33 @@
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\stickFig.xnb</Output>
       <Time>2012-02-22T02:36:54.0126716-08:00</Time>
     </Item>
+    <Item>
+      <Source>circleLarge.png</Source>
+      <Name>circleLarge</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleLarge.xnb</Output>
+      <Time>2012-02-26T15:48:19.659407-08:00</Time>
+    </Item>
+    <Item>
+      <Source>circleMedium.png</Source>
+      <Name>circleMedium</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleMedium.xnb</Output>
+      <Time>2012-02-26T17:50:45.240229-08:00</Time>
+    </Item>
+    <Item>
+      <Source>circleSmall.png</Source>
+      <Name>circleSmall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleSmall.xnb</Output>
+      <Time>2012-02-26T15:49:19.3958238-08:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
