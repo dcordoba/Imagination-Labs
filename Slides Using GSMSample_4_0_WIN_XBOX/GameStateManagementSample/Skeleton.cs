@@ -7,7 +7,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Kinect;
 using Microsoft.Xna.Framework.Graphics;
-
+using GameStateManagement.DTWGestureRecognition;
 #endregion
 
 namespace GameStateManagement
@@ -19,12 +19,11 @@ namespace GameStateManagement
         KinectSensor kinectSensor;
 
         private Skeleton[] skeletonData;
-        public SkeletonFrame skeletonFrame;
         private ScreenManager screenManager;
         private Vector2 midViewPort;
         private Sprite2D head;
         private Dictionary<JointType,Sprite2D> skeletonShapes;
-
+        private DTWImplementation dtw;
 
         Sprite2D circleLarge;
         Sprite2D circleMed;
@@ -55,10 +54,10 @@ namespace GameStateManagement
                 };
                 kinectSensor.SkeletonStream.Enable(p);
                // kinectSensor.SkeletonStream.
-               
-                kinectSensor.AllFramesReady += new EventHandler<AllFramesReadyEventArgs>(KinectAllFramesReady);
+                
                 kinectSensor.Start();
-
+                kinectSensor.SkeletonFrameReady += new EventHandler<SkeletonFrameReadyEventArgs>(KinectSkeletonFramesReady);
+                dtw = new DTWImplementation(kinectSensor, this);
                 this.skeletonData = new Skeleton[kinectSensor.SkeletonStream.FrameSkeletonArrayLength];
 
 
@@ -69,22 +68,31 @@ namespace GameStateManagement
                 Sprite2D rightHand = new Sprite2D(screenManager.BlankTexture,new Rectangle(0, 0, 50, 50), Color.LightGreen);
                  */
                 ///*Circle sprites
-                InitCircles();
-                Sprite2D rightHand = circleMed;
-                Sprite2D rightElbow = circleSmall;
-                Sprite2D head = circleLarge;
+                //InitCircles();
+                InitSprites();
+                /*Sprite2D rightHand = circleSmall;
+                Sprite2D rightElbow = circleMed;
+                Sprite2D head = circleSmall;
+                Sprite2D leftElbow = circleMed;
+                Sprite2D leftHand = circleSmall;
+                Sprite2D leftKnee = circleMed;
+                Sprite2D rightKnee = circleMed;
+                Sprite2D leftAnkle = circleSmall;
+                Sprite2D rightAnkle = circleSmall;
+                Sprite2D Spine = new Sprite2D();
+
                 skeletonShapes.Add(JointType.Head, head);
                 skeletonShapes.Add(JointType.HandRight, rightHand);
                 skeletonShapes.Add(JointType.HandLeft, rightHand);
                 skeletonShapes.Add(JointType.ElbowRight, rightElbow);
-                skeletonShapes.Add(JointType.ElbowLeft, rightElbow);
-                skeletonShapes.Add(JointType.KneeLeft, rightElbow);
-                skeletonShapes.Add(JointType.KneeRight, rightElbow);
-                skeletonShapes.Add(JointType.AnkleLeft, rightElbow);
-                skeletonShapes.Add(JointType.AnkleRight, rightElbow);
-                skeletonShapes.Add(JointType.Spine, rightHand);
+                skeletonShapes.Add(JointType.ElbowLeft, leftElbow);
+                skeletonShapes.Add(JointType.KneeLeft, leftKnee);
+                skeletonShapes.Add(JointType.KneeRight, rightKnee);
+                skeletonShapes.Add(JointType.AnkleLeft, leftAnkle);
+                skeletonShapes.Add(JointType.AnkleRight, rightAnkle);
+                skeletonShapes.Add(JointType.Spine, Spine);
                 //TODO: create new sprites for each joint type
-
+                */
                 Console.WriteLine("****************************************created new Skeleton data.\n");
                 //*/
                 /*Circle sprites
@@ -114,30 +122,50 @@ namespace GameStateManagement
             circleMed = new Sprite2D(cMed, new Rectangle(0, 0, 40, 40), Color.White);
             circleSmall = new Sprite2D(cSmall, new Rectangle(0, 0, 20, 20), Color.White);
         }
-        public void KinectAllFramesReady(object sender,AllFramesReadyEventArgs e)
+        private void InitSprites()
+        {   
+            Texture2D cLarge = screenManager.Game.Content.Load<Texture2D>("circleLarge");
+            Texture2D cMed = screenManager.Game.Content.Load<Texture2D>("circleMedium");
+            Texture2D cSmall = screenManager.Game.Content.Load<Texture2D>("circleSmall");
+
+            skeletonShapes.Add(JointType.Head, new Sprite2D(cLarge, new Rectangle(0, 0, 75, 75), Color.White));
+            skeletonShapes.Add(JointType.HandRight, new Sprite2D(cSmall, new Rectangle(0, 0, 20, 20), Color.White));
+            skeletonShapes.Add(JointType.HandLeft, new Sprite2D(cSmall, new Rectangle(0, 0, 20, 20), Color.White));
+            skeletonShapes.Add(JointType.ElbowRight, new Sprite2D(cMed, new Rectangle(0, 0, 40, 40), Color.White));
+            skeletonShapes.Add(JointType.ElbowLeft, new Sprite2D(cMed, new Rectangle(0, 0, 40, 40), Color.White));
+            skeletonShapes.Add(JointType.KneeLeft, new Sprite2D(cMed, new Rectangle(0, 0, 40, 40), Color.White));
+            skeletonShapes.Add(JointType.KneeRight, new Sprite2D(cMed, new Rectangle(0, 0, 40, 40), Color.White));
+            skeletonShapes.Add(JointType.AnkleLeft, new Sprite2D(cSmall, new Rectangle(0, 0, 20, 20), Color.White));
+            skeletonShapes.Add(JointType.AnkleRight, new Sprite2D(cSmall, new Rectangle(0, 0, 20, 20), Color.White));
+            skeletonShapes.Add(JointType.Spine, new Sprite2D(cLarge, new Rectangle(0, 0, 75, 75), Color.White));
+        }
+        public void KinectSkeletonFramesReady(object sender,SkeletonFrameReadyEventArgs e)
         {
-            using (SkeletonFrame skeletonFrame = e.OpenSkeletonFrame())
+            SkeletonFrame sf = e.OpenSkeletonFrame();
+            if (sf != null && screenManager != null)
             {
-                if (skeletonFrame != null && screenManager != null)
+                Skeleton[] skeletons = new Skeleton[sf.SkeletonArrayLength];
+                sf.CopySkeletonDataTo(skeletons);
+
+                foreach (Skeleton skeleton in skeletons)
                 {
                     //  take skeleton data and update avatar state
-                    skeletonFrame.CopySkeletonDataTo(skeletonData);
+
                     midViewPort.X = screenManager.GraphicsDevice.Viewport.Width / 2;
                     midViewPort.Y = screenManager.GraphicsDevice.Viewport.Height / 2;
-                    UpdateJointPos(JointType.Head);
-                    UpdateJointPos(JointType.Spine);
-                    UpdateJointPos(JointType.HandRight);
-                    UpdateJointPos(JointType.HandLeft);
+                    UpdateJointPos(JointType.Head, skeleton);
+                    UpdateJointPos(JointType.Spine, skeleton);
+                    UpdateJointPos(JointType.HandRight, skeleton);
+                    UpdateJointPos(JointType.HandLeft, skeleton);
 
-                    UpdateJointPos(JointType.ElbowRight);                   
-                    UpdateJointPos(JointType.ElbowLeft);
+                    UpdateJointPos(JointType.ElbowRight, skeleton);
+                    UpdateJointPos(JointType.ElbowLeft, skeleton);
 
-                    UpdateJointPos(JointType.KneeRight);
-                    UpdateJointPos(JointType.KneeLeft);
+                    UpdateJointPos(JointType.KneeRight, skeleton);
+                    UpdateJointPos(JointType.KneeLeft, skeleton);
 
-                    UpdateJointPos(JointType.AnkleRight);
-                    UpdateJointPos(JointType.AnkleLeft);
-                   
+                    UpdateJointPos(JointType.AnkleRight, skeleton);
+                    UpdateJointPos(JointType.AnkleLeft, skeleton);
 
 
                     /*Original joint updating code by Isabelle
@@ -161,31 +189,35 @@ namespace GameStateManagement
                     skeletonShapes[JointType.HandRight].SetRectPos((int)((rHandX * screenXScale) + midViewPort.X), (int)(midViewPort.Y - (rHandY * screenYScale)));
                     skeletonShapes[JointType.ElbowRight].SetRectPos((int)((rElbowX * screenXScale) + midViewPort.X), (int)(midViewPort.Y - (rElbowY * screenYScale)));
                     //head.SetRectPos((int)((headX * screenXScale) + midViewPort.X), (int)(midViewPort.Y-(headY *screenYScale)));
-                     * 
+                        * 
                     
 //
 head = skeletonShapes[JointType.Head];
 Console.WriteLine( "head: " + head.Rectangle.X + ", " + head.Rectangle.Y );
 Console.WriteLine("joint: " + headX + ", " + headY);
-                     * */
-
+                        * */
                 }
-                else
-                {
-                    // skeletonFrame is null because the request did not arrive in time
-                }
+                sf.Dispose();
             }
+            else
+            {
+                // skeletonFrame is null because the request did not arrive in time
+            }
+
         }
 
-        private void UpdateJointPos(JointType jointName)
+        private void UpdateJointPos(JointType jointName, Skeleton s)
         {
-            
-            float jointX = skeletonData[0].Joints[jointName].Position.X; //floats between -1 and 1
-            float jointY = skeletonData[0].Joints[jointName].Position.Y;
+            if (s == null)
+                return;
+            float jointX = s.Joints[jointName].Position.X; //floats between -1 and 1
+            float jointY = s.Joints[jointName].Position.Y;
             int screenXScale = 200;
             int screenYScale = 200;
-            skeletonShapes[jointName].SetRectPos((int)((jointX * screenXScale) + midViewPort.X), (int)(midViewPort.Y - (jointY * screenYScale)));
-
+            if (jointX != 0 || jointY != 0)
+            {
+                skeletonShapes[jointName].SetRectPos((int)((jointX * screenXScale) + midViewPort.X), (int)(midViewPort.Y - (jointY * screenYScale)));
+            }
         }
 
         public void SetScreenManager(ScreenManager sm)
@@ -196,7 +228,10 @@ Console.WriteLine("joint: " + headX + ", " + headY);
         {
             get { return head; }
         }
-        
+        public void cycleAvatar()
+        {
+            Console.Out.WriteLine("Cycling Avatar");
+        }
         //  END JASON's CODE
 
        
