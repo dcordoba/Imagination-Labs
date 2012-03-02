@@ -17,6 +17,7 @@ namespace GameStateManagement.DTWGestureRecognition
         DtwGestureRecognizer _dtw;
         ArrayList _video;
         SkeletonTracker _skeleton;
+        private int _flipFlop = 0;
         #endregion
         #region const vars
         private const int MinimumFrames = 6;
@@ -24,7 +25,6 @@ namespace GameStateManagement.DTWGestureRecognition
         private const int CaptureCountdownSeconds = 3;
         private const string GestureSaveFileLocation = @"cycle.txt";
         private const int Ignore = 2;
-        private int _flipFlop = 0;
         #endregion
         KinectSensor kinect;
 
@@ -36,6 +36,7 @@ namespace GameStateManagement.DTWGestureRecognition
             kinect = s;
             System.IO.FileInfo fi = new System.IO.FileInfo(GestureSaveFileLocation);
             LoadGesturesFromFile(fi.FullName);
+
             s.SkeletonFrameReady += new EventHandler<SkeletonFrameReadyEventArgs>(DTWSkeletonReady);
             Skeleton2DDataExtract.Skeleton2DdataCoordReady += NuiSkeleton2DdataCoordReady;
         }
