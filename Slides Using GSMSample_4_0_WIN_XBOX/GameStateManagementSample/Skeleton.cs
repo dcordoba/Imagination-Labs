@@ -210,14 +210,25 @@ Console.WriteLine("joint: " + headX + ", " + headY);
         {
             if (s == null)
                 return;
+            ColorImagePoint cp = kinectSensor.MapSkeletonPointToColor(s.Joints[jointName].Position, ColorImageFormat.RgbResolution640x480Fps30);
             float jointX = s.Joints[jointName].Position.X; //floats between -1 and 1
             float jointY = s.Joints[jointName].Position.Y;
-            int screenXScale = 200;
-            int screenYScale = 200;
+            //int screenXScale = 200;
+            //int screenYScale = 200;
+            Point screen_position = GetDisplayPosition(s.Joints[jointName]);
             if (jointX != 0 || jointY != 0)
             {
-                skeletonShapes[jointName].SetRectPos((int)((jointX * screenXScale) + midViewPort.X), (int)(midViewPort.Y - (jointY * screenYScale)));
+                //skeletonShapes[jointName].SetRectPos((int)((jointX * screenXScale) + midViewPort.X), (int)(midViewPort.Y - (jointY * screenYScale)));
+                skeletonShapes[jointName].SetRectPos(screen_position.X, screen_position.Y);
             }
+        }
+
+        public Point GetDisplayPosition(Joint j)
+        {
+            if (j.Position.X == 0 && j.Position.Y == 0)
+                return new Point(-1, -1) ; // null
+            ColorImagePoint cp = kinectSensor.MapSkeletonPointToColor(j.Position, ColorImageFormat.RgbResolution640x480Fps30);
+            return new Point(cp.X * screenManager.GraphicsDevice.Viewport.Width / 640, cp.Y * screenManager.GraphicsDevice.Viewport.Height / 480);
         }
 
         public void SetScreenManager(ScreenManager sm)
@@ -228,6 +239,10 @@ Console.WriteLine("joint: " + headX + ", " + headY);
         {
             get { return head; }
         }
+        public KinectSensor Kinect
+        {
+            get { return kinectSensor; }
+        }
         public void cycleAvatar()
         {
             Console.Out.WriteLine("Cycling Avatar");
@@ -235,7 +250,7 @@ Console.WriteLine("joint: " + headX + ", " + headY);
         //  END JASON's CODE
 
        
-        public  void  Draw(GameTime gameTime) {           
+        public  void  Draw(GameTime gameTime) {
             screenManager.SpriteBatch.Begin();
             foreach (KeyValuePair<JointType, Sprite2D> shape in skeletonShapes){
                  screenManager.SpriteBatch.Draw(shape.Value.Texture,shape.Value.Rectangle, shape.Value.Color);
