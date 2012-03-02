@@ -32,3 +32,30 @@ C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStat
 C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleLarge.xnb
 C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleMedium.xnb
 C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleSmall.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\obj\x86\Debug\GameStateManagementSample.exe
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\obj\x86\Debug\GameStateManagementSample.pdb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\background.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\blank.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gradient.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\tov.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\questionIcon.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\batman.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\princess.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knightSmall.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\stickFig.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleLarge.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleMedium.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleSmall.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\menufont.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gamefont.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\GameStateManagementSample.exe
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\GameStateManagementSample.pdb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\bg1_active.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\bg1_dirty.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gesture_menu.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\down.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\over.xnb
+C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\up.xnb
