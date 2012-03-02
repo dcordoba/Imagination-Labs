@@ -15,6 +15,9 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input.Touch;
+using GameStateManagement.GestureSelector;
+using Microsoft.Kinect;
+
 #endregion
 
 namespace GameStateManagement
@@ -37,12 +40,14 @@ namespace GameStateManagement
         SpriteBatch spriteBatch;
         SpriteFont font;
         Texture2D blankTexture;
-       
+        
 
         Texture2D avatar1;
         Texture2D avatar2;
         List<Texture2D> avatars;
         SkeletonTracker skeleton;
+
+        GestureMenuScreen mainGestureMenu;
         
         bool isInitialized;
 
@@ -72,7 +77,7 @@ namespace GameStateManagement
 
      
         //Method to get the texture of the current skeleton becuase of class privacy compatabilities
-        public Texture2D CurSekeltonTexture()
+        public Texture2D CurSkeletonTexture()
         {
             return skeleton.Head.Texture;
         }
@@ -85,7 +90,7 @@ namespace GameStateManagement
         }
 
         //Method to get the rectangle of the current skeleton becuase of class privacy compatabilities
-        public Rectangle CurSekeltonRectangle()
+        public Rectangle CurSkeletonRectangle()
         {
             return skeleton.Head.Rectangle;
         }
@@ -168,6 +173,18 @@ namespace GameStateManagement
            
             //Texture2D av1 = new Texture2D(GraphicsDevice, 50, 100);
             skeleton = new SkeletonTracker(this);
+            Texture2D t_up = content.Load<Texture2D>("up");
+            Texture2D t_over = content.Load<Texture2D>("over");
+            Texture2D t_down = content.Load<Texture2D>("down");
+            GestureMenuEntry gme1 = new GestureMenuEntry(t_up, t_over, t_down, new Rectangle(0, 0, 100, 100), "");
+            GestureMenuEntry gme2 = new GestureMenuEntry(t_up, t_over, t_down, new Rectangle(0, 100, 100, 100), "");
+            GestureMenuEntry gme3 = new GestureMenuEntry(t_up, t_over, t_down, new Rectangle(0, 200, 100, 100), "");
+            mainGestureMenu = new GestureMenuScreen(new Rectangle(0, 0, 100, GraphicsDevice.Viewport.Height), 2000, "Main Menu", skeleton, content.Load<Texture2D>("gesture_menu"), this);
+            mainGestureMenu.AddMenuItem(gme1, new Rectangle(0, 0, 100, 100));
+            mainGestureMenu.AddMenuItem(gme2, new Rectangle(0, 100, 100, 100));
+            mainGestureMenu.AddMenuItem(gme3, new Rectangle(0, 200, 100, 100));
+            
+
             // Tell each of the screens to load their content.
             foreach (GameScreen screen in screens)
             {
@@ -287,9 +304,9 @@ namespace GameStateManagement
                     continue;
 
                 screen.Draw(gameTime);
-                skeleton.Draw(gameTime);
-
             }
+            mainGestureMenu.Draw(gameTime);
+            skeleton.Draw(gameTime);
         }
 
 
