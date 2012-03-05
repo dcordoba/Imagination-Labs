@@ -119,24 +119,6 @@
       <Time>2012-02-27T11:47:19.2400738-08:00</Time>
     </Item>
     <Item>
-      <Source>menufont.spritefont</Source>
-      <Name>menufont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\menufont.xnb</Output>
-      <Time>2012-02-27T11:38:32.7299591-08:00</Time>
-    </Item>
-    <Item>
-      <Source>gamefont.spritefont</Source>
-      <Name>gamefont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gamefont.xnb</Output>
-      <Time>2012-02-27T11:38:32.7249588-08:00</Time>
-    </Item>
-    <Item>
       <Source>bg1_active.jpg</Source>
       <Name>bg1_active</Name>
       <Importer>TextureImporter</Importer>
@@ -189,6 +171,24 @@
       <Options>None</Options>
       <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\up.xnb</Output>
       <Time>2012-03-01T19:18:30.6473251-08:00</Time>
+    </Item>
+    <Item>
+      <Source>menufont.spritefont</Source>
+      <Name>menufont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\menufont.xnb</Output>
+      <Time>2012-02-27T11:38:32.7299591-08:00</Time>
+    </Item>
+    <Item>
+      <Source>gamefont.spritefont</Source>
+      <Name>gamefont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gamefont.xnb</Output>
+      <Time>2012-02-27T11:38:32.7249588-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

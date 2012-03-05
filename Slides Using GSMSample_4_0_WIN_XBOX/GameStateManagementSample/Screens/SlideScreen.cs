@@ -16,26 +16,31 @@ namespace GameStateManagement
         #region variables
         SlideMenuScreen parentSlideMenu;
         int slideno;
-        List<Sprite2D> slideObjects;
-        Sprite2D tovSprite;
-        Sprite2D questionSprite;
+        //Sprite2D tovSprite;
+        //Sprite2D questionSprite;
+
+        //List<Sprite2D> slideObjects;
+        List<SlideObject> slideObjects;
+       //   Sprite2D tovSprite;
+       // Sprite2D questionSprite;
         SpriteBatch spriteBatch;
         Texture2D background_dirty;
         Texture2D background_active;
         Color backColor = Color.CornflowerBlue;
         ContentManager content;
-        Boolean captured;
+        bool captured;
         Viewport viewport;
         
         #endregion
 
         #region Initialization
         public SlideScreen(SlideMenuScreen slideMenu)
-        {   
-            this.slideObjects =   new List<Sprite2D>();            
+        {
+            this.slideObjects = new List<SlideObject>();// new List<Sprite2D>();            
             this.parentSlideMenu = slideMenu;
             this.captured = false;
             this.slideno = this.parentSlideMenu.MaxSlideIndex;
+           // this.captured = false;
         }
         #endregion
         
@@ -115,45 +120,20 @@ namespace GameStateManagement
             }
 
         }
+        #endregion
+        #region Captured
         /*Captured
          * current Capture method will print two sprites (a jpg and a png) the first time is captured.
          * subsequent capture events, will put extra question mark pngs on the screen
          */
         private void Captured()
         {
-           ///*
-            if (captured)//already captured once
-            {
-                int offset = 50 * slideObjects.Count;
-                
-                Rectangle rect  = questionSprite.Rectangle;
-                rect.X = questionSprite.Rectangle.X - offset;
-                rect.Y = questionSprite.Rectangle.Y + offset;
-
-                //Sprite2D newQuestionSprite = new Sprite2D(questionSprite.texture, rect, questionSprite.color);
-                Sprite2D newQuestionSprite = new Sprite2D(questionSprite.Texture, rect, questionSprite.Color);
-               slideObjects.Add(newQuestionSprite);
-
-                
-            }/*
-            else
-            {
-                captured = true;
-                Viewport viewport = ScreenManager.GraphicsDevice.Viewport;
-                Rectangle fullscreen = new Rectangle(0, 0, viewport.Width, viewport.Height);
-                Rectangle smallRect = new Rectangle(viewport.Width - (viewport.Width / 8), 0, viewport.Width / 8, viewport.Height / 8);
-                Color transColor = new Color(TransitionAlpha, TransitionAlpha, TransitionAlpha);
-
-                tovSprite = new Sprite2D(this.content.Load<Texture2D>("tov"), fullscreen, transColor);
-                questionSprite = new Sprite2D(this.content.Load<Texture2D>("questionIcon"), smallRect, transColor);
-
-                //slideObjects.Add(tovSprite);
-               // slideObjects.Add(questionSprite);
-            }
-            */
             //Create a Sprite with the current Avatar
-            Sprite2D curAvatar = new Sprite2D(ScreenManager.CurSkeletonTexture(), ScreenManager.CurSkeletonRectangle(), ScreenManager.CurSekeltonColor());
-            slideObjects.Add(curAvatar);
+            //Sprite2D curAvatar = new Sprite2D(ScreenManager.CurSkeletonTexture(), ScreenManager.CurSkeletonRectangle(), ScreenManager.CurSekeltonColor());
+            //slideObjects.Add(curAvatar);
+
+            CharacterObject charObj = new CharacterObject(ScreenManager.CurSkeletonTracker.SkeletonShapes);
+            slideObjects.Add(charObj);
         }
         #endregion
         #region Display
@@ -161,13 +141,14 @@ namespace GameStateManagement
         {
 
             ScreenManager.Game.GraphicsDevice.Clear(backColor);
-           //draws all the sprite objects on the slide
-            spriteBatch.Begin();
 
+           //draws all the objects on the slide
+            spriteBatch.Begin();
             spriteBatch.Draw(background_dirty, new Rectangle(0, 0, viewport.Width, viewport.Height), Color.White);
             for(int i = 0; i < slideObjects.Count; i++){
-               Sprite2D curSprite = slideObjects[i];
-               spriteBatch.Draw(curSprite.Texture, curSprite.Rectangle, curSprite.Color);
+               SlideObject curSprite = slideObjects[i];
+               curSprite.Draw(gameTime,spriteBatch);
+               Console.Out.WriteLine("drawing slide object " + i);
             }
             // Test Code
             spriteBatch.DrawString(ScreenManager.Font, "Slide " + this.slideno, new Vector2(0, 80), Color.Black);

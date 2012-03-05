@@ -12,7 +12,7 @@ using GameStateManagement.DTWGestureRecognition;
 
 namespace GameStateManagement
 {
-    class SkeletonTracker 
+    public class SkeletonTracker 
     {
         //  JASON's CODE
 
@@ -138,6 +138,9 @@ namespace GameStateManagement
             skeletonShapes.Add(JointType.AnkleLeft, new Sprite2D(cSmall, new Rectangle(0, 0, 20, 20), Color.White));
             skeletonShapes.Add(JointType.AnkleRight, new Sprite2D(cSmall, new Rectangle(0, 0, 20, 20), Color.White));
             skeletonShapes.Add(JointType.Spine, new Sprite2D(cLarge, new Rectangle(0, 0, 75, 75), Color.White));
+
+            //temporary var for checking capture
+            head = skeletonShapes[JointType.Head];
         }
         public void KinectSkeletonFramesReady(object sender,SkeletonFrameReadyEventArgs e)
         {
@@ -239,15 +242,22 @@ Console.WriteLine("joint: " + headX + ", " + headY);
         {
             get { return head; }
         }
+
+        public Dictionary<JointType,Sprite2D> SkeletonShapes
+        {
+            get { return skeletonShapes; }
+        }
+
         public KinectSensor Kinect
         {
             get { return kinectSensor; }
+
         }
         public void cycleAvatar()
         {
             Console.Out.WriteLine("Cycling Avatar");
         }
-        //  END JASON's CODE
+       
 
        
         public  void  Draw(GameTime gameTime) {
