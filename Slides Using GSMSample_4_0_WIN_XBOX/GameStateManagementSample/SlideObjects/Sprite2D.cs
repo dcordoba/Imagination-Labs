@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework.Input;
 namespace GameStateManagement
 {
 
-    class Sprite2D
+    public class Sprite2D:SlideObject
     {
         #region vars
         Texture2D texture;
@@ -50,7 +50,13 @@ namespace GameStateManagement
             set { color = value; }
         }
 
-
+        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+           //spriteBatch.Begin();
+            spriteBatch.Draw(texture, rec, color);
+          //  spriteBatch.End();
+            //base.Draw(gameTime);
+        }
         #endregion
     }
 }

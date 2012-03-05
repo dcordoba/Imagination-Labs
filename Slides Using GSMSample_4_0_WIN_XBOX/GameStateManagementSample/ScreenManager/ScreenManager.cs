@@ -15,6 +15,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input.Touch;
+using Microsoft.Kinect;
 #endregion
 
 namespace GameStateManagement
@@ -70,6 +71,10 @@ namespace GameStateManagement
             get { return spriteBatch; }
         }
 
+        public SkeletonTracker CurSkeletonTracker
+        {
+            get { return skeleton; }
+        }
      
         //Method to get the texture of the current skeleton becuase of class privacy compatabilities
         public Texture2D CurSkeletonTexture()
@@ -94,7 +99,8 @@ namespace GameStateManagement
         {
             return skeleton.Head.Color;
         }
-       
+
+        
         /// <summary>
         /// A default font shared by all the screens. This saves
         /// each screen having to bother loading their own local copy.
