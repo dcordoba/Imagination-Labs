@@ -65,6 +65,10 @@ namespace GameStateManagement
             get { return blankTexture; }
         }
 
+        public KinectSensor Kinect
+        {
+            get { return skeleton.Kinect; }
+        }
         
         /// <summary>
         /// A default SpriteBatch shared by all the screens. This saves

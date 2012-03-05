@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\background.xnb</Output>
-      <Time>2012-02-27T11:38:32.7219586-08:00</Time>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\background.xnb</Output>
+      <Time>2012-03-04T13:37:36.4783198-08:00</Time>
     </Item>
     <Item>
       <Source>blank.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\blank.xnb</Output>
-      <Time>2012-02-27T11:38:32.7249588-08:00</Time>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\blank.xnb</Output>
+      <Time>2012-03-04T13:37:36.4939198-08:00</Time>
     </Item>
     <Item>
       <Source>gradient.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gradient.xnb</Output>
-      <Time>2012-02-27T11:38:32.7249588-08:00</Time>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gradient.xnb</Output>
+      <Time>2012-03-04T13:37:36.5095199-08:00</Time>
     </Item>
     <Item>
       <Source>tov.jpg</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\tov.xnb</Output>
-      <Time>2012-02-27T11:38:32.7419598-08:00</Time>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\tov.xnb</Output>
+      <Time>2012-03-04T13:37:36.5407199-08:00</Time>
     </Item>
     <Item>
       <Source>questionIcon.png</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\questionIcon.xnb</Output>
-      <Time>2012-02-27T11:38:32.7359594-08:00</Time>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\questionIcon.xnb</Output>
+      <Time>2012-03-04T13:37:36.5251199-08:00</Time>
     </Item>
     <Item>
       <Source>knight.png</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight.xnb</Output>
-      <Time>2012-02-27T11:38:32.728959-08:00</Time>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight.xnb</Output>
+      <Time>2012-03-04T13:37:36.5095199-08:00</Time>
     </Item>
     <Item>
       <Source>batman.jpg</Source>
@@ -61,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\batman.xnb</Output>
-      <Time>2012-02-27T11:38:32.7229587-08:00</Time>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\batman.xnb</Output>
+      <Time>2012-03-04T13:37:36.4783198-08:00</Time>
     </Item>
     <Item>
       <Source>princess.jpg</Source>
@@ -70,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\princess.xnb</Output>
-      <Time>2012-02-27T11:38:32.7349594-08:00</Time>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\princess.xnb</Output>
+      <Time>2012-03-04T13:37:36.5251199-08:00</Time>
     </Item>
     <Item>
       <Source>knightSmall.png</Source>
@@ -79,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knightSmall.xnb</Output>
-      <Time>2012-02-27T11:38:32.728959-08:00</Time>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knightSmall.xnb</Output>
+      <Time>2012-03-04T13:37:36.5095199-08:00</Time>
     </Item>
     <Item>
       <Source>stickFig.png</Source>
@@ -88,8 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\stickFig.xnb</Output>
-      <Time>2012-02-27T11:38:32.7359594-08:00</Time>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\stickFig.xnb</Output>
+      <Time>2012-03-04T13:37:36.5251199-08:00</Time>
     </Item>
     <Item>
       <Source>circleLarge.png</Source>
@@ -97,8 +97,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleLarge.xnb</Output>
-      <Time>2012-02-27T11:47:19.2400738-08:00</Time>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleLarge.xnb</Output>
+      <Time>2012-03-04T13:37:36.5095199-08:00</Time>
     </Item>
     <Item>
       <Source>circleMedium.png</Source>
@@ -106,8 +106,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleMedium.xnb</Output>
-      <Time>2012-02-27T11:47:19.2400738-08:00</Time>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleMedium.xnb</Output>
+      <Time>2012-03-04T13:37:36.5095199-08:00</Time>
     </Item>
     <Item>
       <Source>circleSmall.png</Source>
@@ -115,26 +115,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleSmall.xnb</Output>
-      <Time>2012-02-27T11:47:19.2400738-08:00</Time>
-    </Item>
-    <Item>
-      <Source>menufont.spritefont</Source>
-      <Name>menufont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\menufont.xnb</Output>
-      <Time>2012-02-27T11:38:32.7299591-08:00</Time>
-    </Item>
-    <Item>
-      <Source>gamefont.spritefont</Source>
-      <Name>gamefont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gamefont.xnb</Output>
-      <Time>2012-02-27T11:38:32.7249588-08:00</Time>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleSmall.xnb</Output>
+      <Time>2012-03-04T13:37:36.5095199-08:00</Time>
     </Item>
     <Item>
       <Source>bg1_active.jpg</Source>
@@ -142,8 +124,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\bg1_active.xnb</Output>
-      <Time>2012-03-01T13:55:38.8563221-08:00</Time>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\bg1_active.xnb</Output>
+      <Time>2012-03-04T13:37:36.4939198-08:00</Time>
     </Item>
     <Item>
       <Source>bg1_dirty.jpg</Source>
@@ -151,8 +133,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\bg1_dirty.xnb</Output>
-      <Time>2012-03-01T13:55:42.036504-08:00</Time>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\bg1_dirty.xnb</Output>
+      <Time>2012-03-04T13:37:36.4939198-08:00</Time>
     </Item>
     <Item>
       <Source>gesture_menu.png</Source>
@@ -160,8 +142,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gesture_menu.xnb</Output>
-      <Time>2012-03-01T17:06:30.5743229-08:00</Time>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gesture_menu.xnb</Output>
+      <Time>2012-03-04T13:37:36.5095199-08:00</Time>
     </Item>
     <Item>
       <Source>down.png</Source>
@@ -169,8 +151,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\down.xnb</Output>
-      <Time>2012-03-01T19:18:46.4922314-08:00</Time>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\down.xnb</Output>
+      <Time>2012-03-04T13:37:36.5095199-08:00</Time>
     </Item>
     <Item>
       <Source>over.png</Source>
@@ -178,8 +160,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\over.xnb</Output>
-      <Time>2012-03-01T19:18:38.6917852-08:00</Time>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\over.xnb</Output>
+      <Time>2012-03-04T13:37:36.5251199-08:00</Time>
     </Item>
     <Item>
       <Source>up.png</Source>
@@ -187,8 +169,26 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\up.xnb</Output>
-      <Time>2012-03-01T19:18:30.6473251-08:00</Time>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\up.xnb</Output>
+      <Time>2012-03-04T13:37:36.5407199-08:00</Time>
+    </Item>
+    <Item>
+      <Source>menufont.spritefont</Source>
+      <Name>menufont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\menufont.xnb</Output>
+      <Time>2012-03-04T13:37:36.5095199-08:00</Time>
+    </Item>
+    <Item>
+      <Source>gamefont.spritefont</Source>
+      <Name>gamefont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gamefont.xnb</Output>
+      <Time>2012-03-04T13:37:36.5095199-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -196,10 +196,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\Content\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\Content\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\David\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -228,7 +228,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2012-02-22T00:42:14.4966069-08:00</Value>
+        <Value>2012-02-18T16:13:28.5683788-08:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

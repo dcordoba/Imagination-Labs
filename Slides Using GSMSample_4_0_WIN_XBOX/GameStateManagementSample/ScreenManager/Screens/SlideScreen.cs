@@ -6,7 +6,10 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-
+using Microsoft.Kinect;
+using System.ComponentModel;
+using System.IO;
+using Microsoft.Xna.Framework.Audio;
 
 namespace GameStateManagement
 {
@@ -20,22 +23,49 @@ namespace GameStateManagement
         Sprite2D tovSprite;
         Sprite2D questionSprite;
         SpriteBatch spriteBatch;
+        SpriteFont gameFont;
         Texture2D background_dirty;
         Texture2D background_active;
         Color backColor = Color.CornflowerBlue;
         ContentManager content;
         Boolean captured;
         Viewport viewport;
-        
+
+        //Recording private variables
+        BackgroundWorker bw;
+        MemoryStream audioStream = null;
+        SoundEffectInstance soundInstance;
+        private const int RiffHeaderSize = 20;
+        private const string RiffHeaderTag = "RIFF";
+        private const int WaveformatExSize = 18; // native sizeof(WAVEFORMATEX)
+        private const int DataHeaderSize = 8;
+        private const string DataHeaderTag = "data";
+        private const int FullHeaderSize = RiffHeaderSize + WaveformatExSize + DataHeaderSize;
+
+
+
         #endregion
 
         #region Initialization
         public SlideScreen(SlideMenuScreen slideMenu)
-        {   
+        {
+            
             this.slideObjects =   new List<Sprite2D>();            
             this.parentSlideMenu = slideMenu;
             this.captured = false;
+
+            //Recording initialization
+            bw = new BackgroundWorker();
+            bw.WorkerSupportsCancellation = true;
+            bw.DoWork += new DoWorkEventHandler(bw_recordAudio);
         }
+
+        private KinectSensor kinectSensor()
+        {
+            if (parentSlideMenu.ScreenManager == null) return null;
+            return parentSlideMenu.ScreenManager.Kinect;
+        }
+
         #endregion
         
         //Color backColor = Color.CornflowerBlue;
@@ -45,12 +75,270 @@ namespace GameStateManagement
                 content = new ContentManager(ScreenManager.Game.Services, "Content");
             background_dirty = content.Load<Texture2D>(@"bg1_dirty");
             background_active = content.Load<Texture2D>(@"bg1_active");
+            gameFont = content.Load<SpriteFont>("gamefont");
             spriteBatch = ScreenManager.SpriteBatch;
             viewport = ScreenManager.GraphicsDevice.Viewport;
             
         }
+        #region Recording 
+        public bool isRecording()
+        {
+            return bw.IsBusy;
+        }
+
+        public bool isPlaying()
+        {
+            if (soundInstance == null) return false;
+            return soundInstance.State == SoundState.Playing;
+        }
+
+        void beginRecording()
+        {
+            if (!isRecording() && !isPlaying())
+            {
+                bw.RunWorkerAsync();
+            }
+            else bw.CancelAsync();
+        }
+
+        private void bw_recordAudio(object sender, DoWorkEventArgs e)
+        {
+            var buffer = new byte[4096];
+            int recordingLength = 0;
+            BackgroundWorker worker = sender as BackgroundWorker;
+
+            // FXCop note: This try/finally block may look strange, but it is
+            // the recommended way to correctly dispose a stream that is used
+            // by a writer to avoid the stream from being double disposed.
+            // For more information see FXCop rule: CA2202
+            //Begin something
+            /*
+                try
+                {
+                    fileStream = new FileStream(OutputFileName, FileMode.Create, FileAccess.ReadWrite, FileShare.None, 4096,true);
+
+                    WriteWavHeader(fileStream);
+                    audioStream = source.Start();
+                    recording = true;
+
+
+                }
+                catch
+                {
+                    recording = false;
+                    audioStream = null;
+                }*/
+            //Begin other
+            using (var fileStream = new MemoryStream())
+            {
+                // FXCop note: This try/finally block may look strange, but it is
+                // the recommended way to correctly dispose a stream that is used
+                // by a writer to avoid the stream from being double disposed.
+                // For more information see FXCop rule: CA2202
+                FileStream logStream = null;
+                try
+                {
+                    logStream = new FileStream("samples.log", FileMode.Create);
+                    using (var sampleStream = new StreamWriter(logStream))
+                    {
+                        logStream = null;
+                        //WriteWavHeader(fileStream);
+
+
+
+                        // Start capturing audio                               
+                        using (var audioStream = kinectSensor().AudioSource.Start())
+                        {
+                            // Simply copy the data from the stream down to the file
+                            int count;
+                            while (!worker.CancellationPending && ((count = audioStream.Read(buffer, 0, buffer.Length)) > 0))
+                            {
+
+                                fileStream.Write(buffer, 0, count);
+                                recordingLength += count;
+                            }
+                            e.Cancel = true;
+                        }
+                        this.audioStream = new MemoryStream(fileStream.ToArray());
+                        UpdateDataLength(fileStream, recordingLength);
+                    }
+                }
+                finally
+                {
+                    if (logStream != null)
+                    {
+                        logStream.Dispose();
+                    }
+                }
+            }
+
+
+
+
+        }
+
+        /// <summary>
+        /// A bare bones WAV file header writer
+        /// </summary>        
+        private static void WriteWavHeader(Stream stream)
+        {
+            // Data length to be fixed up later
+            int dataLength = 0;
+
+            // We need to use a memory stream because the BinaryWriter will close the underlying stream when it is closed
+            MemoryStream memStream = null;
+            BinaryWriter bw = null;
+
+            // FXCop note: This try/finally block may look strange, but it is
+            // the recommended way to correctly dispose a stream that is used
+            // by a writer to avoid the stream from being double disposed.
+            // For more information see FXCop rule: CA2202
+            try
+            {
+                memStream = new MemoryStream(64);
+
+                WAVEFORMATEX format = new WAVEFORMATEX
+                {
+                    FormatTag = 1,
+                    Channels = 1,
+                    SamplesPerSec = 16000,
+                    AvgBytesPerSec = 32000,
+                    BlockAlign = 2,
+                    BitsPerSample = 16,
+                    Size = 0
+                };
+
+                bw = new BinaryWriter(memStream);
+
+                // RIFF header
+                WriteHeaderString(memStream, RiffHeaderTag);
+                bw.Write(dataLength + FullHeaderSize - 8); // File size - 8
+                WriteHeaderString(memStream, "WAVE");
+                WriteHeaderString(memStream, "fmt ");
+                bw.Write(WaveformatExSize);
+
+                // WAVEFORMATEX
+                bw.Write(format.FormatTag);
+                bw.Write(format.Channels);
+                bw.Write(format.SamplesPerSec);
+                bw.Write(format.AvgBytesPerSec);
+                bw.Write(format.BlockAlign);
+                bw.Write(format.BitsPerSample);
+                bw.Write(format.Size);
+
+                // data header
+                WriteHeaderString(memStream, DataHeaderTag);
+                bw.Write(dataLength);
+                memStream.WriteTo(stream);
+            }
+            finally
+            {
+                if (bw != null)
+                {
+                    memStream = null;
+                    bw.Dispose();
+                }
+
+                if (memStream != null)
+                {
+                    memStream.Dispose();
+                }
+            }
+        }
+
+        private static void UpdateDataLength(Stream stream, int dataLength)
+        {
+            using (var bw = new BinaryWriter(stream))
+            {
+                // Write file size - 8 to riff header
+                bw.Seek(RiffHeaderTag.Length, SeekOrigin.Begin);
+                bw.Write(dataLength + FullHeaderSize - 8);
+
+                // Write data size to data header
+                bw.Seek(FullHeaderSize - 4, SeekOrigin.Begin);
+                bw.Write(dataLength);
+            }
+        }
+
+        private static void WriteHeaderString(Stream stream, string s)
+        {
+            byte[] bytes = Encoding.ASCII.GetBytes(s);
+            // Debug.Assert(bytes.Length == s.Length, "The bytes and the string should be the same length.");
+            stream.Write(bytes, 0, bytes.Length);
+        }
+
+        private struct WAVEFORMATEX
+        {
+            public ushort FormatTag;
+            public ushort Channels;
+            public uint SamplesPerSec;
+            public uint AvgBytesPerSec;
+            public ushort BlockAlign;
+            public ushort BitsPerSample;
+            public ushort Size;
+        }
+
+        #endregion
+
+        #region Audio Playback
+        void playAudio()
+        {
+            if (isRecording() || audioStream == null) return;
+            if (isPlaying())
+            {
+                soundInstance.Stop();
+                soundInstance.Dispose();
+                soundInstance = null;
+                return;
+            }
+            /*
+            MemoryStream playbackStream = new MemoryStream(audioStream.ToArray());
+            BinaryReader reader = new BinaryReader(playbackStream);
+
+            int chunkID = reader.ReadInt32();
+            int fileSize = reader.ReadInt32();
+            int riffType = reader.ReadInt32();
+            int fmtID = reader.ReadInt32();
+            int fmtSize = reader.ReadInt32();
+            int fmtCode = reader.ReadInt16();
+            int channels = reader.ReadInt16();
+            int sampleRate = reader.ReadInt32();
+            int fmtAvgBPS = reader.ReadInt32();
+            int fmtBlockAlign = reader.ReadInt16();
+            int bitDepth = reader.ReadInt16();
+
+            if (fmtSize == 18)
+            {
+                // Read any extra values
+                int fmtExtraSize = reader.ReadInt16();
+                reader.ReadBytes(fmtExtraSize);
+            }
+
+            int dataID = reader.ReadInt32();
+            int dataSize = reader.ReadInt32();
+
+            p_byteArray = reader.ReadBytes(dataSize);
+            playbackStream.Close();
+            dynamicSound = new DynamicSoundEffectInstance(sampleRate, (AudioChannels)channels);
+            dynamicSound.IsLooped = false;
+            p_count = dynamicSound.GetSampleSizeInBytes(TimeSpan.FromMilliseconds(100));
+            p_position = 0;
+            dynamicSound.BufferNeeded += new EventHandler<EventArgs>(DynamicSound_BufferNeeded);
+            dynamicSound.Play();
+             * */
+            SoundEffect sf = new SoundEffect(audioStream.ToArray(), 16000, (AudioChannels)1);
+            soundInstance = sf.CreateInstance();
+            soundInstance.Play();
+            
+        }
+
+
+
+
+        #endregion
+
         #region Handle Input
-         /// <summary>
+        /// <summary>
         /// Responds to user input, capturing...
         /// </summary>
         public override void HandleInput(InputState input)
@@ -94,6 +382,16 @@ namespace GameStateManagement
             {
                 parentSlideMenu.ChangeToAvatar(2);
                 Console.Out.WriteLine("changed to 2");
+            }
+            //Press 'r' to start recording. If you're recording, it will stop recording
+            if (input.IsNewKeyPress(Keys.R, null, out requesteeIndex))
+            {
+                beginRecording();
+            }
+            //Press 'p' to play recording. If already playing, will stop it.
+            if (input.IsNewKeyPress(Keys.P, null, out requesteeIndex))
+            {
+                playAudio();
             }
             //press "m" to go to slideMenu
             if (input.IsNewKeyPress(Keys.M, null, out requesteeIndex))
@@ -155,6 +453,18 @@ namespace GameStateManagement
                Sprite2D curSprite = slideObjects[i];
                spriteBatch.Draw(curSprite.Texture, curSprite.Rectangle, curSprite.Color);
             }
+
+            String recordingText = "";
+            String playingText = "";
+            if (isRecording()) recordingText = "Recording";
+            else recordingText = "Not recording";
+            if (isPlaying()) playingText = "Playing";
+            else playingText = "Not Playing";
+
+            spriteBatch.DrawString(gameFont, recordingText, new Vector2(150, 100), Color.DarkBlue);
+            spriteBatch.DrawString(gameFont, playingText, new Vector2(150, 200), Color.DarkRed);
+
+
             spriteBatch.End();
         }
          #endregion
