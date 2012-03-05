@@ -15,18 +15,18 @@ namespace GameStateManagement
     {
         #region variables
         SlideMenuScreen parentSlideMenu;
-        
 
         //List<Sprite2D> slideObjects;
         List<SlideObject> slideObjects;
-        Sprite2D tovSprite;
-        Sprite2D questionSprite;
+     //   Sprite2D tovSprite;
+       // Sprite2D questionSprite;
         SpriteBatch spriteBatch;
-               
+        Texture2D background_dirty;
+        Texture2D background_active;
         Color backColor = Color.CornflowerBlue;
         ContentManager content;
-        Boolean captured;
-       
+        //Boolean captured;
+        Viewport viewport;
         
         #endregion
 
@@ -35,7 +35,7 @@ namespace GameStateManagement
         {
             this.slideObjects = new List<SlideObject>();// new List<Sprite2D>();            
             this.parentSlideMenu = slideMenu;
-            this.captured = false;
+           // this.captured = false;
         }
         #endregion
         
@@ -44,8 +44,11 @@ namespace GameStateManagement
         {
             if (content == null)
                 content = new ContentManager(ScreenManager.Game.Services, "Content");
-
+            background_dirty = content.Load<Texture2D>(@"bg1_dirty");
+            background_active = content.Load<Texture2D>(@"bg1_active");
             spriteBatch = ScreenManager.SpriteBatch;
+            viewport = ScreenManager.GraphicsDevice.Viewport;
+            
         }
         #region Handle Input
          /// <summary>
@@ -118,9 +121,11 @@ namespace GameStateManagement
         #region Display
         public override void Draw(GameTime gameTime)
         {
-            ScreenManager.Game.GraphicsDevice.Clear(Color.DeepSkyBlue);
+            ScreenManager.Game.GraphicsDevice.Clear(backColor);
+
            //draws all the objects on the slide
             spriteBatch.Begin();
+            spriteBatch.Draw(background_dirty, new Rectangle(0, 0, viewport.Width, viewport.Height), Color.White);
             for(int i = 0; i < slideObjects.Count; i++){
                SlideObject curSprite = slideObjects[i];
                curSprite.Draw(gameTime,spriteBatch);

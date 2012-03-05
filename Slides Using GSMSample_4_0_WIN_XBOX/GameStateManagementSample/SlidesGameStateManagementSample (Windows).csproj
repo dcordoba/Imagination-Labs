@@ -70,6 +70,8 @@
     <Compile Include="DTWGestureRecognition\Skeleton2DdataCoordEventArgs.cs" />
     <Compile Include="DTWGestureRecognition\Skeleton2DDataExtract.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="GestureSelector\GestureMenuEntry.cs" />
+    <Compile Include="GestureSelector\GestureMenuScreen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScreenManager\GameScreen.cs" />
     <Compile Include="ScreenManager\InputState.cs" />
