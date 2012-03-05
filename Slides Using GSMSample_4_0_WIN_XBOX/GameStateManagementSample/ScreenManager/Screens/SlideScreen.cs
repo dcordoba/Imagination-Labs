@@ -15,7 +15,7 @@ namespace GameStateManagement
     {
         #region variables
         SlideMenuScreen parentSlideMenu;
-
+        int slideno;
         List<Sprite2D> slideObjects;
         Sprite2D tovSprite;
         Sprite2D questionSprite;
@@ -35,6 +35,7 @@ namespace GameStateManagement
             this.slideObjects =   new List<Sprite2D>();            
             this.parentSlideMenu = slideMenu;
             this.captured = false;
+            this.slideno = this.parentSlideMenu.MaxSlideIndex;
         }
         #endregion
         
@@ -55,6 +56,8 @@ namespace GameStateManagement
         /// </summary>
         public override void HandleInput(InputState input)
         {
+            if (parentSlideMenu.IsPlaying) // If Playing, don't accept input
+                return;
             PlayerIndex requesteeIndex;
             //press c to "capture"
             if(input.IsNewKeyPress(Keys.C, null,out requesteeIndex)){
@@ -70,7 +73,6 @@ namespace GameStateManagement
             if (input.IsNewKeyPress(Keys.Right, null, out requesteeIndex))
             {
                 parentSlideMenu.NextSlide(requesteeIndex);
-                
             }
             //press "n" to create a new slide
             if (input.IsNewKeyPress(Keys.N, null, out requesteeIndex))
@@ -100,8 +102,19 @@ namespace GameStateManagement
             {
                 //TO DO implement menu!
             }
-        }
+            if (input.IsNewKeyPress(Keys.Q, null, out requesteeIndex))
+            {
+                // DEBUGGING FUNCTION
+                Console.Out.WriteLine("Num Slides in ScreenManager: " + ScreenManager.NumScreens);
+                Console.Out.WriteLine("Num Hidden Slides in ScreenManager: " + ScreenManager.NumScreensHidden);
+            }
+            if (input.IsNewKeyPress(Keys.W, null, out requesteeIndex))
+            {
+                // DEBUGGING FOR PLAY ALL FUNCTIONALITY
+                parentSlideMenu.PlayAll(2000);
+            }
 
+        }
         /*Captured
          * current Capture method will print two sprites (a jpg and a png) the first time is captured.
          * subsequent capture events, will put extra question mark pngs on the screen
@@ -146,6 +159,7 @@ namespace GameStateManagement
         #region Display
         public override void Draw(GameTime gameTime)
         {
+
             ScreenManager.Game.GraphicsDevice.Clear(backColor);
            //draws all the sprite objects on the slide
             spriteBatch.Begin();
@@ -155,6 +169,9 @@ namespace GameStateManagement
                Sprite2D curSprite = slideObjects[i];
                spriteBatch.Draw(curSprite.Texture, curSprite.Rectangle, curSprite.Color);
             }
+            // Test Code
+            spriteBatch.DrawString(ScreenManager.Font, "Slide " + this.slideno, new Vector2(0, 80), Color.Black);
+            //
             spriteBatch.End();
         }
          #endregion

@@ -52,7 +52,8 @@ namespace GameStateManagement.GestureSelector
             this._skeleton = skeleton;
             this._img = MenuImg;
             this._hitboxes = new List<KeyValuePair<GestureMenuEntry,Rectangle>>();
-            this._sensor.SkeletonFrameReady += new EventHandler<SkeletonFrameReadyEventArgs>(CheckGesture);
+            if (this._sensor != null)
+                this._sensor.SkeletonFrameReady += new EventHandler<SkeletonFrameReadyEventArgs>(CheckGesture);
             this._manager = manager;
             this._timer = new Stopwatch();
             this._timer.Start();
