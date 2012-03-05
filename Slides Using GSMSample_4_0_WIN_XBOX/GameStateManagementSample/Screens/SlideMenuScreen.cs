@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -12,6 +13,25 @@ namespace GameStateManagement
          #region Initialization
         List<SlideScreen> slides; 
         int currentSlideIndex;
+        int currentSlideIndexBackup;
+        bool _isPlaying; // is playing all the slides in sequence. i.e. temporarily block input
+        public bool IsPlaying
+        {
+            get { return this._isPlaying; }
+        }
+        Stopwatch _playWatch;
+        int _playWatchInterval;
+
+        // DEBUGGING FUNCTIONS
+        public int CurrentSlideIndex
+        {
+            get { return this.currentSlideIndex; }
+        }
+        public int MaxSlideIndex
+        {
+            get { return this.slides.Count; }
+        }
+
         //string menuTitle = "Slides Menu";
         /// <summary>
         /// Constructor fills in the menu contents.
@@ -23,7 +43,8 @@ namespace GameStateManagement
             currentSlideIndex = 0;
             SlideScreen firstSlide = new SlideScreen(this);
             slides.Add(firstSlide);
-
+            _isPlaying = false;
+            _playWatch = new Stopwatch();
             // Create our menu entries.
             MenuEntry playSlideMenuEntry = new MenuEntry("Play Slides");
             MenuEntry exitMenuEntry = new MenuEntry("Exit");
@@ -146,7 +167,7 @@ namespace GameStateManagement
             }
         }
 
-         /// <summary> PreviousSlide(int curSlideIndex, PlayerIndex pi)
+        /// <summary> PreviousSlide(int curSlideIndex, PlayerIndex pi)
         /// Changes the screen to show the previous slide in the
         /// list of slides.
         /// </summary>
@@ -164,11 +185,55 @@ namespace GameStateManagement
             ScreenManager.SetCurSkeletonTexture(avatarIndex);
         }
 
+        public void PlayAll(int interval/* In Milliseconds */)
+        {
+            _isPlaying = true;
+            this._playWatchInterval = interval;
+            this.currentSlideIndexBackup = this.currentSlideIndex;
+            while (this.currentSlideIndex > 0)
+            {
+                this.slides[this.currentSlideIndex].ExitScreen();
+                PreviousSlide(PlayerIndex.One);
+            }
+            this._playWatch.Restart();
+            Console.Out.WriteLine("Started Stopwatch");
+
+        }
+
+
 
         #endregion
 
-        #region Draw
-        
+        #region Draw and Update
+
+        public override void Update(GameTime gameTime, bool otherScreenHasFocus, bool coveredByOtherScreen)
+        {
+            base.Update(gameTime, otherScreenHasFocus, coveredByOtherScreen);
+            if (this._isPlaying)
+            {
+                // Spinlock. I know this is bad, but I haven't looked up how to make threads sleep / wake them up and this is an easy-to-implement solution
+                if (this.currentSlideIndex < slides.Count - 1 && this._playWatch.ElapsedMilliseconds > this._playWatchInterval)
+                {
+                    Console.Out.WriteLine("Slide: " + this.currentSlideIndex);
+                    NextSlide(PlayerIndex.One);
+                    this._playWatch.Restart();
+                    return;
+                }
+                if (this._playWatch.ElapsedMilliseconds > this._playWatchInterval)
+                {
+                    while (this.currentSlideIndex > this.currentSlideIndexBackup)
+                    {
+                        this.slides[this.currentSlideIndex].ExitScreen();
+                        PreviousSlide(PlayerIndex.One);
+                    }
+                    this._playWatch.Reset();
+                    this._playWatch.Stop();
+                    this._isPlaying = false;
+                }
+            }
+        }
+
+
         /// <summary>
         /// Draws the menu.
         /// </summary>
