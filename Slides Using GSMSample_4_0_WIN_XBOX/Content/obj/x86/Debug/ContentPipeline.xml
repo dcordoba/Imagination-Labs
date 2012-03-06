@@ -119,6 +119,60 @@
       <Time>2012-02-29T11:37:14.2413067-08:00</Time>
     </Item>
     <Item>
+      <Source>bg1_active.jpg</Source>
+      <Name>bg1_active</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\bg1_active.xnb</Output>
+      <Time>2012-03-04T16:40:44.9146749-08:00</Time>
+    </Item>
+    <Item>
+      <Source>bg1_dirty.jpg</Source>
+      <Name>bg1_dirty</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\bg1_dirty.xnb</Output>
+      <Time>2012-03-04T16:40:44.9226753-08:00</Time>
+    </Item>
+    <Item>
+      <Source>gesture_menu.png</Source>
+      <Name>gesture_menu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gesture_menu.xnb</Output>
+      <Time>2012-03-04T16:40:44.9306758-08:00</Time>
+    </Item>
+    <Item>
+      <Source>down.png</Source>
+      <Name>down</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\down.xnb</Output>
+      <Time>2012-03-04T16:40:44.9266756-08:00</Time>
+    </Item>
+    <Item>
+      <Source>over.png</Source>
+      <Name>over</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\over.xnb</Output>
+      <Time>2012-03-04T16:40:44.9366761-08:00</Time>
+    </Item>
+    <Item>
+      <Source>up.png</Source>
+      <Name>up</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\up.xnb</Output>
+      <Time>2012-03-04T16:40:44.9436765-08:00</Time>
+    </Item>
+    <Item>
       <Source>menufont.spritefont</Source>
       <Name>menufont</Name>
       <Importer>FontDescriptionImporter</Importer>

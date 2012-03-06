@@ -15,17 +15,20 @@ namespace GameStateManagement
     {
         #region variables
         SlideMenuScreen parentSlideMenu;
+        int slideno;
+        //Sprite2D tovSprite;
+        //Sprite2D questionSprite;
 
         //List<Sprite2D> slideObjects;
         List<SlideObject> slideObjects;
-     //   Sprite2D tovSprite;
+       //   Sprite2D tovSprite;
        // Sprite2D questionSprite;
         SpriteBatch spriteBatch;
         Texture2D background_dirty;
         Texture2D background_active;
         Color backColor = Color.CornflowerBlue;
         ContentManager content;
-        //Boolean captured;
+        bool captured;
         Viewport viewport;
         
         #endregion
@@ -35,6 +38,8 @@ namespace GameStateManagement
         {
             this.slideObjects = new List<SlideObject>();// new List<Sprite2D>();            
             this.parentSlideMenu = slideMenu;
+            this.captured = false;
+            this.slideno = this.parentSlideMenu.MaxSlideIndex;
            // this.captured = false;
         }
         #endregion
@@ -56,6 +61,8 @@ namespace GameStateManagement
         /// </summary>
         public override void HandleInput(InputState input)
         {
+            if (parentSlideMenu.IsPlaying) // If Playing, don't accept input
+                return;
             PlayerIndex requesteeIndex;
             //press c to "capture"
             if(input.IsNewKeyPress(Keys.C, null,out requesteeIndex)){
@@ -71,7 +78,6 @@ namespace GameStateManagement
             if (input.IsNewKeyPress(Keys.Right, null, out requesteeIndex))
             {
                 parentSlideMenu.NextSlide(requesteeIndex);
-                
             }
             //press "n" to create a new slide
             if (input.IsNewKeyPress(Keys.N, null, out requesteeIndex))
@@ -101,6 +107,18 @@ namespace GameStateManagement
             {
                 //TO DO implement menu!
             }
+            if (input.IsNewKeyPress(Keys.Q, null, out requesteeIndex))
+            {
+                // DEBUGGING FUNCTION
+                Console.Out.WriteLine("Num Slides in ScreenManager: " + ScreenManager.NumScreens);
+                Console.Out.WriteLine("Num Hidden Slides in ScreenManager: " + ScreenManager.NumScreensHidden);
+            }
+            if (input.IsNewKeyPress(Keys.W, null, out requesteeIndex))
+            {
+                // DEBUGGING FOR PLAY ALL FUNCTIONALITY
+                parentSlideMenu.PlayAll(2000);
+            }
+
         }
         #endregion
         #region Captured
@@ -121,6 +139,7 @@ namespace GameStateManagement
         #region Display
         public override void Draw(GameTime gameTime)
         {
+
             ScreenManager.Game.GraphicsDevice.Clear(backColor);
 
            //draws all the objects on the slide
@@ -131,6 +150,9 @@ namespace GameStateManagement
                curSprite.Draw(gameTime,spriteBatch);
                Console.Out.WriteLine("drawing slide object " + i);
             }
+            // Test Code
+            spriteBatch.DrawString(ScreenManager.Font, "Slide " + this.slideno, new Vector2(0, 80), Color.Black);
+            //
             spriteBatch.End();
         }
          #endregion
