@@ -1,0 +1,18 @@
+C:\Users\Jason\Desktop\SkinningSample_4_0\SkinnedModel\bin\x86\Debug\SkinnedModel.dll
+C:\Users\Jason\Desktop\SkinningSample_4_0\SkinnedModel\bin\x86\Debug\SkinnedModel.pdb
+C:\Users\Jason\Desktop\SkinningSample_4_0\SkinnedModel\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Jason\Desktop\SkinningSample_4_0\SkinnedModel\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Jason\Desktop\SkinningSample_4_0\SkinnedModel\obj\x86\Debug\SkinnedModel.dll
+C:\Users\Jason\Desktop\SkinningSample_4_0\SkinnedModel\obj\x86\Debug\SkinnedModel.pdb
+C:\Users\Jason\Desktop\CS 247\SkinningSample_4_0\SkinnedModel\bin\x86\Debug\SkinnedModel.dll
+C:\Users\Jason\Desktop\CS 247\SkinningSample_4_0\SkinnedModel\bin\x86\Debug\SkinnedModel.pdb
+C:\Users\Jason\Desktop\CS 247\SkinningSample_4_0\SkinnedModel\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Jason\Desktop\CS 247\SkinningSample_4_0\SkinnedModel\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Jason\Desktop\CS 247\SkinningSample_4_0\SkinnedModel\obj\x86\Debug\SkinnedModel.dll
+C:\Users\Jason\Desktop\CS 247\SkinningSample_4_0\SkinnedModel\obj\x86\Debug\SkinnedModel.pdb
+C:\Users\Jason\Desktop\ImaginectFork\Avatar\SkinningSample_4_0\SkinnedModel\bin\x86\Debug\SkinnedModel.dll
+C:\Users\Jason\Desktop\ImaginectFork\Avatar\SkinningSample_4_0\SkinnedModel\bin\x86\Debug\SkinnedModel.pdb
+C:\Users\Jason\Desktop\ImaginectFork\Avatar\SkinningSample_4_0\SkinnedModel\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Jason\Desktop\ImaginectFork\Avatar\SkinningSample_4_0\SkinnedModel\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Jason\Desktop\ImaginectFork\Avatar\SkinningSample_4_0\SkinnedModel\obj\x86\Debug\SkinnedModel.dll
+C:\Users\Jason\Desktop\ImaginectFork\Avatar\SkinningSample_4_0\SkinnedModel\obj\x86\Debug\SkinnedModel.pdb

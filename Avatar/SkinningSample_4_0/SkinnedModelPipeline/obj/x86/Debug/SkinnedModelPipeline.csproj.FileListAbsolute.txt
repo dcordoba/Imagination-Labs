@@ -1,0 +1,21 @@
+C:\Users\Jason\Desktop\SkinningSample_4_0\SkinnedModelPipeline\bin\x86\Debug\SkinnedModelPipeline.dll
+C:\Users\Jason\Desktop\SkinningSample_4_0\SkinnedModelPipeline\bin\x86\Debug\SkinnedModelPipeline.pdb
+C:\Users\Jason\Desktop\SkinningSample_4_0\SkinnedModelPipeline\bin\x86\Debug\SkinnedModel.dll
+C:\Users\Jason\Desktop\SkinningSample_4_0\SkinnedModelPipeline\bin\x86\Debug\SkinnedModel.pdb
+C:\Users\Jason\Desktop\SkinningSample_4_0\SkinnedModelPipeline\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Jason\Desktop\SkinningSample_4_0\SkinnedModelPipeline\obj\x86\Debug\SkinnedModelPipeline.dll
+C:\Users\Jason\Desktop\SkinningSample_4_0\SkinnedModelPipeline\obj\x86\Debug\SkinnedModelPipeline.pdb
+C:\Users\Jason\Desktop\CS 247\SkinningSample_4_0\SkinnedModelPipeline\bin\x86\Debug\SkinnedModelPipeline.dll
+C:\Users\Jason\Desktop\CS 247\SkinningSample_4_0\SkinnedModelPipeline\bin\x86\Debug\SkinnedModelPipeline.pdb
+C:\Users\Jason\Desktop\CS 247\SkinningSample_4_0\SkinnedModelPipeline\bin\x86\Debug\SkinnedModel.dll
+C:\Users\Jason\Desktop\CS 247\SkinningSample_4_0\SkinnedModelPipeline\bin\x86\Debug\SkinnedModel.pdb
+C:\Users\Jason\Desktop\CS 247\SkinningSample_4_0\SkinnedModelPipeline\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Jason\Desktop\CS 247\SkinningSample_4_0\SkinnedModelPipeline\obj\x86\Debug\SkinnedModelPipeline.dll
+C:\Users\Jason\Desktop\CS 247\SkinningSample_4_0\SkinnedModelPipeline\obj\x86\Debug\SkinnedModelPipeline.pdb
+C:\Users\Jason\Desktop\ImaginectFork\Avatar\SkinningSample_4_0\SkinnedModelPipeline\bin\x86\Debug\SkinnedModelPipeline.dll
+C:\Users\Jason\Desktop\ImaginectFork\Avatar\SkinningSample_4_0\SkinnedModelPipeline\bin\x86\Debug\SkinnedModelPipeline.pdb
+C:\Users\Jason\Desktop\ImaginectFork\Avatar\SkinningSample_4_0\SkinnedModelPipeline\bin\x86\Debug\SkinnedModel.dll
+C:\Users\Jason\Desktop\ImaginectFork\Avatar\SkinningSample_4_0\SkinnedModelPipeline\bin\x86\Debug\SkinnedModel.pdb
+C:\Users\Jason\Desktop\ImaginectFork\Avatar\SkinningSample_4_0\SkinnedModelPipeline\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Jason\Desktop\ImaginectFork\Avatar\SkinningSample_4_0\SkinnedModelPipeline\obj\x86\Debug\SkinnedModelPipeline.dll
+C:\Users\Jason\Desktop\ImaginectFork\Avatar\SkinningSample_4_0\SkinnedModelPipeline\obj\x86\Debug\SkinnedModelPipeline.pdb

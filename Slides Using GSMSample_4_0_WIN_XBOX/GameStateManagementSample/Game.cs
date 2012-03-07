@@ -10,6 +10,7 @@
 #region Using Statements
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using SkinnedModel;
 #endregion
 
 namespace GameStateManagement
@@ -25,6 +26,8 @@ namespace GameStateManagement
         #region Fields
         GraphicsDeviceManager graphics;
         ScreenManager screenManager;
+
+        AnimationPlayer animationPlayer;
        
         // By preloading any assets used by UI rendering, we avoid framerate glitches
         // when they suddenly need to be loaded in the middle of a menu transition.
@@ -45,7 +48,7 @@ namespace GameStateManagement
         public GameStateManagementGame()
         {
             Content.RootDirectory = "Content";
-            
+
             graphics = new GraphicsDeviceManager(this);
             graphics.PreferredBackBufferWidth = 853;
             graphics.PreferredBackBufferHeight = 480;
@@ -57,7 +60,6 @@ namespace GameStateManagement
             // Activate the first screens.
             screenManager.AddScreen(new BackgroundScreen(), null);
             screenManager.AddScreen(new SlideMenuScreen(), null);
-            
             
            // screenManager.AddScreen(new MainMenuScreen(), null);
         }
@@ -72,6 +74,7 @@ namespace GameStateManagement
             {
                 Content.Load<object>(asset);
             }
+            animationPlayer = new AnimationPlayer(this, "avatars/dude/dude");
         }
 
 
@@ -89,6 +92,8 @@ namespace GameStateManagement
 
             // The real drawing happens inside the screen manager component.
             base.Draw(gameTime);
+
+            animationPlayer.Draw(0, 100, 0);
         }
 
 
