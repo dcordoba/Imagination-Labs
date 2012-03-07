@@ -1,0 +1,3 @@
+C:\Users\Jason\Desktop\SkinningSample_4_0\SkinningSample\Content\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Jason\Desktop\CS 247\SkinningSample_4_0\SkinningSample\Content\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Jason\Desktop\ImaginectFork\Avatar\SkinningSample_4_0\SkinningSample\Content\obj\x86\Debug\ResolveAssemblyReference.cache
