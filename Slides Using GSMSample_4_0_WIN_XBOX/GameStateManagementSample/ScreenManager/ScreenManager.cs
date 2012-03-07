@@ -15,8 +15,9 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input.Touch;
-using GameStateManagement.GestureSelector;
 using Microsoft.Kinect;
+using GameStateManagement.GestureSelector;
+
 
 #endregion
 
@@ -34,6 +35,24 @@ namespace GameStateManagement
 
         List<GameScreen> screens = new List<GameScreen>();
         List<GameScreen> screensToUpdate = new List<GameScreen>();
+
+        // DEBUGGING FUNCTIONS
+        public int NumScreens
+        {
+            get { return screens.Count; }
+        }
+        public int NumScreensHidden
+        {
+            get
+            {
+                int numHidden = 0;
+                foreach (GameScreen screen in screens)
+                {
+                    numHidden += (screen.ScreenState == ScreenState.Hidden) ? 1 : 0;
+                }
+                return numHidden;
+            }
+        }
 
         InputState input = new InputState();
 
@@ -65,10 +84,6 @@ namespace GameStateManagement
             get { return blankTexture; }
         }
 
-        public KinectSensor Kinect
-        {
-            get { return skeleton.Kinect; }
-        }
         
         /// <summary>
         /// A default SpriteBatch shared by all the screens. This saves
@@ -79,6 +94,15 @@ namespace GameStateManagement
             get { return spriteBatch; }
         }
 
+        public KinectSensor Kinect
+        {
+            get { return skeleton.Kinect; }
+        }
+
+        public SkeletonTracker CurSkeletonTracker
+        {
+            get { return skeleton; }
+        }
      
         //Method to get the texture of the current skeleton becuase of class privacy compatabilities
         public Texture2D CurSkeletonTexture()
@@ -103,7 +127,8 @@ namespace GameStateManagement
         {
             return skeleton.Head.Color;
         }
-       
+
+        
         /// <summary>
         /// A default font shared by all the screens. This saves
         /// each screen having to bother loading their own local copy.
@@ -177,6 +202,17 @@ namespace GameStateManagement
            
             //Texture2D av1 = new Texture2D(GraphicsDevice, 50, 100);
             skeleton = new SkeletonTracker(this);
+            InitMainGestureMenu(content);
+
+            // Tell each of the screens to load their content.
+            foreach (GameScreen screen in screens)
+            {
+                screen.LoadContent();
+            }
+        }
+
+        private void InitMainGestureMenu(ContentManager content)
+        {
             Texture2D t_up = content.Load<Texture2D>("up");
             Texture2D t_over = content.Load<Texture2D>("over");
             Texture2D t_down = content.Load<Texture2D>("down");
@@ -187,13 +223,6 @@ namespace GameStateManagement
             mainGestureMenu.AddMenuItem(gme1, new Rectangle(0, 0, 100, 100));
             mainGestureMenu.AddMenuItem(gme2, new Rectangle(0, 100, 100, 100));
             mainGestureMenu.AddMenuItem(gme3, new Rectangle(0, 200, 100, 100));
-            
-
-            // Tell each of the screens to load their content.
-            foreach (GameScreen screen in screens)
-            {
-                screen.LoadContent();
-            }
         }
 
         private void InitAvatars(ContentManager content)
@@ -309,7 +338,7 @@ namespace GameStateManagement
 
                 screen.Draw(gameTime);
             }
-            mainGestureMenu.Draw(gameTime);
+            //mainGestureMenu.Draw(gameTime);
             skeleton.Draw(gameTime);
         }
 

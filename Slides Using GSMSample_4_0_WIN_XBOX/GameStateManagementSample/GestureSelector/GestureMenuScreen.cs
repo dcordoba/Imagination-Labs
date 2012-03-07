@@ -13,10 +13,10 @@ using Microsoft.Kinect;
 namespace GameStateManagement.GestureSelector
 {
     /* GestureMenuScreen is an implementation of MenuScreen that takes the Kinect Sensor and uses it as input.
-     * On initialization, one must specify a Rectangle that defines the hitbox of the Menu.
-     * After it is initialized, one must add menu items through the function 
-     * AddMenuEntry and give it the menu entry and the Rectangle specifying the hitbox.
-     */
+* On initialization, one must specify a Rectangle that defines the hitbox of the Menu.
+* After it is initialized, one must add menu items through the function
+* AddMenuEntry and give it the menu entry and the Rectangle specifying the hitbox.
+*/
     class GestureMenuScreen : MenuScreen
     {
         #region Private Vars
@@ -29,7 +29,7 @@ namespace GameStateManagement.GestureSelector
         int _threshold;
         Stopwatch _timer;
         List<KeyValuePair<GestureMenuEntry, Rectangle>> _hitboxes;
-        
+
         ScreenManager _manager;
 
         #endregion
@@ -43,16 +43,18 @@ namespace GameStateManagement.GestureSelector
 
 
         #region Initialization
-        public GestureMenuScreen(Rectangle initArea, int init_time, string Title, SkeletonTracker skeleton, Texture2D MenuImg, ScreenManager manager) : base (Title)
+        public GestureMenuScreen(Rectangle initArea, int init_time, string Title, SkeletonTracker skeleton, Texture2D MenuImg, ScreenManager manager)
+            : base(Title)
         {
             this._hitArea = initArea;
-            
+
             this._threshold = init_time;
             this._sensor = skeleton.Kinect;
             this._skeleton = skeleton;
             this._img = MenuImg;
             this._hitboxes = new List<KeyValuePair<GestureMenuEntry,Rectangle>>();
-            this._sensor.SkeletonFrameReady += new EventHandler<SkeletonFrameReadyEventArgs>(CheckGesture);
+            if (this._sensor != null)
+                this._sensor.SkeletonFrameReady += new EventHandler<SkeletonFrameReadyEventArgs>(CheckGesture);
             this._manager = manager;
             this._timer = new Stopwatch();
             this._timer.Start();
@@ -141,4 +143,3 @@ namespace GameStateManagement.GestureSelector
 
     }
 }
-
