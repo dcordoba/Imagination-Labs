@@ -31,3 +31,7 @@ Content\backgrounds\behindPages.xnb
 Content\backgrounds\background_fantasyriver_straightened.xnb
 Content\backgrounds\background_outerspace_straightened.xnb
 Content\backgrounds\behindPages_straightened.xnb
+Content\menu\menu_circleHighlight.xnb
+Content\menu\menu_sideDock.xnb
+Content\menu\menu_sideIcons_active.xnb
+Content\menu\menu_sideIcons_idle.xnb

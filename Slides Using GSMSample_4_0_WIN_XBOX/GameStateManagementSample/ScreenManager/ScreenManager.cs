@@ -65,10 +65,20 @@ namespace GameStateManagement
         Texture2D avatar2;
         List<Texture2D> avatars;
 
-        List<Texture2D> backgrounds;
-        Texture2D backgroundExtraPages;
-        public int backgroundIndex = 0;
+        List<Texture2D> backgrounds;       
         
+        //Constant textures that are potentially needed for every slide
+        Texture2D backgroundExtraPages;
+        Texture2D menu_circleHighlight;
+        Texture2D menu_sideDock;
+        Texture2D menu_sideIcons_active;
+        Texture2D menu_sideIcons_idle;
+        //Constant Rectangles for the menus in consitant locations!
+        Rectangle sideMenuDockRect; 
+        Rectangle sideMenuIconsRect;
+        Rectangle fullscreen;
+
+        //Our skeleton tracker for the program
         SkeletonTracker skeleton;
 
 
@@ -80,7 +90,7 @@ namespace GameStateManagement
 
         #endregion
 
-        #region Properties
+        #region Properties ie Getters
         /// <summary>
         /// A default blankTexture shared by all the screens. This saves
         /// each screen(and especially the skeleton) having to bother creating their own local instance.
@@ -143,15 +153,43 @@ namespace GameStateManagement
         {
             get { return font; }
         }
-
-        // <summary>
-        /// A default texture2D shared by all the slide screens which represents
-        /// the extra pages of the story book. This saves
-        /// each screen having to bother loading their own local copy.
+        #region Drawing Gets for texture2Ds and rectangles needed to draw
+       
+        /// <summary>
+        /// The following methods return default texture2Ds that many slides
+        /// need. This saves each screen having to bother loading their own local copy.
         /// </summary>
         public Texture2D BackgroundExtraPages
         {
             get { return backgroundExtraPages; }
+        }
+        public Texture2D Menu_SideDock
+        {
+            get { return menu_sideDock; }
+        }
+        public Texture2D Menu_SideIcons_Active
+        {
+            get { return menu_sideIcons_active; }
+        }
+        public Texture2D Menu_SideIcons_Idle
+        {
+            get { return menu_sideIcons_idle; }
+        }
+        public Texture2D Menu_CircleHighlight
+        {
+            get { return menu_circleHighlight; }
+        }
+        public Rectangle SideMenuDockRectangle
+        {
+            get { return sideMenuDockRect; }
+        }
+        public Rectangle fullscreenRectangle
+        {
+            get { return fullscreen; }
+        }
+        public Rectangle SideMenuIconsRectangle
+        {
+            get { return sideMenuIconsRect; }
         }
         /// <summary>
         /// A default avatar shared by all the screens. This saves
@@ -161,6 +199,7 @@ namespace GameStateManagement
         {
             get { return avatar1; }
         }
+        #endregion
         /// <summary>
         /// If true, the manager prints out a list of all the screens
         /// each time it is updated. This can be useful for making sure
@@ -219,7 +258,8 @@ namespace GameStateManagement
             //Texture2D av1 = new Texture2D(GraphicsDevice, 50, 100);
             skeleton = new SkeletonTracker(this);
             InitMainGestureMenu(content);
-            InitBackgrounds(content);
+            InitTextures(content);
+            InitRectangles(content);
             // Tell each of the screens to load their content.
             foreach (GameScreen screen in screens)
             {
@@ -227,14 +267,30 @@ namespace GameStateManagement
             }
         }
 
-        private void InitBackgrounds(ContentManager content)
+        private void InitTextures(ContentManager content)
         {
+            //initialize background related textures. Add background textures to the backgrounds list
             backgroundExtraPages = content.Load<Texture2D>("backgrounds/behindPages_straightened");
             Texture2D backGround1 = content.Load<Texture2D>("backgrounds/background_fantasyriver_straightened");
             Texture2D backGround2 = content.Load<Texture2D>("backgrounds/background_outerspace_straightened");
             backgrounds.Add(backGround1);
             backgrounds.Add(backGround2);
             
+            //initialize menu textures
+            menu_circleHighlight = content.Load<Texture2D>("menu/menu_circleHighlight");
+            menu_sideDock = content.Load<Texture2D>("menu/menu_sideDock");
+            menu_sideIcons_active = content.Load<Texture2D>("menu/menu_sideIcons_active");
+            menu_sideIcons_idle = content.Load<Texture2D>("menu/menu_sideIcons_idle");
+        }
+        private void InitRectangles(ContentManager content)
+        {
+            int sideMenuWidth = 75;
+            int dockWidth = 40;
+            int sideMenuIconOffset_X = 0;
+            int sideMenuIconOffset_Y = 10;
+            sideMenuDockRect = new Rectangle(0, 0, dockWidth, GraphicsDevice.Viewport.Height);
+            sideMenuIconsRect = new Rectangle(sideMenuIconOffset_X, sideMenuIconOffset_Y, sideMenuWidth,  GraphicsDevice.Viewport.Height);
+            fullscreen = new Rectangle(0, 0,  GraphicsDevice.Viewport.Width,  GraphicsDevice.Viewport.Height);
         }
 
         private void InitMainGestureMenu(ContentManager content)

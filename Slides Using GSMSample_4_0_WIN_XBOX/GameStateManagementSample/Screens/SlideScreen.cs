@@ -22,7 +22,7 @@ namespace GameStateManagement
         int slideno;
         //Sprite2D tovSprite;
         //Sprite2D questionSprite;
-
+        public int backgroundIndex = 0; //temporary tracker for toggling backgrounds
         private Texture2D backgroundScene;
         private List<SlideObject> slideObjects;
 
@@ -361,8 +361,8 @@ namespace GameStateManagement
            // press "b" to change the background
             if(input.IsNewKeyPress(Keys.B,null, out requesteeIndex)){
 
-                int index = 1 - ScreenManager.backgroundIndex; //a temporary toggle between the 2 backgrounds availiable
-                ScreenManager.backgroundIndex = index;
+                int index = 1 - backgroundIndex; //a temporary toggle between the 2 backgrounds availiable
+                backgroundIndex = index;
                 Console.WriteLine("background index: " + index);
                 //TODO: use gesture recognition to generate background indices. 
                 ChangeBackground(index);
@@ -468,11 +468,20 @@ namespace GameStateManagement
             spriteBatch.Begin();
            // spriteBatch.Draw(background_dirty, new Rectangle(0, 0, viewport.Width, viewport.Height), Color.White);
             //starts by drawing the backgrounds
+            /*
+            int sideMenuWidth = 75;
+            int dockWidth = 40;
+            int sideMenuIconOffset_X = 0;  
+            int sideMenuIconOffset_Y = 10;  
+            Rectangle sideMenuDockRect = new Rectangle(0, 0, dockWidth, viewport.Height);
+            Rectangle sideMenuIconsRect = new Rectangle(sideMenuIconOffset_X, sideMenuIconOffset_Y, sideMenuWidth, viewport.Height);
             Rectangle fullscreen = new Rectangle(0, 0, viewport.Width, viewport.Height);//new Rectangle(0, 0, viewport.Width, viewport.Height);
-            
-            spriteBatch.Draw(ScreenManager.BackgroundExtraPages, fullscreen, Color.White);
-            spriteBatch.Draw(backgroundScene, fullscreen, Color.White);
-            spriteBatch.Draw(backgroundScene, fullscreen, Color.White);
+           
+             */
+            spriteBatch.Draw(ScreenManager.BackgroundExtraPages, ScreenManager.fullscreenRectangle, Color.White);
+            spriteBatch.Draw(backgroundScene,ScreenManager.fullscreenRectangle, Color.White);
+           // spriteBatch.Draw(ScreenManager.Menu_SideDock, sideMenuDockRect, Color.White);
+            spriteBatch.Draw(ScreenManager.Menu_SideIcons_Idle, ScreenManager.SideMenuIconsRectangle, Color.White);
             for(int i = 0; i < slideObjects.Count; i++){
                SlideObject curSprite = slideObjects[i];
                curSprite.Draw(gameTime,spriteBatch);

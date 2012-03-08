@@ -298,6 +298,42 @@
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\behindPages_straightened.xnb</Output>
       <Time>2012-03-08T01:24:54.1570834-08:00</Time>
     </Item>
+    <Item>
+      <Source>menu\menu_circleHighlight.png</Source>
+      <Name>menu\menu_circleHighlight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\menu\menu_circleHighlight.xnb</Output>
+      <Time>2012-03-07T20:34:37.3305214-08:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\menu_sideDock.png</Source>
+      <Name>menu\menu_sideDock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\menu\menu_sideDock.xnb</Output>
+      <Time>2012-03-07T20:34:37.1255097-08:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\menu_sideIcons_active.png</Source>
+      <Name>menu\menu_sideIcons_active</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\menu\menu_sideIcons_active.xnb</Output>
+      <Time>2012-03-07T20:34:37.2675178-08:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\menu_sideIcons_idle.png</Source>
+      <Name>menu\menu_sideIcons_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\menu\menu_sideIcons_idle.xnb</Output>
+      <Time>2012-03-07T20:34:36.7954908-08:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
