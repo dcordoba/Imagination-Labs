@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\background.xnb</Output>
-      <Time>2010-09-15T14:43:52-07:00</Time>
+      <Time>2012-03-07T19:57:26.8319442-08:00</Time>
     </Item>
     <Item>
       <Source>blank.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\blank.xnb</Output>
-      <Time>2010-09-15T14:43:52-07:00</Time>
+      <Time>2012-03-07T19:57:26.8609458-08:00</Time>
     </Item>
     <Item>
       <Source>gradient.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gradient.xnb</Output>
-      <Time>2010-09-15T14:43:52-07:00</Time>
+      <Time>2012-03-07T19:57:26.8699463-08:00</Time>
     </Item>
     <Item>
       <Source>tov.jpg</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\tov.xnb</Output>
-      <Time>2011-11-06T02:09:34-08:00</Time>
+      <Time>2012-03-07T19:57:26.9539512-08:00</Time>
     </Item>
     <Item>
       <Source>questionIcon.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\questionIcon.xnb</Output>
-      <Time>2011-12-05T19:58:59.6314494-08:00</Time>
+      <Time>2012-03-07T19:57:26.9089486-08:00</Time>
     </Item>
     <Item>
       <Source>knight.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight.xnb</Output>
-      <Time>2012-02-22T02:21:56.1403162-08:00</Time>
+      <Time>2012-03-07T19:57:26.8749466-08:00</Time>
     </Item>
     <Item>
       <Source>batman.jpg</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\batman.xnb</Output>
-      <Time>2012-02-22T02:08:55.6556751-08:00</Time>
+      <Time>2012-03-07T19:57:26.8419447-08:00</Time>
     </Item>
     <Item>
       <Source>princess.jpg</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\princess.xnb</Output>
-      <Time>2012-02-22T02:12:49.9020732-08:00</Time>
+      <Time>2012-03-07T19:57:26.9079485-08:00</Time>
     </Item>
     <Item>
       <Source>knightSmall.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knightSmall.xnb</Output>
-      <Time>2012-02-22T02:30:42.5014224-08:00</Time>
+      <Time>2012-03-07T19:57:26.8759467-08:00</Time>
     </Item>
     <Item>
       <Source>stickFig.png</Source>
@@ -89,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\stickFig.xnb</Output>
-      <Time>2012-02-22T02:36:54.0126716-08:00</Time>
+      <Time>2012-03-07T19:57:26.9099486-08:00</Time>
     </Item>
     <Item>
       <Source>circleLarge.png</Source>
@@ -98,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleLarge.xnb</Output>
-      <Time>2012-02-29T11:37:14.2313062-08:00</Time>
+      <Time>2012-03-07T19:57:26.8619459-08:00</Time>
     </Item>
     <Item>
       <Source>circleMedium.png</Source>
@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleMedium.xnb</Output>
-      <Time>2012-02-29T11:37:14.2363065-08:00</Time>
+      <Time>2012-03-07T19:57:26.863946-08:00</Time>
     </Item>
     <Item>
       <Source>circleSmall.png</Source>
@@ -116,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleSmall.xnb</Output>
-      <Time>2012-02-29T11:37:14.2413067-08:00</Time>
+      <Time>2012-03-07T19:57:26.8649461-08:00</Time>
     </Item>
     <Item>
       <Source>bg1_active.jpg</Source>
@@ -125,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\bg1_active.xnb</Output>
-      <Time>2012-03-04T16:40:44.9146749-08:00</Time>
+      <Time>2012-03-07T19:57:26.8519453-08:00</Time>
     </Item>
     <Item>
       <Source>bg1_dirty.jpg</Source>
@@ -134,7 +134,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\bg1_dirty.xnb</Output>
-      <Time>2012-03-04T16:40:44.9226753-08:00</Time>
+      <Time>2012-03-07T19:57:26.8599458-08:00</Time>
     </Item>
     <Item>
       <Source>gesture_menu.png</Source>
@@ -143,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gesture_menu.xnb</Output>
-      <Time>2012-03-04T16:40:44.9306758-08:00</Time>
+      <Time>2012-03-07T19:57:26.8689463-08:00</Time>
     </Item>
     <Item>
       <Source>down.png</Source>
@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\down.xnb</Output>
-      <Time>2012-03-04T16:40:44.9266756-08:00</Time>
+      <Time>2012-03-07T19:57:26.8669462-08:00</Time>
     </Item>
     <Item>
       <Source>over.png</Source>
@@ -161,7 +161,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\over.xnb</Output>
-      <Time>2012-03-04T16:40:44.9366761-08:00</Time>
+      <Time>2012-03-07T19:57:26.9049484-08:00</Time>
     </Item>
     <Item>
       <Source>up.png</Source>
@@ -170,7 +170,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\up.xnb</Output>
-      <Time>2012-03-04T16:40:44.9436765-08:00</Time>
+      <Time>2012-03-07T19:57:26.9559513-08:00</Time>
     </Item>
     <Item>
       <Source>menufont.spritefont</Source>
@@ -179,7 +179,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\menufont.xnb</Output>
-      <Time>2010-09-15T14:43:52-07:00</Time>
+      <Time>2012-03-07T19:57:26.8779468-08:00</Time>
     </Item>
     <Item>
       <Source>gamefont.spritefont</Source>
@@ -188,7 +188,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gamefont.xnb</Output>
-      <Time>2010-09-15T14:43:52-07:00</Time>
+      <Time>2012-03-07T19:57:26.8679462-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

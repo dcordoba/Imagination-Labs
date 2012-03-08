@@ -94,6 +94,11 @@ namespace GameStateManagement
             get { return spriteBatch; }
         }
 
+        public KinectSensor Kinect
+        {
+            get { return skeleton.Kinect; }
+        }
+
         public SkeletonTracker CurSkeletonTracker
         {
             get { return skeleton; }
