@@ -64,8 +64,10 @@ namespace GameStateManagement
         Texture2D avatar1;
         Texture2D avatar2;
         List<Texture2D> avatars;
+
         List<Texture2D> backgrounds;
-        int backgroundIndex = 0;
+        Texture2D backgroundExtraPages;
+        public int backgroundIndex = 0;
         
         SkeletonTracker skeleton;
 
@@ -142,6 +144,15 @@ namespace GameStateManagement
             get { return font; }
         }
 
+        // <summary>
+        /// A default texture2D shared by all the slide screens which represents
+        /// the extra pages of the story book. This saves
+        /// each screen having to bother loading their own local copy.
+        /// </summary>
+        public Texture2D BackgroundExtraPages
+        {
+            get { return backgroundExtraPages; }
+        }
         /// <summary>
         /// A default avatar shared by all the screens. This saves
         /// each screen having to bother loading their own local copy.
@@ -218,9 +229,9 @@ namespace GameStateManagement
 
         private void InitBackgrounds(ContentManager content)
         {
-            
-            Texture2D backGround1 = content.Load<Texture2D>("backgrounds/background_fantasyriver");
-            Texture2D backGround2 = content.Load<Texture2D>("backgrounds/background_outerspace");
+            backgroundExtraPages = content.Load<Texture2D>("backgrounds/behindPages_straightened");
+            Texture2D backGround1 = content.Load<Texture2D>("backgrounds/background_fantasyriver_straightened");
+            Texture2D backGround2 = content.Load<Texture2D>("backgrounds/background_outerspace_straightened");
             backgrounds.Add(backGround1);
             backgrounds.Add(backGround2);
             
@@ -362,6 +373,14 @@ namespace GameStateManagement
 
         #region Public Methods
 
+        /// <summary>
+        /// getBackgroundScene returns the Texture2D of the background scene
+        /// indicated by index. 
+        /// </summary>
+        public Texture2D GetBackgroundScene(int index)
+        {
+            return backgrounds[index];
+        }
 
         /// <summary>
         /// Adds a new screen to the screen manager.

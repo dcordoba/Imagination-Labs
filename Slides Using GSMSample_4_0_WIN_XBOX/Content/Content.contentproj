@@ -172,8 +172,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="backgrounds\behind pages.png">
-      <Name>behind pages</Name>
+    <Compile Include="backgrounds\behindPages.png">
+      <Name>behindPages</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
@@ -206,6 +206,25 @@
     </Compile>
     <Compile Include="buttons\button_help_idle.png">
       <Name>button_help_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="backgrounds\background_fantasyriver_straightened.png">
+      <Name>background_fantasyriver_straightened</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="backgrounds\background_outerspace_straightened.png">
+      <Name>background_outerspace_straightened</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="backgrounds\behindPages_straightened.png">
+      <Name>behindPages_straightened</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

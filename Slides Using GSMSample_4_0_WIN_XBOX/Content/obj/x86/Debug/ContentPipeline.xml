@@ -209,15 +209,6 @@
       <Time>2012-03-07T20:49:19.5789831-08:00</Time>
     </Item>
     <Item>
-      <Source>backgrounds\behind pages.png</Source>
-      <Name>backgrounds\behind pages</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\behind pages.xnb</Output>
-      <Time>2012-03-07T20:49:19.5909838-08:00</Time>
-    </Item>
-    <Item>
       <Source>buttons\button_back_active.png</Source>
       <Name>buttons\button_back_active</Name>
       <Importer>TextureImporter</Importer>
@@ -270,6 +261,42 @@
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\buttons\button_help_idle.xnb</Output>
       <Time>2012-03-07T20:49:54.0949573-08:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\behindPages.png</Source>
+      <Name>backgrounds\behindPages</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\behindPages.xnb</Output>
+      <Time>2012-03-07T20:49:19.5909838-08:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\background_fantasyriver_straightened.png</Source>
+      <Name>backgrounds\background_fantasyriver_straightened</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\background_fantasyriver_straightened.xnb</Output>
+      <Time>2012-03-08T00:56:38.5741016-08:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\background_outerspace_straightened.png</Source>
+      <Name>backgrounds\background_outerspace_straightened</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\background_outerspace_straightened.xnb</Output>
+      <Time>2012-03-08T01:06:49.298033-08:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\behindPages_straightened.png</Source>
+      <Name>backgrounds\behindPages_straightened</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\behindPages_straightened.xnb</Output>
+      <Time>2012-03-08T01:24:54.1570834-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

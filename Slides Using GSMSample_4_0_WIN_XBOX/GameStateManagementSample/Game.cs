@@ -49,7 +49,7 @@ namespace GameStateManagement
             graphics = new GraphicsDeviceManager(this);
             graphics.PreferredBackBufferWidth = 853;
             graphics.PreferredBackBufferHeight = 480;
-            //graphics.IsFullScreen = true;
+           // graphics.IsFullScreen = true; // don't forget to switch to full screen mode when testing!
             // Create the screen manager component.
             screenManager = new ScreenManager(this);
             Components.Add(screenManager);

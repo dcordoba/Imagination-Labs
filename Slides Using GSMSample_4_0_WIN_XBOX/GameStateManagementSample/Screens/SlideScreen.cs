@@ -23,7 +23,7 @@ namespace GameStateManagement
         //Sprite2D tovSprite;
         //Sprite2D questionSprite;
 
-        private Texture2D curBackground;
+        private Texture2D backgroundScene;
         private List<SlideObject> slideObjects;
 
 
@@ -54,11 +54,12 @@ namespace GameStateManagement
         public SlideScreen(SlideMenuScreen slideMenu)
         {
             this.slideObjects = new List<SlideObject>();// new List<Sprite2D>(); 
-            this.curBackground = ScreenManager.
+          
             this.parentSlideMenu = slideMenu;
             this.captured = false;
             this.slideno = this.parentSlideMenu.MaxSlideIndex;
-           
+          
+
             //Recording initialization
             bw = new BackgroundWorker();
             bw.WorkerSupportsCancellation = true;
@@ -82,6 +83,8 @@ namespace GameStateManagement
             background_active = content.Load<Texture2D>(@"bg1_active");
             spriteBatch = ScreenManager.SpriteBatch;
             viewport = ScreenManager.GraphicsDevice.Viewport;
+            if(backgroundScene == null)
+                backgroundScene = ScreenManager.GetBackgroundScene(0); //initialize default background 
             
         }
 
@@ -350,10 +353,19 @@ namespace GameStateManagement
             if(input.IsNewKeyPress(Keys.C, null,out requesteeIndex)){
                 Captured();
             }
-            //press "b" or the left arrow key to go back one slide
-            if(input.IsNewKeyPress(Keys.B,null, out requesteeIndex)||input.IsNewKeyPress(Keys.Left, null, out requesteeIndex)){
+            //press the left arrow key to go back one slide
+            if(input.IsNewKeyPress(Keys.Left, null, out requesteeIndex)){
                 parentSlideMenu.PreviousSlide(requesteeIndex);
                 this.ExitScreen();
+            }
+           // press "b" to change the background
+            if(input.IsNewKeyPress(Keys.B,null, out requesteeIndex)){
+
+                int index = 1 - ScreenManager.backgroundIndex; //a temporary toggle between the 2 backgrounds availiable
+                ScreenManager.backgroundIndex = index;
+                Console.WriteLine("background index: " + index);
+                //TODO: use gesture recognition to generate background indices. 
+                ChangeBackground(index);
             }
             //press u to undo last capture for this slide
             if (input.IsNewKeyPress(Keys.U, null, out requesteeIndex))
@@ -420,7 +432,18 @@ namespace GameStateManagement
 
         }
         #endregion
-        #region Captured
+        #region ChangeBackground(index)
+       /// <summary>
+       /// Changes the background of the slide to be the new background texture
+       /// indicated by the index for the background array.
+       /// </summary>
+       /// <param name="newBackgroundIndex"></param> 
+        private void ChangeBackground(int newBackgroundIndex)
+        {
+            this.backgroundScene = ScreenManager.GetBackgroundScene(newBackgroundIndex);
+        }
+        #endregion
+        #region Captured()
         /*Captured
          * current Capture method will print two sprites (a jpg and a png) the first time is captured.
          * subsequent capture events, will put extra question mark pngs on the screen
@@ -443,7 +466,13 @@ namespace GameStateManagement
 
            //draws all the objects on the slide
             spriteBatch.Begin();
-            spriteBatch.Draw(background_dirty, new Rectangle(0, 0, viewport.Width, viewport.Height), Color.White);
+           // spriteBatch.Draw(background_dirty, new Rectangle(0, 0, viewport.Width, viewport.Height), Color.White);
+            //starts by drawing the backgrounds
+            Rectangle fullscreen = new Rectangle(0, 0, viewport.Width, viewport.Height);//new Rectangle(0, 0, viewport.Width, viewport.Height);
+            
+            spriteBatch.Draw(ScreenManager.BackgroundExtraPages, fullscreen, Color.White);
+            spriteBatch.Draw(backgroundScene, fullscreen, Color.White);
+            spriteBatch.Draw(backgroundScene, fullscreen, Color.White);
             for(int i = 0; i < slideObjects.Count; i++){
                SlideObject curSprite = slideObjects[i];
                curSprite.Draw(gameTime,spriteBatch);
