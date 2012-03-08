@@ -19,3 +19,12 @@ Content\over.xnb
 Content\up.xnb
 Content\menufont.xnb
 Content\gamefont.xnb
+Content\backgrounds\background_fantasyriver.xnb
+Content\backgrounds\background_outerspace.xnb
+Content\backgrounds\behind pages.xnb
+Content\buttons\button_back_active.xnb
+Content\buttons\button_back_idle.xnb
+Content\buttons\button_forward_active.xnb
+Content\buttons\button_forward_idle.xnb
+Content\buttons\button_help_active.xnb
+Content\buttons\button_help_idle.xnb

@@ -64,7 +64,11 @@ namespace GameStateManagement
         Texture2D avatar1;
         Texture2D avatar2;
         List<Texture2D> avatars;
+        List<Texture2D> backgrounds;
+        int backgroundIndex = 0;
+        
         SkeletonTracker skeleton;
+
 
         GestureMenuScreen mainGestureMenu;
         
@@ -174,6 +178,7 @@ namespace GameStateManagement
             // we don't assume the game wants to read them.
             TouchPanel.EnabledGestures = GestureType.None;
             avatars = new List<Texture2D>();
+            backgrounds = new List<Texture2D>();
         }
 
 
@@ -203,12 +208,22 @@ namespace GameStateManagement
             //Texture2D av1 = new Texture2D(GraphicsDevice, 50, 100);
             skeleton = new SkeletonTracker(this);
             InitMainGestureMenu(content);
-
+            InitBackgrounds(content);
             // Tell each of the screens to load their content.
             foreach (GameScreen screen in screens)
             {
                 screen.LoadContent();
             }
+        }
+
+        private void InitBackgrounds(ContentManager content)
+        {
+            
+            Texture2D backGround1 = content.Load<Texture2D>("backgrounds/background_fantasyriver");
+            Texture2D backGround2 = content.Load<Texture2D>("backgrounds/background_outerspace");
+            backgrounds.Add(backGround1);
+            backgrounds.Add(backGround2);
+            
         }
 
         private void InitMainGestureMenu(ContentManager content)

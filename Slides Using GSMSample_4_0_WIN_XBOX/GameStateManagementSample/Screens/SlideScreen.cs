@@ -23,8 +23,11 @@ namespace GameStateManagement
         //Sprite2D tovSprite;
         //Sprite2D questionSprite;
 
-        //List<Sprite2D> slideObjects;
-        List<SlideObject> slideObjects;
+        private Texture2D curBackground;
+        private List<SlideObject> slideObjects;
+
+
+
        //   Sprite2D tovSprite;
        // Sprite2D questionSprite;
         SpriteBatch spriteBatch;
@@ -50,11 +53,12 @@ namespace GameStateManagement
         #region Initialization
         public SlideScreen(SlideMenuScreen slideMenu)
         {
-            this.slideObjects = new List<SlideObject>();// new List<Sprite2D>();            
+            this.slideObjects = new List<SlideObject>();// new List<Sprite2D>(); 
+            this.curBackground = ScreenManager.
             this.parentSlideMenu = slideMenu;
             this.captured = false;
             this.slideno = this.parentSlideMenu.MaxSlideIndex;
-           // this.captured = false;
+           
             //Recording initialization
             bw = new BackgroundWorker();
             bw.WorkerSupportsCancellation = true;

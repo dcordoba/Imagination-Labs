@@ -190,6 +190,87 @@
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gamefont.xnb</Output>
       <Time>2012-03-07T19:57:26.8679462-08:00</Time>
     </Item>
+    <Item>
+      <Source>backgrounds\background_fantasyriver.png</Source>
+      <Name>backgrounds\background_fantasyriver</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\background_fantasyriver.xnb</Output>
+      <Time>2012-03-07T20:49:19.5689825-08:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\background_outerspace.png</Source>
+      <Name>backgrounds\background_outerspace</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\background_outerspace.xnb</Output>
+      <Time>2012-03-07T20:49:19.5789831-08:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\behind pages.png</Source>
+      <Name>backgrounds\behind pages</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\behind pages.xnb</Output>
+      <Time>2012-03-07T20:49:19.5909838-08:00</Time>
+    </Item>
+    <Item>
+      <Source>buttons\button_back_active.png</Source>
+      <Name>buttons\button_back_active</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\buttons\button_back_active.xnb</Output>
+      <Time>2012-03-07T20:49:54.0759562-08:00</Time>
+    </Item>
+    <Item>
+      <Source>buttons\button_back_idle.png</Source>
+      <Name>buttons\button_back_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\buttons\button_back_idle.xnb</Output>
+      <Time>2012-03-07T20:49:54.0799565-08:00</Time>
+    </Item>
+    <Item>
+      <Source>buttons\button_forward_active.png</Source>
+      <Name>buttons\button_forward_active</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\buttons\button_forward_active.xnb</Output>
+      <Time>2012-03-07T20:49:54.0839567-08:00</Time>
+    </Item>
+    <Item>
+      <Source>buttons\button_forward_idle.png</Source>
+      <Name>buttons\button_forward_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\buttons\button_forward_idle.xnb</Output>
+      <Time>2012-03-07T20:49:54.0869569-08:00</Time>
+    </Item>
+    <Item>
+      <Source>buttons\button_help_active.png</Source>
+      <Name>buttons\button_help_active</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\buttons\button_help_active.xnb</Output>
+      <Time>2012-03-07T20:49:54.0909571-08:00</Time>
+    </Item>
+    <Item>
+      <Source>buttons\button_help_idle.png</Source>
+      <Name>buttons\button_help_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\buttons\button_help_idle.xnb</Output>
+      <Time>2012-03-07T20:49:54.0949573-08:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
