@@ -16,7 +16,10 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input.Touch;
 using Microsoft.Kinect;
+using Microsoft.Speech;
 using GameStateManagement.GestureSelector;
+using Microsoft.Speech.Recognition;
+//using ShapeGame.Speech;
 
 
 #endregion
@@ -81,6 +84,8 @@ namespace GameStateManagement
         //Our skeleton tracker for the program
         SkeletonTracker skeleton;
 
+        SpeechRecognitionEngine speechRecognizer;
+
 
         GestureMenuScreen mainGestureMenu;
         
@@ -91,6 +96,13 @@ namespace GameStateManagement
         #endregion
 
         #region Properties ie Getters
+        /// <summary>
+        /// returns the skeleton tracker of the program
+        /// </summary>
+        public SkeletonTracker Skeleton
+        {
+            get { return skeleton; }
+        }
         /// <summary>
         /// A default blankTexture shared by all the screens. This saves
         /// each screen(and especially the skeleton) having to bother creating their own local instance.
@@ -260,6 +272,7 @@ namespace GameStateManagement
             InitMainGestureMenu(content);
             InitTextures(content);
             InitRectangles(content);
+            InitSpeechRecognizer();
             // Tell each of the screens to load their content.
             foreach (GameScreen screen in screens)
             {
@@ -267,6 +280,10 @@ namespace GameStateManagement
             }
         }
 
+        private void InitSpeechRecognizer()
+        {
+           
+        }
         private void InitTextures(ContentManager content)
         {
             //initialize background related textures. Add background textures to the backgrounds list

@@ -349,6 +349,10 @@ namespace GameStateManagement
             if (parentSlideMenu.IsPlaying) // If Playing, don't accept input
                 return;
             PlayerIndex requesteeIndex;
+            SkeletonTracker skel = ScreenManager.Skeleton;
+            //int leftHandX = skel.GetDisplayPosition(skel.Joints[JointType.HandLeft]);
+          //  if(ScreenManager.Skeleton.
+            #region keyboard commands
             //press c to "capture"
             if(input.IsNewKeyPress(Keys.C, null,out requesteeIndex)){
                 Captured();
@@ -429,6 +433,7 @@ namespace GameStateManagement
                 // DEBUGGING FOR PLAY ALL FUNCTIONALITY
                 parentSlideMenu.PlayAll(2000);
             }
+            #endregion
 
         }
         #endregion
