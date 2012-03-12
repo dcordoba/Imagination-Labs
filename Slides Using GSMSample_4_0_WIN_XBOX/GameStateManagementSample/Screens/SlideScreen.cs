@@ -509,8 +509,17 @@ namespace GameStateManagement
             {
 
                 case SpeechRecognizer.Verbs.Capture:
-                    Console.WriteLine("*****SLIDERecognized 'Capture'!!!!!!!!!!!!!!!!!!");
+                    Console.WriteLine("*****SLIDE Recognized 'Capture'!!!!!!!!!!!!!!!!!!");
                     Captured();
+                    break;
+                case SpeechRecognizer.Verbs.New:
+                    Console.WriteLine("*****SLIDE Recognized 'New Slide'!!!!!!!!!!!!!!!!!!");                   
+                    break;
+                case SpeechRecognizer.Verbs.Back:
+                    Console.WriteLine("*****SLIDE Recognized 'Back'!!!!!!!!!!!!!!!!!!");                    
+                    break;
+                case SpeechRecognizer.Verbs.Next:
+                    Console.WriteLine("*****SLIDE Recognized 'Next'!!!!!!!!!!!!!!!!!!");
                     break;
             }
         }

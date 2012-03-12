@@ -26,6 +26,14 @@ namespace GameStateManagement
         private readonly Dictionary<string, WhatSaid> gameplayPhrases = new Dictionary<string, WhatSaid>
             {
                 { "Capture", new WhatSaid { Verb = Verbs.Capture } },
+                { "New", new WhatSaid { Verb = Verbs.New} },
+                { "Next", new WhatSaid { Verb = Verbs.Next } },
+                { "Forward", new WhatSaid { Verb = Verbs.Next } },
+                { "Back", new WhatSaid { Verb = Verbs.Back} },
+                { "Previous", new WhatSaid { Verb = Verbs.Back } },
+
+               
+                /*
                 { "Faster", new WhatSaid { Verb = Verbs.Faster } },
                 { "Slower", new WhatSaid { Verb = Verbs.Slower } },
                 { "Bigger Shapes", new WhatSaid { Verb = Verbs.Bigger } },
@@ -43,6 +51,7 @@ namespace GameStateManagement
                 { "More", new WhatSaid { Verb = Verbs.More } },
                 { "Less", new WhatSaid { Verb = Verbs.Fewer } },
                 { "Fewer", new WhatSaid { Verb = Verbs.Fewer } },
+                 * */
             };
 
         private readonly Dictionary<string, WhatSaid> shapePhrases = new Dictionary<string, WhatSaid>
@@ -130,6 +139,9 @@ namespace GameStateManagement
 
         private readonly Dictionary<string, WhatSaid> singlePhrases = new Dictionary<string, WhatSaid>
             {
+                 { "Freeze", new WhatSaid { Verb = Verbs.Capture } },
+                //{ "New Slide", new WhatSaid { Verb = Verbs.New } },
+                /* examples of alternate sayings
                 { "Speed Up", new WhatSaid { Verb = Verbs.Faster } },
                 { "Slow Down", new WhatSaid { Verb = Verbs.Slower } },
                 { "Reset", new WhatSaid { Verb = Verbs.Reset } },
@@ -143,6 +155,7 @@ namespace GameStateManagement
                 { "Play", new WhatSaid { Verb = Verbs.Resume } },
                 { "Start", new WhatSaid { Verb = Verbs.Resume } },
                 { "Go", new WhatSaid { Verb = Verbs.Resume } },
+                 * */
             };
 
         private SpeechRecognitionEngine sre;
@@ -163,6 +176,9 @@ namespace GameStateManagement
         {
             None = 0,
             Capture,
+            Next,
+            Back,
+            New,            
             Bigger,
             Biggest,
             Smaller,
@@ -177,7 +193,8 @@ namespace GameStateManagement
             ShapesAndColors,
             Reset,
             Pause,
-            Resume
+            Resume,
+             //*/ 
         }
 
         public EchoCancellationMode EchoCancellationMode

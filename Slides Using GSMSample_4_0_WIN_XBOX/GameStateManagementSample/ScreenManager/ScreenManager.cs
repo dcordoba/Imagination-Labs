@@ -363,6 +363,7 @@ namespace GameStateManagement
 
         
         #endregion
+        /*
         #region speech recognition
         private void RecognizerSaidSomething(object sender, SpeechRecognizer.SaidSomethingEventArgs e)
         {
@@ -376,6 +377,7 @@ namespace GameStateManagement
                     //if(this.screens.
 
                     break;
+
                 case SpeechRecognizer.Verbs.Pause:
                     Console.WriteLine("Recognized 'Pause'");
                     break;
@@ -396,7 +398,9 @@ namespace GameStateManagement
                     break;
             }
         }
-        #endregion
+         * #endregion
+         * */
+
         #region Update and Draw
 
 
