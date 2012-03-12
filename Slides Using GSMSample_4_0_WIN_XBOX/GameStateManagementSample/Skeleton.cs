@@ -20,8 +20,7 @@ namespace GameStateManagement
     {
         
         KinectSensor kinectSensor;
-        //SpeechRecognitionEngine speechRecognizer;
-        SpeechRecognizer speechRecognizer; 
+      
 
         private Skeleton[] skeletonData;
         private ScreenManager screenManager;
@@ -65,7 +64,7 @@ namespace GameStateManagement
                 dtw = new DTWImplementation(kinectSensor, this);
                 this.skeletonData = new Skeleton[kinectSensor.SkeletonStream.FrameSkeletonArrayLength];
 
-                this.speechRecognizer = SpeechRecognizer.Create();//SpeechRecognizer.Create(kinectSensor);
+               
                // InitSpeechRecognition();
                
 
@@ -78,104 +77,14 @@ namespace GameStateManagement
                 ///*Circle sprites
                 //InitCircles();
                 InitSprites();
-                /*Sprite2D rightHand = circleSmall;
-                Sprite2D rightElbow = circleMed;
-                Sprite2D head = circleSmall;
-                Sprite2D leftElbow = circleMed;
-                Sprite2D leftHand = circleSmall;
-                Sprite2D leftKnee = circleMed;
-                Sprite2D rightKnee = circleMed;
-                Sprite2D leftAnkle = circleSmall;
-                Sprite2D rightAnkle = circleSmall;
-                Sprite2D Spine = new Sprite2D();
-
-                skeletonShapes.Add(JointType.Head, head);
-                skeletonShapes.Add(JointType.HandRight, rightHand);
-                skeletonShapes.Add(JointType.HandLeft, rightHand);
-                skeletonShapes.Add(JointType.ElbowRight, rightElbow);
-                skeletonShapes.Add(JointType.ElbowLeft, leftElbow);
-                skeletonShapes.Add(JointType.KneeLeft, leftKnee);
-                skeletonShapes.Add(JointType.KneeRight, rightKnee);
-                skeletonShapes.Add(JointType.AnkleLeft, leftAnkle);
-                skeletonShapes.Add(JointType.AnkleRight, rightAnkle);
-                skeletonShapes.Add(JointType.Spine, Spine);
+               
                 //TODO: create new sprites for each joint type
-                */
+               
                 Console.WriteLine("****************************************created new Skeleton data.\n");
-                //*/
-                /*Circle sprites
-                InitCircles();
-                Sprite2D rightHand = Circle();
-                Sprite2D rightElbow = Circle();
-                Sprite2D head = Circle();
-                skeletonShapes.Add("Head", head);
-                skeletonShapes.Add("HandRight", rightHand);
-                skeletonShapes.Add("ElbowRight", rightElbow);
-                Console.WriteLine("****************************************created new Skeleton data.\n");
-                //  END JASON's CODE */
+              
             }
         }
-        /*
-        private void InitSpeechRecognition()
-        {
-            // Obtain the KinectAudioSource to do audio capture
-            KinectAudioSource source = sensor.AudioSource;
-            source.EchoCancellationMode = EchoCancellationMode.None; // No AEC for this sample
-            source.AutomaticGainControlEnabled = false; // Important to turn this off for speech recognition
-
-            RecognizerInfo ri = GetKinectRecognizer();
-
-            if (ri == null)
-            {
-                Console.WriteLine("Could not find Kinect speech recognizer. Please refer to the sample requirements.");
-                return;
-            }
-
-            Console.WriteLine("Using: {0}", ri.Name);
-
-            // NOTE: Need to wait 4 seconds for device to be ready right after initialization
-            int wait = 4;
-            while (wait > 0)
-            {
-                Console.Write("Device will be ready for speech recognition in {0} second(s).\r", wait--);
-                Thread.Sleep(1000);
-            }
-
-            using (var sre = new SpeechRecognitionEngine(ri.Id))
-            {
-                var colors = new Choices();
-                colors.Add("red");
-                colors.Add("green");
-                colors.Add("blue");
-
-                var gb = new GrammarBuilder { Culture = ri.Culture };
-
-                // Specify the culture to match the recognizer in case we are running in a different culture.                                 
-                gb.Append(colors);
-
-                // Create the actual Grammar instance, and then load it into the speech recognizer.
-                var g = new Grammar(gb);
-
-                sre.LoadGrammar(g);
-                sre.SpeechRecognized += SreSpeechRecognized;
-                sre.SpeechHypothesized += SreSpeechHypothesized;
-                sre.SpeechRecognitionRejected += SreSpeechRecognitionRejected;
-
-                using (Stream s = source.Start())
-                {
-                    sre.SetInputToAudioStream(
-                        s, new SpeechAudioFormatInfo(EncodingFormat.Pcm, 16000, 16, 1, 32000, 2, null));
-
-                    Console.WriteLine("Recognizing speech. Say: 'red', 'green' or 'blue'. Press ENTER to stop");
-
-                    sre.RecognizeAsync(RecognizeMode.Multiple);
-                    Console.ReadLine();
-                    Console.WriteLine("Stopping recognizer ...");
-                    sre.RecognizeAsyncStop();
-                }
-            }
-        }
-        */
+      
         private Sprite2D Circle()
         {
             Texture2D cLarge = screenManager.Game.Content.Load<Texture2D>("circleLarge");

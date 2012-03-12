@@ -83,8 +83,8 @@ namespace GameStateManagement
 
         //Our skeleton tracker for the program
         SkeletonTracker skeleton;
-
-        SpeechRecognitionEngine speechRecognizer;
+        //SpeechRecognizer for our program
+        SpeechRecognizer speechRecognizer;
 
 
         GestureMenuScreen mainGestureMenu;
@@ -241,6 +241,8 @@ namespace GameStateManagement
             TouchPanel.EnabledGestures = GestureType.None;
             avatars = new List<Texture2D>();
             backgrounds = new List<Texture2D>();
+
+           
         }
 
 
@@ -269,21 +271,24 @@ namespace GameStateManagement
            
             //Texture2D av1 = new Texture2D(GraphicsDevice, 50, 100);
             skeleton = new SkeletonTracker(this);
+
+            // Start speech recognizer after KinectSensor.Start() is called
+            // returns null if problem with speech prereqs or instantiation.
+            speechRecognizer = SpeechRecognizer.Create();
+            speechRecognizer.SaidSomething += this.RecognizerSaidSomething;
+            speechRecognizer.Start(skeleton.Kinect.AudioSource);
+
             InitMainGestureMenu(content);
             InitTextures(content);
             InitRectangles(content);
-            InitSpeechRecognizer();
+            
             // Tell each of the screens to load their content.
             foreach (GameScreen screen in screens)
             {
                 screen.LoadContent();
             }
         }
-
-        private void InitSpeechRecognizer()
-        {
-           
-        }
+      
         private void InitTextures(ContentManager content)
         {
             //initialize background related textures. Add background textures to the backgrounds list
@@ -349,9 +354,36 @@ namespace GameStateManagement
             }
         }
 
-
+        
         #endregion
+        #region speech recognition
+        private void RecognizerSaidSomething(object sender, SpeechRecognizer.SaidSomethingEventArgs e)
+        {
+            Console.WriteLine("entered the recognizer said something function:");
+            switch (e.Verb)
+            {
 
+                case SpeechRecognizer.Verbs.Pause:
+                    Console.WriteLine("Recognized 'Pause'");
+                    break;
+                case SpeechRecognizer.Verbs.Resume:
+                    Console.WriteLine("Recognized 'Resume'");
+                    break;
+                case SpeechRecognizer.Verbs.Reset:
+                    Console.WriteLine("Recognized 'Reset'");
+                    break;
+                case SpeechRecognizer.Verbs.Faster:
+                    Console.WriteLine("Recognized 'Faster'");
+                    break;
+                case SpeechRecognizer.Verbs.Slower:
+                    Console.WriteLine("Recognized 'Slower'");
+                    break;
+                default:
+                    Console.WriteLine("Recognizer said something Unknown");
+                    break;
+            }
+        }
+        #endregion
         #region Update and Draw
 
 

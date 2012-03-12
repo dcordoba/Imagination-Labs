@@ -200,7 +200,7 @@ namespace GameStateManagement
         public static SpeechRecognizer Create()
         {
             SpeechRecognizer recognizer = null;
-
+            recognizer = new SpeechRecognizer();
             try
             {
                 recognizer = new SpeechRecognizer();
@@ -329,9 +329,9 @@ namespace GameStateManagement
 
             var objectChoices = new Choices();
             objectChoices.Add(gameplay);
-            objectChoices.Add(shapes);
-            objectChoices.Add(colors);
-            objectChoices.Add(coloredShapeGrammar);
+            //objectChoices.Add(shapes);
+            //objectChoices.Add(colors);
+           // objectChoices.Add(coloredShapeGrammar);
 
             var actionGrammar = new GrammarBuilder();
             actionGrammar.AppendWildcard();
