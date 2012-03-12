@@ -173,24 +173,6 @@
       <Time>2012-03-07T19:57:26.9559513-08:00</Time>
     </Item>
     <Item>
-      <Source>menufont.spritefont</Source>
-      <Name>menufont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\menufont.xnb</Output>
-      <Time>2012-03-07T19:57:26.8779468-08:00</Time>
-    </Item>
-    <Item>
-      <Source>gamefont.spritefont</Source>
-      <Name>gamefont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gamefont.xnb</Output>
-      <Time>2012-03-07T19:57:26.8679462-08:00</Time>
-    </Item>
-    <Item>
       <Source>backgrounds\background_fantasyriver.png</Source>
       <Name>backgrounds\background_fantasyriver</Name>
       <Importer>TextureImporter</Importer>
@@ -207,6 +189,15 @@
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\background_outerspace.xnb</Output>
       <Time>2012-03-07T20:49:19.5789831-08:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\behindPages.png</Source>
+      <Name>backgrounds\behindPages</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\behindPages.xnb</Output>
+      <Time>2012-03-07T20:49:19.5909838-08:00</Time>
     </Item>
     <Item>
       <Source>buttons\button_back_active.png</Source>
@@ -261,15 +252,6 @@
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\buttons\button_help_idle.xnb</Output>
       <Time>2012-03-07T20:49:54.0949573-08:00</Time>
-    </Item>
-    <Item>
-      <Source>backgrounds\behindPages.png</Source>
-      <Name>backgrounds\behindPages</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\behindPages.xnb</Output>
-      <Time>2012-03-07T20:49:19.5909838-08:00</Time>
     </Item>
     <Item>
       <Source>backgrounds\background_fantasyriver_straightened.png</Source>
@@ -333,6 +315,177 @@
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\menu\menu_sideIcons_idle.xnb</Output>
       <Time>2012-03-07T20:34:36.7954908-08:00</Time>
+    </Item>
+    <Item>
+      <Source>knight\FootLeft.png</Source>
+      <Name>knight\FootLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\FootLeft.xnb</Output>
+      <Time>2012-03-12T02:56:49.6053828-07:00</Time>
+    </Item>
+    <Item>
+      <Source>knight\FootRight.png</Source>
+      <Name>knight\FootRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\FootRight.xnb</Output>
+      <Time>2012-03-12T02:56:49.6103831-07:00</Time>
+    </Item>
+    <Item>
+      <Source>knight\ForearmLeft.png</Source>
+      <Name>knight\ForearmLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\ForearmLeft.xnb</Output>
+      <Time>2012-03-12T02:56:49.6143833-07:00</Time>
+    </Item>
+    <Item>
+      <Source>knight\ForearmRight.png</Source>
+      <Name>knight\ForearmRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\ForearmRight.xnb</Output>
+      <Time>2012-03-12T02:56:49.6173835-07:00</Time>
+    </Item>
+    <Item>
+      <Source>knight\HandLeft.png</Source>
+      <Name>knight\HandLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\HandLeft.xnb</Output>
+      <Time>2012-03-12T02:56:49.6203836-07:00</Time>
+    </Item>
+    <Item>
+      <Source>knight\HandRight.png</Source>
+      <Name>knight\HandRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\HandRight.xnb</Output>
+      <Time>2012-03-12T02:56:49.6243839-07:00</Time>
+    </Item>
+    <Item>
+      <Source>knight\Head.png</Source>
+      <Name>knight\Head</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\Head.xnb</Output>
+      <Time>2012-03-12T02:56:49.627384-07:00</Time>
+    </Item>
+    <Item>
+      <Source>knight\Hips.png</Source>
+      <Name>knight\Hips</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\Hips.xnb</Output>
+      <Time>2012-03-12T02:56:49.6303842-07:00</Time>
+    </Item>
+    <Item>
+      <Source>knight\ShinLeft.png</Source>
+      <Name>knight\ShinLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\ShinLeft.xnb</Output>
+      <Time>2012-03-12T02:56:49.6333844-07:00</Time>
+    </Item>
+    <Item>
+      <Source>knight\ShinRight.png</Source>
+      <Name>knight\ShinRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\ShinRight.xnb</Output>
+      <Time>2012-03-12T02:56:49.6363846-07:00</Time>
+    </Item>
+    <Item>
+      <Source>knight\ThighLeft.png</Source>
+      <Name>knight\ThighLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\ThighLeft.xnb</Output>
+      <Time>2012-03-12T02:56:49.6403848-07:00</Time>
+    </Item>
+    <Item>
+      <Source>knight\ThighRight.png</Source>
+      <Name>knight\ThighRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\ThighRight.xnb</Output>
+      <Time>2012-03-12T02:56:49.643385-07:00</Time>
+    </Item>
+    <Item>
+      <Source>knight\Torso.png</Source>
+      <Name>knight\Torso</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\Torso.xnb</Output>
+      <Time>2012-03-12T02:56:49.6473852-07:00</Time>
+    </Item>
+    <Item>
+      <Source>knight\UpperArmLeft.png</Source>
+      <Name>knight\UpperArmLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\UpperArmLeft.xnb</Output>
+      <Time>2012-03-12T02:56:49.6503854-07:00</Time>
+    </Item>
+    <Item>
+      <Source>knight\UpperArmRight.png</Source>
+      <Name>knight\UpperArmRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\UpperArmRight.xnb</Output>
+      <Time>2012-03-12T02:56:49.6543856-07:00</Time>
+    </Item>
+    <Item>
+      <Source>knight\italian_knt2 - Copy.png</Source>
+      <Name>knight\italian_knt2 - Copy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\italian_knt2 - Copy.xnb</Output>
+      <Time>2012-03-12T02:59:33.814775-07:00</Time>
+    </Item>
+    <Item>
+      <Source>knight\italian_knt2.png</Source>
+      <Name>knight\italian_knt2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\italian_knt2.xnb</Output>
+      <Time>2012-03-12T03:03:52.1185492-07:00</Time>
+    </Item>
+    <Item>
+      <Source>menufont.spritefont</Source>
+      <Name>menufont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\menufont.xnb</Output>
+      <Time>2012-03-07T19:57:26.8779468-08:00</Time>
+    </Item>
+    <Item>
+      <Source>gamefont.spritefont</Source>
+      <Name>gamefont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gamefont.xnb</Output>
+      <Time>2012-03-07T19:57:26.8679462-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
