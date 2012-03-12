@@ -17,34 +17,41 @@ namespace GameStateManagement.GestureSelector
         Texture2D _up;
         Texture2D _over;
         Texture2D _down;
+        Texture2D _disabled;
         Rectangle _pos;
         #endregion
 
         #region Public Vars
-        public enum MenuEntryState { UP, OVER, DOWN };
+        public enum MenuEntryState { UP, OVER, DOWN, DISABLED };
+        String _text;
+        public String Text
+        {
+            get { return _text; }
+        }
         #endregion
 
 
         #region Initialization
-        public GestureMenuEntry(Texture2D up, Texture2D over, Texture2D down, Rectangle pos, String text)
+        public GestureMenuEntry(Texture2D up, Texture2D over, Texture2D down, Texture2D disabled, Rectangle pos, String text)
             : base(text)
         {
             this._up = up;
             this._over = over;
             this._down = down;
+            this._disabled = disabled;
             this._pos = pos;
+            this._text = text;
         }
         #endregion
 
         protected internal override void OnSelectEntry(PlayerIndex playerIndex)
         {
-            Console.Out.WriteLine("Selected");
             base.OnSelectEntry(playerIndex);
         }
 
         #region Draw and Update
 
-        public void Draw(MenuScreen screen, MenuEntryState state, GameTime gameTime)
+        public void Draw(MenuScreen screen, MenuEntryState state, GameTime gameTime, float sortmode)
         {
             SpriteBatch spriteBatch = screen.ScreenManager.SpriteBatch;
             Texture2D drawTexture;
@@ -56,12 +63,14 @@ namespace GameStateManagement.GestureSelector
                 case MenuEntryState.DOWN:
                     drawTexture = this._down;
                     break;
-                default:
+                case MenuEntryState.UP:
                     drawTexture = this._up;
                     break;
+                default:
+                    drawTexture = this._disabled;
+                    break;
             }
-            spriteBatch.Draw(drawTexture, this._pos, Color.White);
-
+            spriteBatch.Draw(drawTexture, this._pos, null, Color.White, 0, Vector2.Zero, SpriteEffects.None, 0.48F + sortmode);
         }
         #endregion
     }

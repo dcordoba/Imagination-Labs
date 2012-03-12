@@ -446,7 +446,7 @@ namespace GameStateManagement
        /// indicated by the index for the background array.
        /// </summary>
        /// <param name="newBackgroundIndex"></param> 
-        private void ChangeBackground(int newBackgroundIndex)
+        public void ChangeBackground(int newBackgroundIndex)
         {
             this.backgroundScene = ScreenManager.GetBackgroundScene(newBackgroundIndex);
         }
@@ -491,7 +491,7 @@ namespace GameStateManagement
             spriteBatch.Draw(ScreenManager.BackgroundExtraPages, ScreenManager.fullscreenRectangle, Color.White);
             spriteBatch.Draw(backgroundScene,ScreenManager.fullscreenRectangle, Color.White);
            // spriteBatch.Draw(ScreenManager.Menu_SideDock, sideMenuDockRect, Color.White);
-            spriteBatch.Draw(ScreenManager.Menu_SideIcons_Idle, ScreenManager.SideMenuIconsRectangle, Color.White);
+            //spriteBatch.Draw(ScreenManager.Menu_SideIcons_Idle, ScreenManager.SideMenuIconsRectangle, Color.White);
             for(int i = 0; i < slideObjects.Count; i++){
                SlideObject curSprite = slideObjects[i];
                curSprite.Draw(gameTime,spriteBatch);

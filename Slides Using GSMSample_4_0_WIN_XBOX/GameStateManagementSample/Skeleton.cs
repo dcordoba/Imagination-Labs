@@ -28,7 +28,7 @@ namespace GameStateManagement
         private Sprite2D head;
         private Dictionary<JointType,Sprite2D> skeletonShapes;
         private DTWImplementation dtw;
-
+ 
         Sprite2D circleLarge;
         Sprite2D circleMed;
         Sprite2D circleSmall;
