@@ -1,0 +1,2 @@
+ColorImagePoint cp = kinectSensor.MapSkeletonPointToColor(j.Position, ColorImageFormat.RgbResolution640x480Fps30);
+return new Point(cp.X * screenManager.GraphicsDevice.Viewport.Width / 640, cp.Y * screenManager.GraphicsDevice.Viewport.Height / 480);
