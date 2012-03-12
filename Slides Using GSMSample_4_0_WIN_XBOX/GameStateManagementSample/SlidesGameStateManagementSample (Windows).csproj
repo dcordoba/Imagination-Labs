@@ -89,6 +89,7 @@
     <Compile Include="Screens\SlideMenuScreen.cs" />
     <Compile Include="Screens\SlideScreen.cs" />
     <Compile Include="Skeleton.cs" />
+    <Compile Include="SlideObjects\Character.cs" />
     <Compile Include="SlideObjects\CharacterObject.cs" />
     <Compile Include="SlideObjects\SlideObject.cs" />
     <Compile Include="SlideObjects\Sprite2D.cs" />
