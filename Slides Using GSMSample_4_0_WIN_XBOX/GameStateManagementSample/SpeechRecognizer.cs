@@ -25,6 +25,7 @@ namespace GameStateManagement
     {
         private readonly Dictionary<string, WhatSaid> gameplayPhrases = new Dictionary<string, WhatSaid>
             {
+                { "Capture", new WhatSaid { Verb = Verbs.Capture } },
                 { "Faster", new WhatSaid { Verb = Verbs.Faster } },
                 { "Slower", new WhatSaid { Verb = Verbs.Slower } },
                 { "Bigger Shapes", new WhatSaid { Verb = Verbs.Bigger } },
@@ -161,6 +162,7 @@ namespace GameStateManagement
         public enum Verbs
         {
             None = 0,
+            Capture,
             Bigger,
             Biggest,
             Smaller,

@@ -58,7 +58,7 @@ namespace GameStateManagement
             this.parentSlideMenu = slideMenu;
             this.captured = false;
             this.slideno = this.parentSlideMenu.MaxSlideIndex;
-          
+           
 
             //Recording initialization
             bw = new BackgroundWorker();
@@ -85,7 +85,9 @@ namespace GameStateManagement
             viewport = ScreenManager.GraphicsDevice.Viewport;
             if(backgroundScene == null)
                 backgroundScene = ScreenManager.GetBackgroundScene(0); //initialize default background 
-            
+
+            //Voice Recognition initialization
+            ScreenManager.SpeechRecognizer.SaidSomething += new EventHandler<SpeechRecognizer.SaidSomethingEventArgs>(SlideRecognizerSaidSomething);
         }
 
         #region Recording
@@ -367,7 +369,7 @@ namespace GameStateManagement
 
                 int index = 1 - backgroundIndex; //a temporary toggle between the 2 backgrounds availiable
                 backgroundIndex = index;
-                Console.WriteLine("background index: " + index);
+             
                 //TODO: use gesture recognition to generate background indices. 
                 ChangeBackground(index);
             }
@@ -454,15 +456,17 @@ namespace GameStateManagement
          * subsequent capture events, will put extra question mark pngs on the screen
          */
         private void Captured()
+        //public void Captured()
         {
             //Create a Sprite with the current Avatar
             //Sprite2D curAvatar = new Sprite2D(ScreenManager.CurSkeletonTexture(), ScreenManager.CurSkeletonRectangle(), ScreenManager.CurSekeltonColor());
             //slideObjects.Add(curAvatar);
 
             CharacterObject charObj = new CharacterObject(ScreenManager.CurSkeletonTracker.SkeletonShapes);
-            slideObjects.Add(charObj);
+            this.slideObjects.Add(charObj);
         }
         #endregion
+
         #region Display
         public override void Draw(GameTime gameTime)
         {
@@ -490,7 +494,7 @@ namespace GameStateManagement
             for(int i = 0; i < slideObjects.Count; i++){
                SlideObject curSprite = slideObjects[i];
                curSprite.Draw(gameTime,spriteBatch);
-               Console.Out.WriteLine("drawing slide object " + i);
+              
             }
             // Test Code
             spriteBatch.DrawString(ScreenManager.Font, "Slide " + this.slideno, new Vector2(0, 80), Color.Black);
@@ -498,7 +502,19 @@ namespace GameStateManagement
             spriteBatch.End();
         }
          #endregion
+        #region Speech Recognition
+        private void SlideRecognizerSaidSomething(object sender, SpeechRecognizer.SaidSomethingEventArgs e)
+        {
+            switch (e.Verb)
+            {
 
+                case SpeechRecognizer.Verbs.Capture:
+                    Console.WriteLine("*****SLIDERecognized 'Capture'!!!!!!!!!!!!!!!!!!");
+                    Captured();
+                    break;
+            }
+        }
+        #endregion
     }
        
      

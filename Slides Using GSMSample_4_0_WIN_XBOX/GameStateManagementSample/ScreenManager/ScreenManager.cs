@@ -104,6 +104,13 @@ namespace GameStateManagement
             get { return skeleton; }
         }
         /// <summary>
+        /// returns the skeleton tracker of the program
+        /// </summary>
+        public SpeechRecognizer SpeechRecognizer
+        {
+            get { return speechRecognizer; }
+        }
+        /// <summary>
         /// A default blankTexture shared by all the screens. This saves
         /// each screen(and especially the skeleton) having to bother creating their own local instance.
         /// </summary>
@@ -275,7 +282,7 @@ namespace GameStateManagement
             // Start speech recognizer after KinectSensor.Start() is called
             // returns null if problem with speech prereqs or instantiation.
             speechRecognizer = SpeechRecognizer.Create();
-            speechRecognizer.SaidSomething += this.RecognizerSaidSomething;
+            //speechRecognizer.SaidSomething += this.RecognizerSaidSomething;
             speechRecognizer.Start(skeleton.Kinect.AudioSource);
 
             InitMainGestureMenu(content);
@@ -359,10 +366,16 @@ namespace GameStateManagement
         #region speech recognition
         private void RecognizerSaidSomething(object sender, SpeechRecognizer.SaidSomethingEventArgs e)
         {
-            Console.WriteLine("entered the recognizer said something function:");
+            
             switch (e.Verb)
             {
 
+                case SpeechRecognizer.Verbs.Capture:
+                    Console.WriteLine("Recognized 'Capture'!!!!!!!!!!!!!!!!!!");
+                    //if(this.screens[screens.Count-1].
+                    //if(this.screens.
+
+                    break;
                 case SpeechRecognizer.Verbs.Pause:
                     Console.WriteLine("Recognized 'Pause'");
                     break;

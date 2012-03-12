@@ -56,13 +56,12 @@ namespace GameStateManagement
         #region Draw
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-           // spriteBatch.Begin();
+           
             foreach (KeyValuePair<JointType, Sprite2D> shape in skeletonShapes)
             {
                spriteBatch.Draw(shape.Value.Texture, shape.Value.Rectangle, shape.Value.Color);
             }
-            Console.Out.WriteLine("CharacterObj draw");
-            //spriteBatch.End();
+           
         }
         #endregion
         private Dictionary<JointType, Sprite2D> DeepCopyDictionary(Dictionary<JointType, Sprite2D> skelShapes)
