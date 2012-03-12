@@ -22,6 +22,7 @@ using Microsoft.Speech.Recognition;
 //using ShapeGame.Speech;
 
 
+using GameStateManagement;
 #endregion
 
 namespace GameStateManagement
@@ -92,8 +93,12 @@ namespace GameStateManagement
          * have control over the slide, and any voice command is issued 4x or more! (ie "new" creates 4+ slides!)
          */
        public PlayerIndex currentPlayerIndex = PlayerIndex.One; 
+        MainGestureMenu mainGestureMenu;
 
-        GestureMenuScreen mainGestureMenu;
+        public MainGestureMenu MainGestureMenu
+        {
+            get { return mainGestureMenu; }
+        }
         
         bool isInitialized;
 
@@ -293,7 +298,8 @@ namespace GameStateManagement
 
 
 
-            InitMainGestureMenu(content);
+
+            mainGestureMenu = new MainGestureMenu(GraphicsDevice, content, skeleton, this);
             InitTextures(content);
             InitRectangles(content);
             
@@ -330,20 +336,6 @@ namespace GameStateManagement
             fullscreen = new Rectangle(0, 0,  GraphicsDevice.Viewport.Width,  GraphicsDevice.Viewport.Height);
         }
 
-        private void InitMainGestureMenu(ContentManager content)
-        {
-            Texture2D t_up = content.Load<Texture2D>("up");
-            Texture2D t_over = content.Load<Texture2D>("over");
-            Texture2D t_down = content.Load<Texture2D>("down");
-            GestureMenuEntry gme1 = new GestureMenuEntry(t_up, t_over, t_down, new Rectangle(0, 0, 100, 100), "");
-            GestureMenuEntry gme2 = new GestureMenuEntry(t_up, t_over, t_down, new Rectangle(0, 100, 100, 100), "");
-            GestureMenuEntry gme3 = new GestureMenuEntry(t_up, t_over, t_down, new Rectangle(0, 200, 100, 100), "");
-            mainGestureMenu = new GestureMenuScreen(new Rectangle(0, 0, 100, GraphicsDevice.Viewport.Height), 2000, "Main Menu", skeleton, content.Load<Texture2D>("gesture_menu"), this);
-            mainGestureMenu.AddMenuItem(gme1, new Rectangle(0, 0, 100, 100));
-            mainGestureMenu.AddMenuItem(gme2, new Rectangle(0, 100, 100, 100));
-            mainGestureMenu.AddMenuItem(gme3, new Rectangle(0, 200, 100, 100));
-        }
-
         private void InitAvatars(ContentManager content)
         {
             avatar1 = content.Load<Texture2D>("knight");
@@ -375,6 +367,8 @@ namespace GameStateManagement
         #region speech recognition
         private void RecognizerSaidSomething(object sender, SpeechRecognizer.SaidSomethingEventArgs e)
         {
+            if (this.screens.Count <= 2)
+                return;
             if (this.screens.Count > 1)
                 ((SlideScreen)this.screens[screens.Count - 1]).SlideRecognizerSaidSomething(sender, e);
             /*switch (e.Verb)
@@ -495,7 +489,7 @@ namespace GameStateManagement
 
                 screen.Draw(gameTime);
             }
-            //mainGestureMenu.Draw(gameTime);
+            mainGestureMenu.Draw(gameTime);
             skeleton.Draw(gameTime);
         }
 

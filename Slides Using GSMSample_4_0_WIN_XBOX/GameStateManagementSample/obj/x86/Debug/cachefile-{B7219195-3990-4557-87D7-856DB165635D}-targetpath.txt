@@ -52,3 +52,14 @@ Content\knight\italian_knt2 - Copy.xnb
 Content\knight\italian_knt2.xnb
 Content\menufont.xnb
 Content\gamefont.xnb
+Content\places menu\desert (hilite)1.xnb
+Content\places menu\desert.xnb
+Content\places menu\fantasy hills (hilite).xnb
+Content\places menu\fantasy hills.xnb
+Content\places menu\outer space (hilite).xnb
+Content\places menu\outer space.xnb
+Content\places menu\places menu bar.xnb
+Content\places menu\regular hills (hilite).xnb
+Content\places menu\regular hills.xnb
+Content\places menu\undersea (hilite).xnb
+Content\places menu\undersea.xnb

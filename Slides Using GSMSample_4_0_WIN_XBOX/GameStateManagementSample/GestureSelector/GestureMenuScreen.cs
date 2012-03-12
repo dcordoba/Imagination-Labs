@@ -24,26 +24,39 @@ namespace GameStateManagement.GestureSelector
         Rectangle _hitArea;
         // timer specifies how long one must hover over the item in milliseconds for a menu item to be selected
         Texture2D _img;
+        Texture2D _imgoff;
+        Texture2D _imgdisabled;
         KinectSensor _sensor;
         SkeletonTracker _skeleton;
         int _threshold;
         Stopwatch _timer;
         List<KeyValuePair<GestureMenuEntry, Rectangle>> _hitboxes;
-
         ScreenManager _manager;
 
         #endregion
 
         #region Public Vars
         int selection = -1;
-        bool is_selected = false;
-        bool is_disabled = false;
+        bool is_selected = false; // A specific menu item is selected
+        bool is_disabled = false; // The whole menu screen is disabled
+        bool is_over = false;     // A hand is over the entire menu
+        public bool Disabled
+        {
+            get { return is_disabled; }
+            set { is_disabled = value; }
+        }
+        KeyValuePair<Texture2D, Rectangle> _other;
+        public KeyValuePair<Texture2D,Rectangle> Other
+        {
+            get { return _other; }
+            set { _other = value; }
+        }
 
         #endregion
 
 
         #region Initialization
-        public GestureMenuScreen(Rectangle initArea, int init_time, string Title, SkeletonTracker skeleton, Texture2D MenuImg, ScreenManager manager)
+        public GestureMenuScreen(Rectangle initArea, int init_time, string Title, SkeletonTracker skeleton, Texture2D MenuImg, Texture2D MenuImgOff, Texture2D MenuImgDisabled, ScreenManager manager)
             : base(Title)
         {
             this._hitArea = initArea;
@@ -52,7 +65,9 @@ namespace GameStateManagement.GestureSelector
             this._sensor = skeleton.Kinect;
             this._skeleton = skeleton;
             this._img = MenuImg;
-            this._hitboxes = new List<KeyValuePair<GestureMenuEntry,Rectangle>>();
+            this._imgoff = MenuImgOff;
+            this._imgdisabled = MenuImgDisabled;
+            this._hitboxes = new List<KeyValuePair<GestureMenuEntry, Rectangle>>();
             if (this._sensor != null)
                 this._sensor.SkeletonFrameReady += new EventHandler<SkeletonFrameReadyEventArgs>(CheckGesture);
             this._manager = manager;
@@ -78,6 +93,7 @@ namespace GameStateManagement.GestureSelector
             sf.CopySkeletonDataTo(sdata);
             sf.Dispose();
             int temp_selected = -1;
+            bool over = false;
             foreach (Skeleton data in sdata)
             {
                 if (data != null)
@@ -90,9 +106,14 @@ namespace GameStateManagement.GestureSelector
                         {
                             temp_selected = this._hitboxes.IndexOf(entry_rect);
                         }
+                        if (RectTouched(hand_left, this._hitArea) || RectTouched(hand_right, this._hitArea))
+                        {
+                            over = true;
+                        }
                     }
                 }
             }
+            this.is_over = over;
             if (temp_selected > -1 && temp_selected == this.selection)
             {
 
@@ -119,12 +140,21 @@ namespace GameStateManagement.GestureSelector
 
         #region Draw and Update
 
-        public override void Draw(GameTime gameTime)
+        public void Draw(GameTime gameTime, float sortmode)
         {
             //base.Draw(gameTime);
             SpriteBatch spriteBatch = _manager.SpriteBatch;
-            spriteBatch.Begin();
-            spriteBatch.Draw(this._img, this._hitArea, Color.White);
+            spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend);
+            if (this.is_disabled)
+                spriteBatch.Draw(this._imgdisabled, this._hitArea, null, Color.White, 0, Vector2.Zero, SpriteEffects.None, 0.49F + sortmode);
+            else if (!this.is_over)
+                spriteBatch.Draw(this._imgoff, this._hitArea, null, Color.White, 0, Vector2.Zero, SpriteEffects.None, 0.49F + sortmode);
+            else if (this.is_over)
+            {
+                spriteBatch.Draw(this._img, this._hitArea, null, Color.White, 0, Vector2.Zero, SpriteEffects.None, 0.49F + sortmode);
+                if (!this._other.Equals(default(KeyValuePair<Texture2D,Rectangle>)))
+                    spriteBatch.Draw(this._other.Key, this._other.Value, null, Color.White, 0, Vector2.Zero, SpriteEffects.None, 0.50F + sortmode);
+            }
             foreach (KeyValuePair<GestureMenuEntry, Rectangle> kvp in _hitboxes)
             {
                 GestureMenuEntry.MenuEntryState mes = GestureMenuEntry.MenuEntryState.UP;
@@ -135,11 +165,12 @@ namespace GameStateManagement.GestureSelector
                     else
                         mes = GestureMenuEntry.MenuEntryState.OVER;
                 }
-                kvp.Key.Draw(this, mes, gameTime);
+                if (this.is_disabled)
+                    mes = GestureMenuEntry.MenuEntryState.DISABLED;
+                kvp.Key.Draw(this, mes, gameTime, sortmode);
             }
             spriteBatch.End();
         }
         #endregion
-
     }
 }
