@@ -87,7 +87,7 @@ namespace GameStateManagement
                 backgroundScene = ScreenManager.GetBackgroundScene(0); //initialize default background 
 
             //Voice Recognition initialization
-            ScreenManager.SpeechRecognizer.SaidSomething += new EventHandler<SpeechRecognizer.SaidSomethingEventArgs>(SlideRecognizerSaidSomething);
+            //ScreenManager.SpeechRecognizer.SaidSomething += new EventHandler<SpeechRecognizer.SaidSomethingEventArgs>(SlideRecognizerSaidSomething);
         }
 
         #region Recording
@@ -361,7 +361,8 @@ namespace GameStateManagement
             }
             //press the left arrow key to go back one slide
             if(input.IsNewKeyPress(Keys.Left, null, out requesteeIndex)){
-                parentSlideMenu.PreviousSlide(requesteeIndex);
+               // parentSlideMenu.PreviousSlide(requesteeIndex);
+                parentSlideMenu.PreviousSlide();
                 this.ExitScreen();
             }
            // press "b" to change the background
@@ -384,12 +385,12 @@ namespace GameStateManagement
             //press right arrow key to move forward one slide
             if (input.IsNewKeyPress(Keys.Right, null, out requesteeIndex))
             {
-                parentSlideMenu.NextSlide(requesteeIndex);
+                parentSlideMenu.NextSlide();
             }
             //press "n" to create a new slide
             if (input.IsNewKeyPress(Keys.N, null, out requesteeIndex))
             {
-                parentSlideMenu.NewSlide(requesteeIndex);
+                parentSlideMenu.NewSlide();
             }
             //press "z" to go to change to avatar1
             if (input.IsNewKeyPress(Keys.Z, null, out requesteeIndex))
@@ -503,8 +504,10 @@ namespace GameStateManagement
         }
          #endregion
         #region Speech Recognition
-        private void SlideRecognizerSaidSomething(object sender, SpeechRecognizer.SaidSomethingEventArgs e)
+        public void SlideRecognizerSaidSomething(object sender, SpeechRecognizer.SaidSomethingEventArgs e)
         {
+            //if (!System.Object.ReferenceEquals(ScreenManager.GetScreens()[ScreenManager.NumScreens - 1], this))
+            //    return;
             switch (e.Verb)
             {
 
@@ -513,13 +516,17 @@ namespace GameStateManagement
                     Captured();
                     break;
                 case SpeechRecognizer.Verbs.New:
-                    Console.WriteLine("*****SLIDE Recognized 'New Slide'!!!!!!!!!!!!!!!!!!");                   
+                    Console.WriteLine("*****SLIDE Recognized 'New Slide'!!!!!!!!!!!!!!!!!!");
+                    parentSlideMenu.NewSlide();
                     break;
                 case SpeechRecognizer.Verbs.Back:
-                    Console.WriteLine("*****SLIDE Recognized 'Back'!!!!!!!!!!!!!!!!!!");                    
+                    Console.WriteLine("*****SLIDE Recognized 'Back'!!!!!!!!!!!!!!!!!!");
+                    parentSlideMenu.PreviousSlide();
+                    this.ExitScreen();
                     break;
                 case SpeechRecognizer.Verbs.Next:
                     Console.WriteLine("*****SLIDE Recognized 'Next'!!!!!!!!!!!!!!!!!!");
+                    parentSlideMenu.NextSlide();
                     break;
             }
         }

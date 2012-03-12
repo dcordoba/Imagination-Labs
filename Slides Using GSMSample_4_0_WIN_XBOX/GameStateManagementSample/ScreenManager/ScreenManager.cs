@@ -83,9 +83,15 @@ namespace GameStateManagement
 
         //Our skeleton tracker for the program
         SkeletonTracker skeleton;
+
         //SpeechRecognizer for our program
         SpeechRecognizer speechRecognizer;
 
+        /*Default to have player 1 be our current player. This is needed because without specifing 
+         * that a single player has control over a slide, the program assumes that all 4 players
+         * have control over the slide, and any voice command is issued 4x or more! (ie "new" creates 4+ slides!)
+         */
+       public PlayerIndex currentPlayerIndex = PlayerIndex.One; 
 
         GestureMenuScreen mainGestureMenu;
         
@@ -282,8 +288,10 @@ namespace GameStateManagement
             // Start speech recognizer after KinectSensor.Start() is called
             // returns null if problem with speech prereqs or instantiation.
             speechRecognizer = SpeechRecognizer.Create();
-            //speechRecognizer.SaidSomething += this.RecognizerSaidSomething;
+            speechRecognizer.SaidSomething += this.RecognizerSaidSomething;
             speechRecognizer.Start(skeleton.Kinect.AudioSource);
+
+
 
             InitMainGestureMenu(content);
             InitTextures(content);
@@ -363,12 +371,13 @@ namespace GameStateManagement
 
         
         #endregion
-        /*
+        
         #region speech recognition
         private void RecognizerSaidSomething(object sender, SpeechRecognizer.SaidSomethingEventArgs e)
         {
-            
-            switch (e.Verb)
+            if (this.screens.Count > 1)
+                ((SlideScreen)this.screens[screens.Count - 1]).SlideRecognizerSaidSomething(sender, e);
+            /*switch (e.Verb)
             {
 
                 case SpeechRecognizer.Verbs.Capture:
@@ -396,10 +405,10 @@ namespace GameStateManagement
                 default:
                     Console.WriteLine("Recognizer said something Unknown");
                     break;
-            }
+            }*/
         }
-         * #endregion
-         * */
+         #endregion
+         
 
         #region Update and Draw
 

@@ -140,13 +140,13 @@ namespace GameStateManagement
         /// Creates a newSlide with passing the playerIndex parameter to the screenManager.
         /// note: this method takes O(n) .....
         /// </summary>
-        public void NewSlide(PlayerIndex playerIndex)
+        public void NewSlide()
         {
             //insert newSlide after the current slide
             SlideScreen slide = new SlideScreen(this);            
             slides.Insert(currentSlideIndex +1, slide);
             currentSlideIndex++;
-            ScreenManager.AddScreen(slide, playerIndex);
+            ScreenManager.AddScreen(slide,ScreenManager.currentPlayerIndex);//adding a screen with 'null' for player index allows any player to control the screen but allows commands to be multiplied!
         }/*
         public void NewSlide(SlideMenuScreen slideMenu, PlayerIndex playerIndex)
         {
@@ -158,11 +158,13 @@ namespace GameStateManagement
         /// Changes the screen to show the next slide in the
         /// list of slides.
         /// </summary>
-        public void NextSlide(PlayerIndex playerIndex){
+       // public void NextSlide(PlayerIndex playerIndex){
+        public void NextSlide()
+        {
             //if the current slide is not the last slide
             if (currentSlideIndex < slides.Count - 1)
             {
-                ScreenManager.AddScreen(slides[currentSlideIndex +1],playerIndex);
+                ScreenManager.AddScreen(slides[currentSlideIndex + 1], ScreenManager.currentPlayerIndex);//if playerIndex is null, the screen accepts input from any player//playerIndex);
                 currentSlideIndex++;
             }
         }
@@ -171,7 +173,7 @@ namespace GameStateManagement
         /// Changes the screen to show the previous slide in the
         /// list of slides.
         /// </summary>
-        public void PreviousSlide(PlayerIndex playerIndex)
+        public void PreviousSlide()
         {
             if (currentSlideIndex > 0)
             {
@@ -193,7 +195,7 @@ namespace GameStateManagement
             while (this.currentSlideIndex > 0)
             {
                 this.slides[this.currentSlideIndex].ExitScreen();
-                PreviousSlide(PlayerIndex.One);
+                PreviousSlide();
             }
             this._playWatch.Restart();
             Console.Out.WriteLine("Started Stopwatch");
@@ -215,7 +217,8 @@ namespace GameStateManagement
                 if (this.currentSlideIndex < slides.Count - 1 && this._playWatch.ElapsedMilliseconds > this._playWatchInterval)
                 {
                     Console.Out.WriteLine("Slide: " + this.currentSlideIndex);
-                    NextSlide(PlayerIndex.One);
+                    NextSlide();
+                    //NextSlide(PlayerIndex.One);
                     this._playWatch.Restart();
                     return;
                 }
@@ -224,7 +227,7 @@ namespace GameStateManagement
                     while (this.currentSlideIndex > this.currentSlideIndexBackup)
                     {
                         this.slides[this.currentSlideIndex].ExitScreen();
-                        PreviousSlide(PlayerIndex.One);
+                        PreviousSlide();
                     }
                     this._playWatch.Reset();
                     this._playWatch.Stop();
