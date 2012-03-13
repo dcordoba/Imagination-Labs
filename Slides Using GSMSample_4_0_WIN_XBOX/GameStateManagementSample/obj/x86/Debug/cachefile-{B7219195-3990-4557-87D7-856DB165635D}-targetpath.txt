@@ -50,8 +50,6 @@ Content\knight\UpperArmLeft.xnb
 Content\knight\UpperArmRight.xnb
 Content\knight\italian_knt2 - Copy.xnb
 Content\knight\italian_knt2.xnb
-Content\menufont.xnb
-Content\gamefont.xnb
 Content\places menu\desert (hilite)1.xnb
 Content\places menu\desert.xnb
 Content\places menu\fantasy hills (hilite).xnb
@@ -63,3 +61,5 @@ Content\places menu\regular hills (hilite).xnb
 Content\places menu\regular hills.xnb
 Content\places menu\undersea (hilite).xnb
 Content\places menu\undersea.xnb
+Content\menufont.xnb
+Content\gamefont.xnb
