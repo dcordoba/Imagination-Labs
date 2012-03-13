@@ -73,7 +73,7 @@ namespace GameStateManagement
         void SlidesMenuEntrySelected(object sender, PlayerIndexEventArgs e)
         {
            // ScreenManager.TraceEnabled = true;
-            ScreenManager.MainGestureMenu.EnableMainScreen();
+            //ScreenManager.MainGestureMenu.EnableMainScreen();
             ScreenManager.AddScreen(slides[currentSlideIndex],e.PlayerIndex);
         }
 
@@ -189,7 +189,7 @@ namespace GameStateManagement
 
         public void ChangeToAvatar( int avatarIndex)
         {
-            ScreenManager.SetCurSkeletonTexture(avatarIndex);
+           // ScreenManager.SetCurSkeletonTexture(avatarIndex);
         }
 
         public void PlayAll(int interval/* In Milliseconds */)
