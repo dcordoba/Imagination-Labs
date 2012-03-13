@@ -391,8 +391,8 @@ namespace GameStateManagement
         private void SreSpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             Console.Write("\rSpeech Recognized: \t{0}", e.Result.Text);
-
-            if ((this.SaidSomething == null) || (e.Result.Confidence < 0.3))
+            Console.Write("\rSpeech Confidence: \t{0}", e.Result.Confidence);
+            if ((this.SaidSomething == null) || (e.Result.Confidence < 0.7))
             {
                 return;
             }
