@@ -27,7 +27,7 @@ namespace GameStateManagement.GestureSelector
         Texture2D _imgoff;
         Texture2D _imgdisabled;
         KinectSensor _sensor;
-        SkeletonTracker _skeleton;
+        Character _skeleton;
         int _threshold;
         Stopwatch _timer;
         List<KeyValuePair<GestureMenuEntry, Rectangle>> _hitboxes;
@@ -56,13 +56,13 @@ namespace GameStateManagement.GestureSelector
 
 
         #region Initialization
-        public GestureMenuScreen(Rectangle initArea, int init_time, string Title, SkeletonTracker skeleton, Texture2D MenuImg, Texture2D MenuImgOff, Texture2D MenuImgDisabled, ScreenManager manager)
+        public GestureMenuScreen(Rectangle initArea, int init_time, string Title, Character skeleton, Texture2D MenuImg, Texture2D MenuImgOff, Texture2D MenuImgDisabled, ScreenManager manager)
             : base(Title)
         {
             this._hitArea = initArea;
 
             this._threshold = init_time;
-            this._sensor = skeleton.Kinect;
+            this._sensor = manager.Kinect;
             this._skeleton = skeleton;
             this._img = MenuImg;
             this._imgoff = MenuImgOff;
@@ -98,8 +98,8 @@ namespace GameStateManagement.GestureSelector
             {
                 if (data != null)
                 {
-                    Point hand_left = this._skeleton.GetDisplayPosition(data.Joints[JointType.HandLeft]);
-                    Point hand_right = this._skeleton.GetDisplayPosition(data.Joints[JointType.HandRight]);
+                    Point hand_left = this._skeleton.getLeftHandPoint();
+                    Point hand_right = this._skeleton.getRightHandPoint();
                     foreach (KeyValuePair<GestureMenuEntry, Rectangle> entry_rect in this._hitboxes)
                     {
                         if (RectTouched(hand_left, entry_rect.Value) || RectTouched(hand_right, entry_rect.Value))

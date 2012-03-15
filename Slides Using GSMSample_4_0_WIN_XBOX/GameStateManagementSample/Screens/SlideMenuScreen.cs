@@ -189,7 +189,7 @@ namespace GameStateManagement
 
         public void ChangeToAvatar( int avatarIndex)
         {
-            ScreenManager.SetCurSkeletonTexture(avatarIndex);
+           // ScreenManager.SetCurSkeletonTexture(avatarIndex);
         }
 
         public void PlayAll(int interval/* In Milliseconds */)
