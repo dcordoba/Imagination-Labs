@@ -359,27 +359,25 @@ namespace GameStateManagement
             //Texture2D av1 = new Texture2D(GraphicsDevice, 50, 100);
             // skeleton = new SkeletonTracker(this);
 
+
+            mainGestureMenu = new MainGestureMenu(GraphicsDevice, content, curCharacter, this);
             // Start speech recognizer after KinectSensor.Start() is called
             // returns null if problem with speech prereqs or instantiation.
             speechRecognizer = SpeechRecognizer.Create();
             speechRecognizer.SaidSomething += this.RecognizerSaidSomething;
             // speechRecognizer.Start(skeleton.Kinect.AudioSource);
-            speechRecognizer.Start(kinect.AudioSource);
+            if (!(kinect == null))
+                speechRecognizer.Start(kinect.AudioSource);
+           
+            InitTextures(content);
+            InitRectangles(content);
 
-
-
-
-                //  mainGestureMenu = new MainGestureMenu(GraphicsDevice, content, skeleton, this);
-                InitTextures(content);
-                InitRectangles(content);
-
-                // Tell each of the screens to load their content.
-                foreach (GameScreen screen in screens)
-                {
-                    screen.LoadContent();
-                }
+            // Tell each of the screens to load their content.
+            foreach (GameScreen screen in screens)
+            {
+                screen.LoadContent();
             }
-      
+        }
         private void InitTextures(ContentManager content)
         {
             //initialize background related textures. Add background textures to the backgrounds list
@@ -437,6 +435,7 @@ namespace GameStateManagement
         #region speech recognition
         private void RecognizerSaidSomething(object sender, SpeechRecognizer.SaidSomethingEventArgs e)
         {
+            //return;
             if (this.screens.Count <= 2)
                 return;
             if (this.screens.Count > 1)
@@ -560,7 +559,8 @@ namespace GameStateManagement
                 screen.Draw(gameTime);
             }
 
-
+            //draws the main gesture menu
+            mainGestureMenu.Draw(gameTime);
 
             //  draw main avatar
             if (curSkeleton != null)
@@ -569,8 +569,8 @@ namespace GameStateManagement
                 curCharacter.update(curSkeletonJoints);
                 curCharacter.draw(0);
             }
-           
-            // mainGestureMenu.Draw(gameTime);
+            
+            
             //skeleton.Draw(gameTime);
         }
 
