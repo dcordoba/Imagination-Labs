@@ -367,6 +367,7 @@ namespace GameStateManagement
         #region speech recognition
         private void RecognizerSaidSomething(object sender, SpeechRecognizer.SaidSomethingEventArgs e)
         {
+            return;
             if (this.screens.Count <= 2)
                 return;
             if (this.screens.Count > 1)
