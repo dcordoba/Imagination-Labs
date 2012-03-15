@@ -65,6 +65,8 @@
     <XnaCompressContent>true</XnaCompressContent>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="SkeletonClassAbstraction\JointDerived.cs" />
+    <Compile Include="SkeletonClassAbstraction\SkeletonDerived.cs" />
     <Compile Include="DTWGestureRecognition\DTWImplementation.cs" />
     <Compile Include="DTWGestureRecognition\DtwGestureRecognizer.cs" />
     <Compile Include="DTWGestureRecognition\Skeleton2DdataCoordEventArgs.cs" />
@@ -90,6 +92,8 @@
     <Compile Include="Screens\SlideMenuScreen.cs" />
     <Compile Include="Screens\SlideScreen.cs" />
     <Compile Include="Skeleton.cs" />
+    <Compile Include="SkeletonClassAbstraction\JointCollectionDerived.cs" />
+    <Compile Include="SkeletonClassAbstraction\SkeletonJoints.cs" />
     <Compile Include="SlideObjects\Character.cs" />
     <Compile Include="SlideObjects\CharacterObject.cs" />
     <Compile Include="SlideObjects\SlideObject.cs" />

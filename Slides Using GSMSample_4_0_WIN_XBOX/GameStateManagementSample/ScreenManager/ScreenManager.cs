@@ -36,7 +36,7 @@ namespace GameStateManagement
     /// </summary>
     public class ScreenManager : DrawableGameComponent
     {
-        #region Fields
+        #region Variables
 
         List<GameScreen> screens = new List<GameScreen>();
         List<GameScreen> screensToUpdate = new List<GameScreen>();
@@ -88,6 +88,7 @@ namespace GameStateManagement
         KinectSensor kinect;
         Skeleton[] skeletonData;
         Skeleton curSkeleton;
+        SkeletonJoints curSkeletonJoints;
         Character curCharacter;
         int curAvatarIndex; //the index for which avatar is being drawn.
 
@@ -559,10 +560,13 @@ namespace GameStateManagement
                 screen.Draw(gameTime);
             }
 
+
+
             //  draw main avatar
             if (curSkeleton != null)
             {
-                curCharacter.update(curSkeleton);
+                curSkeletonJoints.UpdateJointPositions(curSkeleton);
+                curCharacter.update(curSkeletonJoints);
                 curCharacter.draw(0);
             }
            
@@ -588,6 +592,7 @@ namespace GameStateManagement
                         if (skeleton != null && skeleton.TrackingState == SkeletonTrackingState.Tracked)
                         {
                             curSkeleton = skeleton;
+                            curSkeletonJoints = new SkeletonJoints(curSkeleton);
                         }
 
                     }

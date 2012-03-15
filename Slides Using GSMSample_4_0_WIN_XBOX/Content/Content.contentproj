@@ -329,13 +329,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="knight\italian_knt2 - Copy.png">
-      <Name>italian_knt2 - Copy</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="knight\italian_knt2.png">
       <Name>italian_knt2</Name>
       <Importer>TextureImporter</Importer>

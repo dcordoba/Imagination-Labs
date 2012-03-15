@@ -47,7 +47,8 @@ namespace GameStateManagement
     public class Character
     {
         Game game;
-        Skeleton skeleton;
+        //Skeleton skeleton;
+        SkeletonJoints skeleton;
         KinectSensor sensor;
         Texture2D[][] sprites;
         SpriteBatch spriteBatch;
@@ -96,7 +97,7 @@ namespace GameStateManagement
             }
         }
 
-        public void update(Skeleton skeleton)
+        public void update(SkeletonJoints skeleton)//Skeleton skeleton)
         {
             this.skeleton = skeleton;
 
@@ -134,6 +135,8 @@ namespace GameStateManagement
             Point kneeRight = jointToPoint(skeleton.Joints[JointType.KneeRight]);
             Point footLeft = jointToPoint(skeleton.Joints[JointType.AnkleLeft]);
             Point footRight = jointToPoint(skeleton.Joints[JointType.AnkleRight]);
+
+            Console.WriteLine(hipLeft.X);
 
             // aesthetic adjustments
             lowerBack.Y += 30;
@@ -216,9 +219,10 @@ namespace GameStateManagement
             return Math.Sqrt(Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2));
         }
 
-        private Point jointToPoint(Joint joint)
+        private Point jointToPoint(SkeletonPoint jointPosition)//Joint joint)
         {
-            ColorImagePoint cp = sensor.MapSkeletonPointToColor(joint.Position, ColorImageFormat.RgbResolution640x480Fps30);
+            //ColorImagePoint cp = sensor.MapSkeletonPointToColor(joint.Position, ColorImageFormat.RgbResolution640x480Fps30);
+            ColorImagePoint cp = sensor.MapSkeletonPointToColor(jointPosition, ColorImageFormat.RgbResolution640x480Fps30);
             return new Point(cp.X * game.GraphicsDevice.Viewport.Width / 640, cp.Y * game.GraphicsDevice.Viewport.Height / 480);
         }
     }

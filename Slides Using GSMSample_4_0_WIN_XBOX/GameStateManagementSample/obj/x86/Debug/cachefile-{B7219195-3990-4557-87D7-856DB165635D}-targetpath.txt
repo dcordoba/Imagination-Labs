@@ -48,7 +48,6 @@ Content\knight\ThighRight.xnb
 Content\knight\Torso.xnb
 Content\knight\UpperArmLeft.xnb
 Content\knight\UpperArmRight.xnb
-Content\knight\italian_knt2 - Copy.xnb
 Content\knight\italian_knt2.xnb
 Content\places menu\desert (hilite)1.xnb
 Content\places menu\desert.xnb
