@@ -542,7 +542,7 @@ namespace GameStateManagement
                     this.ExitScreen();
                     break;
                 case SpeechRecognizer.Verbs.Next:
-                    Console.WriteLine("*****SLIDE Recognized 'Next'!!!!!!!!!!!!!!!!!!");
+                    Console.WriteLine("*****SLIDE Recognized 'Next'!!!!!!!!!!!!!!!!!! ");
                     parentSlideMenu.NextSlide();
                     break;
             }
