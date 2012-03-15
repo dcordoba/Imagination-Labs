@@ -470,24 +470,6 @@
       <Time>2012-03-12T10:06:13.1270918-07:00</Time>
     </Item>
     <Item>
-      <Source>menufont.spritefont</Source>
-      <Name>menufont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\menufont.xnb</Output>
-      <Time>2012-03-12T10:06:13.1380925-07:00</Time>
-    </Item>
-    <Item>
-      <Source>gamefont.spritefont</Source>
-      <Name>gamefont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gamefont.xnb</Output>
-      <Time>2012-03-12T10:06:13.1030905-07:00</Time>
-    </Item>
-    <Item>
       <Source>places menu\desert (hilite)1.png</Source>
       <Name>places menu\desert (hilite)1</Name>
       <Importer>TextureImporter</Importer>
@@ -585,6 +567,24 @@
       <Options>None</Options>
       <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\undersea.xnb</Output>
       <Time>2012-03-06T09:03:44-08:00</Time>
+    </Item>
+    <Item>
+      <Source>menufont.spritefont</Source>
+      <Name>menufont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\menufont.xnb</Output>
+      <Time>2012-03-12T10:06:13.1380925-07:00</Time>
+    </Item>
+    <Item>
+      <Source>gamefont.spritefont</Source>
+      <Name>gamefont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gamefont.xnb</Output>
+      <Time>2012-03-12T10:06:13.1030905-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

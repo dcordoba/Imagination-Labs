@@ -25,6 +25,8 @@ namespace GameStateManagement
         public int backgroundIndex = 0; //temporary tracker for toggling backgrounds
         private Texture2D backgroundScene;
         private List<SlideObject> slideObjects;
+        private List<Skeleton> capturedSkeletons;
+        private List<int> capturedAvatarIndices;
 
 
 
@@ -58,6 +60,8 @@ namespace GameStateManagement
             this.parentSlideMenu = slideMenu;
             this.captured = false;
             this.slideno = this.parentSlideMenu.MaxSlideIndex;
+            this.capturedSkeletons = new List<Skeleton>();
+            this.capturedAvatarIndices = new List<int>();
            
 
             //Recording initialization
@@ -351,7 +355,7 @@ namespace GameStateManagement
             if (parentSlideMenu.IsPlaying) // If Playing, don't accept input
                 return;
             PlayerIndex requesteeIndex;
-            SkeletonTracker skel = ScreenManager.Skeleton;
+            //SkeletonTracker skel = ScreenManager.Skeleton;
             //int leftHandX = skel.GetDisplayPosition(skel.Joints[JointType.HandLeft]);
           //  if(ScreenManager.Skeleton.
             #region keyboard commands
@@ -459,15 +463,18 @@ namespace GameStateManagement
         private void Captured()
         //public void Captured()
         {
+            capturedSkeletons.Add(ScreenManager.CurSkeleton);
+            capturedAvatarIndices.Add(ScreenManager.CurAvatarIndex);
+            //capturedAvatarIndices.Add(ScreenManager.Ch
             //Create a Sprite with the current Avatar
             //Sprite2D curAvatar = new Sprite2D(ScreenManager.CurSkeletonTexture(), ScreenManager.CurSkeletonRectangle(), ScreenManager.CurSekeltonColor());
             //slideObjects.Add(curAvatar);
 
-            CharacterObject charObj = new CharacterObject(ScreenManager.CurSkeletonTracker.SkeletonShapes);
-            this.slideObjects.Add(charObj);
+           // CharacterObject charObj = new CharacterObject(ScreenManager.CurSkeletonTracker.SkeletonShapes);
+           // this.slideObjects.Add(charObj);
         }
         #endregion
-
+         
         #region Display
         public override void Draw(GameTime gameTime)
         {
@@ -494,15 +501,21 @@ namespace GameStateManagement
             //spriteBatch.Draw(ScreenManager.Menu_SideIcons_Idle, ScreenManager.SideMenuIconsRectangle, Color.White);
             for(int i = 0; i < slideObjects.Count; i++){
                SlideObject curSprite = slideObjects[i];
-               curSprite.Draw(gameTime,spriteBatch);
+             curSprite.Draw(gameTime,spriteBatch);
               
             }
             // Test Code
             spriteBatch.DrawString(ScreenManager.Font, "Slide " + this.slideno, new Vector2(0, 80), Color.Black);
             //
             spriteBatch.End();
+            for(int i = 0; i < capturedSkeletons.Count; i++){
+                ScreenManager.CurCharacter.update(capturedSkeletons[i]);
+                ScreenManager.CurCharacter.draw(capturedAvatarIndices[i]);
+            }
+
+            Console.WriteLine("capturedSkeletons.count " + capturedSkeletons.Count);
         }
-         #endregion
+        #endregion
         #region Speech Recognition
         public void SlideRecognizerSaidSomething(object sender, SpeechRecognizer.SaidSomethingEventArgs e)
         {

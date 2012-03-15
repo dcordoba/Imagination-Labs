@@ -23,6 +23,7 @@ using Microsoft.Speech.Recognition;
 
 
 using GameStateManagement;
+using GameStateManagement.DTWGestureRecognition;
 #endregion
 
 namespace GameStateManagement
@@ -83,7 +84,12 @@ namespace GameStateManagement
         Rectangle fullscreen;
 
         //Our skeleton tracker for the program
-        SkeletonTracker skeleton;
+       //       SkeletonTracker skeleton;
+        KinectSensor kinect;
+        Skeleton[] skeletonData;
+        Skeleton curSkeleton;
+        Character curCharacter;
+        int curAvatarIndex; //the index for which avatar is being drawn.
 
         //SpeechRecognizer for our program
         SpeechRecognizer speechRecognizer;
@@ -110,11 +116,40 @@ namespace GameStateManagement
         /// <summary>
         /// returns the skeleton tracker of the program
         /// </summary>
+        /// 
+        /*
         public SkeletonTracker Skeleton
         {
             get { return skeleton; }
+        }*/
+        /// <summary>
+        /// returns the current skeleton of the program
+        /// </summary>
+        /// 
+       
+        public Skeleton CurSkeleton
+        {
+            get { return curSkeleton; }
         }
         /// <summary>
+        /// returns the current Character instance of the program
+        /// </summary>
+        /// 
+        public Character CurCharacter
+        {
+            get { return curCharacter; }
+        }
+        /// <summary>
+        /// returns the current Character instance of the program
+        /// </summary>
+        /// 
+        public int CurAvatarIndex
+        {
+            get { return curAvatarIndex; }
+        }
+        /// <summary>
+        /// <summary>
+        /// 
         /// returns the skeleton tracker of the program
         /// </summary>
         public SpeechRecognizer SpeechRecognizer
@@ -139,22 +174,26 @@ namespace GameStateManagement
         {
             get { return spriteBatch; }
         }
-
+        
         public KinectSensor Kinect
         {
-            get { return skeleton.Kinect; }
+          //  get { return skeleton.Kinect; }
+            get { return kinect; }
         }
-
+        /*
         public SkeletonTracker CurSkeletonTracker
         {
             get { return skeleton; }
         }
-     
+     */
         //Method to get the texture of the current skeleton becuase of class privacy compatabilities
+       /*
         public Texture2D CurSkeletonTexture()
         {
             return skeleton.Head.Texture;
         }
+        * */
+        /*
         public void SetCurSkeletonTexture(int textureIndex)
         {
             if (textureIndex >= 0 && textureIndex < avatars.Count)
@@ -162,18 +201,22 @@ namespace GameStateManagement
                 skeleton.Head.Texture = avatars[textureIndex];
             }
         }
-
+        */
+        
+        /*
         //Method to get the rectangle of the current skeleton becuase of class privacy compatabilities
         public Rectangle CurSkeletonRectangle()
         {
             return skeleton.Head.Rectangle;
         }
-        //Method to get the color of the current skeleton becuase of class privacy compatabilities
+         * */
+        //Method to get the color of the current skeleton becuase of class privacy compatabilities\
+        /*
         public Color CurSekeltonColor()
         {
             return skeleton.Head.Color;
         }
-
+        */
         
         /// <summary>
         /// A default font shared by all the screens. This saves
@@ -281,35 +324,57 @@ namespace GameStateManagement
         {
             // Load content belonging to the screen manager.
             ContentManager content = Game.Content;
+            #region Init Kinect
+            if (KinectSensor.KinectSensors.Count > 0)
+            {
+                kinect = KinectSensor.KinectSensors[0];
+                TransformSmoothParameters p = new TransformSmoothParameters
+                {
+                    Smoothing = 0.75f,
+                    Correction = 0.0f,
+                    Prediction = 0.0f,
+                    JitterRadius = 0.05f,
+                    MaxDeviationRadius = 0.04f
+                };
+                kinect.SkeletonStream.Enable(p);
+                // kinectSensor.SkeletonStream.
+
+                kinect.Start();
+                kinect.SkeletonFrameReady += new EventHandler<SkeletonFrameReadyEventArgs>(KinectSkeletonFramesReady);
+                //dtw = new DTWImplementation(kinect, this);
+                this.skeletonData = new Skeleton[kinect.SkeletonStream.FrameSkeletonArrayLength];
+            }
+            #endregion
+            curAvatarIndex = 0;
+            curCharacter = new Character(this.Game);
+            curCharacter.setKinect(this.kinect);
+            curCharacter.load(new String[] { "knight" });
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
             font = content.Load<SpriteFont>("menufont");
             blankTexture = content.Load<Texture2D>("blank");
             InitAvatars(content);
-           
+
             //Texture2D av1 = new Texture2D(GraphicsDevice, 50, 100);
-            skeleton = new SkeletonTracker(this);
+            // skeleton = new SkeletonTracker(this);
 
             // Start speech recognizer after KinectSensor.Start() is called
             // returns null if problem with speech prereqs or instantiation.
             speechRecognizer = SpeechRecognizer.Create();
             speechRecognizer.SaidSomething += this.RecognizerSaidSomething;
-            speechRecognizer.Start(skeleton.Kinect.AudioSource);
-
-
-
-
-            mainGestureMenu = new MainGestureMenu(GraphicsDevice, content, skeleton, this);
+            // speechRecognizer.Start(skeleton.Kinect.AudioSource);
+            if (!(kinect == null))
+                speechRecognizer.Start(kinect.AudioSource);
+            mainGestureMenu = new MainGestureMenu(GraphicsDevice, content, curCharacter, this);
             InitTextures(content);
             InitRectangles(content);
-            
+
             // Tell each of the screens to load their content.
             foreach (GameScreen screen in screens)
             {
                 screen.LoadContent();
             }
         }
-      
         private void InitTextures(ContentManager content)
         {
             //initialize background related textures. Add background textures to the backgrounds list
@@ -367,6 +432,7 @@ namespace GameStateManagement
         #region speech recognition
         private void RecognizerSaidSomething(object sender, SpeechRecognizer.SaidSomethingEventArgs e)
         {
+            return;
             if (this.screens.Count <= 2)
                 return;
             if (this.screens.Count > 1)
@@ -489,11 +555,43 @@ namespace GameStateManagement
 
                 screen.Draw(gameTime);
             }
+
+            //  draw main avatar
+            if (curSkeleton != null)
+            {
+                curCharacter.update(curSkeleton);
+                curCharacter.draw(0);
+            }
+            
             mainGestureMenu.Draw(gameTime);
-            skeleton.Draw(gameTime);
+            //skeleton.Draw(gameTime);
         }
 
 
+        #endregion
+        #region KinectSkeletonAllFramesReady
+        public void KinectSkeletonFramesReady(object sender, SkeletonFrameReadyEventArgs e)
+        {
+            using (SkeletonFrame sf = e.OpenSkeletonFrame())
+            {
+                if (sf != null)
+                {
+                    sf.CopySkeletonDataTo(skeletonData);
+
+                    foreach (Skeleton skeleton in skeletonData)
+                    {
+                        //  take skeleton data and update avatar state
+
+                        if (skeleton != null && skeleton.TrackingState == SkeletonTrackingState.Tracked)
+                        {
+                            curSkeleton = skeleton;
+                        }
+
+                    }
+                }
+            }
+
+        }
         #endregion
 
         #region Public Methods

@@ -44,7 +44,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace GameStateManagement
 {
-    class Character
+    public class Character
     {
         Game game;
         Skeleton skeleton;
@@ -116,8 +116,8 @@ namespace GameStateManagement
 
         public void draw(int characterIndex)
         {
-            if (this.skeleton == null) return;
-
+            if (this.skeleton == null || this.sensor == null) return;
+            
             Point headTop = jointToPoint(skeleton.Joints[JointType.Head]);
             Point lowerBack = jointToPoint(skeleton.Joints[JointType.Spine]);
 

@@ -21,7 +21,7 @@ namespace GameStateManagement
         ScreenManager screenManager;
         bool _backgroundActivate = false;
 
-        public MainGestureMenu(GraphicsDevice GD, ContentManager content, SkeletonTracker skeleton, ScreenManager sm)
+        public MainGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
         {
             _backgroundGestureMenu = InitBackgroundGestureMenu(GD, content, skeleton, sm);
             _avatarGestureMenu = InitAvatarGestureMenu(GD, content, skeleton, sm);
@@ -29,7 +29,7 @@ namespace GameStateManagement
             _mainGestureMenu = InitMainGestureMenu(GD, content, skeleton, sm);
             screenManager = sm;
         }
-        private GestureMenuScreen InitBackgroundGestureMenu(GraphicsDevice GD, ContentManager content, SkeletonTracker skeleton, ScreenManager sm)
+        private GestureMenuScreen InitBackgroundGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
         {
             Texture2D background_bar = content.Load<Texture2D>("places menu/places menu bar");
             Texture2D empty = new Texture2D(GD, 1, 1);
@@ -75,16 +75,16 @@ namespace GameStateManagement
             backgroundGestureMenu.AddMenuItem(undersea,         new Rectangle(X_5,  Y_elem, menu_Width, menu_Height));
             return backgroundGestureMenu;
         }
-        private GestureMenuScreen InitAvatarGestureMenu(GraphicsDevice GD, ContentManager content, SkeletonTracker skeleton, ScreenManager sm)
+        private GestureMenuScreen InitAvatarGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
         {
             return null;
         }
-        private GestureMenuScreen InitExportGestureMenu(GraphicsDevice GD, ContentManager content, SkeletonTracker skeleton, ScreenManager sm)
+        private GestureMenuScreen InitExportGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
         {
             return null;
         }
 
-        private GestureMenuScreen InitMainGestureMenu(GraphicsDevice GD, ContentManager content, SkeletonTracker skeleton, ScreenManager sm)
+        private GestureMenuScreen InitMainGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
         {
             Texture2D empty = new Texture2D(GD, 1, 1);
             Texture2D t_up = empty;
