@@ -323,7 +323,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\FootLeft.xnb</Output>
-      <Time>2012-03-12T19:10:46-07:00</Time>
+      <Time>2012-03-15T22:50:34.4180116-07:00</Time>
     </Item>
     <Item>
       <Source>knight\FootRight.png</Source>
@@ -332,7 +332,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\FootRight.xnb</Output>
-      <Time>2012-03-12T19:11:46-07:00</Time>
+      <Time>2012-03-15T22:50:34.4370127-07:00</Time>
     </Item>
     <Item>
       <Source>knight\ForearmLeft.png</Source>
@@ -341,7 +341,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\ForearmLeft.xnb</Output>
-      <Time>2012-03-12T22:33:44-07:00</Time>
+      <Time>2012-03-15T22:50:34.4610141-07:00</Time>
     </Item>
     <Item>
       <Source>knight\ForearmRight.png</Source>
@@ -350,7 +350,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\ForearmRight.xnb</Output>
-      <Time>2012-03-12T22:33:38-07:00</Time>
+      <Time>2012-03-15T22:50:34.4830154-07:00</Time>
     </Item>
     <Item>
       <Source>knight\HandLeft.png</Source>
@@ -359,7 +359,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\HandLeft.xnb</Output>
-      <Time>2012-03-12T22:33:32-07:00</Time>
+      <Time>2012-03-15T22:50:34.5150172-07:00</Time>
     </Item>
     <Item>
       <Source>knight\HandRight.png</Source>
@@ -368,7 +368,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\HandRight.xnb</Output>
-      <Time>2012-03-12T22:33:52-07:00</Time>
+      <Time>2012-03-15T22:50:34.5400186-07:00</Time>
     </Item>
     <Item>
       <Source>knight\Head.png</Source>
@@ -377,7 +377,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\Head.xnb</Output>
-      <Time>2012-03-12T22:33:56-07:00</Time>
+      <Time>2012-03-15T22:50:34.5620199-07:00</Time>
     </Item>
     <Item>
       <Source>knight\Hips.png</Source>
@@ -386,7 +386,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\Hips.xnb</Output>
-      <Time>2012-03-12T22:33:54-07:00</Time>
+      <Time>2012-03-15T22:50:34.5790208-07:00</Time>
     </Item>
     <Item>
       <Source>knight\ShinLeft.png</Source>
@@ -395,7 +395,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\ShinLeft.xnb</Output>
-      <Time>2012-03-12T22:31:16-07:00</Time>
+      <Time>2012-03-15T22:50:35.1790552-07:00</Time>
     </Item>
     <Item>
       <Source>knight\ShinRight.png</Source>
@@ -404,7 +404,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\ShinRight.xnb</Output>
-      <Time>2012-03-12T22:30:38-07:00</Time>
+      <Time>2012-03-15T22:50:35.2090569-07:00</Time>
     </Item>
     <Item>
       <Source>knight\ThighLeft.png</Source>
@@ -413,7 +413,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\ThighLeft.xnb</Output>
-      <Time>2012-03-12T22:30:06-07:00</Time>
+      <Time>2012-03-15T22:50:35.2430588-07:00</Time>
     </Item>
     <Item>
       <Source>knight\ThighRight.png</Source>
@@ -422,7 +422,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\ThighRight.xnb</Output>
-      <Time>2012-03-12T19:17:22-07:00</Time>
+      <Time>2012-03-15T22:50:35.2790609-07:00</Time>
     </Item>
     <Item>
       <Source>knight\Torso.png</Source>
@@ -431,7 +431,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\Torso.xnb</Output>
-      <Time>2012-03-12T19:16:42-07:00</Time>
+      <Time>2012-03-15T22:50:35.3020622-07:00</Time>
     </Item>
     <Item>
       <Source>knight\UpperArmLeft.png</Source>
@@ -440,7 +440,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\UpperArmLeft.xnb</Output>
-      <Time>2012-03-12T19:15:48-07:00</Time>
+      <Time>2012-03-15T22:50:35.333064-07:00</Time>
     </Item>
     <Item>
       <Source>knight\UpperArmRight.png</Source>
@@ -449,7 +449,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight\UpperArmRight.xnb</Output>
-      <Time>2012-03-12T19:14:34-07:00</Time>
+      <Time>2012-03-15T22:50:35.3650658-07:00</Time>
     </Item>
     <Item>
       <Source>knight\italian_knt2.png</Source>
