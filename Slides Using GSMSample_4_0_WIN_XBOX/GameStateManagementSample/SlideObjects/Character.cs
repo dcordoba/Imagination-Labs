@@ -136,7 +136,7 @@ namespace GameStateManagement
             Point footLeft = jointToPoint(skeleton.Joints[JointType.AnkleLeft]);
             Point footRight = jointToPoint(skeleton.Joints[JointType.AnkleRight]);
 
-            Console.WriteLine(hipLeft.X);
+            //Console.WriteLine(hipLeft.X);
 
             // aesthetic adjustments
             lowerBack.Y += 30;

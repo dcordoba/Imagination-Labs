@@ -197,7 +197,12 @@ namespace GameStateManagement
         }
         private void ActivateExit(object sender, PlayerIndexEventArgs p)
         {
-
+            int numRemoves = screenManager.NumScreens - 2;
+            for (numRemoves = screenManager.NumScreens - 2; numRemoves > 0; numRemoves--)
+            {
+                ((SlideScreen)screenManager.GetScreens()[numRemoves + 1]).ExitScreen();
+                ((SlideMenuScreen)screenManager.GetScreens()[1]).PreviousSlide();
+            }
         }
 
         private void SelectAvatar(object sender, PlayerIndexEventArgs p)

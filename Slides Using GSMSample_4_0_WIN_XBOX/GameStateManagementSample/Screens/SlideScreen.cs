@@ -410,13 +410,13 @@ namespace GameStateManagement
             if (input.IsNewKeyPress(Keys.Z, null, out requesteeIndex))
             {
                 parentSlideMenu.ChangeToAvatar(0);
-                Console.Out.WriteLine("Changed to 0");
+                //Console.Out.WriteLine("Changed to 0");
             }
             //press "x" to go to change to avatar2
             if (input.IsNewKeyPress(Keys.X, null, out requesteeIndex))
             {
                 parentSlideMenu.ChangeToAvatar(1);
-                Console.Out.WriteLine("Changed to 1");
+                //Console.Out.WriteLine("Changed to 1");
             }
            
             //press "m" to go to slideMenu
@@ -543,7 +543,7 @@ namespace GameStateManagement
             }
            
             spriteBatch.End();
-            Console.WriteLine("capturedSkeletons.count " + capturedSkeletons.Count);
+            //Console.WriteLine("capturedSkeletons.count " + capturedSkeletons.Count);
         }
         #endregion
         #region Speech Recognition

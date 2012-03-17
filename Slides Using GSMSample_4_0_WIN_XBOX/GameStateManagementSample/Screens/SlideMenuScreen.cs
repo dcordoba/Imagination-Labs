@@ -215,7 +215,7 @@ namespace GameStateManagement
                 PreviousSlide();
             }
             this._playWatch.Restart();
-            Console.Out.WriteLine("Started Stopwatch");
+            //Console.Out.WriteLine("Started Stopwatch");
 
         }
 
@@ -233,7 +233,7 @@ namespace GameStateManagement
                 // Spinlock. I know this is bad, but I haven't looked up how to make threads sleep / wake them up and this is an easy-to-implement solution
                 if (this.currentSlideIndex < slides.Count - 1 && this._playWatch.ElapsedMilliseconds > this._playWatchInterval)
                 {
-                    Console.Out.WriteLine("Slide: " + this.currentSlideIndex);
+                    //Console.Out.WriteLine("Slide: " + this.currentSlideIndex);
                     NextSlide();
                     //NextSlide(PlayerIndex.One);
                     this._playWatch.Restart();
