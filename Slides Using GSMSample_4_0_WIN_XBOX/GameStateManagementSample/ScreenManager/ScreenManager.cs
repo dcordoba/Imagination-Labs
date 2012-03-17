@@ -359,7 +359,10 @@ namespace GameStateManagement
             String[] avatarFilepaths = new String[] { 
                 "characters/knight",
                 "characters/pocahontas",
-                "characters/white_knight"
+                "characters/cartoonGirl",
+                "characters/dragon",
+                "characters/white_knight",                
+                
             };
             numAvatars = avatarFilepaths.Length;
             curCharacter.load(avatarFilepaths);

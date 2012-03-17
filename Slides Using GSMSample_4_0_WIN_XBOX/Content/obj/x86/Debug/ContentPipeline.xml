@@ -982,6 +982,303 @@
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\w.knight-sword.xnb</Output>
       <Time>2012-03-16T05:07:32-07:00</Time>
     </Item>
+    <Item>
+      <Source>characters\cartoonGirl\FootLeft.png</Source>
+      <Name>characters\cartoonGirl\FootLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\FootLeft.xnb</Output>
+      <Time>2012-03-14T22:36:50-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\FootRight.png</Source>
+      <Name>characters\cartoonGirl\FootRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\FootRight.xnb</Output>
+      <Time>2012-03-14T22:33:10-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\ForearmRight.png</Source>
+      <Name>characters\cartoonGirl\ForearmRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\ForearmRight.xnb</Output>
+      <Time>2012-03-14T22:42:32-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\HandLeft.png</Source>
+      <Name>characters\cartoonGirl\HandLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\HandLeft.xnb</Output>
+      <Time>2012-03-14T23:01:50-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\HandRight.png</Source>
+      <Name>characters\cartoonGirl\HandRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\HandRight.xnb</Output>
+      <Time>2012-03-14T22:44:08-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\Head.png</Source>
+      <Name>characters\cartoonGirl\Head</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\Head.xnb</Output>
+      <Time>2012-03-14T22:25:18-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\Hips.png</Source>
+      <Name>characters\cartoonGirl\Hips</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\Hips.xnb</Output>
+      <Time>2012-03-14T22:24:20-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\ShinLeft.png</Source>
+      <Name>characters\cartoonGirl\ShinLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\ShinLeft.xnb</Output>
+      <Time>2012-03-14T22:34:42-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\ShinRight.png</Source>
+      <Name>characters\cartoonGirl\ShinRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\ShinRight.xnb</Output>
+      <Time>2012-03-14T22:30:32-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\ThighLeft.png</Source>
+      <Name>characters\cartoonGirl\ThighLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\ThighLeft.xnb</Output>
+      <Time>2012-03-14T22:34:18-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\ThighRight.png</Source>
+      <Name>characters\cartoonGirl\ThighRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\ThighRight.xnb</Output>
+      <Time>2012-03-14T22:29:56-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\Torso.png</Source>
+      <Name>characters\cartoonGirl\Torso</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\Torso.xnb</Output>
+      <Time>2012-03-14T22:24:52-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\UpperArmLeft.png</Source>
+      <Name>characters\cartoonGirl\UpperArmLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\UpperArmLeft.xnb</Output>
+      <Time>2012-03-14T23:00:44-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\UpperArmRight.png</Source>
+      <Name>characters\cartoonGirl\UpperArmRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\UpperArmRight.xnb</Output>
+      <Time>2012-03-14T22:41:02-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\dragonleftwing.png</Source>
+      <Name>characters\dragon\dragonleftwing</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\dragonleftwing.xnb</Output>
+      <Time>2012-03-15T14:45:52-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\dragonrightwing.png</Source>
+      <Name>characters\dragon\dragonrightwing</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\dragonrightwing.xnb</Output>
+      <Time>2012-03-15T14:40:28-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\dragontail.png</Source>
+      <Name>characters\dragon\dragontail</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\dragontail.xnb</Output>
+      <Time>2012-03-15T14:47:36-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\FootLeft.png</Source>
+      <Name>characters\dragon\FootLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\FootLeft.xnb</Output>
+      <Time>2012-03-15T12:36:42-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\FootRight.png</Source>
+      <Name>characters\dragon\FootRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\FootRight.xnb</Output>
+      <Time>2012-03-15T12:33:24-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\HandLeft.png</Source>
+      <Name>characters\dragon\HandLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\HandLeft.xnb</Output>
+      <Time>2012-03-15T14:20:52-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\HandRight.png</Source>
+      <Name>characters\dragon\HandRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\HandRight.xnb</Output>
+      <Time>2012-03-15T14:30:54-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\Head.png</Source>
+      <Name>characters\dragon\Head</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\Head.xnb</Output>
+      <Time>2012-03-15T12:24:36-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\Hips.png</Source>
+      <Name>characters\dragon\Hips</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\Hips.xnb</Output>
+      <Time>2012-03-15T12:29:00-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\ShinLeft.png</Source>
+      <Name>characters\dragon\ShinLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\ShinLeft.xnb</Output>
+      <Time>2012-03-15T12:35:50-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\ShinRight.png</Source>
+      <Name>characters\dragon\ShinRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\ShinRight.xnb</Output>
+      <Time>2012-03-15T12:32:06-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\ThighLeft.png</Source>
+      <Name>characters\dragon\ThighLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\ThighLeft.xnb</Output>
+      <Time>2012-03-15T12:35:04-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\ThighRight.png</Source>
+      <Name>characters\dragon\ThighRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\ThighRight.xnb</Output>
+      <Time>2012-03-15T12:32:44-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\Torso.png</Source>
+      <Name>characters\dragon\Torso</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\Torso.xnb</Output>
+      <Time>2012-03-15T12:26:56-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\UpperArmLeft.png</Source>
+      <Name>characters\dragon\UpperArmLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\UpperArmLeft.xnb</Output>
+      <Time>2012-03-15T12:41:02-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\UpperArmRight.png</Source>
+      <Name>characters\dragon\UpperArmRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\UpperArmRight.xnb</Output>
+      <Time>2012-03-15T14:26:30-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\ForearmLeft.png</Source>
+      <Name>characters\cartoonGirl\ForearmLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\ForearmLeft.xnb</Output>
+      <Time>2012-03-14T23:00:02-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\ForearmLeft.png</Source>
+      <Name>characters\dragon\ForearmLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\ForearmLeft.xnb</Output>
+      <Time>2012-03-15T14:20:20-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\ForearmRight.png</Source>
+      <Name>characters\dragon\ForearmRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\ForearmRight.xnb</Output>
+      <Time>2012-03-15T14:29:00-07:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
