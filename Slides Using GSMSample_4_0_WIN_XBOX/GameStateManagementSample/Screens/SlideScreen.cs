@@ -466,13 +466,13 @@ namespace GameStateManagement
             SkeletonJoints curJoints = new SkeletonJoints(ScreenManager.CurSkeleton);
             capturedSkeletons.Add(curJoints);
             capturedAvatarIndices.Add(ScreenManager.CurAvatarIndex);
-            //capturedAvatarIndices.Add(ScreenManager.Ch
-            //Create a Sprite with the current Avatar
-            //Sprite2D curAvatar = new Sprite2D(ScreenManager.CurSkeletonTexture(), ScreenManager.CurSkeletonRectangle(), ScreenManager.CurSekeltonColor());
-            //slideObjects.Add(curAvatar);
-
-           // CharacterObject charObj = new CharacterObject(ScreenManager.CurSkeletonTracker.SkeletonShapes);
-           // this.slideObjects.Add(charObj);
+            //int fontHeightAdj = 50; //adjust height by the height of the font
+            int menuWidth = ScreenManager.MainGestureMenu.Width;
+            int x = (viewport.Width / 2) - menuWidth; //- ScreenManager.;
+            int y = viewport.Height / 2;
+            spriteBatch.Begin();
+            spriteBatch.DrawString(ScreenManager.Font, "~ Captured! " + this.parentSlideMenu.CurrentPageNumber() + " ~", new Vector2(x, y), Color.White);
+            spriteBatch.End();
         }
         #endregion
          
