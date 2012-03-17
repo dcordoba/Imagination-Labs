@@ -662,7 +662,7 @@ namespace GameStateManagement
         /// ChangeAvatar
         /// changes the avatar to the avatar skin at index
         /// </summary>        
-        public void ChangeAvatar(int index)
+        public void ChangeAvatar(int index, PlayerIndex player)
         {
             curAvatarIndex = index;
         }

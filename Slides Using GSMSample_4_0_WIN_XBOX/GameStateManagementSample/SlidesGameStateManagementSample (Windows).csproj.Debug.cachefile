@@ -120,6 +120,19 @@ Content\characters\cartoonGirl\ThighRight.xnb
 Content\characters\cartoonGirl\Torso.xnb
 Content\characters\cartoonGirl\UpperArmLeft.xnb
 Content\characters\cartoonGirl\UpperArmRight.xnb
+Content\narration\1.xnb
+Content\narration\2.xnb
+Content\narration\3.xnb
+Content\narration\narratemenubar.xnb
+Content\narration\playback button (default).xnb
+Content\narration\playback button (hilite).xnb
+Content\narration\playback button (pushed).xnb
+Content\narration\record button (default).xnb
+Content\narration\record button (hilite)1.xnb
+Content\narration\record button (pushed).xnb
+Content\narration\recording (cold).xnb
+Content\narration\recording (growing).xnb
+Content\narration\recording_hot.xnb
 Content\characters\dragon\dragonleftwing.xnb
 Content\characters\dragon\dragonrightwing.xnb
 Content\characters\dragon\dragontail.xnb
@@ -140,16 +153,3 @@ Content\characters\dragon\UpperArmLeft.xnb
 Content\characters\dragon\UpperArmRight.xnb
 Content\menufont.xnb
 Content\gamefont.xnb
-Content\narration\1.xnb
-Content\narration\2.xnb
-Content\narration\3.xnb
-Content\narration\narratemenubar.xnb
-Content\narration\playback button (default).xnb
-Content\narration\playback button (hilite).xnb
-Content\narration\playback button (pushed).xnb
-Content\narration\record button (default).xnb
-Content\narration\record button (hilite)1.xnb
-Content\narration\record button (pushed).xnb
-Content\narration\recording (cold).xnb
-Content\narration\recording (growing).xnb
-Content\narration\recording_hot.xnb
