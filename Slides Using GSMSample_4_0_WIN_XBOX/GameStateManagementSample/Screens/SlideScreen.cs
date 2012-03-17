@@ -482,11 +482,12 @@ namespace GameStateManagement
         }
         #endregion
 #region Undo
-        private void Undo()
+        public void Undo()
         {
-            if (slideObjects.Count > 0)
+            if (capturedSkeletons.Count > 0 && capturedAvatarIndices.Count > 0)
             {
-                slideObjects.RemoveAt(slideObjects.Count - 1);
+                capturedSkeletons.RemoveAt(capturedSkeletons.Count - 1);
+                capturedAvatarIndices.RemoveAt(capturedAvatarIndices.Count - 1);
             }
         }
 #endregion

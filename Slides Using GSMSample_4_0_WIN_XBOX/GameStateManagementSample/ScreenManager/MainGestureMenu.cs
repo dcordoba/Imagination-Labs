@@ -188,13 +188,12 @@ namespace GameStateManagement
         }
         private void ActivateNarration(object sender, PlayerIndexEventArgs p)
         {
-            GameScreen[] screens = screenManager.GetScreens();
-            ((SlideScreen)screens[screenManager.NumScreens - 1]).beginRecording();
+            ((SlideScreen)screenManager.GetScreens()[screenManager.NumScreens - 1]).beginRecording();
 
         }
         private void ActivateUndo(object sender, PlayerIndexEventArgs p)
         {
-            
+            ((SlideScreen)screenManager.GetScreens()[screenManager.NumScreens - 1]).Undo();
         }
         private void ActivateExit(object sender, PlayerIndexEventArgs p)
         {
