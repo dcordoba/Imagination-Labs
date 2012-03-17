@@ -114,6 +114,8 @@ namespace GameStateManagement.GestureSelector
                 }
             }
             this.is_over = over;
+            if (this.is_selected && temp_selected != this.selection)
+                this._hitboxes[this.selection].Key.OnUnselectEntry(PlayerIndex.One); // default to one
             if (temp_selected > -1 && temp_selected == this.selection)
             {
 
@@ -130,6 +132,7 @@ namespace GameStateManagement.GestureSelector
                 this.selection = temp_selected;
                 this.is_selected = false;
             }
+
 
         }
 

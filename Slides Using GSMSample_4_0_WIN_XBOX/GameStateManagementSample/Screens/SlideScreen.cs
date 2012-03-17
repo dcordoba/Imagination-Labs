@@ -109,7 +109,7 @@ namespace GameStateManagement
             return soundInstance.State == SoundState.Playing;
         }
 
-        void beginRecording()
+        public void beginRecording()
         {
             if (!isRecording() && !isPlaying())
             {

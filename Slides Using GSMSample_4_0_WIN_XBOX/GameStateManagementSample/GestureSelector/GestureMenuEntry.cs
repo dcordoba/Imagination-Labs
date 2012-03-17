@@ -24,6 +24,7 @@ namespace GameStateManagement.GestureSelector
         #region Public Vars
         public enum MenuEntryState { UP, OVER, DOWN, DISABLED };
         String _text;
+        public event EventHandler<PlayerIndexEventArgs> Unselected;
         public String Text
         {
             get { return _text; }
@@ -47,6 +48,12 @@ namespace GameStateManagement.GestureSelector
         protected internal override void OnSelectEntry(PlayerIndex playerIndex)
         {
             base.OnSelectEntry(playerIndex);
+        }
+
+        public void OnUnselectEntry(PlayerIndex pi)
+        {
+            if (Unselected != null)
+                Unselected(this, new PlayerIndexEventArgs(pi));
         }
 
         #region Draw and Update

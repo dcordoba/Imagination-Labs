@@ -154,11 +154,15 @@ namespace GameStateManagement
             Texture2D t_down = content.Load<Texture2D>("menu/menu_circleHighlight");
             GestureMenuEntry gme1 = new GestureMenuEntry(t_up, empty, empty, empty, new Rectangle(1, 1, Width, Width), "avatar");
             GestureMenuEntry gme2 = new GestureMenuEntry(t_up, empty, empty, empty, new Rectangle(0, 100, Width, Width), "background");
-            GestureMenuEntry gme3 = new GestureMenuEntry(t_up, empty, empty, empty, new Rectangle(0, 200, Width, Width), "");
-            GestureMenuEntry gme4 = new GestureMenuEntry(t_up, empty, empty, empty, new Rectangle(0, 300, Width, Width), "");
-            GestureMenuEntry gme5 = new GestureMenuEntry(t_up, empty, empty, empty, new Rectangle(0, 400, Width, Width), "");
+            GestureMenuEntry gme3 = new GestureMenuEntry(t_up, empty, empty, empty, new Rectangle(0, 200, Width, Width), "narrate");
+            GestureMenuEntry gme4 = new GestureMenuEntry(t_up, empty, empty, empty, new Rectangle(0, 300, Width, Width), "undo");
+            GestureMenuEntry gme5 = new GestureMenuEntry(t_up, empty, empty, empty, new Rectangle(0, 400, Width, Width), "exit");
             gme1.Selected += new EventHandler<PlayerIndexEventArgs>(ActivateAvatarScreen);
             gme2.Selected += new EventHandler<PlayerIndexEventArgs>(ActivateBackgroundScreen);
+            gme3.Selected += new EventHandler<PlayerIndexEventArgs>(ActivateNarration);
+            gme3.Unselected += new EventHandler<PlayerIndexEventArgs>(ActivateNarration);
+            gme4.Selected += new EventHandler<PlayerIndexEventArgs>(ActivateUndo);
+            gme5.Selected += new EventHandler<PlayerIndexEventArgs>(ActivateExit);
             GestureMenuScreen mainGestureMenu = new GestureMenuScreen(new Rectangle(0, 0, Width, Height), 2000, "Main Menu", skeleton, content.Load<Texture2D>("menu/menu_sideIcons_active"), content.Load<Texture2D>("menu/menu_sideIcons_idle"), empty, sm);
             mainGestureMenu.Disabled = true;
             mainGestureMenu.Other = sideDock;
@@ -181,6 +185,20 @@ namespace GameStateManagement
             _backgroundActivate = true;
             _backgroundGestureMenu.Disabled = false;
             _avatarGestureMenu.Disabled = true;
+        }
+        private void ActivateNarration(object sender, PlayerIndexEventArgs p)
+        {
+            GameScreen[] screens = screenManager.GetScreens();
+            ((SlideScreen)screens[screenManager.NumScreens - 1]).beginRecording();
+
+        }
+        private void ActivateUndo(object sender, PlayerIndexEventArgs p)
+        {
+            
+        }
+        private void ActivateExit(object sender, PlayerIndexEventArgs p)
+        {
+
         }
 
         private void SelectAvatar(object sender, PlayerIndexEventArgs p)
