@@ -373,11 +373,10 @@ namespace GameStateManagement
            // press "b" to change the background
             if(input.IsNewKeyPress(Keys.B,null, out requesteeIndex)){
 
-                int index = 1 - backgroundIndex; //a temporary toggle between the 2 backgrounds availiable
-                backgroundIndex = index;
+                backgroundIndex = (backgroundIndex + 1) % 4;
              
                 //TODO: use gesture recognition to generate background indices. 
-                ChangeBackground(index);
+                ChangeBackground(backgroundIndex);
             }
             //press u to undo last capture for this slide
             if (input.IsNewKeyPress(Keys.U, null, out requesteeIndex))

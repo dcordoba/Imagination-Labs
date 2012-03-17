@@ -382,10 +382,17 @@ namespace GameStateManagement
         {
             //initialize background related textures. Add background textures to the backgrounds list
             backgroundExtraPages = content.Load<Texture2D>("backgrounds/behindPages_straightened");
-            Texture2D backGround1 = content.Load<Texture2D>("backgrounds/background_fantasyriver_straightened");
-            Texture2D backGround2 = content.Load<Texture2D>("backgrounds/background_outerspace_straightened");
-            backgrounds.Add(backGround1);
-            backgrounds.Add(backGround2);
+            Texture2D background_fantasyriver = content.Load<Texture2D>("backgrounds/background_fantasyriver_straightened");
+            Texture2D background_space = content.Load<Texture2D>("backgrounds/background_outerspace_straightened");
+            Texture2D background_desert = content.Load<Texture2D>("backgrounds/desert");
+            Texture2D background_undersea = content.Load<Texture2D>("backgrounds/undersea");
+
+
+            backgrounds.Add(background_fantasyriver);
+            backgrounds.Add(background_space);
+            backgrounds.Add(background_desert);
+            backgrounds.Add(background_undersea);
+
             
             //initialize menu textures
             menu_circleHighlight = content.Load<Texture2D>("menu/menu_circleHighlight");
