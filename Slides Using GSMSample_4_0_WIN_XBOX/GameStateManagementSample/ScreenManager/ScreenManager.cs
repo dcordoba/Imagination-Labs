@@ -329,6 +329,8 @@ namespace GameStateManagement
             if (KinectSensor.KinectSensors.Count > 0)
             {
                 kinect = KinectSensor.KinectSensors[0];
+                if (kinect == null)
+                    throw new Exception("Kinect not plugged in!");
                 TransformSmoothParameters p = new TransformSmoothParameters
                 {
                     Smoothing = 0.75f,
@@ -337,10 +339,12 @@ namespace GameStateManagement
                     JitterRadius = 0.05f,
                     MaxDeviationRadius = 0.04f
                 };
+                
                 kinect.SkeletonStream.Enable(p);
                 // kinectSensor.SkeletonStream.
 
                 kinect.Start();
+                
                 kinect.SkeletonFrameReady += new EventHandler<SkeletonFrameReadyEventArgs>(KinectSkeletonFramesReady);
                 //dtw = new DTWImplementation(kinect, this);
                 this.skeletonData = new Skeleton[kinect.SkeletonStream.FrameSkeletonArrayLength];

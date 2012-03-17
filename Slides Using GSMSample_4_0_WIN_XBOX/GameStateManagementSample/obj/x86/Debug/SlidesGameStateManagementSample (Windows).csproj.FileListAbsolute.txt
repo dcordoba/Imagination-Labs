@@ -254,3 +254,15 @@ C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStat
 C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\Torso.xnb
 C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\UpperArmLeft.xnb
 C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\UpperArmRight.xnb
+C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\beach.xnb
+C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\desert.xnb
+C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\forest.xnb
+C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\pyramids.xnb
+C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\riverhouse.xnb
+C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\rooftops.xnb
+C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\snowyforest.xnb
+C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\undersea.xnb
+C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatar_icons\bubbleman_over.xnb
+C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatar_icons\bubbleman_up.xnb
+C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatar_icons\knight_over.xnb
+C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatar_icons\knight_up.xnb

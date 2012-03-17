@@ -730,6 +730,114 @@
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\UpperArmRight.xnb</Output>
       <Time>2012-03-15T17:52:40-07:00</Time>
     </Item>
+    <Item>
+      <Source>backgrounds\beach.png</Source>
+      <Name>backgrounds\beach</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\beach.xnb</Output>
+      <Time>2012-03-15T23:59:52.9584642-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\desert.png</Source>
+      <Name>backgrounds\desert</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\desert.xnb</Output>
+      <Time>2012-03-16T17:13:29.1839499-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\forest.png</Source>
+      <Name>backgrounds\forest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\forest.xnb</Output>
+      <Time>2012-03-15T23:59:53.0104671-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\pyramids.png</Source>
+      <Name>backgrounds\pyramids</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\pyramids.xnb</Output>
+      <Time>2012-03-15T23:59:53.0294682-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\riverhouse.png</Source>
+      <Name>backgrounds\riverhouse</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\riverhouse.xnb</Output>
+      <Time>2012-03-15T23:59:53.0534696-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\rooftops.png</Source>
+      <Name>backgrounds\rooftops</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\rooftops.xnb</Output>
+      <Time>2012-03-15T23:59:53.0694705-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\snowyforest.png</Source>
+      <Name>backgrounds\snowyforest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\snowyforest.xnb</Output>
+      <Time>2012-03-15T23:59:53.1044725-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\undersea.png</Source>
+      <Name>backgrounds\undersea</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\undersea.xnb</Output>
+      <Time>2012-03-16T17:13:57.4285654-07:00</Time>
+    </Item>
+    <Item>
+      <Source>avatar_icons\bubbleman_over.png</Source>
+      <Name>avatar_icons\bubbleman_over</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatar_icons\bubbleman_over.xnb</Output>
+      <Time>2012-03-16T17:43:06.9026296-07:00</Time>
+    </Item>
+    <Item>
+      <Source>avatar_icons\bubbleman_up.png</Source>
+      <Name>avatar_icons\bubbleman_up</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatar_icons\bubbleman_up.xnb</Output>
+      <Time>2012-03-16T17:35:32.7356527-07:00</Time>
+    </Item>
+    <Item>
+      <Source>avatar_icons\knight_over.png</Source>
+      <Name>avatar_icons\knight_over</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatar_icons\knight_over.xnb</Output>
+      <Time>2012-03-16T17:43:20.1833892-07:00</Time>
+    </Item>
+    <Item>
+      <Source>avatar_icons\knight_up.png</Source>
+      <Name>avatar_icons\knight_up</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatar_icons\knight_up.xnb</Output>
+      <Time>2012-03-16T17:33:41.9323151-07:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

@@ -44,6 +44,8 @@ Content\places menu\regular hills (hilite).xnb
 Content\places menu\regular hills.xnb
 Content\places menu\undersea (hilite).xnb
 Content\places menu\undersea.xnb
+Content\menufont.xnb
+Content\gamefont.xnb
 Content\characters\knight\FootLeft.xnb
 Content\characters\knight\FootRight.xnb
 Content\characters\knight\ForearmLeft.xnb
@@ -89,5 +91,3 @@ Content\avatar_icons\bubbleman_over.xnb
 Content\avatar_icons\bubbleman_up.xnb
 Content\avatar_icons\knight_over.xnb
 Content\avatar_icons\knight_up.xnb
-Content\menufont.xnb
-Content\gamefont.xnb
