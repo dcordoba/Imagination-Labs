@@ -859,6 +859,155 @@
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="avatars\dragon_icon_hover.png">
+      <Name>dragon_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="avatars\dragon_icon_idle.png">
+      <Name>dragon_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="avatars\girl_icon_hover.png">
+      <Name>girl_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="avatars\girl_icon_idle.png">
+      <Name>girl_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="avatars\pocahon_icon_hover.png">
+      <Name>pocahon_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="avatars\pocahon_icon_idle.png">
+      <Name>pocahon_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="avatars\w.knight_icon_hover.png">
+      <Name>w.knight_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="avatars\w.knight_icon_idle.png">
+      <Name>w.knight_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="places menu\places\beach\o.beach.png">
+      <Name>o.beach</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="places menu\places\beach\o.beach_icon_hover.png">
+      <Name>o.beach_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="places menu\places\beach\o.beach_icon_idle.png">
+      <Name>o.beach_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="places menu\places\coralreef\o.coralreef.png">
+      <Name>o.coralreef</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="places menu\places\coralreef\o.coralreef_icon_hover.png">
+      <Name>o.coralreef_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="places menu\places\coralreef\o.coralreef_icon_idle.png">
+      <Name>o.coralreef_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="places menu\places\desert pyramids\o.desert.png">
+      <Name>o.desert</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="places menu\places\desert pyramids\o.desert_icon_hover.png">
+      <Name>o.desert_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="places menu\places\desert pyramids\o.desert_icon_idle.png">
+      <Name>o.desert_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="places menu\places\fantasy house\o.fantastyhouse.png">
+      <Name>o.fantastyhouse</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="places menu\places\fantasy house\o.fantasyhouse_icon_hover.png">
+      <Name>o.fantasyhouse_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="places menu\places\fantasy house\o.fantasyhouse_icon_idle.png">
+      <Name>o.fantasyhouse_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="places menu\places\monument park\o.monumentpark.png">
+      <Name>o.monumentpark</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="places menu\places\monument park\o.monumpark_icon_hover.png">
+      <Name>o.monumpark_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="places menu\places\monument park\o.monumpark_icon_idle.png">
+      <Name>o.monumpark_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="places menu\places\rainforest\o.rainforest.png">
+      <Name>o.rainforest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="places menu\places\rainforest\o.rainforest_icon_hover.png">
+      <Name>o.rainforest_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="places menu\places\rainforest\o.rainforest_icon_idle.png">
+      <Name>o.rainforest_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="places menu\places\snowy forest\o.snowyforest.png">
+      <Name>o.snowyforest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="places menu\places\snowy forest\o.snowyforest_icon_hover.png">
+      <Name>o.snowyforest_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="places menu\places\snowy forest\o.snowyforest_icon_idle.png">
+      <Name>o.snowyforest_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

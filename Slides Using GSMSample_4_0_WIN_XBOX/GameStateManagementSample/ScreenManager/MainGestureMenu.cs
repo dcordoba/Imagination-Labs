@@ -35,7 +35,7 @@ namespace GameStateManagement
         int Y = 138;
         int Y_elem = 100;
         int width;
-        int Height;
+        int height;
         int menu_Width;
         int menu_Height;
         #endregion
@@ -43,7 +43,7 @@ namespace GameStateManagement
         public MainGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
         {
             width = GD.Viewport.Width * 21 / 30;
-            Height = width * 68 / 1063;
+            height = width * 68 / 1063;
             menu_Width = 181 * 45 / 100;
             menu_Height = menu_Width * 129 / 181;
             _backgroundGestureMenu = InitBackgroundGestureMenu(GD, content, skeleton, sm);
@@ -54,56 +54,86 @@ namespace GameStateManagement
         }
         private GestureMenuScreen InitBackgroundGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
         {
+            int Y_elem_2 = Y_elem + menu_Height + 30;
             Texture2D background_bar = content.Load<Texture2D>("places menu/places menu bar");
             Texture2D empty = new Texture2D(GD, 1, 1);
 
-
-            Texture2D desert_up          = content.Load<Texture2D>("places menu/desert");
-            Texture2D desert_over        = content.Load<Texture2D>("places menu/desert (hilite)1");
-            Texture2D fantasy_hills_up   = content.Load<Texture2D>("places menu/fantasy hills");
-            Texture2D fantasy_hills_over = content.Load<Texture2D>("places menu/fantasy hills (hilite)");
-            Texture2D outer_space_up     = content.Load<Texture2D>("places menu/outer space");
-            Texture2D outer_space_over   = content.Load<Texture2D>("places menu/outer space (hilite)");
-            Texture2D regular_hills_up   = content.Load<Texture2D>("places menu/regular hills");
-            Texture2D regular_hills_over = content.Load<Texture2D>("places menu/regular hills (hilite)");
-            Texture2D undersea_up        = content.Load<Texture2D>("places menu/undersea");
-            Texture2D undersea_over      = content.Load<Texture2D>("places menu/undersea (hilite)");
-            GestureMenuScreen backgroundGestureMenu = new GestureMenuScreen(new Rectangle(X, Y, width, Height), 2000, "Background", skeleton, background_bar, background_bar, empty, sm);
+            Texture2D beach_up = content.Load<Texture2D>("places menu/places/beach/o.beach_icon_idle");
+            Texture2D beach_over = content.Load<Texture2D>("places menu/places/beach/o.beach_icon_hover");
+            Texture2D coral_up = content.Load<Texture2D>("places menu/places/coralreef/o.coralreef_icon_idle");
+            Texture2D coral_over = content.Load<Texture2D>("places menu/places/coralreef/o.coralreef_icon_hover");
+            Texture2D fantasy_up = content.Load<Texture2D>("places menu/places/fantasy house/o.fantasyhouse_icon_idle");
+            Texture2D fantasy_over = content.Load<Texture2D>("places menu/places/fantasy house/o.fantasyhouse_icon_hover");
+            Texture2D monument_up = content.Load<Texture2D>("places menu/places/monument park/o.monumpark_icon_idle");
+            Texture2D monument_over = content.Load<Texture2D>("places menu/places/monument park/o.monumpark_icon_hover");
+            Texture2D rainforest_up = content.Load<Texture2D>("places menu/places/rainforest/o.rainforest_icon_idle");
+            Texture2D rainforest_over = content.Load<Texture2D>("places menu/places/rainforest/o.rainforest_icon_hover");
+            Texture2D snowy_up = content.Load<Texture2D>("places menu/places/snowy forest/o.snowyforest_icon_idle");
+            Texture2D snowy_over = content.Load<Texture2D>("places menu/places/snowy forest/o.snowyforest_icon_hover");
+            Texture2D desert_up          = content.Load<Texture2D>("places menu/places/desert pyramids/o.desert_icon_idle");
+            Texture2D desert_over        = content.Load<Texture2D>("places menu/places/desert pyramids/o.desert_icon_hover");
+            GestureMenuScreen backgroundGestureMenu = new GestureMenuScreen(new Rectangle(X, Y, width, height), 2000, "Background", skeleton, background_bar, background_bar, empty, sm);
             backgroundGestureMenu.Disabled = true;
-            GestureMenuEntry desert         = new GestureMenuEntry(desert_up, desert_over, desert_over, empty, new Rectangle(X_1, Y_elem, menu_Width, menu_Height), "desert");
-            GestureMenuEntry fantasy_hills = new GestureMenuEntry(fantasy_hills_up, fantasy_hills_over, fantasy_hills_over, empty, new Rectangle(X_2, Y_elem, menu_Width, menu_Height), "fantasy_hills");
-            GestureMenuEntry outer_space = new GestureMenuEntry(outer_space_up, outer_space_over, outer_space_over, empty, new Rectangle(X_3, Y_elem, menu_Width, menu_Height), "outer_space");
-            GestureMenuEntry regular_hills = new GestureMenuEntry(regular_hills_up, regular_hills_over, regular_hills_over, empty, new Rectangle(X_4, Y_elem, menu_Width, menu_Height), "regular_hills");
-            GestureMenuEntry undersea = new GestureMenuEntry(undersea_up, undersea_over, undersea_over, empty, new Rectangle(X_5, Y_elem, menu_Width, menu_Height), "undersea");
+            GestureMenuEntry beach = new GestureMenuEntry(beach_up, beach_over, beach_over, empty, new Rectangle(X_1, Y_elem, menu_Width, menu_Height), "beach");
+            GestureMenuEntry coral = new GestureMenuEntry(coral_up, coral_over, coral_over, empty, new Rectangle(X_2, Y_elem, menu_Width, menu_Height), "coral");
+            GestureMenuEntry fantasy = new GestureMenuEntry(fantasy_up, fantasy_over, fantasy_over, empty, new Rectangle(X_3, Y_elem, menu_Width, menu_Height), "fantasy");
+            GestureMenuEntry monument = new GestureMenuEntry(monument_up, monument_over, monument_over, empty, new Rectangle(X_4, Y_elem, menu_Width, menu_Height), "monument");
+            GestureMenuEntry rainforest = new GestureMenuEntry(rainforest_up, rainforest_over, rainforest_over, empty, new Rectangle(X_5, Y_elem, menu_Width, menu_Height), "rainforest");
+            GestureMenuEntry snowy = new GestureMenuEntry(snowy_up, snowy_over, snowy_over, empty, new Rectangle(X_1, Y_elem_2, menu_Width, menu_Height), "snowy");
+            GestureMenuEntry desert = new GestureMenuEntry(desert_up, desert_over, desert_over, empty, new Rectangle(X_2, Y_elem_2, menu_Width, menu_Height), "desert");
+
+            beach.Selected += new EventHandler<PlayerIndexEventArgs>(SelectBackground);
+            coral.Selected += new EventHandler<PlayerIndexEventArgs>(SelectBackground);
+            fantasy.Selected += new EventHandler<PlayerIndexEventArgs>(SelectBackground);
+            monument.Selected += new EventHandler<PlayerIndexEventArgs>(SelectBackground);
+            rainforest.Selected += new EventHandler<PlayerIndexEventArgs>(SelectBackground);
+            snowy.Selected += new EventHandler<PlayerIndexEventArgs>(SelectBackground);
             desert.Selected += new EventHandler<PlayerIndexEventArgs>(SelectBackground);
-            fantasy_hills.Selected += new EventHandler<PlayerIndexEventArgs>(SelectBackground);
-            outer_space.Selected += new EventHandler<PlayerIndexEventArgs>(SelectBackground);
-            regular_hills.Selected += new EventHandler<PlayerIndexEventArgs>(SelectBackground);
-            undersea.Selected += new EventHandler<PlayerIndexEventArgs>(SelectBackground);
-            backgroundGestureMenu.AddMenuItem(desert, new Rectangle(X_1, Y_elem, menu_Width, menu_Height));
-            backgroundGestureMenu.AddMenuItem(fantasy_hills,    new Rectangle(X_2,  Y_elem, menu_Width, menu_Height));
-            backgroundGestureMenu.AddMenuItem(outer_space,      new Rectangle(X_3,  Y_elem, menu_Width, menu_Height));
-            backgroundGestureMenu.AddMenuItem(regular_hills,    new Rectangle(X_4,  Y_elem, menu_Width, menu_Height));
-            backgroundGestureMenu.AddMenuItem(undersea,         new Rectangle(X_5,  Y_elem, menu_Width, menu_Height));
+            backgroundGestureMenu.AddMenuItem(beach, new Rectangle(X_1, Y_elem, menu_Width, menu_Height));
+            backgroundGestureMenu.AddMenuItem(coral, new Rectangle(X_2, Y_elem, menu_Width, menu_Height));
+            backgroundGestureMenu.AddMenuItem(fantasy, new Rectangle(X_3, Y_elem, menu_Width, menu_Height));
+            backgroundGestureMenu.AddMenuItem(monument, new Rectangle(X_4, Y_elem, menu_Width, menu_Height));
+            backgroundGestureMenu.AddMenuItem(rainforest, new Rectangle(X_5, Y_elem, menu_Width, menu_Height));
+            backgroundGestureMenu.AddMenuItem(snowy, new Rectangle(X_1, Y_elem_2, menu_Width, menu_Height));
+            backgroundGestureMenu.AddMenuItem(desert, new Rectangle(X_2, Y_elem_2, menu_Width, menu_Height));
             return backgroundGestureMenu;
         }
         private GestureMenuScreen InitAvatarGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
         {
+            int Y = 35;
+            int Y_elem = 0;
+            int X_1 = 80;
+            int X_2 = 200;
+            int X_3 = 340;
+            int X_4 = 390;
+            int X_4_2 = 440;
+
             Texture2D avatar_bar = content.Load<Texture2D>("places menu/places menu bar");
             Texture2D empty = new Texture2D(GD, 1, 1);
-            Texture2D bubbleman_up = content.Load<Texture2D>("avatar_icons/bubbleman_up");
-            Texture2D bubbleman_over = content.Load<Texture2D>("avatar_icons/bubbleman_over");
-            Texture2D knight_up = content.Load<Texture2D>("avatar_icons/knight_up");
-            Texture2D knight_over = content.Load<Texture2D>("avatar_icons/knight_over");
-            
-            GestureMenuScreen avatarGestureMenu = new GestureMenuScreen(new Rectangle(X, Y, Width, Height), 2000, "Avatars", skeleton, avatar_bar, avatar_bar, empty, sm);
+            Texture2D dragon_up = content.Load<Texture2D>("avatars/dragon_icon_idle");
+            Texture2D dragon_over = content.Load<Texture2D>("avatars/dragon_icon_hover");
+            Texture2D girl_up = content.Load<Texture2D>("avatars/girl_icon_idle");
+            Texture2D girl_over = content.Load<Texture2D>("avatars/girl_icon_hover");
+            Texture2D pocahon_up = content.Load<Texture2D>("avatars/pocahon_icon_idle");
+            Texture2D pocahon_over = content.Load<Texture2D>("avatars/pocahon_icon_hover");
+            Texture2D wknight_up = content.Load<Texture2D>("avatars/w.knight_icon_idle");
+            Texture2D wknight_over = content.Load<Texture2D>("avatars/w.knight_icon_hover");
+            int ratio = 60;
+            int ratio_2 = 55;
+            GestureMenuScreen avatarGestureMenu = new GestureMenuScreen(new Rectangle(X, Y, width, height), 2000, "Avatars", skeleton, avatar_bar, avatar_bar, empty, sm);
             avatarGestureMenu.Disabled = true; // TODO make true
-            GestureMenuEntry bubbleman = new GestureMenuEntry(bubbleman_up, bubbleman_over, bubbleman_over, empty, new Rectangle(X_1, Y_elem, menu_Width, menu_Height), "bubbleman");
-            GestureMenuEntry knight = new GestureMenuEntry(knight_up, knight_over, knight_over, empty, new Rectangle(X_2, Y_elem, menu_Width, menu_Height), "knight");
-            bubbleman.Selected += new EventHandler<PlayerIndexEventArgs>(SelectAvatar);
-            knight.Selected += new EventHandler<PlayerIndexEventArgs>(SelectAvatar);
-            avatarGestureMenu.AddMenuItem(bubbleman, new Rectangle(X_1, Y_elem, menu_Width, menu_Height));
-            avatarGestureMenu.AddMenuItem(knight, new Rectangle(X_2, Y_elem, menu_Width, menu_Height));
+            GestureMenuEntry dragon = new GestureMenuEntry(dragon_up, dragon_over, dragon_over, empty, new Rectangle(X_1, Y_elem, dragon_up.Width * ratio / 100, dragon_up.Height * ratio / 100), "dragon");
+            GestureMenuEntry girl = new GestureMenuEntry(girl_up, girl_over, girl_over, empty, new Rectangle(X_2, Y_elem, girl_up.Width * ratio / 100, girl_up.Height * ratio / 100), "girl");
+            GestureMenuEntry pocahon = new GestureMenuEntry(pocahon_up, pocahon_over, pocahon_over, empty, new Rectangle(X_3, Y_elem, pocahon_up.Width * ratio / 100, pocahon_up.Height * ratio / 100), "pocahon");
+            GestureMenuEntry wknight = new GestureMenuEntry(wknight_up, wknight_over, wknight_over, empty, new Rectangle(X_4, Y_elem, wknight_up.Width * ratio / 100, wknight_up.Height * ratio / 100), "wknight");
+            dragon.Selected += new EventHandler<PlayerIndexEventArgs>(SelectAvatar);
+            girl.Selected += new EventHandler<PlayerIndexEventArgs>(SelectAvatar);
+            pocahon.Selected += new EventHandler<PlayerIndexEventArgs>(SelectAvatar);
+            wknight.Selected += new EventHandler<PlayerIndexEventArgs>(SelectAvatar);
+            avatarGestureMenu.AddMenuItem(dragon, new Rectangle(X_1, Y_elem, dragon_up.Width * ratio / 100, dragon_up.Height * ratio / 100));
+            avatarGestureMenu.AddMenuItem(girl, new Rectangle(X_2, Y_elem, girl_up.Width * ratio / 100, girl_up.Height * ratio / 100));
+            avatarGestureMenu.AddMenuItem(pocahon, new Rectangle(X_3, Y_elem, pocahon_up.Width * ratio / 100, pocahon_up.Height * ratio / 100));
+            avatarGestureMenu.AddMenuItem(wknight, new Rectangle(X_4_2, Y_elem, (wknight_up.Width * ratio_2 / 100) * ratio / 100, wknight_up.Height * ratio / 100));
 
             return avatarGestureMenu;
         }
@@ -122,11 +152,12 @@ namespace GameStateManagement
             KeyValuePair<Texture2D, Rectangle> sideDock = new KeyValuePair<Texture2D, Rectangle>(content.Load<Texture2D>("menu/menu_sideDock"), new Rectangle(0, 0, 50, Height));
             Texture2D t_over = content.Load<Texture2D>("menu/menu_circleHighlight");
             Texture2D t_down = content.Load<Texture2D>("menu/menu_circleHighlight");
-            GestureMenuEntry gme1 = new GestureMenuEntry(t_up, empty, empty, empty, new Rectangle(0, 0, Width, Width), "");
+            GestureMenuEntry gme1 = new GestureMenuEntry(t_up, empty, empty, empty, new Rectangle(1, 1, Width, Width), "avatar");
             GestureMenuEntry gme2 = new GestureMenuEntry(t_up, empty, empty, empty, new Rectangle(0, 100, Width, Width), "background");
             GestureMenuEntry gme3 = new GestureMenuEntry(t_up, empty, empty, empty, new Rectangle(0, 200, Width, Width), "");
             GestureMenuEntry gme4 = new GestureMenuEntry(t_up, empty, empty, empty, new Rectangle(0, 300, Width, Width), "");
             GestureMenuEntry gme5 = new GestureMenuEntry(t_up, empty, empty, empty, new Rectangle(0, 400, Width, Width), "");
+            gme1.Selected += new EventHandler<PlayerIndexEventArgs>(ActivateAvatarScreen);
             gme2.Selected += new EventHandler<PlayerIndexEventArgs>(ActivateBackgroundScreen);
             GestureMenuScreen mainGestureMenu = new GestureMenuScreen(new Rectangle(0, 0, Width, Height), 2000, "Main Menu", skeleton, content.Load<Texture2D>("menu/menu_sideIcons_active"), content.Load<Texture2D>("menu/menu_sideIcons_idle"), empty, sm);
             mainGestureMenu.Disabled = true;
@@ -139,15 +170,42 @@ namespace GameStateManagement
             return mainGestureMenu;
         }
 
+        private void ActivateAvatarScreen(object sender, PlayerIndexEventArgs p)
+        {
+            _backgroundActivate = false;
+            _backgroundGestureMenu.Disabled = true;
+            _avatarGestureMenu.Disabled = false;
+        }
         private void ActivateBackgroundScreen(object sender, PlayerIndexEventArgs p)
         {
             _backgroundActivate = true;
             _backgroundGestureMenu.Disabled = false;
+            _avatarGestureMenu.Disabled = true;
         }
 
         private void SelectAvatar(object sender, PlayerIndexEventArgs p)
         {
             int avatarIndex = -1;
+            switch (((GestureMenuEntry)sender).Text)
+            {
+                case "dragon":
+                    avatarIndex = 3;
+                    break;
+                case "girl":
+                    avatarIndex = 2;
+                    break;
+                case "pocahon":
+                    avatarIndex = 1;
+                    break;
+                case "wknight":
+                    avatarIndex = 0;
+                    break;
+                default:
+                    break;
+            }
+            if (avatarIndex > -1)
+                screenManager.ChangeAvatar(avatarIndex, p.PlayerIndex);
+            _avatarGestureMenu.Disabled = true;
         }
 
         private void SelectBackground(object sender, PlayerIndexEventArgs p)
@@ -155,19 +213,26 @@ namespace GameStateManagement
             int backgroundIndex = -1;
             switch (((GestureMenuEntry)sender).Text)
             {
-                case "desert":
-                    backgroundIndex = 2;
-                    break;
-                case "fantasy_hills":
+                case "beach":
                     backgroundIndex = 0;
                     break;
-                case "outer_space":
+                case "coral":
                     backgroundIndex = 1;
                     break;
-                case "regular_hills":
+                case "fantasy":
+                    backgroundIndex = 2;
                     break;
-                case "undersea":
+                case "monument":
                     backgroundIndex = 3;
+                    break;
+                case "rainforest":
+                    backgroundIndex = 4;
+                    break;
+                case "snowy":
+                    backgroundIndex = 5;
+                    break;
+                case "desert":
+                    backgroundIndex = 6;
                     break;
                 default:
                     break;
@@ -180,6 +245,7 @@ namespace GameStateManagement
         {
             _mainGestureMenu.Disabled = true;
             _backgroundGestureMenu.Disabled = true;
+            _avatarGestureMenu.Disabled = true;
         }
 
         public void EnableMainScreen()
@@ -190,8 +256,8 @@ namespace GameStateManagement
         public void Draw(GameTime gametime)
         {
             _backgroundGestureMenu.Draw(gametime, 0.1F);
-            _mainGestureMenu.Draw(gametime, 0.0F);
             _avatarGestureMenu.Draw(gametime, 0.0F);
+            _mainGestureMenu.Draw(gametime, 0.0F);
         }
 
     }
