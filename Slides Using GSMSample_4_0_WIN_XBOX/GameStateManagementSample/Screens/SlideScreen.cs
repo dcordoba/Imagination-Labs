@@ -388,10 +388,13 @@ namespace GameStateManagement
             //press u to undo last capture for this slide
             if (input.IsNewKeyPress(Keys.U, null, out requesteeIndex))
             {
+                Undo();
+                /*
                 if (slideObjects.Count > 0)
                 {
                     slideObjects.RemoveAt(slideObjects.Count - 1);
                 }
+                 * */
             }
             //press right arrow key to move forward one slide
             if (input.IsNewKeyPress(Keys.Right, null, out requesteeIndex))
@@ -478,6 +481,15 @@ namespace GameStateManagement
             spriteBatch.End();
         }
         #endregion
+#region Undo
+        private void Undo()
+        {
+            if (slideObjects.Count > 0)
+            {
+                slideObjects.RemoveAt(slideObjects.Count - 1);
+            }
+        }
+#endregion
          
         #region Display
         public override void Draw(GameTime gameTime)
