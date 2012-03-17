@@ -4,4 +4,3 @@ C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_new\Imagination-Labs\S
 C:\Users\David\isabelle-cs247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\Content\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Isa\CS247\Imagination-Labs\Imagination-Labs DAvid\Slides Using GSMSample_4_0_WIN_XBOX\Content\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\Content\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\Content\obj\x86\Debug\ResolveAssemblyReference.cache

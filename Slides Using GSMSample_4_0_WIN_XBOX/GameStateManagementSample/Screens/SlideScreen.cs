@@ -56,8 +56,10 @@ namespace GameStateManagement
         #region Initialization
         public SlideScreen(SlideMenuScreen slideMenu)
         {
+            TransitionOnTime = TimeSpan.FromSeconds(0.5);
+            TransitionOffTime = TimeSpan.FromSeconds(0.5);
+
             this.slideObjects = new List<SlideObject>();// new List<Sprite2D>(); 
-          
             this.parentSlideMenu = slideMenu;
             this.captured = false;
             this.slideno = this.parentSlideMenu.MaxSlideIndex;
