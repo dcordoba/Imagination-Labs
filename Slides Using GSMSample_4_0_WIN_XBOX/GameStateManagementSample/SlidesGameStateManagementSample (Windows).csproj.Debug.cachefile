@@ -151,8 +151,6 @@ Content\characters\dragon\ThighRight.xnb
 Content\characters\dragon\Torso.xnb
 Content\characters\dragon\UpperArmLeft.xnb
 Content\characters\dragon\UpperArmRight.xnb
-Content\menufont.xnb
-Content\gamefont.xnb
 Content\avatars\dragon_icon_hover.xnb
 Content\avatars\dragon_icon_idle.xnb
 Content\avatars\girl_icon_hover.xnb
@@ -182,3 +180,5 @@ Content\places menu\places\rainforest\o.rainforest_icon_idle.xnb
 Content\places menu\places\snowy forest\o.snowyforest.xnb
 Content\places menu\places\snowy forest\o.snowyforest_icon_hover.xnb
 Content\places menu\places\snowy forest\o.snowyforest_icon_idle.xnb
+Content\menufont.xnb
+Content\gamefont.xnb
