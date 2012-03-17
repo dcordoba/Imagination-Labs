@@ -36,7 +36,7 @@ namespace GameStateManagement
     /// </summary>
     public class ScreenManager : DrawableGameComponent
     {
-        #region Fields
+        #region Variables
 
         List<GameScreen> screens = new List<GameScreen>();
         List<GameScreen> screensToUpdate = new List<GameScreen>();
@@ -88,6 +88,7 @@ namespace GameStateManagement
         KinectSensor kinect;
         Skeleton[] skeletonData;
         Skeleton curSkeleton;
+        SkeletonJoints curSkeletonJoints;
         Character curCharacter;
         int curAvatarIndex; //the index for which avatar is being drawn.
 
@@ -358,6 +359,8 @@ namespace GameStateManagement
             //Texture2D av1 = new Texture2D(GraphicsDevice, 50, 100);
             // skeleton = new SkeletonTracker(this);
 
+
+            mainGestureMenu = new MainGestureMenu(GraphicsDevice, content, curCharacter, this);
             // Start speech recognizer after KinectSensor.Start() is called
             // returns null if problem with speech prereqs or instantiation.
             speechRecognizer = SpeechRecognizer.Create();
@@ -365,7 +368,7 @@ namespace GameStateManagement
             // speechRecognizer.Start(skeleton.Kinect.AudioSource);
             if (!(kinect == null))
                 speechRecognizer.Start(kinect.AudioSource);
-            mainGestureMenu = new MainGestureMenu(GraphicsDevice, content, curCharacter, this);
+           
             InitTextures(content);
             InitRectangles(content);
 
@@ -379,10 +382,17 @@ namespace GameStateManagement
         {
             //initialize background related textures. Add background textures to the backgrounds list
             backgroundExtraPages = content.Load<Texture2D>("backgrounds/behindPages_straightened");
-            Texture2D backGround1 = content.Load<Texture2D>("backgrounds/background_fantasyriver_straightened");
-            Texture2D backGround2 = content.Load<Texture2D>("backgrounds/background_outerspace_straightened");
-            backgrounds.Add(backGround1);
-            backgrounds.Add(backGround2);
+            Texture2D background_fantasyriver = content.Load<Texture2D>("backgrounds/background_fantasyriver_straightened");
+            Texture2D background_space = content.Load<Texture2D>("backgrounds/background_outerspace_straightened");
+            Texture2D background_desert = content.Load<Texture2D>("backgrounds/desert");
+            Texture2D background_undersea = content.Load<Texture2D>("backgrounds/undersea");
+
+
+            backgrounds.Add(background_fantasyriver);
+            backgrounds.Add(background_space);
+            backgrounds.Add(background_desert);
+            backgrounds.Add(background_undersea);
+
             
             //initialize menu textures
             menu_circleHighlight = content.Load<Texture2D>("menu/menu_circleHighlight");
@@ -432,7 +442,7 @@ namespace GameStateManagement
         #region speech recognition
         private void RecognizerSaidSomething(object sender, SpeechRecognizer.SaidSomethingEventArgs e)
         {
-            return;
+            //return;
             if (this.screens.Count <= 2)
                 return;
             if (this.screens.Count > 1)
@@ -556,14 +566,18 @@ namespace GameStateManagement
                 screen.Draw(gameTime);
             }
 
+            //draws the main gesture menu
+            mainGestureMenu.Draw(gameTime);
+
             //  draw main avatar
             if (curSkeleton != null)
             {
-                curCharacter.update(curSkeleton);
+                curSkeletonJoints.UpdateJointPositions(curSkeleton);
+                curCharacter.update(curSkeletonJoints);
                 curCharacter.draw(0);
             }
             
-            mainGestureMenu.Draw(gameTime);
+            
             //skeleton.Draw(gameTime);
         }
 
@@ -585,6 +599,7 @@ namespace GameStateManagement
                         if (skeleton != null && skeleton.TrackingState == SkeletonTrackingState.Tracked)
                         {
                             curSkeleton = skeleton;
+                            curSkeletonJoints = new SkeletonJoints(curSkeleton);
                         }
 
                     }

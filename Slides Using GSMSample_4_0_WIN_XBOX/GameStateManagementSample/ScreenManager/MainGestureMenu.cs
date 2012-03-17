@@ -20,9 +20,27 @@ namespace GameStateManagement
         GestureMenuScreen _exportGestureMenu;
         ScreenManager screenManager;
         bool _backgroundActivate = false;
+        #region icon_grid
+        int X = 0;
+        int X_1 = 80;
+        int X_2 = 180;
+        int X_3 = 280;
+        int X_4 = 380;
+        int X_5 = 480;
+        int Y = 138;
+        int Y_elem = 100;
+        int Width;
+        int Height;
+        int menu_Width;
+        int menu_Height;
+        #endregion
 
         public MainGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
         {
+            Width = GD.Viewport.Width * 21 / 30;
+            Height = Width * 68 / 1063;
+            menu_Width = 181 * 45 / 100;
+            menu_Height = menu_Width * 129 / 181;
             _backgroundGestureMenu = InitBackgroundGestureMenu(GD, content, skeleton, sm);
             _avatarGestureMenu = InitAvatarGestureMenu(GD, content, skeleton, sm);
             _exportGestureMenu = InitExportGestureMenu(GD, content, skeleton, sm);
@@ -34,6 +52,7 @@ namespace GameStateManagement
             Texture2D background_bar = content.Load<Texture2D>("places menu/places menu bar");
             Texture2D empty = new Texture2D(GD, 1, 1);
 
+
             Texture2D desert_up          = content.Load<Texture2D>("places menu/desert");
             Texture2D desert_over        = content.Load<Texture2D>("places menu/desert (hilite)1");
             Texture2D fantasy_hills_up   = content.Load<Texture2D>("places menu/fantasy hills");
@@ -44,18 +63,6 @@ namespace GameStateManagement
             Texture2D regular_hills_over = content.Load<Texture2D>("places menu/regular hills (hilite)");
             Texture2D undersea_up        = content.Load<Texture2D>("places menu/undersea");
             Texture2D undersea_over      = content.Load<Texture2D>("places menu/undersea (hilite)");
-            int X = 0;
-            int X_1 = 80;
-            int X_2 = 180;
-            int X_3 = 280;
-            int X_4 = 380;
-            int X_5 = 480;
-            int Y = 138;
-            int Y_elem = 100;
-            int Width  = GD.Viewport.Width * 21 / 30;
-            int Height = Width * 68 / 1063;
-            int menu_Width  = 181 * 45 / 100;
-            int menu_Height = menu_Width * 129 / 181;
             GestureMenuScreen backgroundGestureMenu = new GestureMenuScreen(new Rectangle(X, Y, Width, Height), 2000, "Background", skeleton, background_bar, background_bar, empty, sm);
             backgroundGestureMenu.Disabled = true;
             GestureMenuEntry desert         = new GestureMenuEntry(desert_up, desert_over, desert_over, empty, new Rectangle(X_1, Y_elem, menu_Width, menu_Height), "desert");
@@ -77,7 +84,23 @@ namespace GameStateManagement
         }
         private GestureMenuScreen InitAvatarGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
         {
-            return null;
+            Texture2D avatar_bar = content.Load<Texture2D>("places menu/places menu bar");
+            Texture2D empty = new Texture2D(GD, 1, 1);
+            Texture2D bubbleman_up = content.Load<Texture2D>("avatar_icons/bubbleman_up");
+            Texture2D bubbleman_over = content.Load<Texture2D>("avatar_icons/bubbleman_over");
+            Texture2D knight_up = content.Load<Texture2D>("avatar_icons/knight_up");
+            Texture2D knight_over = content.Load<Texture2D>("avatar_icons/knight_over");
+            
+            GestureMenuScreen avatarGestureMenu = new GestureMenuScreen(new Rectangle(X, Y, Width, Height), 2000, "Avatars", skeleton, avatar_bar, avatar_bar, empty, sm);
+            avatarGestureMenu.Disabled = true; // TODO make true
+            GestureMenuEntry bubbleman = new GestureMenuEntry(bubbleman_up, bubbleman_over, bubbleman_over, empty, new Rectangle(X_1, Y_elem, menu_Width, menu_Height), "bubbleman");
+            GestureMenuEntry knight = new GestureMenuEntry(knight_up, knight_over, knight_over, empty, new Rectangle(X_2, Y_elem, menu_Width, menu_Height), "knight");
+            bubbleman.Selected += new EventHandler<PlayerIndexEventArgs>(SelectAvatar);
+            knight.Selected += new EventHandler<PlayerIndexEventArgs>(SelectAvatar);
+            avatarGestureMenu.AddMenuItem(bubbleman, new Rectangle(X_1, Y_elem, menu_Width, menu_Height));
+            avatarGestureMenu.AddMenuItem(knight, new Rectangle(X_2, Y_elem, menu_Width, menu_Height));
+
+            return avatarGestureMenu;
         }
         private GestureMenuScreen InitExportGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
         {
@@ -116,12 +139,18 @@ namespace GameStateManagement
             _backgroundGestureMenu.Disabled = false;
         }
 
+        private void SelectAvatar(object sender, PlayerIndexEventArgs p)
+        {
+            int avatarIndex = -1;
+        }
+
         private void SelectBackground(object sender, PlayerIndexEventArgs p)
         {
             int backgroundIndex = -1;
             switch (((GestureMenuEntry)sender).Text)
             {
                 case "desert":
+                    backgroundIndex = 2;
                     break;
                 case "fantasy_hills":
                     backgroundIndex = 0;
@@ -132,6 +161,7 @@ namespace GameStateManagement
                 case "regular_hills":
                     break;
                 case "undersea":
+                    backgroundIndex = 3;
                     break;
                 default:
                     break;
@@ -155,6 +185,7 @@ namespace GameStateManagement
         {
             _backgroundGestureMenu.Draw(gametime, 0.1F);
             _mainGestureMenu.Draw(gametime, 0.0F);
+            _avatarGestureMenu.Draw(gametime, 0.0F);
         }
 
     }

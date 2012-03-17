@@ -48,7 +48,6 @@ Content\knight\ThighRight.xnb
 Content\knight\Torso.xnb
 Content\knight\UpperArmLeft.xnb
 Content\knight\UpperArmRight.xnb
-Content\knight\italian_knt2 - Copy.xnb
 Content\knight\italian_knt2.xnb
 Content\places menu\desert (hilite)1.xnb
 Content\places menu\desert.xnb
@@ -61,5 +60,17 @@ Content\places menu\regular hills (hilite).xnb
 Content\places menu\regular hills.xnb
 Content\places menu\undersea (hilite).xnb
 Content\places menu\undersea.xnb
+Content\backgrounds\beach.xnb
+Content\backgrounds\desert.xnb
+Content\backgrounds\forest.xnb
+Content\backgrounds\pyramids.xnb
+Content\backgrounds\riverhouse.xnb
+Content\backgrounds\rooftops.xnb
+Content\backgrounds\snowyforest.xnb
+Content\backgrounds\undersea.xnb
 Content\menufont.xnb
 Content\gamefont.xnb
+Content\avatar_icons\bubbleman_over.xnb
+Content\avatar_icons\bubbleman_up.xnb
+Content\avatar_icons\knight_over.xnb
+Content\avatar_icons\knight_up.xnb

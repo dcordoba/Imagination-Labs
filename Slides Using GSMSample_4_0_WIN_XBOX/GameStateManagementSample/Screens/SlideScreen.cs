@@ -25,7 +25,8 @@ namespace GameStateManagement
         public int backgroundIndex = 0; //temporary tracker for toggling backgrounds
         private Texture2D backgroundScene;
         private List<SlideObject> slideObjects;
-        private List<Skeleton> capturedSkeletons;
+        //private List<Skeleton> capturedSkeletons;
+        private List<SkeletonJoints> capturedSkeletons;
         private List<int> capturedAvatarIndices;
 
 
@@ -60,7 +61,7 @@ namespace GameStateManagement
             this.parentSlideMenu = slideMenu;
             this.captured = false;
             this.slideno = this.parentSlideMenu.MaxSlideIndex;
-            this.capturedSkeletons = new List<Skeleton>();
+            this.capturedSkeletons = new List<SkeletonJoints>();//List<Skeleton>();
             this.capturedAvatarIndices = new List<int>();
            
 
@@ -372,11 +373,10 @@ namespace GameStateManagement
            // press "b" to change the background
             if(input.IsNewKeyPress(Keys.B,null, out requesteeIndex)){
 
-                int index = 1 - backgroundIndex; //a temporary toggle between the 2 backgrounds availiable
-                backgroundIndex = index;
+                backgroundIndex = (backgroundIndex + 1) % 4;
              
                 //TODO: use gesture recognition to generate background indices. 
-                ChangeBackground(index);
+                ChangeBackground(backgroundIndex);
             }
             //press u to undo last capture for this slide
             if (input.IsNewKeyPress(Keys.U, null, out requesteeIndex))
@@ -463,7 +463,8 @@ namespace GameStateManagement
         private void Captured()
         //public void Captured()
         {
-            capturedSkeletons.Add(ScreenManager.CurSkeleton);
+            SkeletonJoints curJoints = new SkeletonJoints(ScreenManager.CurSkeleton);
+            capturedSkeletons.Add(curJoints);
             capturedAvatarIndices.Add(ScreenManager.CurAvatarIndex);
             //capturedAvatarIndices.Add(ScreenManager.Ch
             //Create a Sprite with the current Avatar
@@ -507,12 +508,14 @@ namespace GameStateManagement
             // Test Code
             spriteBatch.DrawString(ScreenManager.Font, "Slide " + this.slideno, new Vector2(0, 80), Color.Black);
             //
-            spriteBatch.End();
+          // SkeletonDerived skel = new SkeletonDerived(ScreenManager.CurSkeleton);
+            
+            //skel.Joints = ScreenManager.CurSkeleton.Joints;
             for(int i = 0; i < capturedSkeletons.Count; i++){
                 ScreenManager.CurCharacter.update(capturedSkeletons[i]);
                 ScreenManager.CurCharacter.draw(capturedAvatarIndices[i]);
             }
-
+            spriteBatch.End();
             Console.WriteLine("capturedSkeletons.count " + capturedSkeletons.Count);
         }
         #endregion
@@ -538,12 +541,14 @@ namespace GameStateManagement
                     this.ExitScreen();
                     break;
                 case SpeechRecognizer.Verbs.Next:
-                    Console.WriteLine("*****SLIDE Recognized 'Next'!!!!!!!!!!!!!!!!!!");
+                    Console.WriteLine("*****SLIDE Recognized 'Next'!!!!!!!!!!!!!!!!!! ");
                     parentSlideMenu.NextSlide();
                     break;
             }
         }
         #endregion
+
+
     }
        
      
