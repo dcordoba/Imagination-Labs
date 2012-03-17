@@ -89,8 +89,10 @@ namespace GameStateManagement
         Skeleton[] skeletonData;
         Skeleton curSkeleton;
         SkeletonJoints curSkeletonJoints;
+        //Avatar variables
         Character curCharacter;
         public int curAvatarIndex; //the index for which avatar is being drawn.
+        private int numAvatars; //number of avatars that are availiable for use
 
         //SpeechRecognizer for our program
         SpeechRecognizer speechRecognizer;
@@ -114,15 +116,15 @@ namespace GameStateManagement
         #endregion
 
         #region Properties ie Getters
+       
         /// <summary>
-        /// returns the skeleton tracker of the program
+        /// returns the number of avatars availiable in the program
         /// </summary>
         /// 
-        /*
-        public SkeletonTracker Skeleton
+        public int NumberOfCharacters
         {
-            get { return skeleton; }
-        }*/
+            get { return numAvatars; }
+        }
         /// <summary>
         /// returns the current skeleton of the program
         /// </summary>
@@ -353,7 +355,14 @@ namespace GameStateManagement
             curAvatarIndex = 0;
             curCharacter = new Character(this.Game);
             curCharacter.setKinect(this.kinect);
-            curCharacter.load(new String[] { "characters/knight", "characters/pocahontas" });
+
+            String[] avatarFilepaths = new String[] { 
+                "characters/knight",
+                "characters/pocahontas",
+                "characters/white_knight"
+            };
+            numAvatars = avatarFilepaths.Length;
+            curCharacter.load(avatarFilepaths);
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
             font = content.Load<SpriteFont>("menufont");
@@ -404,6 +413,7 @@ namespace GameStateManagement
             menu_sideIcons_active = content.Load<Texture2D>("menu/menu_sideIcons_active");
             menu_sideIcons_idle = content.Load<Texture2D>("menu/menu_sideIcons_idle");
         }
+
         private void InitRectangles(ContentManager content)
         {
             int sideMenuWidth = 75;
@@ -614,8 +624,30 @@ namespace GameStateManagement
         #endregion
 
         #region Public Methods
-
-        /// <summary>
+        ///<summary>
+        /// ChangeAvatar
+        /// changes the avatar to the avatar skin at index
+        /// </summary>        
+        public void CycleAvatar()
+        {
+            if (curAvatarIndex == numAvatars - 1)
+            {
+                curAvatarIndex = 0;
+            }
+            else
+            {
+                curAvatarIndex++;
+            }            
+        }
+        ///<summary>
+        /// ChangeAvatar
+        /// changes the avatar to the avatar skin at index
+        /// </summary>        
+        public void ChangeAvatar(int index)
+        {
+            curAvatarIndex = index;
+        }
+      
         /// getBackgroundScene returns the Texture2D of the background scene
         /// indicated by index. 
         /// </summary>

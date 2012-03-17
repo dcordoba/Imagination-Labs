@@ -838,6 +838,150 @@
       <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatar_icons\knight_up.xnb</Output>
       <Time>2012-03-16T17:33:41.9323151-07:00</Time>
     </Item>
+    <Item>
+      <Source>characters\white_knight\FootLeft.png</Source>
+      <Name>characters\white_knight\FootLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\FootLeft.xnb</Output>
+      <Time>2012-03-16T03:49:28-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\FootRight.png</Source>
+      <Name>characters\white_knight\FootRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\FootRight.xnb</Output>
+      <Time>2012-03-16T03:53:16-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\ForearmLeft.png</Source>
+      <Name>characters\white_knight\ForearmLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\ForearmLeft.xnb</Output>
+      <Time>2012-03-16T04:02:28-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\ForearmRight.png</Source>
+      <Name>characters\white_knight\ForearmRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\ForearmRight.xnb</Output>
+      <Time>2012-03-16T04:02:54-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\HandLeft.png</Source>
+      <Name>characters\white_knight\HandLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\HandLeft.xnb</Output>
+      <Time>2012-03-16T04:05:28-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\HandRight.png</Source>
+      <Name>characters\white_knight\HandRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\HandRight.xnb</Output>
+      <Time>2012-03-16T04:05:56-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\Head.png</Source>
+      <Name>characters\white_knight\Head</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\Head.xnb</Output>
+      <Time>2012-03-16T05:04:18-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\Hips.png</Source>
+      <Name>characters\white_knight\Hips</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\Hips.xnb</Output>
+      <Time>2012-03-16T04:47:30-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\ShinLeft.png</Source>
+      <Name>characters\white_knight\ShinLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\ShinLeft.xnb</Output>
+      <Time>2012-03-16T03:44:30-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\ShinRight.png</Source>
+      <Name>characters\white_knight\ShinRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\ShinRight.xnb</Output>
+      <Time>2012-03-16T03:45:06-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\ThighLeft.png</Source>
+      <Name>characters\white_knight\ThighLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\ThighLeft.xnb</Output>
+      <Time>2012-03-16T03:46:28-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\ThighRight.png</Source>
+      <Name>characters\white_knight\ThighRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\ThighRight.xnb</Output>
+      <Time>2012-03-16T03:46:50-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\Torso.png</Source>
+      <Name>characters\white_knight\Torso</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\Torso.xnb</Output>
+      <Time>2012-03-16T04:47:06-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\UpperArmLeft.png</Source>
+      <Name>characters\white_knight\UpperArmLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\UpperArmLeft.xnb</Output>
+      <Time>2012-03-16T03:59:32-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\UpperArmRight.png</Source>
+      <Name>characters\white_knight\UpperArmRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\UpperArmRight.xnb</Output>
+      <Time>2012-03-16T04:00:06-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\w.knight-sword.png</Source>
+      <Name>characters\white_knight\w.knight-sword</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Isa\CS247\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\w.knight-sword.xnb</Output>
+      <Time>2012-03-16T05:07:32-07:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

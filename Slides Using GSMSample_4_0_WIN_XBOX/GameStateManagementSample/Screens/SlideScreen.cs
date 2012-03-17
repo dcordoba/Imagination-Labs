@@ -364,6 +364,11 @@ namespace GameStateManagement
             if(input.IsNewKeyPress(Keys.C, null,out requesteeIndex)){
                 Captured();
             }
+            //press a to  cycle through avatars
+            if (input.IsNewKeyPress(Keys.A, null, out requesteeIndex))
+            {
+                ScreenManager.CycleAvatar();
+            }
             //press the left arrow key to go back one slide
             if(input.IsNewKeyPress(Keys.Left, null, out requesteeIndex)){
                // parentSlideMenu.PreviousSlide(requesteeIndex);
@@ -408,12 +413,7 @@ namespace GameStateManagement
                 parentSlideMenu.ChangeToAvatar(1);
                 Console.Out.WriteLine("Changed to 1");
             }
-            //press "a" to go to change to avatar2
-            if (input.IsNewKeyPress(Keys.A, null, out requesteeIndex))
-            {
-                parentSlideMenu.ChangeToAvatar(2);
-                Console.Out.WriteLine("changed to 2");
-            }
+           
             //press "m" to go to slideMenu
             if (input.IsNewKeyPress(Keys.M, null, out requesteeIndex))
             {
