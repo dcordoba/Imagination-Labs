@@ -137,6 +137,16 @@ namespace GameStateManagement
         #endregion
 
         #region Slide Menu Functions
+
+        /// <summary> CurrentPageNumber()
+        /// returns the index of the current slide + 1 to represent the current page number
+        /// </summary>
+        public int CurrentPageNumber()
+        {
+            return currentSlideIndex + 1;
+            
+        }
+
         /// <summary> NewSlide(PlayerIndex playerIndex) or
         /// Creates a newSlide with passing the playerIndex parameter to the screenManager.
         /// note: this method takes O(n) .....
@@ -148,16 +158,14 @@ namespace GameStateManagement
             slides.Insert(currentSlideIndex +1, slide);
             currentSlideIndex++;
             ScreenManager.AddScreen(slide,ScreenManager.currentPlayerIndex);//adding a screen with 'null' for player index allows any player to control the screen but allows commands to be multiplied!
-        }/*
-        public void NewSlide(SlideMenuScreen slideMenu, PlayerIndex playerIndex)
-        {
-            SlideScreen slide = new SlideScreen(slideMenu, slides.Count);
-            slides.Add(slide);
-            ScreenManager.AddScreen(slide, playerIndex);
-        } */
+        }
+
+
         /// <summary> NextSlide(int curSlideIndex)
         /// Changes the screen to show the next slide in the
-        /// list of slides.
+        /// list of slides. If the user is already on the
+        /// last slide and says "next" then it automatically 
+        /// creates a new slide
         /// </summary>
        // public void NextSlide(PlayerIndex playerIndex){
         public void NextSlide()
@@ -167,6 +175,10 @@ namespace GameStateManagement
             {
                 ScreenManager.AddScreen(slides[currentSlideIndex + 1], ScreenManager.currentPlayerIndex);//if playerIndex is null, the screen accepts input from any player//playerIndex);
                 currentSlideIndex++;
+            }
+            else //if the current slide is the last Slide Automatically create a new slide
+            {
+                NewSlide();    
             }
         }
 

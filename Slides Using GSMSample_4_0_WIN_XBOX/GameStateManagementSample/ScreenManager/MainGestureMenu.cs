@@ -19,6 +19,11 @@ namespace GameStateManagement
         GestureMenuScreen _avatarGestureMenu;
         GestureMenuScreen _exportGestureMenu;
         ScreenManager screenManager;
+        int menuWidth;
+        public int Width
+        {
+            get { return menuWidth; }
+        }
         bool _backgroundActivate = false;
 
         public MainGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
@@ -90,6 +95,7 @@ namespace GameStateManagement
             Texture2D t_up = empty;
             int Height = GD.Viewport.Height;
             int Width = GD.Viewport.Height * 155 / 1000;
+            this.menuWidth = Width;
             KeyValuePair<Texture2D, Rectangle> sideDock = new KeyValuePair<Texture2D, Rectangle>(content.Load<Texture2D>("menu/menu_sideDock"), new Rectangle(0, 0, 50, Height));
             Texture2D t_over = content.Load<Texture2D>("menu/menu_circleHighlight");
             Texture2D t_down = content.Load<Texture2D>("menu/menu_circleHighlight");

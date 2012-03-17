@@ -499,15 +499,19 @@ namespace GameStateManagement
              */
             spriteBatch.Draw(ScreenManager.BackgroundExtraPages, ScreenManager.fullscreenRectangle, Color.White);
             spriteBatch.Draw(backgroundScene,ScreenManager.fullscreenRectangle, Color.White);
-           // spriteBatch.Draw(ScreenManager.Menu_SideDock, sideMenuDockRect, Color.White);
-            //spriteBatch.Draw(ScreenManager.Menu_SideIcons_Idle, ScreenManager.SideMenuIconsRectangle, Color.White);
+          
             for(int i = 0; i < slideObjects.Count; i++){
                SlideObject curSprite = slideObjects[i];
-             curSprite.Draw(gameTime,spriteBatch);
+                 curSprite.Draw(gameTime,spriteBatch);
               
             }
-            // Test Code
-            spriteBatch.DrawString(ScreenManager.Font, "Slide " + this.slideno, new Vector2(0, 80), Color.Black);
+            // Draws page number of the slide
+            int fontHeightAdj = 50; //adjust height by the height of the font
+            int menuWidth = ScreenManager.MainGestureMenu.Width;
+            int x = (viewport.Width / 2) - menuWidth; //- ScreenManager.;
+            int y = viewport.Height - fontHeightAdj;
+
+            spriteBatch.DrawString(ScreenManager.Font, "~ Page " + this.parentSlideMenu.CurrentPageNumber() +" ~", new Vector2(x, y), Color.DarkSlateGray);
             //
           // SkeletonDerived skel = new SkeletonDerived(ScreenManager.CurSkeleton);
             
