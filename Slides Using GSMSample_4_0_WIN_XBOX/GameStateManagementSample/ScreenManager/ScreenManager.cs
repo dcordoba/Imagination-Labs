@@ -410,16 +410,20 @@ namespace GameStateManagement
         {
             //initialize background related textures. Add background textures to the backgrounds list
             backgroundExtraPages = content.Load<Texture2D>("backgrounds/behindPages_straightened");
-            Texture2D background_fantasyriver = content.Load<Texture2D>("backgrounds/background_fantasyriver_straightened");
-            Texture2D background_space = content.Load<Texture2D>("backgrounds/background_outerspace_straightened");
-            Texture2D background_desert = content.Load<Texture2D>("backgrounds/desert");
-            Texture2D background_undersea = content.Load<Texture2D>("backgrounds/undersea");
-
-
-            backgrounds.Add(background_fantasyriver);
-            backgrounds.Add(background_space);
-            backgrounds.Add(background_desert);
-            backgrounds.Add(background_undersea);
+            Texture2D beach = content.Load<Texture2D>("places menu/places/beach/o.beach");
+            Texture2D coral = content.Load<Texture2D>("places menu/places/coralreef/o.coralreef");
+            Texture2D fantasy = content.Load<Texture2D>("places menu/places/fantasy house/o.fantastyhouse");
+            Texture2D monument = content.Load<Texture2D>("places menu/places/monument park/o.monumentpark");
+            Texture2D rainforest = content.Load<Texture2D>("places menu/places/rainforest/o.rainforest");
+            Texture2D snowy = content.Load<Texture2D>("places menu/places/snowy forest/o.snowyforest");
+            Texture2D desert = content.Load<Texture2D>("places menu/places/desert pyramids/o.desert");
+            backgrounds.Add(beach);
+            backgrounds.Add(coral);
+            backgrounds.Add(fantasy);
+            backgrounds.Add(monument);
+            backgrounds.Add(rainforest);
+            backgrounds.Add(snowy);
+            backgrounds.Add(desert);
 
             
             //initialize menu textures

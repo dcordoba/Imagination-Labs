@@ -109,7 +109,7 @@ namespace GameStateManagement
             return soundInstance.State == SoundState.Playing;
         }
 
-        void beginRecording()
+        public void beginRecording()
         {
             if (!isRecording() && !isPlaying())
             {
@@ -410,13 +410,13 @@ namespace GameStateManagement
             if (input.IsNewKeyPress(Keys.Z, null, out requesteeIndex))
             {
                 parentSlideMenu.ChangeToAvatar(0);
-                Console.Out.WriteLine("Changed to 0");
+                //Console.Out.WriteLine("Changed to 0");
             }
             //press "x" to go to change to avatar2
             if (input.IsNewKeyPress(Keys.X, null, out requesteeIndex))
             {
                 parentSlideMenu.ChangeToAvatar(1);
-                Console.Out.WriteLine("Changed to 1");
+                //Console.Out.WriteLine("Changed to 1");
             }
            
             //press "m" to go to slideMenu
@@ -482,11 +482,12 @@ namespace GameStateManagement
         }
         #endregion
 #region Undo
-        private void Undo()
+        public void Undo()
         {
-            if (slideObjects.Count > 0)
+            if (capturedSkeletons.Count > 0 && capturedAvatarIndices.Count > 0)
             {
-                slideObjects.RemoveAt(slideObjects.Count - 1);
+                capturedSkeletons.RemoveAt(capturedSkeletons.Count - 1);
+                capturedAvatarIndices.RemoveAt(capturedAvatarIndices.Count - 1);
             }
         }
 #endregion
@@ -542,7 +543,7 @@ namespace GameStateManagement
             }
            
             spriteBatch.End();
-            Console.WriteLine("capturedSkeletons.count " + capturedSkeletons.Count);
+            //Console.WriteLine("capturedSkeletons.count " + capturedSkeletons.Count);
         }
         #endregion
         #region Speech Recognition

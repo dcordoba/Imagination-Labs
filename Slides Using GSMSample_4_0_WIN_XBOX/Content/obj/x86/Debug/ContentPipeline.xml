@@ -1,0 +1,1702 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>background.png</Source>
+      <Name>background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\background.xnb</Output>
+      <Time>2012-03-12T10:06:12.9660826-07:00</Time>
+    </Item>
+    <Item>
+      <Source>blank.png</Source>
+      <Name>blank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\blank.xnb</Output>
+      <Time>2012-03-12T10:06:13.0890897-07:00</Time>
+    </Item>
+    <Item>
+      <Source>gradient.png</Source>
+      <Name>gradient</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gradient.xnb</Output>
+      <Time>2012-03-12T10:06:13.1050906-07:00</Time>
+    </Item>
+    <Item>
+      <Source>tov.jpg</Source>
+      <Name>tov</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\tov.xnb</Output>
+      <Time>2012-03-12T10:06:13.1610938-07:00</Time>
+    </Item>
+    <Item>
+      <Source>questionIcon.png</Source>
+      <Name>questionIcon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\questionIcon.xnb</Output>
+      <Time>2012-03-12T10:06:13.1540934-07:00</Time>
+    </Item>
+    <Item>
+      <Source>knight.png</Source>
+      <Name>knight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knight.xnb</Output>
+      <Time>2012-03-12T10:06:13.1100909-07:00</Time>
+    </Item>
+    <Item>
+      <Source>batman.jpg</Source>
+      <Name>batman</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\batman.xnb</Output>
+      <Time>2012-03-12T10:06:13.0740888-07:00</Time>
+    </Item>
+    <Item>
+      <Source>princess.jpg</Source>
+      <Name>princess</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\princess.xnb</Output>
+      <Time>2012-03-12T10:06:13.1510932-07:00</Time>
+    </Item>
+    <Item>
+      <Source>knightSmall.png</Source>
+      <Name>knightSmall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\knightSmall.xnb</Output>
+      <Time>2012-03-12T10:06:13.1290919-07:00</Time>
+    </Item>
+    <Item>
+      <Source>stickFig.png</Source>
+      <Name>stickFig</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\stickFig.xnb</Output>
+      <Time>2012-03-12T10:06:13.1550934-07:00</Time>
+    </Item>
+    <Item>
+      <Source>circleLarge.png</Source>
+      <Name>circleLarge</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleLarge.xnb</Output>
+      <Time>2012-03-12T10:06:13.0970901-07:00</Time>
+    </Item>
+    <Item>
+      <Source>circleMedium.png</Source>
+      <Name>circleMedium</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleMedium.xnb</Output>
+      <Time>2012-03-12T10:06:13.0980902-07:00</Time>
+    </Item>
+    <Item>
+      <Source>circleSmall.png</Source>
+      <Name>circleSmall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\circleSmall.xnb</Output>
+      <Time>2012-03-12T10:06:13.0990902-07:00</Time>
+    </Item>
+    <Item>
+      <Source>bg1_active.jpg</Source>
+      <Name>bg1_active</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\bg1_active.xnb</Output>
+      <Time>2012-03-12T10:06:13.0810892-07:00</Time>
+    </Item>
+    <Item>
+      <Source>bg1_dirty.jpg</Source>
+      <Name>bg1_dirty</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\bg1_dirty.xnb</Output>
+      <Time>2012-03-12T10:06:13.0880896-07:00</Time>
+    </Item>
+    <Item>
+      <Source>gesture_menu.png</Source>
+      <Name>gesture_menu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gesture_menu.xnb</Output>
+      <Time>2012-03-12T10:06:13.1040905-07:00</Time>
+    </Item>
+    <Item>
+      <Source>down.png</Source>
+      <Name>down</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\down.xnb</Output>
+      <Time>2012-03-12T10:06:13.1010903-07:00</Time>
+    </Item>
+    <Item>
+      <Source>over.png</Source>
+      <Name>over</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\over.xnb</Output>
+      <Time>2012-03-12T10:06:13.1490931-07:00</Time>
+    </Item>
+    <Item>
+      <Source>up.png</Source>
+      <Name>up</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\up.xnb</Output>
+      <Time>2012-03-12T10:06:13.1620938-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\background_fantasyriver.png</Source>
+      <Name>backgrounds\background_fantasyriver</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\background_fantasyriver.xnb</Output>
+      <Time>2012-03-12T10:06:12.9940842-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\background_outerspace.png</Source>
+      <Name>backgrounds\background_outerspace</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\background_outerspace.xnb</Output>
+      <Time>2012-03-12T10:06:13.0450871-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\behindPages.png</Source>
+      <Name>backgrounds\behindPages</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\behindPages.xnb</Output>
+      <Time>2012-03-12T10:06:13.0710886-07:00</Time>
+    </Item>
+    <Item>
+      <Source>buttons\button_back_active.png</Source>
+      <Name>buttons\button_back_active</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\buttons\button_back_active.xnb</Output>
+      <Time>2012-03-12T10:06:13.0910898-07:00</Time>
+    </Item>
+    <Item>
+      <Source>buttons\button_back_idle.png</Source>
+      <Name>buttons\button_back_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\buttons\button_back_idle.xnb</Output>
+      <Time>2012-03-12T10:06:13.0920898-07:00</Time>
+    </Item>
+    <Item>
+      <Source>buttons\button_forward_active.png</Source>
+      <Name>buttons\button_forward_active</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\buttons\button_forward_active.xnb</Output>
+      <Time>2012-03-12T10:06:13.0930899-07:00</Time>
+    </Item>
+    <Item>
+      <Source>buttons\button_forward_idle.png</Source>
+      <Name>buttons\button_forward_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\buttons\button_forward_idle.xnb</Output>
+      <Time>2012-03-12T10:06:13.0940899-07:00</Time>
+    </Item>
+    <Item>
+      <Source>buttons\button_help_active.png</Source>
+      <Name>buttons\button_help_active</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\buttons\button_help_active.xnb</Output>
+      <Time>2012-03-12T10:06:13.09509-07:00</Time>
+    </Item>
+    <Item>
+      <Source>buttons\button_help_idle.png</Source>
+      <Name>buttons\button_help_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\buttons\button_help_idle.xnb</Output>
+      <Time>2012-03-12T10:06:13.09509-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\background_fantasyriver_straightened.png</Source>
+      <Name>backgrounds\background_fantasyriver_straightened</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\background_fantasyriver_straightened.xnb</Output>
+      <Time>2012-03-12T10:06:13.0170855-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\background_outerspace_straightened.png</Source>
+      <Name>backgrounds\background_outerspace_straightened</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\background_outerspace_straightened.xnb</Output>
+      <Time>2012-03-12T10:06:13.0680884-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\behindPages_straightened.png</Source>
+      <Name>backgrounds\behindPages_straightened</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\behindPages_straightened.xnb</Output>
+      <Time>2012-03-12T10:06:13.0730887-07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\menu_circleHighlight.png</Source>
+      <Name>menu\menu_circleHighlight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\menu\menu_circleHighlight.xnb</Output>
+      <Time>2012-03-12T10:06:13.1310921-07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\menu_sideDock.png</Source>
+      <Name>menu\menu_sideDock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\menu\menu_sideDock.xnb</Output>
+      <Time>2012-03-12T10:06:13.1320921-07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\menu_sideIcons_active.png</Source>
+      <Name>menu\menu_sideIcons_active</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\menu\menu_sideIcons_active.xnb</Output>
+      <Time>2012-03-12T10:06:13.1340922-07:00</Time>
+    </Item>
+    <Item>
+      <Source>menu\menu_sideIcons_idle.png</Source>
+      <Name>menu\menu_sideIcons_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\menu\menu_sideIcons_idle.xnb</Output>
+      <Time>2012-03-12T10:06:13.1370924-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\desert (hilite)1.png</Source>
+      <Name>places menu\desert (hilite)1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\desert (hilite)1.xnb</Output>
+      <Time>2012-03-06T09:01:40-08:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\desert.png</Source>
+      <Name>places menu\desert</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\desert.xnb</Output>
+      <Time>2012-03-06T09:01:08-08:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\fantasy hills (hilite).png</Source>
+      <Name>places menu\fantasy hills (hilite)</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\fantasy hills (hilite).xnb</Output>
+      <Time>2012-03-06T09:02:34-08:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\fantasy hills.png</Source>
+      <Name>places menu\fantasy hills</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\fantasy hills.xnb</Output>
+      <Time>2012-03-06T09:02:06-08:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\outer space (hilite).png</Source>
+      <Name>places menu\outer space (hilite)</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\outer space (hilite).xnb</Output>
+      <Time>2012-03-06T09:03:24-08:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\outer space.png</Source>
+      <Name>places menu\outer space</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\outer space.xnb</Output>
+      <Time>2012-03-06T09:03:04-08:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places menu bar.png</Source>
+      <Name>places menu\places menu bar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places menu bar.xnb</Output>
+      <Time>2012-03-06T08:52:34-08:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\regular hills (hilite).png</Source>
+      <Name>places menu\regular hills (hilite)</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\regular hills (hilite).xnb</Output>
+      <Time>2012-03-06T09:05:24-08:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\regular hills.png</Source>
+      <Name>places menu\regular hills</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\regular hills.xnb</Output>
+      <Time>2012-03-06T09:04:34-08:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\undersea (hilite).png</Source>
+      <Name>places menu\undersea (hilite)</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\undersea (hilite).xnb</Output>
+      <Time>2012-03-06T09:04:12-08:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\undersea.png</Source>
+      <Name>places menu\undersea</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\undersea.xnb</Output>
+      <Time>2012-03-06T09:03:44-08:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\knight\FootLeft.png</Source>
+      <Name>characters\knight\FootLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\knight\FootLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.7781605-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\knight\FootRight.png</Source>
+      <Name>characters\knight\FootRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\knight\FootRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.7791606-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\knight\ForearmLeft.png</Source>
+      <Name>characters\knight\ForearmLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\knight\ForearmLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.7801606-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\knight\ForearmRight.png</Source>
+      <Name>characters\knight\ForearmRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\knight\ForearmRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.7811607-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\knight\HandLeft.png</Source>
+      <Name>characters\knight\HandLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\knight\HandLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.7821607-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\knight\HandRight.png</Source>
+      <Name>characters\knight\HandRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\knight\HandRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.7831608-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\knight\Head.png</Source>
+      <Name>characters\knight\Head</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\knight\Head.xnb</Output>
+      <Time>2012-03-17T05:38:46.7841608-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\knight\Hips.png</Source>
+      <Name>characters\knight\Hips</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\knight\Hips.xnb</Output>
+      <Time>2012-03-17T05:38:46.7841608-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\knight\italian_knt2.png</Source>
+      <Name>characters\knight\italian_knt2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\knight\italian_knt2.xnb</Output>
+      <Time>2012-03-17T05:38:46.8771662-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\knight\ShinLeft.png</Source>
+      <Name>characters\knight\ShinLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\knight\ShinLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.821163-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\knight\ShinRight.png</Source>
+      <Name>characters\knight\ShinRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\knight\ShinRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.821163-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\knight\ThighLeft.png</Source>
+      <Name>characters\knight\ThighLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\knight\ThighLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.822163-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\knight\ThighRight.png</Source>
+      <Name>characters\knight\ThighRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\knight\ThighRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.8231631-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\knight\Torso.png</Source>
+      <Name>characters\knight\Torso</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\knight\Torso.xnb</Output>
+      <Time>2012-03-17T05:38:46.8241631-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\knight\UpperArmLeft.png</Source>
+      <Name>characters\knight\UpperArmLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\knight\UpperArmLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.8251632-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\knight\UpperArmRight.png</Source>
+      <Name>characters\knight\UpperArmRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\knight\UpperArmRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.8251632-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\FootLeft.png</Source>
+      <Name>characters\white_knight\FootLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\FootLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.9291691-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\FootRight.png</Source>
+      <Name>characters\white_knight\FootRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\FootRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.9331694-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\ForearmLeft.png</Source>
+      <Name>characters\white_knight\ForearmLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\ForearmLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.9481702-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\ForearmRight.png</Source>
+      <Name>characters\white_knight\ForearmRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\ForearmRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.962171-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\HandLeft.png</Source>
+      <Name>characters\white_knight\HandLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\HandLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.9761718-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\HandRight.png</Source>
+      <Name>characters\white_knight\HandRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\HandRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.9901726-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\Head.png</Source>
+      <Name>characters\white_knight\Head</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\Head.xnb</Output>
+      <Time>2012-03-17T05:38:46.9931728-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\Hips.png</Source>
+      <Name>characters\white_knight\Hips</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\Hips.xnb</Output>
+      <Time>2012-03-17T05:38:46.9991731-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\ShinLeft.png</Source>
+      <Name>characters\white_knight\ShinLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\ShinLeft.xnb</Output>
+      <Time>2012-03-17T05:38:47.0161741-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\ShinRight.png</Source>
+      <Name>characters\white_knight\ShinRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\ShinRight.xnb</Output>
+      <Time>2012-03-17T05:38:47.0331751-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\ThighLeft.png</Source>
+      <Name>characters\white_knight\ThighLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\ThighLeft.xnb</Output>
+      <Time>2012-03-17T05:38:47.0501761-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\ThighRight.png</Source>
+      <Name>characters\white_knight\ThighRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\ThighRight.xnb</Output>
+      <Time>2012-03-17T05:38:47.067177-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\Torso.png</Source>
+      <Name>characters\white_knight\Torso</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\Torso.xnb</Output>
+      <Time>2012-03-17T05:38:47.0791777-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\UpperArmLeft.png</Source>
+      <Name>characters\white_knight\UpperArmLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\UpperArmLeft.xnb</Output>
+      <Time>2012-03-17T05:38:47.0971787-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\UpperArmRight.png</Source>
+      <Name>characters\white_knight\UpperArmRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\UpperArmRight.xnb</Output>
+      <Time>2012-03-17T05:38:47.1141797-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\white_knight\w.knight-sword.png</Source>
+      <Name>characters\white_knight\w.knight-sword</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\white_knight\w.knight-sword.xnb</Output>
+      <Time>2012-03-17T05:38:47.1611824-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\pocahontas\FootLeft.png</Source>
+      <Name>characters\pocahontas\FootLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\FootLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.8811664-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\pocahontas\FootRight.png</Source>
+      <Name>characters\pocahontas\FootRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\FootRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.8821665-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\pocahontas\ForeArmLeft.png</Source>
+      <Name>characters\pocahontas\ForeArmLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\ForeArmLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.8841666-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\pocahontas\ForeArmRight.png</Source>
+      <Name>characters\pocahontas\ForeArmRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\ForeArmRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.8841666-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\pocahontas\HandLeft.png</Source>
+      <Name>characters\pocahontas\HandLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\HandLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.8851666-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\pocahontas\HandRight.png</Source>
+      <Name>characters\pocahontas\HandRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\HandRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.8861667-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\pocahontas\Head with hair.png</Source>
+      <Name>characters\pocahontas\Head with hair</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\Head with hair.xnb</Output>
+      <Time>2012-03-17T05:38:46.8871667-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\pocahontas\Head.png</Source>
+      <Name>characters\pocahontas\Head</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\Head.xnb</Output>
+      <Time>2012-03-17T05:38:46.8881668-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\pocahontas\Hips.png</Source>
+      <Name>characters\pocahontas\Hips</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\Hips.xnb</Output>
+      <Time>2012-03-17T05:38:46.8891669-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\pocahontas\pocahontas.png</Source>
+      <Name>characters\pocahontas\pocahontas</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\pocahontas.xnb</Output>
+      <Time>2012-03-17T05:38:46.926169-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\pocahontas\ShinLeft.png</Source>
+      <Name>characters\pocahontas\ShinLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\ShinLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.8901669-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\pocahontas\ShinRight.png</Source>
+      <Name>characters\pocahontas\ShinRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\ShinRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.891167-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\pocahontas\ThighLeft.png</Source>
+      <Name>characters\pocahontas\ThighLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\ThighLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.892167-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\pocahontas\ThighRight.png</Source>
+      <Name>characters\pocahontas\ThighRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\ThighRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.892167-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\pocahontas\Torso.png</Source>
+      <Name>characters\pocahontas\Torso</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\Torso.xnb</Output>
+      <Time>2012-03-17T05:38:46.8931671-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\pocahontas\UpperArmLeft.png</Source>
+      <Name>characters\pocahontas\UpperArmLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\UpperArmLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.8941671-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\pocahontas\UpperArmRight.png</Source>
+      <Name>characters\pocahontas\UpperArmRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\pocahontas\UpperArmRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.8951672-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\beach.png</Source>
+      <Name>backgrounds\beach</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\beach.xnb</Output>
+      <Time>2012-03-17T05:38:46.2641311-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\desert.png</Source>
+      <Name>backgrounds\desert</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\desert.xnb</Output>
+      <Time>2012-03-17T05:38:46.3111338-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\forest.png</Source>
+      <Name>backgrounds\forest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\forest.xnb</Output>
+      <Time>2012-03-17T05:38:46.3541363-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\pyramids.png</Source>
+      <Name>backgrounds\pyramids</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\pyramids.xnb</Output>
+      <Time>2012-03-17T05:38:46.3861381-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\riverhouse.png</Source>
+      <Name>backgrounds\riverhouse</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\riverhouse.xnb</Output>
+      <Time>2012-03-17T05:38:46.4281405-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\rooftops.png</Source>
+      <Name>backgrounds\rooftops</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\rooftops.xnb</Output>
+      <Time>2012-03-17T05:38:46.4561421-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\snowyforest.png</Source>
+      <Name>backgrounds\snowyforest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\snowyforest.xnb</Output>
+      <Time>2012-03-17T05:38:46.5161455-07:00</Time>
+    </Item>
+    <Item>
+      <Source>backgrounds\undersea.png</Source>
+      <Name>backgrounds\undersea</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\backgrounds\undersea.xnb</Output>
+      <Time>2012-03-17T05:38:46.559148-07:00</Time>
+    </Item>
+    <Item>
+      <Source>avatar_icons\bubbleman_over.png</Source>
+      <Name>avatar_icons\bubbleman_over</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatar_icons\bubbleman_over.xnb</Output>
+      <Time>2012-03-17T05:38:46.2121281-07:00</Time>
+    </Item>
+    <Item>
+      <Source>avatar_icons\bubbleman_up.png</Source>
+      <Name>avatar_icons\bubbleman_up</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatar_icons\bubbleman_up.xnb</Output>
+      <Time>2012-03-17T05:38:46.2131282-07:00</Time>
+    </Item>
+    <Item>
+      <Source>avatar_icons\knight_over.png</Source>
+      <Name>avatar_icons\knight_over</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatar_icons\knight_over.xnb</Output>
+      <Time>2012-03-17T05:38:46.2151283-07:00</Time>
+    </Item>
+    <Item>
+      <Source>avatar_icons\knight_up.png</Source>
+      <Name>avatar_icons\knight_up</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatar_icons\knight_up.xnb</Output>
+      <Time>2012-03-17T05:38:46.2171284-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\FootLeft.png</Source>
+      <Name>characters\cartoonGirl\FootLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\FootLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.6661541-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\FootRight.png</Source>
+      <Name>characters\cartoonGirl\FootRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\FootRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.6681542-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\ForearmLeft.png</Source>
+      <Name>characters\cartoonGirl\ForearmLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\ForearmLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.6701543-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\ForearmRight.png</Source>
+      <Name>characters\cartoonGirl\ForearmRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\ForearmRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.6711544-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\HandLeft.png</Source>
+      <Name>characters\cartoonGirl\HandLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\HandLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.6731545-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\HandRight.png</Source>
+      <Name>characters\cartoonGirl\HandRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\HandRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.6741546-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\Head.png</Source>
+      <Name>characters\cartoonGirl\Head</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\Head.xnb</Output>
+      <Time>2012-03-17T05:38:46.6771547-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\Hips.png</Source>
+      <Name>characters\cartoonGirl\Hips</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\Hips.xnb</Output>
+      <Time>2012-03-17T05:38:46.6781548-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\ShinLeft.png</Source>
+      <Name>characters\cartoonGirl\ShinLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\ShinLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.6801549-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\ShinRight.png</Source>
+      <Name>characters\cartoonGirl\ShinRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\ShinRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.6801549-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\ThighLeft.png</Source>
+      <Name>characters\cartoonGirl\ThighLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\ThighLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.682155-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\ThighRight.png</Source>
+      <Name>characters\cartoonGirl\ThighRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\ThighRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.682155-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\Torso.png</Source>
+      <Name>characters\cartoonGirl\Torso</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\Torso.xnb</Output>
+      <Time>2012-03-17T05:38:46.6841551-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\UpperArmLeft.png</Source>
+      <Name>characters\cartoonGirl\UpperArmLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\UpperArmLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.6861552-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\cartoonGirl\UpperArmRight.png</Source>
+      <Name>characters\cartoonGirl\UpperArmRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\cartoonGirl\UpperArmRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.6871553-07:00</Time>
+    </Item>
+    <Item>
+      <Source>narration\1.png</Source>
+      <Name>narration\1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\narration\1.xnb</Output>
+      <Time>2012-03-17T05:38:47.1631825-07:00</Time>
+    </Item>
+    <Item>
+      <Source>narration\2.png</Source>
+      <Name>narration\2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\narration\2.xnb</Output>
+      <Time>2012-03-17T05:38:47.1781834-07:00</Time>
+    </Item>
+    <Item>
+      <Source>narration\3.png</Source>
+      <Name>narration\3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\narration\3.xnb</Output>
+      <Time>2012-03-17T05:38:47.1791834-07:00</Time>
+    </Item>
+    <Item>
+      <Source>narration\narratemenubar.png</Source>
+      <Name>narration\narratemenubar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\narration\narratemenubar.xnb</Output>
+      <Time>2012-03-17T05:38:47.1801835-07:00</Time>
+    </Item>
+    <Item>
+      <Source>narration\playback button (default).png</Source>
+      <Name>narration\playback button (default)</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\narration\playback button (default).xnb</Output>
+      <Time>2012-03-17T05:38:47.1821836-07:00</Time>
+    </Item>
+    <Item>
+      <Source>narration\playback button (hilite).png</Source>
+      <Name>narration\playback button (hilite)</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\narration\playback button (hilite).xnb</Output>
+      <Time>2012-03-17T05:38:47.1851838-07:00</Time>
+    </Item>
+    <Item>
+      <Source>narration\playback button (pushed).png</Source>
+      <Name>narration\playback button (pushed)</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\narration\playback button (pushed).xnb</Output>
+      <Time>2012-03-17T05:38:47.1871839-07:00</Time>
+    </Item>
+    <Item>
+      <Source>narration\record button (default).png</Source>
+      <Name>narration\record button (default)</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\narration\record button (default).xnb</Output>
+      <Time>2012-03-17T05:38:47.189184-07:00</Time>
+    </Item>
+    <Item>
+      <Source>narration\record button (hilite)1.png</Source>
+      <Name>narration\record button (hilite)1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\narration\record button (hilite)1.xnb</Output>
+      <Time>2012-03-17T05:38:47.1911841-07:00</Time>
+    </Item>
+    <Item>
+      <Source>narration\record button (pushed).png</Source>
+      <Name>narration\record button (pushed)</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\narration\record button (pushed).xnb</Output>
+      <Time>2012-03-17T05:38:47.1931842-07:00</Time>
+    </Item>
+    <Item>
+      <Source>narration\recording (cold).png</Source>
+      <Name>narration\recording (cold)</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\narration\recording (cold).xnb</Output>
+      <Time>2012-03-17T05:38:47.1951844-07:00</Time>
+    </Item>
+    <Item>
+      <Source>narration\recording (growing).png</Source>
+      <Name>narration\recording (growing)</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\narration\recording (growing).xnb</Output>
+      <Time>2012-03-17T05:38:47.223186-07:00</Time>
+    </Item>
+    <Item>
+      <Source>narration\recording_hot.png</Source>
+      <Name>narration\recording_hot</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\narration\recording_hot.xnb</Output>
+      <Time>2012-03-17T05:38:47.2251861-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\dragonleftwing.png</Source>
+      <Name>characters\dragon\dragonleftwing</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\dragonleftwing.xnb</Output>
+      <Time>2012-03-17T05:38:46.7731602-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\dragonrightwing.png</Source>
+      <Name>characters\dragon\dragonrightwing</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\dragonrightwing.xnb</Output>
+      <Time>2012-03-17T05:38:46.7761604-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\dragontail.png</Source>
+      <Name>characters\dragon\dragontail</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\dragontail.xnb</Output>
+      <Time>2012-03-17T05:38:46.7771604-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\FootLeft.png</Source>
+      <Name>characters\dragon\FootLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\FootLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.7181571-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\FootRight.png</Source>
+      <Name>characters\dragon\FootRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\FootRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.7191571-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\ForearmLeft.png</Source>
+      <Name>characters\dragon\ForearmLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\ForearmLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.7211572-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\ForearmRight.png</Source>
+      <Name>characters\dragon\ForearmRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\ForearmRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.7231574-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\HandLeft.png</Source>
+      <Name>characters\dragon\HandLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\HandLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.7241574-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\HandRight.png</Source>
+      <Name>characters\dragon\HandRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\HandRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.7251575-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\Head.png</Source>
+      <Name>characters\dragon\Head</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\Head.xnb</Output>
+      <Time>2012-03-17T05:38:46.7261575-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\Hips.png</Source>
+      <Name>characters\dragon\Hips</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\Hips.xnb</Output>
+      <Time>2012-03-17T05:38:46.7281576-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\ShinLeft.png</Source>
+      <Name>characters\dragon\ShinLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\ShinLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.7291577-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\ShinRight.png</Source>
+      <Name>characters\dragon\ShinRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\ShinRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.7301578-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\ThighLeft.png</Source>
+      <Name>characters\dragon\ThighLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\ThighLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.7311578-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\ThighRight.png</Source>
+      <Name>characters\dragon\ThighRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\ThighRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.7331579-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\Torso.png</Source>
+      <Name>characters\dragon\Torso</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\Torso.xnb</Output>
+      <Time>2012-03-17T05:38:46.735158-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\UpperArmLeft.png</Source>
+      <Name>characters\dragon\UpperArmLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\UpperArmLeft.xnb</Output>
+      <Time>2012-03-17T05:38:46.7371582-07:00</Time>
+    </Item>
+    <Item>
+      <Source>characters\dragon\UpperArmRight.png</Source>
+      <Name>characters\dragon\UpperArmRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\characters\dragon\UpperArmRight.xnb</Output>
+      <Time>2012-03-17T05:38:46.7401583-07:00</Time>
+    </Item>
+    <Item>
+      <Source>menufont.spritefont</Source>
+      <Name>menufont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\menufont.xnb</Output>
+      <Time>2012-03-12T10:06:13.1380925-07:00</Time>
+    </Item>
+    <Item>
+      <Source>gamefont.spritefont</Source>
+      <Name>gamefont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\gamefont.xnb</Output>
+      <Time>2012-03-12T10:06:13.1030905-07:00</Time>
+    </Item>
+    <Item>
+      <Source>avatars\dragon_icon_hover.png</Source>
+      <Name>avatars\dragon_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatars\dragon_icon_hover.xnb</Output>
+      <Time>2012-03-16T23:19:06-07:00</Time>
+    </Item>
+    <Item>
+      <Source>avatars\dragon_icon_idle.png</Source>
+      <Name>avatars\dragon_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatars\dragon_icon_idle.xnb</Output>
+      <Time>2012-03-16T23:18:38-07:00</Time>
+    </Item>
+    <Item>
+      <Source>avatars\girl_icon_hover.png</Source>
+      <Name>avatars\girl_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatars\girl_icon_hover.xnb</Output>
+      <Time>2012-03-16T23:10:52-07:00</Time>
+    </Item>
+    <Item>
+      <Source>avatars\girl_icon_idle.png</Source>
+      <Name>avatars\girl_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatars\girl_icon_idle.xnb</Output>
+      <Time>2012-03-16T23:09:40-07:00</Time>
+    </Item>
+    <Item>
+      <Source>avatars\pocahon_icon_hover.png</Source>
+      <Name>avatars\pocahon_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatars\pocahon_icon_hover.xnb</Output>
+      <Time>2012-03-17T00:46:16-07:00</Time>
+    </Item>
+    <Item>
+      <Source>avatars\pocahon_icon_idle.png</Source>
+      <Name>avatars\pocahon_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatars\pocahon_icon_idle.xnb</Output>
+      <Time>2012-03-17T00:45:48-07:00</Time>
+    </Item>
+    <Item>
+      <Source>avatars\w.knight_icon_hover.png</Source>
+      <Name>avatars\w.knight_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatars\w.knight_icon_hover.xnb</Output>
+      <Time>2012-03-17T00:36:42-07:00</Time>
+    </Item>
+    <Item>
+      <Source>avatars\w.knight_icon_idle.png</Source>
+      <Name>avatars\w.knight_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\avatars\w.knight_icon_idle.xnb</Output>
+      <Time>2012-03-17T00:36:00-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\beach\o.beach.png</Source>
+      <Name>places menu\places\beach\o.beach</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\beach\o.beach.xnb</Output>
+      <Time>2012-03-17T08:09:53.5207485-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\beach\o.beach_icon_hover.png</Source>
+      <Name>places menu\places\beach\o.beach_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\beach\o.beach_icon_hover.xnb</Output>
+      <Time>2012-03-16T22:24:30-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\beach\o.beach_icon_idle.png</Source>
+      <Name>places menu\places\beach\o.beach_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\beach\o.beach_icon_idle.xnb</Output>
+      <Time>2012-03-16T22:23:34-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\coralreef\o.coralreef.png</Source>
+      <Name>places menu\places\coralreef\o.coralreef</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\coralreef\o.coralreef.xnb</Output>
+      <Time>2012-03-17T08:10:19.9432598-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\coralreef\o.coralreef_icon_hover.png</Source>
+      <Name>places menu\places\coralreef\o.coralreef_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\coralreef\o.coralreef_icon_hover.xnb</Output>
+      <Time>2012-03-16T22:29:10-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\coralreef\o.coralreef_icon_idle.png</Source>
+      <Name>places menu\places\coralreef\o.coralreef_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\coralreef\o.coralreef_icon_idle.xnb</Output>
+      <Time>2012-03-16T22:28:34-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\desert pyramids\o.desert.png</Source>
+      <Name>places menu\places\desert pyramids\o.desert</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\desert pyramids\o.desert.xnb</Output>
+      <Time>2012-03-17T08:09:25.6841564-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\desert pyramids\o.desert_icon_hover.png</Source>
+      <Name>places menu\places\desert pyramids\o.desert_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\desert pyramids\o.desert_icon_hover.xnb</Output>
+      <Time>2012-03-16T22:32:26-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\desert pyramids\o.desert_icon_idle.png</Source>
+      <Name>places menu\places\desert pyramids\o.desert_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\desert pyramids\o.desert_icon_idle.xnb</Output>
+      <Time>2012-03-16T22:32:06-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\fantasy house\o.fantastyhouse.png</Source>
+      <Name>places menu\places\fantasy house\o.fantastyhouse</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\fantasy house\o.fantastyhouse.xnb</Output>
+      <Time>2012-03-17T08:10:50.4110025-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\fantasy house\o.fantasyhouse_icon_hover.png</Source>
+      <Name>places menu\places\fantasy house\o.fantasyhouse_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\fantasy house\o.fantasyhouse_icon_hover.xnb</Output>
+      <Time>2012-03-16T22:35:24-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\fantasy house\o.fantasyhouse_icon_idle.png</Source>
+      <Name>places menu\places\fantasy house\o.fantasyhouse_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\fantasy house\o.fantasyhouse_icon_idle.xnb</Output>
+      <Time>2012-03-16T22:34:58-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\monument park\o.monumentpark.png</Source>
+      <Name>places menu\places\monument park\o.monumentpark</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\monument park\o.monumentpark.xnb</Output>
+      <Time>2012-03-17T08:11:13.1773046-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\monument park\o.monumpark_icon_hover.png</Source>
+      <Name>places menu\places\monument park\o.monumpark_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\monument park\o.monumpark_icon_hover.xnb</Output>
+      <Time>2012-03-16T22:39:48-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\monument park\o.monumpark_icon_idle.png</Source>
+      <Name>places menu\places\monument park\o.monumpark_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\monument park\o.monumpark_icon_idle.xnb</Output>
+      <Time>2012-03-16T22:39:28-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\rainforest\o.rainforest.png</Source>
+      <Name>places menu\places\rainforest\o.rainforest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\rainforest\o.rainforest.xnb</Output>
+      <Time>2012-03-17T08:11:34.7325375-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\rainforest\o.rainforest_icon_hover.png</Source>
+      <Name>places menu\places\rainforest\o.rainforest_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\rainforest\o.rainforest_icon_hover.xnb</Output>
+      <Time>2012-03-16T22:49:54-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\rainforest\o.rainforest_icon_idle.png</Source>
+      <Name>places menu\places\rainforest\o.rainforest_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\rainforest\o.rainforest_icon_idle.xnb</Output>
+      <Time>2012-03-16T22:49:30-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\snowy forest\o.snowyforest.png</Source>
+      <Name>places menu\places\snowy forest\o.snowyforest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\snowy forest\o.snowyforest.xnb</Output>
+      <Time>2012-03-17T08:12:04.6752501-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\snowy forest\o.snowyforest_icon_hover.png</Source>
+      <Name>places menu\places\snowy forest\o.snowyforest_icon_hover</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\snowy forest\o.snowyforest_icon_hover.xnb</Output>
+      <Time>2012-03-16T22:46:36-07:00</Time>
+    </Item>
+    <Item>
+      <Source>places menu\places\snowy forest\o.snowyforest_icon_idle.png</Source>
+      <Name>places menu\places\snowy forest\o.snowyforest_icon_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\places menu\places\snowy forest\o.snowyforest_icon_idle.xnb</Output>
+      <Time>2012-03-16T22:45:44-07:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\Content\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Kotaro Ishiguro\Documents\classes\HCI\kinect\isa_final\Imagination-Labs\Slides Using GSMSample_4_0_WIN_XBOX\GameStateManagementSample\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T13:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T13:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2012-02-22T00:42:14.4966069-08:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
