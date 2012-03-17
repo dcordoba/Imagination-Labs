@@ -435,6 +435,7 @@ namespace GameStateManagement
             //Press 'p' to play recording. If already playing, will stop it.
             if (input.IsNewKeyPress(Keys.P, null, out requesteeIndex))
             {
+
                 playAudio();
             }
             if (input.IsNewKeyPress(Keys.W, null, out requesteeIndex))
@@ -521,6 +522,13 @@ namespace GameStateManagement
                 ScreenManager.CurCharacter.update(capturedSkeletons[i]);
                 ScreenManager.CurCharacter.draw(capturedAvatarIndices[i]);
             }
+            if (isRecording())
+            {
+                int iconSize = 150;
+                Rectangle rect = new Rectangle(x, viewport.Height/2 - iconSize,iconSize, iconSize);
+                spriteBatch.Draw(ScreenManager.NarrationOn, rect, Color.White);
+            }
+           
             spriteBatch.End();
             Console.WriteLine("capturedSkeletons.count " + capturedSkeletons.Count);
         }

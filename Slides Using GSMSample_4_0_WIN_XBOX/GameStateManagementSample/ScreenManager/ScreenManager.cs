@@ -78,6 +78,8 @@ namespace GameStateManagement
         Texture2D menu_sideDock;
         Texture2D menu_sideIcons_active;
         Texture2D menu_sideIcons_idle;
+
+        Texture2D narrationOn;
         //Constant Rectangles for the menus in consitant locations!
         Rectangle sideMenuDockRect; 
         Rectangle sideMenuIconsRect;
@@ -158,6 +160,15 @@ namespace GameStateManagement
         public SpeechRecognizer SpeechRecognizer
         {
             get { return speechRecognizer; }
+        }
+
+        /// <summary>
+        /// 
+        /// returns the texture 2D representing narration recording
+        /// </summary>
+        public Texture2D NarrationOn
+        {
+            get { return narrationOn; }
         }
         /// <summary>
         /// A default blankTexture shared by all the screens. This saves
@@ -416,6 +427,8 @@ namespace GameStateManagement
             menu_sideDock = content.Load<Texture2D>("menu/menu_sideDock");
             menu_sideIcons_active = content.Load<Texture2D>("menu/menu_sideIcons_active");
             menu_sideIcons_idle = content.Load<Texture2D>("menu/menu_sideIcons_idle");
+
+            narrationOn = content.Load<Texture2D>("narration/recording_hot");
         }
 
         private void InitRectangles(ContentManager content)
