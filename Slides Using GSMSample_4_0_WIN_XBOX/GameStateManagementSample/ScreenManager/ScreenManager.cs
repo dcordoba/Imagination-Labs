@@ -352,8 +352,14 @@ namespace GameStateManagement
                 this.skeletonData = new Skeleton[kinect.SkeletonStream.FrameSkeletonArrayLength];
             }
             #endregion
+
+            spriteBatch = new SpriteBatch(GraphicsDevice);
+            font = content.Load<SpriteFont>("menufont");
+            blankTexture = content.Load<Texture2D>("blank");
+            InitAvatars(content);
+
             curAvatarIndex = 0;
-            curCharacter = new Character(this.Game);
+            curCharacter = new Character(this.Game, spriteBatch);
             curCharacter.setKinect(this.kinect);
 
             String[] avatarFilepaths = new String[] { 
@@ -366,11 +372,6 @@ namespace GameStateManagement
             };
             numAvatars = avatarFilepaths.Length;
             curCharacter.load(avatarFilepaths);
-
-            spriteBatch = new SpriteBatch(GraphicsDevice);
-            font = content.Load<SpriteFont>("menufont");
-            blankTexture = content.Load<Texture2D>("blank");
-            InitAvatars(content);
 
             //Texture2D av1 = new Texture2D(GraphicsDevice, 50, 100);
             // skeleton = new SkeletonTracker(this);
@@ -589,9 +590,11 @@ namespace GameStateManagement
             //  draw main avatar
             if (curSkeleton != null)
             {
+                spriteBatch.Begin();
                 curSkeletonJoints.UpdateJointPositions(curSkeleton);
                 curCharacter.update(curSkeletonJoints);
                 curCharacter.draw(curAvatarIndex);
+                spriteBatch.End();
             }
             
             

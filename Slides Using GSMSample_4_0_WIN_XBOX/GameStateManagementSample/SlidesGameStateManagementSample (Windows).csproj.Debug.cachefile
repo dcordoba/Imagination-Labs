@@ -44,8 +44,6 @@ Content\places menu\regular hills (hilite).xnb
 Content\places menu\regular hills.xnb
 Content\places menu\undersea (hilite).xnb
 Content\places menu\undersea.xnb
-Content\menufont.xnb
-Content\gamefont.xnb
 Content\characters\knight\FootLeft.xnb
 Content\characters\knight\FootRight.xnb
 Content\characters\knight\ForearmLeft.xnb
@@ -62,6 +60,22 @@ Content\characters\knight\ThighRight.xnb
 Content\characters\knight\Torso.xnb
 Content\characters\knight\UpperArmLeft.xnb
 Content\characters\knight\UpperArmRight.xnb
+Content\characters\white_knight\FootLeft.xnb
+Content\characters\white_knight\FootRight.xnb
+Content\characters\white_knight\ForearmLeft.xnb
+Content\characters\white_knight\ForearmRight.xnb
+Content\characters\white_knight\HandLeft.xnb
+Content\characters\white_knight\HandRight.xnb
+Content\characters\white_knight\Head.xnb
+Content\characters\white_knight\Hips.xnb
+Content\characters\white_knight\ShinLeft.xnb
+Content\characters\white_knight\ShinRight.xnb
+Content\characters\white_knight\ThighLeft.xnb
+Content\characters\white_knight\ThighRight.xnb
+Content\characters\white_knight\Torso.xnb
+Content\characters\white_knight\UpperArmLeft.xnb
+Content\characters\white_knight\UpperArmRight.xnb
+Content\characters\white_knight\w.knight-sword.xnb
 Content\characters\pocahontas\FootLeft.xnb
 Content\characters\pocahontas\FootRight.xnb
 Content\characters\pocahontas\ForeArmLeft.xnb
@@ -91,24 +105,9 @@ Content\avatar_icons\bubbleman_over.xnb
 Content\avatar_icons\bubbleman_up.xnb
 Content\avatar_icons\knight_over.xnb
 Content\avatar_icons\knight_up.xnb
-Content\characters\white_knight\FootLeft.xnb
-Content\characters\white_knight\FootRight.xnb
-Content\characters\white_knight\ForearmLeft.xnb
-Content\characters\white_knight\ForearmRight.xnb
-Content\characters\white_knight\HandLeft.xnb
-Content\characters\white_knight\HandRight.xnb
-Content\characters\white_knight\Head.xnb
-Content\characters\white_knight\Hips.xnb
-Content\characters\white_knight\ShinLeft.xnb
-Content\characters\white_knight\ShinRight.xnb
-Content\characters\white_knight\ThighLeft.xnb
-Content\characters\white_knight\ThighRight.xnb
-Content\characters\white_knight\Torso.xnb
-Content\characters\white_knight\UpperArmLeft.xnb
-Content\characters\white_knight\UpperArmRight.xnb
-Content\characters\white_knight\w.knight-sword.xnb
 Content\characters\cartoonGirl\FootLeft.xnb
 Content\characters\cartoonGirl\FootRight.xnb
+Content\characters\cartoonGirl\ForearmLeft.xnb
 Content\characters\cartoonGirl\ForearmRight.xnb
 Content\characters\cartoonGirl\HandLeft.xnb
 Content\characters\cartoonGirl\HandRight.xnb
@@ -126,6 +125,8 @@ Content\characters\dragon\dragonrightwing.xnb
 Content\characters\dragon\dragontail.xnb
 Content\characters\dragon\FootLeft.xnb
 Content\characters\dragon\FootRight.xnb
+Content\characters\dragon\ForearmLeft.xnb
+Content\characters\dragon\ForearmRight.xnb
 Content\characters\dragon\HandLeft.xnb
 Content\characters\dragon\HandRight.xnb
 Content\characters\dragon\Head.xnb
@@ -137,6 +138,5 @@ Content\characters\dragon\ThighRight.xnb
 Content\characters\dragon\Torso.xnb
 Content\characters\dragon\UpperArmLeft.xnb
 Content\characters\dragon\UpperArmRight.xnb
-Content\characters\cartoonGirl\ForearmLeft.xnb
-Content\characters\dragon\ForearmLeft.xnb
-Content\characters\dragon\ForearmRight.xnb
+Content\menufont.xnb
+Content\gamefont.xnb

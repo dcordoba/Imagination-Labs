@@ -70,11 +70,11 @@ namespace GameStateManagement
             0.1f,  0.1f,  0.1f
         };
 
-        public Character(Game game)
+        public Character(Game game, SpriteBatch batch)
         {
             // TODO: Complete member initialization
             this.game = game;
-            spriteBatch = new SpriteBatch(game.GraphicsDevice);
+            spriteBatch = batch;
         }
 
         public void setKinect(KinectSensor sensor)
@@ -118,7 +118,7 @@ namespace GameStateManagement
         public void draw(int characterIndex)
         {
             if (this.skeleton == null || this.sensor == null) return;
-            
+
             Point headTop = jointToPoint(skeleton.Joints[JointType.Head]);
             Point lowerBack = jointToPoint(skeleton.Joints[JointType.Spine]);
 
@@ -147,42 +147,46 @@ namespace GameStateManagement
             Point hipCenter = new Point((hipLeft.X + hipRight.X) / 2, (hipLeft.Y + hipRight.Y) / 2);
 
             //  TODO: switch to a better height metric later
-            float height = footLeft.Y - headTop.Y;
+            float height = 400;
 
             int shoulderWidth = (int)distanceBetweenPoints(shoulderLeft, shoulderRight);
 
-            spriteBatch.Begin();
-
-            drawBetween(headTop, shoulderCenter, shoulderWidth / 2, sprites[characterIndex][0], 0);
-            drawBetween(shoulderCenter, lowerBack, shoulderWidth, sprites[characterIndex][1], 0.1f);
-            drawBetween(lowerBack, hipCenter, shoulderWidth, sprites[characterIndex][2], 0);
+            drawBetween(shoulderCenter, lowerBack, shoulderWidth, sprites[characterIndex][1], 0.3f);
+            drawBetween(lowerBack, hipCenter, shoulderWidth, sprites[characterIndex][2], 0.25f);
+            drawBetween(headTop, shoulderCenter, shoulderWidth / 2, sprites[characterIndex][0], 0.35f);
 
             drawBetween(shoulderLeft, elbowLeft, (int)(widthHeightRatio[3] * height), sprites[characterIndex][3], 0.2f);
             drawBetween(elbowLeft, handLeft, (int)(widthHeightRatio[4] * height), sprites[characterIndex][4], 0.3f);
-            drawAt(handLeft, sprites[characterIndex][5], 0.4f);
+            drawAt(handLeft, sprites[characterIndex][5], 0.4f, getAngle(elbowLeft, handLeft), height / 10);
 
             drawBetween(shoulderRight, elbowRight, (int)(widthHeightRatio[6] * height), sprites[characterIndex][6], 0.2f);
             drawBetween(elbowRight, handRight, (int)(widthHeightRatio[7] * height), sprites[characterIndex][7], 0.3f);
-            drawAt(handRight, sprites[characterIndex][8], 0.4f);
+            drawAt(handRight, sprites[characterIndex][8], 0.4f, getAngle(elbowRight, handRight), height / 10);
 
             drawBetween(hipLeft, kneeLeft, (int)(widthHeightRatio[9] * height), sprites[characterIndex][9], 0.2f);
             drawBetween(kneeLeft, footLeft, (int)(widthHeightRatio[10] * height), sprites[characterIndex][10], 0.3f);
-            drawAt(footLeft, sprites[characterIndex][11], 0.4f);
+            drawAt(footLeft, sprites[characterIndex][11], 0.4f, getAngle(kneeLeft, footLeft), height / 10);
 
             drawBetween(hipRight, kneeRight, (int)(widthHeightRatio[6] * height), sprites[characterIndex][12], 0.2f);
             drawBetween(kneeRight, footRight, (int)(widthHeightRatio[7] * height), sprites[characterIndex][13], 0.3f);
-            drawAt(footRight, sprites[characterIndex][11], 0.4f);
-            
-            spriteBatch.End();
+            drawAt(footRight, sprites[characterIndex][11], 0.4f, getAngle(kneeRight, footRight), height / 10);
+        }
+
+        private float getAngle(Point p1, Point p2)
+        {
+            float rotation = (float)Math.Acos(Vector2.Dot(Vector2.Normalize(new Vector2(p2.X - p1.X, p2.Y - p1.Y)), new Vector2(0, 1)));
+
+            if (p1.X < p2.X) rotation *= -1;
+
+            return rotation;
         }
 
         private void drawBetween(Point p1, Point p2, int width, Texture2D sprite, float layer)
         {
             //  height of image is distance between pts
-            int height = (int) distanceBetweenPoints(p1, p2);
-            float rotation = (float) Math.Acos(Vector2.Dot(Vector2.Normalize(new Vector2(p2.X-p1.X, p2.Y-p1.Y)), new Vector2(0, 1)));
+            int height = (int)distanceBetweenPoints(p1, p2);
 
-            if (p1.X < p2.X) rotation *= -1;
+            float rotation = getAngle(p1, p2);
 
             //  used to offset drawn segments so they go overlap 
             int offsetX = sprite.Width / 2;
@@ -194,22 +198,22 @@ namespace GameStateManagement
                 new Rectangle(0, 0, sprite.Width, sprite.Height),
                 Color.White,
                 rotation,
-                new Vector2(sprite.Width/2, sprite.Height/8),
+                new Vector2(sprite.Width / 2, sprite.Height / 8),
                 SpriteEffects.None,
                 layer);
         }
 
-        private void drawAt(Point point, Texture2D sprite, float layer)
+        private void drawAt(Point point, Texture2D sprite, float layer, float rotation, float width)
         {
-            int w = sprite.Width;
-            int h = sprite.Height;
+            int w = (int)width;// sprite.Width;
+            int h = sprite.Height * (int)width / sprite.Width;
             spriteBatch.Draw(
                 sprite,
-                new Rectangle(point.X - w/2, point.Y - h/2, w, h),
+                new Rectangle(point.X, point.Y, w, h),
                 new Rectangle(0, 0, sprite.Width, sprite.Height),
                 Color.White,
-                0,
-                new Vector2(0, 0),
+                rotation,
+                new Vector2(sprite.Width / 2, sprite.Height / 2),
                 SpriteEffects.None,
                 layer);
         }
