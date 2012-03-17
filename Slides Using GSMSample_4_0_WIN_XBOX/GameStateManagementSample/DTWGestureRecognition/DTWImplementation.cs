@@ -128,6 +128,7 @@ namespace GameStateManagement.DTWGestureRecognition
                 }
                 if (s.Contains("changeAvatar"))
                 {
+                    //To Do make sure that change avatar has a parameter for playerINdex
                     _skeleton.cycleAvatar();
                 }
             }

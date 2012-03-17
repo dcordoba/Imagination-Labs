@@ -90,7 +90,7 @@ namespace GameStateManagement
         Skeleton curSkeleton;
         SkeletonJoints curSkeletonJoints;
         Character curCharacter;
-        int curAvatarIndex; //the index for which avatar is being drawn.
+        public int curAvatarIndex; //the index for which avatar is being drawn.
 
         //SpeechRecognizer for our program
         SpeechRecognizer speechRecognizer;
@@ -349,7 +349,7 @@ namespace GameStateManagement
             curAvatarIndex = 0;
             curCharacter = new Character(this.Game);
             curCharacter.setKinect(this.kinect);
-            curCharacter.load(new String[] { "knight" });
+            curCharacter.load(new String[] { "characters/knight", "characters/pocahontas" });
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
             font = content.Load<SpriteFont>("menufont");
@@ -567,7 +567,7 @@ namespace GameStateManagement
             {
                 curSkeletonJoints.UpdateJointPositions(curSkeleton);
                 curCharacter.update(curSkeletonJoints);
-                curCharacter.draw(0);
+                curCharacter.draw(curAvatarIndex);
             }
             
             

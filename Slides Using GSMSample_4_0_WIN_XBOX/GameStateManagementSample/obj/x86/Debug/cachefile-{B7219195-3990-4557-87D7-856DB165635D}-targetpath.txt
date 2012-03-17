@@ -33,22 +33,6 @@ Content\menu\menu_circleHighlight.xnb
 Content\menu\menu_sideDock.xnb
 Content\menu\menu_sideIcons_active.xnb
 Content\menu\menu_sideIcons_idle.xnb
-Content\knight\FootLeft.xnb
-Content\knight\FootRight.xnb
-Content\knight\ForearmLeft.xnb
-Content\knight\ForearmRight.xnb
-Content\knight\HandLeft.xnb
-Content\knight\HandRight.xnb
-Content\knight\Head.xnb
-Content\knight\Hips.xnb
-Content\knight\ShinLeft.xnb
-Content\knight\ShinRight.xnb
-Content\knight\ThighLeft.xnb
-Content\knight\ThighRight.xnb
-Content\knight\Torso.xnb
-Content\knight\UpperArmLeft.xnb
-Content\knight\UpperArmRight.xnb
-Content\knight\italian_knt2.xnb
 Content\places menu\desert (hilite)1.xnb
 Content\places menu\desert.xnb
 Content\places menu\fantasy hills (hilite).xnb
@@ -62,3 +46,36 @@ Content\places menu\undersea (hilite).xnb
 Content\places menu\undersea.xnb
 Content\menufont.xnb
 Content\gamefont.xnb
+Content\characters\knight\FootLeft.xnb
+Content\characters\knight\FootRight.xnb
+Content\characters\knight\ForearmLeft.xnb
+Content\characters\knight\ForearmRight.xnb
+Content\characters\knight\HandLeft.xnb
+Content\characters\knight\HandRight.xnb
+Content\characters\knight\Head.xnb
+Content\characters\knight\Hips.xnb
+Content\characters\knight\italian_knt2.xnb
+Content\characters\knight\ShinLeft.xnb
+Content\characters\knight\ShinRight.xnb
+Content\characters\knight\ThighLeft.xnb
+Content\characters\knight\ThighRight.xnb
+Content\characters\knight\Torso.xnb
+Content\characters\knight\UpperArmLeft.xnb
+Content\characters\knight\UpperArmRight.xnb
+Content\characters\pocahontas\FootLeft.xnb
+Content\characters\pocahontas\FootRight.xnb
+Content\characters\pocahontas\ForeArmLeft.xnb
+Content\characters\pocahontas\ForeArmRight.xnb
+Content\characters\pocahontas\HandLeft.xnb
+Content\characters\pocahontas\HandRight.xnb
+Content\characters\pocahontas\Head with hair.xnb
+Content\characters\pocahontas\Head.xnb
+Content\characters\pocahontas\Hips.xnb
+Content\characters\pocahontas\pocahontas.xnb
+Content\characters\pocahontas\ShinLeft.xnb
+Content\characters\pocahontas\ShinRight.xnb
+Content\characters\pocahontas\ThighLeft.xnb
+Content\characters\pocahontas\ThighRight.xnb
+Content\characters\pocahontas\Torso.xnb
+Content\characters\pocahontas\UpperArmLeft.xnb
+Content\characters\pocahontas\UpperArmRight.xnb
