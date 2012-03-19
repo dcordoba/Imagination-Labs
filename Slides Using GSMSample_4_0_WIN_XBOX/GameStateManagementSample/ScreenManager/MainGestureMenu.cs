@@ -114,7 +114,7 @@ namespace GameStateManagement
             int height = C_Y(80);
             int X = C_X(0);
             int X_1 = C_X(100);
-            int X_2 = C_X(205);
+            int X_2 = C_X(205); 
             int X_3 = C_X(310);
             int X_4 = C_X(415);
             int X_5 = C_X(520);
