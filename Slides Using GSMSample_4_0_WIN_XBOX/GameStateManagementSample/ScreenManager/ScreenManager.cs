@@ -96,7 +96,7 @@ namespace GameStateManagement
         Character curCharacter;
         public int curAvatarIndex; //the index for which avatar is being drawn.
         private int numAvatars; //number of avatars that are availiable for use
-
+        private int numBackgrounds; //number of backgrounds that are availiable for use
         //SpeechRecognizer for our program
         SpeechRecognizer speechRecognizer;
 
@@ -130,6 +130,15 @@ namespace GameStateManagement
         public int NumberOfCharacters
         {
             get { return numAvatars; }
+        }
+
+        /// <summary>
+        /// returns the number of backgrounds availiable in the program
+        /// </summary>
+        /// 
+        public int NumberOfBackgrounds
+        {
+            get { return numBackgrounds; }
         }
         /// <summary>
         /// returns the current skeleton of the program
@@ -430,6 +439,7 @@ namespace GameStateManagement
             backgrounds.Add(snowy);
             backgrounds.Add(desert);
 
+            numBackgrounds = backgrounds.Count;
             
             //initialize menu textures
             menu_circleHighlight = content.Load<Texture2D>("menu/menu_circleHighlight");

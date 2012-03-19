@@ -266,8 +266,8 @@ namespace GameStateManagement
         }
         private void RecordNarration(object sender, PlayerIndexEventArgs p)
         {
-            SlideScreen curSlide = (SlideScreen)screenManager.GetScreens()[screenManager.NumScreens - 1];
-            curSlide.beginRecording();
+            SlideScreen curScreen = (SlideScreen)screenManager.GetScreens()[screenManager.NumScreens - 1];
+            curScreen.beginRecording();
         }
         private void ActivateAvatarScreen(object sender, PlayerIndexEventArgs p)
         {

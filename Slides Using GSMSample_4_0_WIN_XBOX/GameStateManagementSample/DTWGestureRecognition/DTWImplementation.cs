@@ -134,6 +134,21 @@ namespace GameStateManagement.DTWGestureRecognition
                     //To Do make sure that change avatar has a parameter for playerINdex
                     _screenManager.CycleAvatar();
                 }
+                if (s.Contains("Next"))
+                {
+                    SlideScreen curScreen = (SlideScreen)_screenManager.GetScreens()[_screenManager.NumScreens - 1];
+                    curScreen.NextSlide();
+                }
+                if (s.Contains("Previous"))
+                {
+                    SlideScreen curScreen = (SlideScreen)_screenManager.GetScreens()[_screenManager.NumScreens - 1];
+                    curScreen.PreviousSlide();
+                }
+                if (s.Contains("Background"))
+                {
+                    SlideScreen curScreen = (SlideScreen)_screenManager.GetScreens()[_screenManager.NumScreens - 1];
+                    curScreen.CycleBackground();
+                }
             }
 
             // Ensures that we remember only the last x frames
