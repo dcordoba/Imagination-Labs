@@ -588,7 +588,7 @@ namespace GameStateManagement
                 Rectangle rect = new Rectangle(x, viewport.Height/2 - iconSize,iconSize, iconSize);
                 spriteBatch.Draw(ScreenManager.NarrationOn, rect, Color.White);
             }
-            if (ScreenManager.speechRecognitionOn)
+            if (ScreenManager.speechRecognitionOn && !parentSlideMenu.IsPlayingSlideshow)
             {
                 Color  fontColor = new Color( 47,79,79,30); //darkSlateGrey w Alpha 50
                 int heightAdj = fontHeightAdj - 10;

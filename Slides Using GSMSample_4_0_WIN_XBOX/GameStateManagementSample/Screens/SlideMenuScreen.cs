@@ -240,6 +240,7 @@ namespace GameStateManagement
             base.Update(gameTime, otherScreenHasFocus, coveredByOtherScreen);
             if (this._isPlayingSlideshow)
             {
+                ScreenManager.MainGestureMenu.DisableMainScreen(); //don't draw the main screen when playing slideshow
                 // Spinlock. I know this is bad, but I haven't looked up how to make threads sleep / wake them up and this is an easy-to-implement solution
                 if (this.currentSlideIndex < slides.Count - 1 && this._playWatch.ElapsedMilliseconds > this._playWatchInterval)
                 {
@@ -264,6 +265,7 @@ namespace GameStateManagement
                     }
                     this._playWatch.Reset();
                     this._playWatch.Stop();
+                    ScreenManager.MainGestureMenu.EnableMainScreen();//restart the gesture menu after done with slideshow
                     this._isPlayingSlideshow = false;
                 }
             }
