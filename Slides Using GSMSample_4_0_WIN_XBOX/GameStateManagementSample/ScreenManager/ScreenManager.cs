@@ -91,6 +91,7 @@ namespace GameStateManagement
         Skeleton[] skeletonData;
         Skeleton curSkeleton;
         SkeletonJoints curSkeletonJoints;
+
         //Avatar variables
         Character curCharacter;
         public int curAvatarIndex; //the index for which avatar is being drawn.
@@ -98,6 +99,9 @@ namespace GameStateManagement
 
         //SpeechRecognizer for our program
         SpeechRecognizer speechRecognizer;
+
+        //Gesture Recognizer for our program
+        DTWImplementation dtw;
 
         /*Default to have player 1 be our current player. This is needed because without specifing 
          * that a single player has control over a slide, the program assumes that all 4 players
@@ -359,7 +363,7 @@ namespace GameStateManagement
                 kinect.Start();
                 
                 kinect.SkeletonFrameReady += new EventHandler<SkeletonFrameReadyEventArgs>(KinectSkeletonFramesReady);
-                //dtw = new DTWImplementation(kinect, this);
+                dtw = new DTWImplementation(kinect, this);
                 this.skeletonData = new Skeleton[kinect.SkeletonStream.FrameSkeletonArrayLength];
             }
             #endregion

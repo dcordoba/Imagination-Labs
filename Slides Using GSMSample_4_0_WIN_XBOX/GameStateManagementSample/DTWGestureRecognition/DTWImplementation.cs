@@ -16,7 +16,9 @@ namespace GameStateManagement.DTWGestureRecognition
         #region vars
         DtwGestureRecognizer _dtw;
         ArrayList _video;
-        SkeletonTracker _skeleton;
+       // SkeletonTracker _skeleton;
+        ScreenManager _screenManager;
+        
         private int _flipFlop = 0;
         #endregion
         #region const vars
@@ -28,11 +30,12 @@ namespace GameStateManagement.DTWGestureRecognition
         #endregion
         KinectSensor kinect;
 
-        public DTWImplementation(KinectSensor s, SkeletonTracker st)
+        // DTWImplementation(KinectSensor s, SkeletonTracker st)
+        public DTWImplementation(KinectSensor s, ScreenManager sm)
         {
             _dtw = new DtwGestureRecognizer(12, 0.6, 2, 2, 10);
             _video = new ArrayList();
-            _skeleton = st;
+            _screenManager = sm;
             kinect = s;
             System.IO.FileInfo fi = new System.IO.FileInfo(GestureSaveFileLocation);
             LoadGesturesFromFile(fi.FullName);
@@ -129,7 +132,7 @@ namespace GameStateManagement.DTWGestureRecognition
                 if (s.Contains("changeAvatar"))
                 {
                     //To Do make sure that change avatar has a parameter for playerINdex
-                    _skeleton.cycleAvatar();
+                    _screenManager.CycleAvatar();
                 }
             }
 

@@ -123,8 +123,10 @@ Content\characters\cartoonGirl\UpperArmRight.xnb
 Content\narration\1.xnb
 Content\narration\2.xnb
 Content\narration\3.xnb
+Content\narration\narrate_menu_bar.xnb
 Content\narration\playback_button_idle.xnb
 Content\narration\playback_button_hover.xnb
+Content\narration\playback_button_pushed.xnb
 Content\narration\record_button_idle.xnb
 Content\narration\record_button_hover.xnb
 Content\narration\record_button_pushed.xnb
@@ -195,5 +197,3 @@ Content\characters\bubble_man\UpperArmLeft.xnb
 Content\characters\bubble_man\UpperArmRight.xnb
 Content\menufont.xnb
 Content\gamefont.xnb
-Content\narration\narrate_menu_bar.xnb
-Content\narration\playback_button_pushed.xnb
