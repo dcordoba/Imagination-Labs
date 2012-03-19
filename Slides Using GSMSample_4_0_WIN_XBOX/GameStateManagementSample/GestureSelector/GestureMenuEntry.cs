@@ -25,6 +25,7 @@ namespace GameStateManagement.GestureSelector
         public enum MenuEntryState { UP, OVER, DOWN, DISABLED };
         String _text;
         public event EventHandler<PlayerIndexEventArgs> Unselected;
+        public event EventHandler<PlayerIndexEventArgs> OnOver;
         public String Text
         {
             get { return _text; }
@@ -54,6 +55,12 @@ namespace GameStateManagement.GestureSelector
         {
             if (Unselected != null)
                 Unselected(this, new PlayerIndexEventArgs(pi));
+        }
+
+        public void OnOnOverEntry(PlayerIndex pi)
+        {
+            if (OnOver != null)
+                OnOver(this, new PlayerIndexEventArgs(pi));
         }
 
         #region Draw and Update
