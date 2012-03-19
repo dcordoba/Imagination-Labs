@@ -243,7 +243,7 @@ namespace GameStateManagement
             int Height = GD.Viewport.Height;
             int Width = C_X(100);
             this.menuWidth = Width;
-            KeyValuePair<Texture2D, Rectangle> sideDock = new KeyValuePair<Texture2D, Rectangle>(content.Load<Texture2D>("menu/menu_sideDock"), new Rectangle(0, 0, C_X(58), h));
+            KeyValuePair<Texture2D, Rectangle> sideDock = new KeyValuePair<Texture2D, Rectangle>(content.Load<Texture2D>("menu/menu_sideDock"), new Rectangle(1, 1, C_X(58), h));
             Texture2D t_over = content.Load<Texture2D>("menu/menu_circleHighlight");
             Texture2D t_down = content.Load<Texture2D>("menu/menu_circleHighlight");
             //Texture2D hitbox = content.Load<Texture2D>("menu/hitbox");

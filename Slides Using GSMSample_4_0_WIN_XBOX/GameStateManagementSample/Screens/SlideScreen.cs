@@ -608,21 +608,21 @@ namespace GameStateManagement
             {
 
                 case SpeechRecognizer.Verbs.Capture:
-                    Console.WriteLine("*****SLIDE Recognized 'Capture'!!!!!!!!!!!!!!!!!!");
+                    //Console.WriteLine("*****SLIDE Recognized 'Capture'!!!!!!!!!!!!!!!!!!");
                     Captured();
                     break;
                 case SpeechRecognizer.Verbs.New:
-                    Console.WriteLine("*****SLIDE Recognized 'New Slide'!!!!!!!!!!!!!!!!!!");
+                    //Console.WriteLine("*****SLIDE Recognized 'New Slide'!!!!!!!!!!!!!!!!!!");
                     parentSlideMenu.NewSlide();
                     break;
                 case SpeechRecognizer.Verbs.Back:
-                    Console.WriteLine("*****SLIDE Recognized 'Back'!!!!!!!!!!!!!!!!!!");
+                    //Console.WriteLine("*****SLIDE Recognized 'Back'!!!!!!!!!!!!!!!!!!");
                    // parentSlideMenu.PreviousSlide();
                    // this.ExitScreen();
                     PreviousSlide();
                     break;
                 case SpeechRecognizer.Verbs.Next:
-                    Console.WriteLine("*****SLIDE Recognized 'Next'!!!!!!!!!!!!!!!!!! ");
+                    //Console.WriteLine("*****SLIDE Recognized 'Next'!!!!!!!!!!!!!!!!!! ");
                     NextSlide();
                     //parentSlideMenu.NextSlide();
                     break;

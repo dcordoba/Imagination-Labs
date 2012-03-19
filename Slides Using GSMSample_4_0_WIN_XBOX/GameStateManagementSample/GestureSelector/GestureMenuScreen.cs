@@ -126,10 +126,10 @@ namespace GameStateManagement.GestureSelector
             {
                 if (data != null && !(data.Joints[JointType.HandLeft].Position.X == 0 && data.Joints[JointType.HandRight].Position.X == 0 && data.Joints[JointType.HandLeft].Position.Y == 0 && data.Joints[JointType.HandRight].Position.Y == 0))
                 {
-                    Point hand_left = this._skeleton.getLeftHandPoint();
-                    Point hand_right = this._skeleton.getRightHandPoint();
-                    Point hand_left2 = this._skeleton2.getLeftHandPoint();
-                    Point hand_right2 = this._skeleton2.getRightHandPoint();
+                    Point hand_left = (ScreenManager.CurCharacter.SkeletonId != ScreenManager.CHARACTER_NOT_INIT) ? this._skeleton.getLeftHandPoint() : new Point(-1, -1);
+                    Point hand_right = (ScreenManager.CurCharacter.SkeletonId != ScreenManager.CHARACTER_NOT_INIT) ? this._skeleton.getRightHandPoint() : new Point(-1, -1);
+                    Point hand_left2 = (ScreenManager.CurCharacter2.SkeletonId != ScreenManager.CHARACTER_NOT_INIT) ? this._skeleton2.getLeftHandPoint() : new Point(-1, -1) ;
+                    Point hand_right2 = (ScreenManager.CurCharacter2.SkeletonId != ScreenManager.CHARACTER_NOT_INIT) ? this._skeleton2.getRightHandPoint() : new Point(-1, -1);
                     foreach (KeyValuePair<GestureMenuEntry, Rectangle> entry_rect in this._hitboxes)
                     {
                         if (RectTouched(hand_left, entry_rect.Value) || RectTouched(hand_right, entry_rect.Value))
