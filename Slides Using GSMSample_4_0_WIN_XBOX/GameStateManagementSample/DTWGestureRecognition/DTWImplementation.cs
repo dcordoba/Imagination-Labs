@@ -129,7 +129,7 @@ namespace GameStateManagement.DTWGestureRecognition
                     // There was no match so reset the buffer
                     _video = new ArrayList();
                 }
-                if (s.Contains("changeAvatar"))
+                if (s.Contains("Avatar"))
                 {
                     //To Do make sure that change avatar has a parameter for playerINdex
                     _screenManager.CycleAvatar();
