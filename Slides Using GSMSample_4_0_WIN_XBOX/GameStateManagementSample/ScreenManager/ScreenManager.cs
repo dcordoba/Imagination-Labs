@@ -696,7 +696,7 @@ namespace GameStateManagement
                             else if (!skel2Set && skeleton.TrackingId == curCharacter2.SkeletonId)
                             {
                                 curSkeleton2 = skeleton;
-                                curSkeletonJoints2 = new SkeletonJoints(curSkeleton);
+                                curSkeletonJoints2 = new SkeletonJoints(curSkeleton2);
                                 skel2Set = true;
                             }
                             else if ((!skel1Set || !skel2Set) && unusedSkeleton == null)
@@ -740,6 +740,11 @@ namespace GameStateManagement
                             skel2Set = true;
                         }
                     }
+                    if (!skel1Set)
+                        curCharacter.SkeletonId = -1;
+                    if (!skel2Set)
+                        curCharacter2.SkeletonId = -1;
+
                 }
             }
 
