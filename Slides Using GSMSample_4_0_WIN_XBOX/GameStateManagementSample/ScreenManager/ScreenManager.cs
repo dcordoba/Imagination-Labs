@@ -740,6 +740,11 @@ namespace GameStateManagement
                             skel2Set = true;
                         }
                     }
+                    if (!skel1Set)
+                        curCharacter.SkeletonId = -1;
+                    if (!skel2Set)
+                        curCharacter2.SkeletonId = -1;
+
                 }
             }
 
