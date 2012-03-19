@@ -19,7 +19,7 @@ namespace GameStateManagement
         GestureMenuScreen _avatarGestureMenu;
         GestureMenuScreen _exportGestureMenu;
         GestureMenuScreen _narrationGestureMenu;
-        //GestureMenuScreen _navigateSlidesGestureMenu;
+        GestureMenuScreen _navigateSlidesGestureMenu;
 
         ScreenManager screenManager;
         int menuWidth;
@@ -49,7 +49,8 @@ namespace GameStateManagement
             _backgroundGestureMenu = InitBackgroundGestureMenu(GD, content, skeleton, sm);
             _avatarGestureMenu = InitAvatarGestureMenu(GD, content, skeleton, sm);
             _exportGestureMenu = InitExportGestureMenu(GD, content, skeleton, sm);
-            _narrationGestureMenu = InitRecordGestureMenu(GD, content, skeleton,sm);
+            _narrationGestureMenu = InitRecordGestureMenu(GD, content, skeleton, sm);
+            _navigateSlidesGestureMenu = InitNavigateGestureMenu(GD, content, skeleton, sm);
             _mainGestureMenu = InitMainGestureMenu(GD, content, skeleton, sm);
         }
         private GestureMenuScreen InitRecordGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
@@ -220,6 +221,11 @@ namespace GameStateManagement
         }
         private GestureMenuScreen InitExportGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
         {
+            return null;
+        }
+        private GestureMenuScreen InitNavigateGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
+        {
+ //           GestureMenuScreen navigateGestureMenu = new GestureMenuScreen(initArea, initTime, "Slide Navigator", skeleton, 
             return null;
         }
 
