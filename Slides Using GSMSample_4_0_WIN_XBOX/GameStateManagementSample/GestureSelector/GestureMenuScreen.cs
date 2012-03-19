@@ -28,6 +28,7 @@ namespace GameStateManagement.GestureSelector
         Texture2D _imgdisabled;
         KinectSensor _sensor;
         Character _skeleton;
+        Character _skeleton2;
         int _threshold;
         Stopwatch _timer;
         Stopwatch _unselectedTimer;
@@ -64,7 +65,7 @@ namespace GameStateManagement.GestureSelector
 
 
         #region Initialization
-        public GestureMenuScreen(Rectangle initArea, int init_time, string Title, Character skeleton, Texture2D MenuImg, Texture2D MenuImgOff, Texture2D MenuImgDisabled, ScreenManager manager)
+        public GestureMenuScreen(Rectangle initArea, int init_time, string Title, Character skeleton, Character skeleton2, Texture2D MenuImg, Texture2D MenuImgOff, Texture2D MenuImgDisabled, ScreenManager manager)
             : base(Title)
         {
             this._hitArea = initArea;
@@ -72,6 +73,7 @@ namespace GameStateManagement.GestureSelector
             this._threshold = init_time;
             this._sensor = manager.Kinect;
             this._skeleton = skeleton;
+            this._skeleton2 = skeleton2;
             this._img = MenuImg;
             this._imgoff = MenuImgOff;
             this._imgdisabled = MenuImgDisabled;
@@ -117,6 +119,7 @@ namespace GameStateManagement.GestureSelector
             Skeleton[] sdata = new Skeleton[sf.SkeletonArrayLength];
             sf.CopySkeletonDataTo(sdata);
             sf.Dispose();
+            int selector = -1;
             int temp_selected = -1;
             bool over = false;
             foreach (Skeleton data in sdata)
@@ -125,13 +128,20 @@ namespace GameStateManagement.GestureSelector
                 {
                     Point hand_left = this._skeleton.getLeftHandPoint();
                     Point hand_right = this._skeleton.getRightHandPoint();
+                    Point hand_left2 = this._skeleton2.getLeftHandPoint();
+                    Point hand_right2 = this._skeleton2.getRightHandPoint();
                     foreach (KeyValuePair<GestureMenuEntry, Rectangle> entry_rect in this._hitboxes)
                     {
                         if (RectTouched(hand_left, entry_rect.Value) || RectTouched(hand_right, entry_rect.Value))
                         {
                             temp_selected = this._hitboxes.IndexOf(entry_rect);
+                            selector = 1;
+                        } else if  ( RectTouched(hand_left2, entry_rect.Value) || RectTouched(hand_right2, entry_rect.Value))
+                        {
+                            temp_selected = this._hitboxes.IndexOf(entry_rect);
+                            selector = 2;
                         }
-                        if (RectTouched(hand_left, this._hitArea) || RectTouched(hand_right, this._hitArea))
+                        if (RectTouched(hand_left, this._hitArea) || RectTouched(hand_right, this._hitArea) || RectTouched(hand_left2, this._hitArea) || RectTouched(hand_right2, this._hitArea))
                         {
                             over = true;
                         }
@@ -152,7 +162,8 @@ namespace GameStateManagement.GestureSelector
 
                 if (this._timer.ElapsedMilliseconds > this._threshold && !this.is_selected)
                 {
-                    this._hitboxes[this.selection].Key.OnSelectEntry(PlayerIndex.One); // default to player one
+                    PlayerIndex pi = (selector == 1) ? PlayerIndex.One : PlayerIndex.Two;
+                    this._hitboxes[this.selection].Key.OnSelectEntry(pi); // default to player one
                     this._timer.Stop();
                     this.is_selected = true;
                 }

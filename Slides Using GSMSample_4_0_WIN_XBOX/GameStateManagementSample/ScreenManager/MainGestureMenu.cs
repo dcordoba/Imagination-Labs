@@ -39,21 +39,21 @@ namespace GameStateManagement
         // * val / 1000
         #endregion
 
-        public MainGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
+        public MainGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, Character skeleton2, ScreenManager sm)
         {
             screenManager = sm;
             width = (int)(1000.0 * ((float)(GD.Viewport.Width * 21 / 30)) / 853.0);
             height = (int)(1000.0 * ((float)(width * 68)) / 1063);
             menu_Width = (int)(1000.0 * ((float)(181 * 45 / 100)));
             menu_Height = (int)(1000.0 * ((float)(menu_Width * 129 / 181)));
-            _backgroundGestureMenu = InitBackgroundGestureMenu(GD, content, skeleton, sm);
-            _avatarGestureMenu = InitAvatarGestureMenu(GD, content, skeleton, sm);
-            _exportGestureMenu = InitExportGestureMenu(GD, content, skeleton, sm);
-            _narrationGestureMenu = InitRecordGestureMenu(GD, content, skeleton, sm);
-            _navigateSlidesGestureMenu = InitNavigateGestureMenu(GD, content, skeleton, sm);
-            _mainGestureMenu = InitMainGestureMenu(GD, content, skeleton, sm);
+            _backgroundGestureMenu = InitBackgroundGestureMenu(GD, content, skeleton, skeleton2, sm);
+            _avatarGestureMenu = InitAvatarGestureMenu(GD, content, skeleton, skeleton2, sm);
+            _exportGestureMenu = InitExportGestureMenu(GD, content, skeleton, skeleton2, sm);
+            _narrationGestureMenu = InitRecordGestureMenu(GD, content, skeleton, skeleton2, sm);
+            _navigateSlidesGestureMenu = InitNavigateGestureMenu(GD, content, skeleton, skeleton2, sm);
+            _mainGestureMenu = InitMainGestureMenu(GD, content, skeleton, skeleton2, sm);
         }
-        private GestureMenuScreen InitRecordGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
+        private GestureMenuScreen InitRecordGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, Character skeleton2, ScreenManager sm)
         {
             Texture2D narration_bar = content.Load<Texture2D>("narration/narrate_menu_bar");
             Texture2D empty = new Texture2D(GD, 1, 1);
@@ -87,7 +87,7 @@ namespace GameStateManagement
             int recordH = C_Y((int)(1000 * ((float)record_up.Height / 2) / 480.0));
             int width = C_X(650);
             int height = C_Y(80);
-            GestureMenuScreen narrationGestureMenu = new GestureMenuScreen(new Rectangle(x_bar, y_bar, width, height), menuActivationWaitTime, "Record", skeleton, narration_bar, narration_bar, empty, sm);
+            GestureMenuScreen narrationGestureMenu = new GestureMenuScreen(new Rectangle(x_bar, y_bar, width, height), menuActivationWaitTime, "Record", skeleton, skeleton2, narration_bar, narration_bar, empty, sm);
             narrationGestureMenu.Disabled =  true;
             //narrationGestureMenu.Disabled = false;
             //creating gesture menu entries
@@ -107,7 +107,7 @@ namespace GameStateManagement
             narrationGestureMenu.Ignored += new EventHandler<PlayerIndexEventArgs>(OnSubmenuIgnored);
             return narrationGestureMenu;
         }
-        private GestureMenuScreen InitBackgroundGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
+        private GestureMenuScreen InitBackgroundGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, Character skeleton2, ScreenManager sm)
         {
             int width = C_X(650);
             int height = C_Y(80);
@@ -142,7 +142,7 @@ namespace GameStateManagement
 
             Texture2D desert_up   = content.Load<Texture2D>("places menu/places/desert pyramids/o.desert_icon_idle");
             Texture2D desert_over = content.Load<Texture2D>("places menu/places/desert pyramids/o.desert_icon_hover");
-            GestureMenuScreen backgroundGestureMenu = new GestureMenuScreen(new Rectangle(X, Y, width, height), menuActivationWaitTime, "Background", skeleton, background_bar, background_bar, empty, sm);
+            GestureMenuScreen backgroundGestureMenu = new GestureMenuScreen(new Rectangle(X, Y, width, height), menuActivationWaitTime, "Background", skeleton, skeleton2, background_bar, background_bar, empty, sm);
 
             backgroundGestureMenu.Disabled = true;
             GestureMenuEntry beach = new GestureMenuEntry(beach_up, beach_over, beach_over, empty, new Rectangle(X_1, Y_elem, menu_Width, menu_Height), "beach");
@@ -171,7 +171,7 @@ namespace GameStateManagement
 
             return backgroundGestureMenu;
         }
-        private GestureMenuScreen InitAvatarGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
+        private GestureMenuScreen InitAvatarGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, Character skeleton2, ScreenManager sm)
         {
             int width = C_X(650);
             int height = C_Y(80);
@@ -201,7 +201,7 @@ namespace GameStateManagement
             int pocaH = C_Y((int)(1000 * ((float)pocahon_up.Height / 2) / 480.0));
             int wkniW = C_X((int)(1000 * ((float)wknight_up.Width / 2) / 853.0));
             int wkniH = C_Y((int)(1000 * ((float)wknight_up.Height / 2) / 480.0));
-            GestureMenuScreen avatarGestureMenu = new GestureMenuScreen(new Rectangle(X, Y, width, height), menuActivationWaitTime, "Avatars", skeleton, avatar_bar, avatar_bar, empty, sm);
+            GestureMenuScreen avatarGestureMenu = new GestureMenuScreen(new Rectangle(X, Y, width, height), menuActivationWaitTime, "Avatars", skeleton, skeleton2, avatar_bar, avatar_bar, empty, sm);
             avatarGestureMenu.Disabled = true; // TODO make true
             GestureMenuEntry dragon = new GestureMenuEntry(dragon_up, dragon_over, dragon_over, empty, new Rectangle(X_1, Y_elem, dragonW, dragonH), "dragon");
             GestureMenuEntry girl = new GestureMenuEntry(girl_up, girl_over, girl_over, empty, new Rectangle(X_2, Y_elem, girlW, girlH), "girl");
@@ -219,17 +219,17 @@ namespace GameStateManagement
 
             return avatarGestureMenu;
         }
-        private GestureMenuScreen InitExportGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
+        private GestureMenuScreen InitExportGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, Character skeleton2, ScreenManager sm)
         {
             return null;
         }
-        private GestureMenuScreen InitNavigateGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
+        private GestureMenuScreen InitNavigateGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, Character skeleton2, ScreenManager sm)
         {
  //           GestureMenuScreen navigateGestureMenu = new GestureMenuScreen(initArea, initTime, "Slide Navigator", skeleton, 
             return null;
         }
 
-        private GestureMenuScreen InitMainGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
+        private GestureMenuScreen InitMainGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, Character skeleton2, ScreenManager sm)
         {
             int h = GD.Viewport.Height;
             int w = GD.Viewport.Width;
@@ -258,7 +258,7 @@ namespace GameStateManagement
             //gme3.Unselected += new EventHandler<PlayerIndexEventArgs>(ActivateNarration);
             gme4.Selected += new EventHandler<PlayerIndexEventArgs>(ActivateUndo);
             gme5.Selected += new EventHandler<PlayerIndexEventArgs>(ActivateExit);
-            GestureMenuScreen mainGestureMenu = new GestureMenuScreen(new Rectangle(0, 0, Width, Height), 1000, "Main Menu", skeleton, content.Load<Texture2D>("menu/menu_sideIcons_active"), content.Load<Texture2D>("menu/menu_sideIcons_idle"), empty, sm);
+            GestureMenuScreen mainGestureMenu = new GestureMenuScreen(new Rectangle(0, 0, Width, Height), 1000, "Main Menu", skeleton, skeleton2, content.Load<Texture2D>("menu/menu_sideIcons_active"), content.Load<Texture2D>("menu/menu_sideIcons_idle"), empty, sm);
             mainGestureMenu.Disabled = true;
             mainGestureMenu.Other = sideDock;
             mainGestureMenu.AddMenuItem(gme1, new Rectangle(0, Y1, Width, Width));
