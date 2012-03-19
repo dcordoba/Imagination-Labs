@@ -61,7 +61,7 @@ namespace GameStateManagement
                 
                 kinectSensor.Start();
                 kinectSensor.SkeletonFrameReady += new EventHandler<SkeletonFrameReadyEventArgs>(KinectSkeletonFramesReady);
-                dtw = new DTWImplementation(kinectSensor, this);
+                //dtw = new DTWImplementation(kinectSensor, this);
                 this.skeletonData = new Skeleton[kinectSensor.SkeletonStream.FrameSkeletonArrayLength];
 
                

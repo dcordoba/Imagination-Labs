@@ -50,7 +50,11 @@ namespace GameStateManagement
         private const int DataHeaderSize = 8;
         private const string DataHeaderTag = "data";
         private const int FullHeaderSize = RiffHeaderSize + WaveformatExSize + DataHeaderSize;
-        
+        /*
+        SlideMenuScreen ParentSlideMenuScreen
+        {
+            get { return parentSlideMenu; }
+        }*/
         #endregion
 
         #region Initialization
@@ -298,7 +302,7 @@ namespace GameStateManagement
         #endregion
 
         #region Audio Playback
-        void playAudio()
+        public void playAudio()
         {
             if (isRecording() || audioStream == null) return;
             if (isPlaying())
@@ -374,8 +378,9 @@ namespace GameStateManagement
             //press the left arrow key to go back one slide
             if(input.IsNewKeyPress(Keys.Left, null, out requesteeIndex)){
                // parentSlideMenu.PreviousSlide(requesteeIndex);
-                parentSlideMenu.PreviousSlide();
-                this.ExitScreen();
+               // parentSlideMenu.PreviousSlide();
+                //this.ExitScreen();
+                PreviousSlide();
             }
            // press "b" to change the background
             if(input.IsNewKeyPress(Keys.B,null, out requesteeIndex)){
@@ -399,7 +404,8 @@ namespace GameStateManagement
             //press right arrow key to move forward one slide
             if (input.IsNewKeyPress(Keys.Right, null, out requesteeIndex))
             {
-                parentSlideMenu.NextSlide();
+               // parentSlideMenu.NextSlide();
+                NextSlide();
             }
             //press "n" to create a new slide
             if (input.IsNewKeyPress(Keys.N, null, out requesteeIndex))
@@ -460,6 +466,19 @@ namespace GameStateManagement
         {
             this.backgroundScene = ScreenManager.GetBackgroundScene(newBackgroundIndex);
         }
+        public void CycleBackground()
+        {
+            backgroundIndex++;
+            if (backgroundIndex < ScreenManager.NumberOfBackgrounds)
+            {
+                this.backgroundScene = ScreenManager.GetBackgroundScene(backgroundIndex);
+            }
+            else
+            {
+                backgroundIndex = 0;
+                this.backgroundScene = ScreenManager.GetBackgroundScene(backgroundIndex);
+            }
+        }
         #endregion
         #region Captured()
         /*Captured
@@ -481,7 +500,20 @@ namespace GameStateManagement
             spriteBatch.End();
         }
         #endregion
-#region Undo
+        #region Next()
+        public void NextSlide()
+        {
+            parentSlideMenu.NextSlide();
+        }
+        #endregion
+        #region Back()
+        public void PreviousSlide()
+        {
+            parentSlideMenu.PreviousSlide();
+            this.ExitScreen();
+        }
+        #endregion
+        #region Undo()
         public void Undo()
         {
             if (capturedSkeletons.Count > 0 && capturedAvatarIndices.Count > 0)
@@ -564,12 +596,14 @@ namespace GameStateManagement
                     break;
                 case SpeechRecognizer.Verbs.Back:
                     Console.WriteLine("*****SLIDE Recognized 'Back'!!!!!!!!!!!!!!!!!!");
-                    parentSlideMenu.PreviousSlide();
-                    this.ExitScreen();
+                   // parentSlideMenu.PreviousSlide();
+                   // this.ExitScreen();
+                    PreviousSlide();
                     break;
                 case SpeechRecognizer.Verbs.Next:
                     Console.WriteLine("*****SLIDE Recognized 'Next'!!!!!!!!!!!!!!!!!! ");
-                    parentSlideMenu.NextSlide();
+                    NextSlide();
+                    //parentSlideMenu.NextSlide();
                     break;
             }
         }

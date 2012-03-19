@@ -91,13 +91,17 @@ namespace GameStateManagement
         Skeleton[] skeletonData;
         Skeleton curSkeleton;
         SkeletonJoints curSkeletonJoints;
+
         //Avatar variables
         Character curCharacter;
         public int curAvatarIndex; //the index for which avatar is being drawn.
         private int numAvatars; //number of avatars that are availiable for use
-
+        private int numBackgrounds; //number of backgrounds that are availiable for use
         //SpeechRecognizer for our program
         SpeechRecognizer speechRecognizer;
+
+        //Gesture Recognizer for our program
+        DTWImplementation dtw;
 
         /*Default to have player 1 be our current player. This is needed because without specifing 
          * that a single player has control over a slide, the program assumes that all 4 players
@@ -126,6 +130,15 @@ namespace GameStateManagement
         public int NumberOfCharacters
         {
             get { return numAvatars; }
+        }
+
+        /// <summary>
+        /// returns the number of backgrounds availiable in the program
+        /// </summary>
+        /// 
+        public int NumberOfBackgrounds
+        {
+            get { return numBackgrounds; }
         }
         /// <summary>
         /// returns the current skeleton of the program
@@ -359,7 +372,7 @@ namespace GameStateManagement
                 kinect.Start();
                 
                 kinect.SkeletonFrameReady += new EventHandler<SkeletonFrameReadyEventArgs>(KinectSkeletonFramesReady);
-                //dtw = new DTWImplementation(kinect, this);
+                dtw = new DTWImplementation(kinect, this);
                 this.skeletonData = new Skeleton[kinect.SkeletonStream.FrameSkeletonArrayLength];
             }
             #endregion
@@ -426,6 +439,7 @@ namespace GameStateManagement
             backgrounds.Add(snowy);
             backgrounds.Add(desert);
 
+            numBackgrounds = backgrounds.Count;
             
             //initialize menu textures
             menu_circleHighlight = content.Load<Texture2D>("menu/menu_circleHighlight");
