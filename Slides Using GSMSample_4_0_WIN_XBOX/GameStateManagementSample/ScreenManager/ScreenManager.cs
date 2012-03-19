@@ -97,8 +97,10 @@ namespace GameStateManagement
         public int curAvatarIndex; //the index for which avatar is being drawn.
         private int numAvatars; //number of avatars that are availiable for use
         private int numBackgrounds; //number of backgrounds that are availiable for use
+
         //SpeechRecognizer for our program
         SpeechRecognizer speechRecognizer;
+        public bool speechRecognitionOn = true;
 
         //Gesture Recognizer for our program
         DTWImplementation dtw;
@@ -492,8 +494,8 @@ namespace GameStateManagement
         #region speech recognition
         private void RecognizerSaidSomething(object sender, SpeechRecognizer.SaidSomethingEventArgs e)
         {
-            //return;
-            if (this.screens.Count <= 2)
+            //return if speech recognition is turned off or if there are no slides on the screen(there are just the game screen and SlideMenuScreen);
+            if (!speechRecognitionOn || this.screens.Count <= 2)
                 return;
             if (this.screens.Count > 1)
                 ((SlideScreen)this.screens[screens.Count - 1]).SlideRecognizerSaidSomething(sender, e);

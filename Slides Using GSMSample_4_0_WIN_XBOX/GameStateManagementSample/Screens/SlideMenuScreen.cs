@@ -14,10 +14,13 @@ namespace GameStateManagement
         List<SlideScreen> slides; 
         int currentSlideIndex;
         int currentSlideIndexBackup;
-        bool _isPlaying; // is playing all the slides in sequence. i.e. temporarily block input
-        public bool IsPlaying
+        const int MIN_SLIDE_TIME = 2000; //In Milliseconds
+        const int NARRATION_BUFFER = 500;
+        bool _isPlayingSlideshow; // is playing all the slides in sequence. i.e. temporarily block input
+        
+        public bool IsPlayingSlideshow
         {
-            get { return this._isPlaying; }
+            get { return this._isPlayingSlideshow; }
         }
         Stopwatch _playWatch;
         int _playWatchInterval;
@@ -43,7 +46,7 @@ namespace GameStateManagement
             currentSlideIndex = 0;
             SlideScreen firstSlide = new SlideScreen(this);
             slides.Add(firstSlide);
-            _isPlaying = false;
+            _isPlayingSlideshow = false;
             _playWatch = new Stopwatch();
             // Create our menu entries.
             MenuEntry playSlideMenuEntry = new MenuEntry("Play Slides");
@@ -206,17 +209,24 @@ namespace GameStateManagement
 
         public void PlayAll(int interval/* In Milliseconds */)
         {
-            _isPlaying = true;
-            this._playWatchInterval = interval;
+            _isPlayingSlideshow = true;
+            this._playWatchInterval = MIN_SLIDE_TIME;//interval;
+            
             this.currentSlideIndexBackup = this.currentSlideIndex;
+            SlideScreen curSlide;
+        
             while (this.currentSlideIndex > 0)
             {
-                this.slides[this.currentSlideIndex].ExitScreen();
+                curSlide = this.slides[this.currentSlideIndex];
+                curSlide.ExitScreen();
                 PreviousSlide();
+                
+               
             }
+            
             this._playWatch.Restart();
             //Console.Out.WriteLine("Started Stopwatch");
-
+            //this._isPlayingSlideshow = false;
         }
 
 
@@ -228,17 +238,23 @@ namespace GameStateManagement
         public override void Update(GameTime gameTime, bool otherScreenHasFocus, bool coveredByOtherScreen)
         {
             base.Update(gameTime, otherScreenHasFocus, coveredByOtherScreen);
-            if (this._isPlaying)
+            if (this._isPlayingSlideshow)
             {
                 // Spinlock. I know this is bad, but I haven't looked up how to make threads sleep / wake them up and this is an easy-to-implement solution
                 if (this.currentSlideIndex < slides.Count - 1 && this._playWatch.ElapsedMilliseconds > this._playWatchInterval)
                 {
                     //Console.Out.WriteLine("Slide: " + this.currentSlideIndex);
                     NextSlide();
+                    SlideScreen curSlide = this.slides[this.currentSlideIndex];
+
+                    this._playWatchInterval = Math.Max(curSlide.NarrationLength + NARRATION_BUFFER, MIN_SLIDE_TIME);
+                    
                     //NextSlide(PlayerIndex.One);
                     this._playWatch.Restart();
+                    curSlide.playAudio();
                     return;
                 }
+                //When completely done with slide show
                 if (this._playWatch.ElapsedMilliseconds > this._playWatchInterval)
                 {
                     while (this.currentSlideIndex > this.currentSlideIndexBackup)
@@ -248,7 +264,7 @@ namespace GameStateManagement
                     }
                     this._playWatch.Reset();
                     this._playWatch.Stop();
-                    this._isPlaying = false;
+                    this._isPlayingSlideshow = false;
                 }
             }
         }

@@ -10,6 +10,7 @@ using Microsoft.Kinect;
 using System.ComponentModel;
 using System.IO;
 using Microsoft.Xna.Framework.Audio;
+using System.Diagnostics;
 
 
 namespace GameStateManagement
@@ -40,7 +41,9 @@ namespace GameStateManagement
         ContentManager content;
         bool captured;
         Viewport viewport;
+
         //Recording private variables
+       // private int recordingLength = 0;
         BackgroundWorker bw;
         MemoryStream audioStream = null;
         SoundEffectInstance soundInstance;
@@ -50,11 +53,13 @@ namespace GameStateManagement
         private const int DataHeaderSize = 8;
         private const string DataHeaderTag = "data";
         private const int FullHeaderSize = RiffHeaderSize + WaveformatExSize + DataHeaderSize;
-        /*
-        SlideMenuScreen ParentSlideMenuScreen
+        private Stopwatch narrationTimer;
+        private int narrationLength; 
+
+        public int NarrationLength
         {
-            get { return parentSlideMenu; }
-        }*/
+            get { return narrationLength; }
+        }
         #endregion
 
         #region Initialization
@@ -63,6 +68,9 @@ namespace GameStateManagement
             TransitionOnTime = TimeSpan.FromSeconds(0.5);
             TransitionOffTime = TimeSpan.FromSeconds(0.5);
 
+
+            this.narrationTimer = new Stopwatch();
+            narrationTimer.Stop();
             this.slideObjects = new List<SlideObject>();// new List<Sprite2D>(); 
             this.parentSlideMenu = slideMenu;
             this.captured = false;
@@ -117,9 +125,15 @@ namespace GameStateManagement
         {
             if (!isRecording() && !isPlaying())
             {
+                narrationTimer.Restart();
                 bw.RunWorkerAsync();
             }
-            else bw.CancelAsync();
+            else
+            {
+                bw.CancelAsync();
+                narrationTimer.Stop();
+                narrationLength = (int)narrationTimer.ElapsedMilliseconds;
+            }
         }
 
         private void bw_recordAudio(object sender, DoWorkEventArgs e)
@@ -192,10 +206,7 @@ namespace GameStateManagement
                     }
                 }
             }
-
-
-
-
+            ScreenManager.SpeechRecognizer.Start(ScreenManager.Kinect.AudioSource);
         }
 
         /// <summary>
@@ -310,6 +321,7 @@ namespace GameStateManagement
                 soundInstance.Stop();
                 soundInstance.Dispose();
                 soundInstance = null;
+               
                 return;
             }
             /*
@@ -359,7 +371,7 @@ namespace GameStateManagement
         /// </summary>
         public override void HandleInput(InputState input)
         {
-            if (parentSlideMenu.IsPlaying) // If Playing, don't accept input
+            if (parentSlideMenu.IsPlayingSlideshow) // If Playing, don't accept input
                 return;
             PlayerIndex requesteeIndex;
             //SkeletonTracker skel = ScreenManager.Skeleton;
@@ -425,10 +437,10 @@ namespace GameStateManagement
                 //Console.Out.WriteLine("Changed to 1");
             }
            
-            //press "m" to go to slideMenu
-            if (input.IsNewKeyPress(Keys.M, null, out requesteeIndex))
+            //press "v" to toggle voice recognition on or off
+            if (input.IsNewKeyPress(Keys.V, null, out requesteeIndex))
             {
-                //TO DO implement menu!
+                ScreenManager.speechRecognitionOn = !ScreenManager.speechRecognitionOn;
             }
             if (input.IsNewKeyPress(Keys.Q, null, out requesteeIndex))
             {
@@ -450,7 +462,7 @@ namespace GameStateManagement
             if (input.IsNewKeyPress(Keys.W, null, out requesteeIndex))
             {
                 // DEBUGGING FOR PLAY ALL FUNCTIONALITY
-                parentSlideMenu.PlayAll(2000);
+                parentSlideMenu.PlayAll(NarrationLength);
             }
             #endregion
 
@@ -572,6 +584,12 @@ namespace GameStateManagement
                 int iconSize = 150;
                 Rectangle rect = new Rectangle(x, viewport.Height/2 - iconSize,iconSize, iconSize);
                 spriteBatch.Draw(ScreenManager.NarrationOn, rect, Color.White);
+            }
+            if (ScreenManager.speechRecognitionOn)
+            {
+                Color  fontColor = new Color( 47,79,79,30); //darkSlateGrey w Alpha 50
+                int heightAdj = fontHeightAdj - 10;
+                spriteBatch.DrawString(ScreenManager.Font, "Speech On", new Vector2(0, viewport.Height - heightAdj),fontColor);
             }
            
             spriteBatch.End();
