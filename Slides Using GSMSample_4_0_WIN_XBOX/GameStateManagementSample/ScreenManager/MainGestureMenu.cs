@@ -26,35 +26,43 @@ namespace GameStateManagement
         }
         bool _backgroundActivate = false;
         #region icon_grid
-        int X = 0;
-        int X_1 = 80;
-        int X_2 = 180;
-        int X_3 = 280;
-        int X_4 = 380;
-        int X_5 = 480;
-        int Y = 138;
-        int Y_elem = 100;
         int width;
         int height;
         int menu_Width;
         int menu_Height;
+
+        // * val / 1000
         #endregion
 
         public MainGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
         {
-            width = GD.Viewport.Width * 21 / 30;
-            height = width * 68 / 1063;
-            menu_Width = 181 * 45 / 100;
-            menu_Height = menu_Width * 129 / 181;
+            screenManager = sm;
+            width = (int)(1000.0 * ((float)(GD.Viewport.Width * 21 / 30)) / 853.0);
+            height = (int)(1000.0 * ((float)(width * 68)) / 1063);
+            menu_Width = (int)(1000.0 * ((float)(181 * 45 / 100)));
+            menu_Height = (int)(1000.0 * ((float)(menu_Width * 129 / 181)));
             _backgroundGestureMenu = InitBackgroundGestureMenu(GD, content, skeleton, sm);
             _avatarGestureMenu = InitAvatarGestureMenu(GD, content, skeleton, sm);
             _exportGestureMenu = InitExportGestureMenu(GD, content, skeleton, sm);
             _mainGestureMenu = InitMainGestureMenu(GD, content, skeleton, sm);
-            screenManager = sm;
         }
         private GestureMenuScreen InitBackgroundGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
         {
-            int Y_elem_2 = Y_elem + menu_Height + 30;
+            int width = C_X(650);
+            int height = C_Y(80);
+            int X = C_X(0);
+            int X_1 = C_X(100);
+            int X_2 = C_X(205);
+            int X_3 = C_X(310);
+            int X_4 = C_X(415);
+            int X_5 = C_X(520);
+            int Y = C_Y(260);
+            int Y_elem = C_Y(245);
+            int Y_elem_2 = C_Y(355);
+            int w = GD.Viewport.Width;
+            int h = GD.Viewport.Height;
+            int menu_Width = C_X(100);
+            int menu_Height = C_Y(100);
             Texture2D background_bar = content.Load<Texture2D>("places menu/places menu bar");
             Texture2D empty = new Texture2D(GD, 1, 1);
 
@@ -72,7 +80,7 @@ namespace GameStateManagement
             Texture2D snowy_over = content.Load<Texture2D>("places menu/places/snowy forest/o.snowyforest_icon_hover");
             Texture2D desert_up          = content.Load<Texture2D>("places menu/places/desert pyramids/o.desert_icon_idle");
             Texture2D desert_over        = content.Load<Texture2D>("places menu/places/desert pyramids/o.desert_icon_hover");
-            GestureMenuScreen backgroundGestureMenu = new GestureMenuScreen(new Rectangle(X, Y, width, height), 2000, "Background", skeleton, background_bar, background_bar, empty, sm);
+            GestureMenuScreen backgroundGestureMenu = new GestureMenuScreen(new Rectangle(X, Y, width, height), 1000, "Background", skeleton, background_bar, background_bar, empty, sm);
             backgroundGestureMenu.Disabled = true;
             GestureMenuEntry beach = new GestureMenuEntry(beach_up, beach_over, beach_over, empty, new Rectangle(X_1, Y_elem, menu_Width, menu_Height), "beach");
             GestureMenuEntry coral = new GestureMenuEntry(coral_up, coral_over, coral_over, empty, new Rectangle(X_2, Y_elem, menu_Width, menu_Height), "coral");
@@ -100,14 +108,16 @@ namespace GameStateManagement
         }
         private GestureMenuScreen InitAvatarGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
         {
-            int Y = 35;
-            int Y_elem = 0;
-            int X_1 = 80;
-            int X_2 = 200;
-            int X_3 = 340;
-            int X_4 = 390;
-            int X_4_2 = 440;
-
+            int width = C_X(650);
+            int height = C_Y(80);
+            int Y = C_Y(73);
+            int Y_elem = C_Y(0);
+            int X = C_X(0);
+            int X_1 = C_X(100);
+            int X_2 = C_X(234);
+            int X_3 = C_X(399);
+            int X_4 = C_X(457);
+            int X_4_2 = C_X(516);
             Texture2D avatar_bar = content.Load<Texture2D>("places menu/places menu bar");
             Texture2D empty = new Texture2D(GD, 1, 1);
             Texture2D dragon_up = content.Load<Texture2D>("avatars/dragon_icon_idle");
@@ -118,22 +128,28 @@ namespace GameStateManagement
             Texture2D pocahon_over = content.Load<Texture2D>("avatars/pocahon_icon_hover");
             Texture2D wknight_up = content.Load<Texture2D>("avatars/w.knight_icon_idle");
             Texture2D wknight_over = content.Load<Texture2D>("avatars/w.knight_icon_hover");
-            int ratio = 60;
-            int ratio_2 = 55;
-            GestureMenuScreen avatarGestureMenu = new GestureMenuScreen(new Rectangle(X, Y, width, height), 2000, "Avatars", skeleton, avatar_bar, avatar_bar, empty, sm);
+            int dragonW = C_X((int)(1000 * ((float)dragon_up.Width / 2) / 853.0));
+            int dragonH = C_Y((int)(1000 * ((float)dragon_up.Height / 2) / 480.0));
+            int girlW = C_X((int)(1000 * ((float)girl_up.Width / 2) / 853.0));
+            int girlH = C_Y((int)(1000 * ((float)girl_up.Height / 2) / 480.0));
+            int pocaW = C_X((int)(1000 * ((float)pocahon_up.Width / 2) / 853.0));
+            int pocaH = C_Y((int)(1000 * ((float)pocahon_up.Height / 2) / 480.0));
+            int wkniW = C_X((int)(1000 * ((float)wknight_up.Width / 2) / 853.0));
+            int wkniH = C_Y((int)(1000 * ((float)wknight_up.Height / 2) / 480.0));
+            GestureMenuScreen avatarGestureMenu = new GestureMenuScreen(new Rectangle(X, Y, width, height), 1000, "Avatars", skeleton, avatar_bar, avatar_bar, empty, sm);
             avatarGestureMenu.Disabled = true; // TODO make true
-            GestureMenuEntry dragon = new GestureMenuEntry(dragon_up, dragon_over, dragon_over, empty, new Rectangle(X_1, Y_elem, dragon_up.Width * ratio / 100, dragon_up.Height * ratio / 100), "dragon");
-            GestureMenuEntry girl = new GestureMenuEntry(girl_up, girl_over, girl_over, empty, new Rectangle(X_2, Y_elem, girl_up.Width * ratio / 100, girl_up.Height * ratio / 100), "girl");
-            GestureMenuEntry pocahon = new GestureMenuEntry(pocahon_up, pocahon_over, pocahon_over, empty, new Rectangle(X_3, Y_elem, pocahon_up.Width * ratio / 100, pocahon_up.Height * ratio / 100), "pocahon");
-            GestureMenuEntry wknight = new GestureMenuEntry(wknight_up, wknight_over, wknight_over, empty, new Rectangle(X_4, Y_elem, wknight_up.Width * ratio / 100, wknight_up.Height * ratio / 100), "wknight");
+            GestureMenuEntry dragon = new GestureMenuEntry(dragon_up, dragon_over, dragon_over, empty, new Rectangle(X_1, Y_elem, dragonW, dragonH), "dragon");
+            GestureMenuEntry girl = new GestureMenuEntry(girl_up, girl_over, girl_over, empty, new Rectangle(X_2, Y_elem, girlW, girlH), "girl");
+            GestureMenuEntry pocahon = new GestureMenuEntry(pocahon_up, pocahon_over, pocahon_over, empty, new Rectangle(X_3, Y_elem, pocaW, pocaH), "pocahon");
+            GestureMenuEntry wknight = new GestureMenuEntry(wknight_up, wknight_over, wknight_over, empty, new Rectangle(X_4, Y_elem, wkniW, wkniH), "wknight");
             dragon.Selected += new EventHandler<PlayerIndexEventArgs>(SelectAvatar);
             girl.Selected += new EventHandler<PlayerIndexEventArgs>(SelectAvatar);
             pocahon.Selected += new EventHandler<PlayerIndexEventArgs>(SelectAvatar);
             wknight.Selected += new EventHandler<PlayerIndexEventArgs>(SelectAvatar);
-            avatarGestureMenu.AddMenuItem(dragon, new Rectangle(X_1, Y_elem, dragon_up.Width * ratio / 100, dragon_up.Height * ratio / 100));
-            avatarGestureMenu.AddMenuItem(girl, new Rectangle(X_2, Y_elem, girl_up.Width * ratio / 100, girl_up.Height * ratio / 100));
-            avatarGestureMenu.AddMenuItem(pocahon, new Rectangle(X_3, Y_elem, pocahon_up.Width * ratio / 100, pocahon_up.Height * ratio / 100));
-            avatarGestureMenu.AddMenuItem(wknight, new Rectangle(X_4_2, Y_elem, (wknight_up.Width * ratio_2 / 100) * ratio / 100, wknight_up.Height * ratio / 100));
+            avatarGestureMenu.AddMenuItem(dragon, new Rectangle(X_1, Y_elem, dragonW, dragonH));
+            avatarGestureMenu.AddMenuItem(girl, new Rectangle(X_2, Y_elem, girlW, girlH));
+            avatarGestureMenu.AddMenuItem(pocahon, new Rectangle(X_3, Y_elem, pocaW, pocaH));
+            avatarGestureMenu.AddMenuItem(wknight, new Rectangle(X_4_2, Y_elem, wkniW / 2, wkniH));
 
             return avatarGestureMenu;
         }
@@ -144,33 +160,41 @@ namespace GameStateManagement
 
         private GestureMenuScreen InitMainGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
         {
+            int h = GD.Viewport.Height;
+            int w = GD.Viewport.Width;
+            int Y1 = C_Y(0);
+            int Y2 = C_Y(200);
+            int Y3 = C_Y(400);
+            int Y4 = C_Y(600);
+            int Y5 = C_Y(800);
             Texture2D empty = new Texture2D(GD, 1, 1);
             Texture2D t_up = empty;
             int Height = GD.Viewport.Height;
-            int Width = GD.Viewport.Height * 155 / 1000;
+            int Width = C_X(100);
             this.menuWidth = Width;
-            KeyValuePair<Texture2D, Rectangle> sideDock = new KeyValuePair<Texture2D, Rectangle>(content.Load<Texture2D>("menu/menu_sideDock"), new Rectangle(0, 0, 50, Height));
+            KeyValuePair<Texture2D, Rectangle> sideDock = new KeyValuePair<Texture2D, Rectangle>(content.Load<Texture2D>("menu/menu_sideDock"), new Rectangle(0, 0, C_X(58), h));
             Texture2D t_over = content.Load<Texture2D>("menu/menu_circleHighlight");
             Texture2D t_down = content.Load<Texture2D>("menu/menu_circleHighlight");
-            GestureMenuEntry gme1 = new GestureMenuEntry(t_up, empty, empty, empty, new Rectangle(1, 1, Width, Width), "avatar");
-            GestureMenuEntry gme2 = new GestureMenuEntry(t_up, empty, empty, empty, new Rectangle(0, 100, Width, Width), "background");
-            GestureMenuEntry gme3 = new GestureMenuEntry(t_up, empty, empty, empty, new Rectangle(0, 200, Width, Width), "narrate");
-            GestureMenuEntry gme4 = new GestureMenuEntry(t_up, empty, empty, empty, new Rectangle(0, 300, Width, Width), "undo");
-            GestureMenuEntry gme5 = new GestureMenuEntry(t_up, empty, empty, empty, new Rectangle(0, 400, Width, Width), "exit");
+            Texture2D hitbox = content.Load<Texture2D>("menu/hitbox");
+            GestureMenuEntry gme1 = new GestureMenuEntry(empty, empty, empty, empty, new Rectangle(0, Y1, Width, Width), "avatar");
+            GestureMenuEntry gme2 = new GestureMenuEntry(empty, empty, empty, empty, new Rectangle(0, Y2, Width, Width), "background");
+            GestureMenuEntry gme3 = new GestureMenuEntry(empty, empty, empty, empty, new Rectangle(0, Y3, Width, Width), "narrate");
+            GestureMenuEntry gme4 = new GestureMenuEntry(empty, empty, empty, empty, new Rectangle(0, Y4, Width, Width), "undo");
+            GestureMenuEntry gme5 = new GestureMenuEntry(empty, empty, empty, empty, new Rectangle(0, Y5, Width, Width), "exit");
             gme1.Selected += new EventHandler<PlayerIndexEventArgs>(ActivateAvatarScreen);
             gme2.Selected += new EventHandler<PlayerIndexEventArgs>(ActivateBackgroundScreen);
             gme3.Selected += new EventHandler<PlayerIndexEventArgs>(ActivateNarration);
             gme3.Unselected += new EventHandler<PlayerIndexEventArgs>(ActivateNarration);
             gme4.Selected += new EventHandler<PlayerIndexEventArgs>(ActivateUndo);
             gme5.Selected += new EventHandler<PlayerIndexEventArgs>(ActivateExit);
-            GestureMenuScreen mainGestureMenu = new GestureMenuScreen(new Rectangle(0, 0, Width, Height), 2000, "Main Menu", skeleton, content.Load<Texture2D>("menu/menu_sideIcons_active"), content.Load<Texture2D>("menu/menu_sideIcons_idle"), empty, sm);
-            mainGestureMenu.Disabled = true;
+            GestureMenuScreen mainGestureMenu = new GestureMenuScreen(new Rectangle(0, 0, Width, Height), 1000, "Main Menu", skeleton, content.Load<Texture2D>("menu/menu_sideIcons_active"), content.Load<Texture2D>("menu/menu_sideIcons_idle"), empty, sm);
+            mainGestureMenu.Disabled = false;
             mainGestureMenu.Other = sideDock;
-            mainGestureMenu.AddMenuItem(gme1, new Rectangle(0, 0, Width, Width));
-            mainGestureMenu.AddMenuItem(gme2, new Rectangle(0, 100, Width, Width));
-            mainGestureMenu.AddMenuItem(gme3, new Rectangle(0, 200, Width, Width));
-            mainGestureMenu.AddMenuItem(gme4, new Rectangle(0, 300, Width, Width));
-            mainGestureMenu.AddMenuItem(gme5, new Rectangle(0, 400, Width, Width));
+            mainGestureMenu.AddMenuItem(gme1, new Rectangle(0, Y1, Width, Width));
+            mainGestureMenu.AddMenuItem(gme2, new Rectangle(0, Y2, Width, Width));
+            mainGestureMenu.AddMenuItem(gme3, new Rectangle(0, Y3, Width, Width));
+            mainGestureMenu.AddMenuItem(gme4, new Rectangle(0, Y4, Width, Width));
+            mainGestureMenu.AddMenuItem(gme5, new Rectangle(0, Y5, Width, Width));
             return mainGestureMenu;
         }
 
@@ -282,5 +306,13 @@ namespace GameStateManagement
             _mainGestureMenu.Draw(gametime, 0.0F);
         }
 
+        private int C_X(int x)
+        {
+            return screenManager.GraphicsDevice.Viewport.Width * x / 1000;
+        }
+        private int C_Y(int y)
+        {
+            return screenManager.GraphicsDevice.Viewport.Height * y / 1000;
+        }
     }
 }

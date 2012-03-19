@@ -378,7 +378,8 @@ namespace GameStateManagement
                 "characters/pocahontas",
                 "characters/cartoonGirl",
                 "characters/dragon",
-                "characters/white_knight",                
+                "characters/white_knight", 
+                "characters/bubble_man",
                 
             };
             numAvatars = avatarFilepaths.Length;
@@ -656,7 +657,7 @@ namespace GameStateManagement
             if (curAvatarIndex == numAvatars - 1)
             {
                 curAvatarIndex = 0;
-            }
+            } 
             else
             {
                 curAvatarIndex++;
