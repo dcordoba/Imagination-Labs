@@ -694,7 +694,7 @@ namespace GameStateManagement
                             else if (!skel2Set && skeleton.TrackingId == curCharacter2.SkeletonId)
                             {
                                 curSkeleton2 = skeleton;
-                                curSkeletonJoints2 = new SkeletonJoints(curSkeleton);
+                                curSkeletonJoints2 = new SkeletonJoints(curSkeleton2);
                                 skel2Set = true;
                             }
                             else if ((!skel1Set || !skel2Set) && unusedSkeleton == null)
