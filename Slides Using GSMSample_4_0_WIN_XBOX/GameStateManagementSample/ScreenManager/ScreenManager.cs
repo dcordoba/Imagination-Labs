@@ -40,7 +40,7 @@ namespace GameStateManagement
 
         List<GameScreen> screens = new List<GameScreen>();
         List<GameScreen> screensToUpdate = new List<GameScreen>();
-
+        public const int CHARACTER_NOT_INIT = -1;
         // DEBUGGING FUNCTIONS
         public int NumScreens
         {
@@ -90,11 +90,15 @@ namespace GameStateManagement
         KinectSensor kinect;
         Skeleton[] skeletonData;
         Skeleton curSkeleton;
+        Skeleton curSkeleton2;
         SkeletonJoints curSkeletonJoints;
+        SkeletonJoints curSkeletonJoints2;
 
         //Avatar variables
         Character curCharacter;
+        Character curCharacter2;
         public int curAvatarIndex; //the index for which avatar is being drawn.
+        public int curAvatarIndex2;
         private int numAvatars; //number of avatars that are availiable for use
         private int numBackgrounds; //number of backgrounds that are availiable for use
 
@@ -151,6 +155,12 @@ namespace GameStateManagement
         {
             get { return curSkeleton; }
         }
+
+        public Skeleton CurSkeleton2
+        {
+            get { return curSkeleton2; }
+        }
+
         /// <summary>
         /// returns the current Character instance of the program
         /// </summary>
@@ -159,6 +169,12 @@ namespace GameStateManagement
         {
             get { return curCharacter; }
         }
+
+        public Character CurCharacter2
+        {
+            get { return curCharacter2; }
+        }
+
         /// <summary>
         /// returns the current Character instance of the program
         /// </summary>
@@ -167,6 +183,11 @@ namespace GameStateManagement
         {
             get { return curAvatarIndex; }
         }
+        public int CurAvatarIndex2
+        {
+            get { return curAvatarIndex2; }
+        }
+
         /// <summary>
         /// <summary>
         /// 
@@ -385,9 +406,11 @@ namespace GameStateManagement
             InitAvatars(content);
 
             curAvatarIndex = 0;
+            curAvatarIndex2 = 1;
             curCharacter = new Character(this.Game, spriteBatch);
+            curCharacter2 = new Character(this.Game, spriteBatch);
             curCharacter.setKinect(this.kinect);
-
+            curCharacter2.setKinect(this.kinect);
             String[] avatarFilepaths = new String[] { 
                 "characters/knight",
                 "characters/pocahontas",
@@ -399,12 +422,13 @@ namespace GameStateManagement
             };
             numAvatars = avatarFilepaths.Length;
             curCharacter.load(avatarFilepaths);
+            curCharacter2.load(avatarFilepaths);
 
             //Texture2D av1 = new Texture2D(GraphicsDevice, 50, 100);
             // skeleton = new SkeletonTracker(this);
 
 
-            mainGestureMenu = new MainGestureMenu(GraphicsDevice, content, curCharacter, this);
+            mainGestureMenu = new MainGestureMenu(GraphicsDevice, content, curCharacter, curCharacter2, this);
             // Start speech recognizer after KinectSensor.Start() is called
             // returns null if problem with speech prereqs or instantiation.
             speechRecognizer = SpeechRecognizer.Create();
@@ -621,16 +645,23 @@ namespace GameStateManagement
             //draws the main gesture menu
             mainGestureMenu.Draw(gameTime);
 
+            spriteBatch.Begin();
             //  draw main avatar
             if (curSkeleton != null)
             {
-                spriteBatch.Begin();
                 curSkeletonJoints.UpdateJointPositions(curSkeleton);
                 curCharacter.update(curSkeletonJoints);
                 curCharacter.draw(curAvatarIndex);
-                spriteBatch.End();
             }
-            
+
+            if (curSkeleton2 != null)
+            {
+                curSkeletonJoints2.UpdateJointPositions(curSkeleton2);
+                curCharacter2.update(curSkeletonJoints2);
+                curCharacter2.draw(curAvatarIndex2);
+            }
+            spriteBatch.End();
+
             
             //skeleton.Draw(gameTime);
         }
@@ -640,6 +671,10 @@ namespace GameStateManagement
         #region KinectSkeletonAllFramesReady
         public void KinectSkeletonFramesReady(object sender, SkeletonFrameReadyEventArgs e)
         {
+            Skeleton unusedSkeleton = null;
+            Skeleton unusedSkeleton2 = null;
+            bool skel1Set = false;
+            bool skel2Set = false;
             using (SkeletonFrame sf = e.OpenSkeletonFrame())
             {
                 if (sf != null)
@@ -652,10 +687,58 @@ namespace GameStateManagement
 
                         if (skeleton != null && skeleton.TrackingState == SkeletonTrackingState.Tracked)
                         {
-                            curSkeleton = skeleton;
-                            curSkeletonJoints = new SkeletonJoints(curSkeleton);
+                            if (!skel1Set && skeleton.TrackingId == curCharacter.SkeletonId)
+                            {
+                                curSkeleton = skeleton;
+                                curSkeletonJoints = new SkeletonJoints(curSkeleton);
+                                skel1Set = true;
+                            }
+                            else if (!skel2Set && skeleton.TrackingId == curCharacter2.SkeletonId)
+                            {
+                                curSkeleton2 = skeleton;
+                                curSkeletonJoints2 = new SkeletonJoints(curSkeleton);
+                                skel2Set = true;
+                            }
+                            else if ((!skel1Set || !skel2Set) && unusedSkeleton == null)
+                            {
+                                unusedSkeleton = skeleton;
+                            } else if ((!skel1Set || !skel2Set) && unusedSkeleton != null)
+                            {
+                                unusedSkeleton2 = skeleton;
+                            }
                         }
-
+                    }
+                    if (unusedSkeleton != null)
+                    {
+                        if (!skel1Set)
+                        {
+                            curSkeleton = unusedSkeleton;
+                            curSkeletonJoints = new SkeletonJoints(curSkeleton);
+                            skel1Set = true;
+                            curCharacter.SkeletonId = curSkeleton.TrackingId;
+                        }
+                        else if (!skel2Set)
+                        {
+                            curSkeleton2 = unusedSkeleton;
+                            curSkeletonJoints2 = new SkeletonJoints(curSkeleton2);
+                            skel2Set = true;
+                            curCharacter2.SkeletonId = curSkeleton2.TrackingId;
+                        }
+                    }
+                    if (unusedSkeleton2 != null)
+                    {
+                        if (!skel1Set)
+                        {
+                            curSkeleton = unusedSkeleton2;
+                            curSkeletonJoints = new SkeletonJoints(curSkeleton);
+                            skel1Set = true;
+                        }
+                        else if (!skel2Set)
+                        {
+                            curSkeleton2 = unusedSkeleton2;
+                            curSkeletonJoints2 = new SkeletonJoints(curSkeleton2);
+                            skel2Set = true;
+                        }
                     }
                 }
             }
@@ -671,21 +754,54 @@ namespace GameStateManagement
         public void CycleAvatar()
         {
             if (curAvatarIndex == numAvatars - 1)
-            {
                 curAvatarIndex = 0;
-            } 
             else
-            {
                 curAvatarIndex++;
-            }            
         }
+        public void CycleAvatar(int skel_id)
+        {
+            if (curCharacter.SkeletonId == skel_id)
+            {
+                if (curAvatarIndex == numAvatars - 1)
+                {
+                    curAvatarIndex = 0;
+                }
+                else
+                {
+                    curAvatarIndex++;
+                }
+            }
+            else if (curCharacter2.SkeletonId == skel_id)
+            {
+                if (curAvatarIndex2 == numAvatars - 1)
+                {
+                    curAvatarIndex2 = 0;
+                }
+                else
+                {
+                    curAvatarIndex2++;
+                }
+            }
+        }
+
+        public void ChangeAvatar(int index, PlayerIndex pi)
+        {
+            if (pi == PlayerIndex.One)
+                curAvatarIndex = index;
+            else if (pi == PlayerIndex.Two)
+                curAvatarIndex2 = index;
+        }
+
         ///<summary>
         /// ChangeAvatar
         /// changes the avatar to the avatar skin at index
         /// </summary>        
-        public void ChangeAvatar(int index, PlayerIndex player)
+        public void ChangeAvatar(int index, int skel_id)
         {
-            curAvatarIndex = index;
+            if (curCharacter.SkeletonId == skel_id)
+                curAvatarIndex = index;
+            else if (curCharacter2.SkeletonId == skel_id)
+                curAvatarIndex2 = index;
         }
       
         /// getBackgroundScene returns the Texture2D of the background scene

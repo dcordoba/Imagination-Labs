@@ -31,7 +31,7 @@ namespace DTWGestureRecognition
         /// </summary>
         /// <param name="sender">The sender object</param>
         /// <param name="a">Skeleton 2Ddata Coord Event Args</param>
-        public delegate void Skeleton2DdataCoordEventHandler(object sender, Skeleton2DdataCoordEventArgs a);
+        public delegate void Skeleton2DdataCoordEventHandler(object sender, Skeleton2DdataCoordEventArgs a, int tracking_id);
 
         /// <summary>
         /// The Skeleton 2Ddata Coord Ready event
@@ -97,7 +97,7 @@ namespace DTWGestureRecognition
             }
 
             // Launch the event!
-            Skeleton2DdataCoordReady(null, new Skeleton2DdataCoordEventArgs(p));
+            Skeleton2DdataCoordReady(null, new Skeleton2DdataCoordEventArgs(p), data.TrackingId);
         }
     }
 }

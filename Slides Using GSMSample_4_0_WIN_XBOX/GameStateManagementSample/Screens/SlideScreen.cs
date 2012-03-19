@@ -501,8 +501,11 @@ namespace GameStateManagement
         //public void Captured()
         {
             SkeletonJoints curJoints = new SkeletonJoints(ScreenManager.CurSkeleton);
+            SkeletonJoints curJoints2 = new SkeletonJoints(ScreenManager.CurSkeleton2);
             capturedSkeletons.Add(curJoints);
             capturedAvatarIndices.Add(ScreenManager.CurAvatarIndex);
+            capturedSkeletons.Add(curJoints2);
+            capturedAvatarIndices.Add(ScreenManager.CurAvatarIndex2);
             //int fontHeightAdj = 50; //adjust height by the height of the font
             int menuWidth = ScreenManager.MainGestureMenu.Width;
             int x = (viewport.Width / 2) - menuWidth; //- ScreenManager.;
