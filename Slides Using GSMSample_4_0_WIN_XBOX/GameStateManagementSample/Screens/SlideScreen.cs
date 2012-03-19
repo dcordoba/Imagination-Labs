@@ -298,7 +298,7 @@ namespace GameStateManagement
         #endregion
 
         #region Audio Playback
-        void playAudio()
+        public void playAudio()
         {
             if (isRecording() || audioStream == null) return;
             if (isPlaying())

@@ -18,8 +18,11 @@ namespace GameStateManagement
         GestureMenuScreen _backgroundGestureMenu;
         GestureMenuScreen _avatarGestureMenu;
         GestureMenuScreen _exportGestureMenu;
+        GestureMenuScreen _narrationGestureMenu;
+
         ScreenManager screenManager;
         int menuWidth;
+        int menuActivationWaitTime = 1000;
         public int Width
         {
             get { return menuWidth; }
@@ -49,8 +52,41 @@ namespace GameStateManagement
             _backgroundGestureMenu = InitBackgroundGestureMenu(GD, content, skeleton, sm);
             _avatarGestureMenu = InitAvatarGestureMenu(GD, content, skeleton, sm);
             _exportGestureMenu = InitExportGestureMenu(GD, content, skeleton, sm);
+            _narrationGestureMenu = InitRecordGestureMenu(GD, content, skeleton,sm);
             _mainGestureMenu = InitMainGestureMenu(GD, content, skeleton, sm);
             screenManager = sm;
+        }
+        private GestureMenuScreen InitRecordGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
+        {
+            Texture2D narration_bar = content.Load<Texture2D>("narration/narrate_menu_bar");
+            Texture2D empty = new Texture2D(GD, 1, 1);
+            Texture2D play_up = content.Load<Texture2D>("narration/playback_button_idle");
+            Texture2D play_hover = content.Load<Texture2D>("narration/playback_button_hover");
+            Texture2D play_pushed = content.Load<Texture2D>("narration/playback_button_pushed");
+            Texture2D record_up = content.Load<Texture2D>("narration/record_button_idle");
+            Texture2D record_hover = content.Load<Texture2D>("narration/record_button_hover");
+            Texture2D record_pushed = content.Load<Texture2D>("narration/record_button_pushed");
+            int x_bar =0;
+            int y_bar = 200 + narration_bar.Height/6;
+            int spaceBetweenEntries = 20;
+            GestureMenuScreen narrationGestureMenu = new GestureMenuScreen(new Rectangle(x_bar, y_bar, width, height), menuActivationWaitTime, "Record", skeleton, narration_bar, narration_bar, empty, sm);
+            narrationGestureMenu.Disabled =  true;
+            //creating gesture menu entries
+            int ratio = 60;
+            
+            int Y_elem = y_bar - narration_bar.Height/5;
+            int X_elem1 = x_bar + menuWidth;
+            int X_elem2 = X_elem1 + spaceBetweenEntries + play_up.Width;
+            GestureMenuEntry playNarration = new GestureMenuEntry(play_up, play_hover, play_pushed, empty, new Rectangle(X_1, Y_elem, menu_Width, menu_Height), "narration_play");
+            GestureMenuEntry recordNarration = new GestureMenuEntry(play_up, play_hover, play_pushed, empty, new Rectangle(X_1, Y_elem, menu_Width, menu_Height), "narration_record");
+            //attaching event handlers to menu entries
+            playNarration.Selected += new EventHandler<PlayerIndexEventArgs>(PlayNarration);
+            
+
+            //adding menu entries to narration menu
+            narrationGestureMenu.AddMenuItem(playNarration, new Rectangle(X_1, Y_elem, play_up.Width * ratio / 100, play_up.Height * ratio / 100));
+            narrationGestureMenu.AddMenuItem(playNarration, new Rectangle(X_1, Y_elem, play_up.Width * ratio / 100, play_up.Height * ratio / 100));
+            return narrationGestureMenu;
         }
         private GestureMenuScreen InitBackgroundGestureMenu(GraphicsDevice GD, ContentManager content, Character skeleton, ScreenManager sm)
         {
@@ -70,8 +106,8 @@ namespace GameStateManagement
             Texture2D rainforest_over = content.Load<Texture2D>("places menu/places/rainforest/o.rainforest_icon_hover");
             Texture2D snowy_up = content.Load<Texture2D>("places menu/places/snowy forest/o.snowyforest_icon_idle");
             Texture2D snowy_over = content.Load<Texture2D>("places menu/places/snowy forest/o.snowyforest_icon_hover");
-            Texture2D desert_up          = content.Load<Texture2D>("places menu/places/desert pyramids/o.desert_icon_idle");
-            Texture2D desert_over        = content.Load<Texture2D>("places menu/places/desert pyramids/o.desert_icon_hover");
+            Texture2D desert_up   = content.Load<Texture2D>("places menu/places/desert pyramids/o.desert_icon_idle");
+            Texture2D desert_over = content.Load<Texture2D>("places menu/places/desert pyramids/o.desert_icon_hover");
             GestureMenuScreen backgroundGestureMenu = new GestureMenuScreen(new Rectangle(X, Y, width, height), 2000, "Background", skeleton, background_bar, background_bar, empty, sm);
             backgroundGestureMenu.Disabled = true;
             GestureMenuEntry beach = new GestureMenuEntry(beach_up, beach_over, beach_over, empty, new Rectangle(X_1, Y_elem, menu_Width, menu_Height), "beach");
@@ -173,7 +209,19 @@ namespace GameStateManagement
             mainGestureMenu.AddMenuItem(gme5, new Rectangle(0, 400, Width, Width));
             return mainGestureMenu;
         }
-
+#region event handlers
+        private void PlayNarration(object sender, PlayerIndexEventArgs p)
+        {
+            ((SlideScreen)screenManager.GetScreens()[screenManager.NumScreens - 1]).playAudio();
+            _narrationGestureMenu.Disabled = true;
+        }
+        private void RecordNarration(object sender, PlayerIndexEventArgs p)
+        {
+            SlideScreen curSlide = (SlideScreen)screenManager.GetScreens()[screenManager.NumScreens - 1];
+            curSlide.beginRecording();
+            //(.beginRecording();
+            _narrationGestureMenu.Disabled = true;
+        }
         private void ActivateAvatarScreen(object sender, PlayerIndexEventArgs p)
         {
             _backgroundActivate = false;
@@ -188,7 +236,11 @@ namespace GameStateManagement
         }
         private void ActivateNarration(object sender, PlayerIndexEventArgs p)
         {
+            _backgroundActivate = false;
+            _backgroundGestureMenu.Disabled = true;
+            _narrationGestureMenu.Disabled = false;
             ((SlideScreen)screenManager.GetScreens()[screenManager.NumScreens - 1]).beginRecording();
+            
 
         }
         private void ActivateUndo(object sender, PlayerIndexEventArgs p)
@@ -268,18 +320,21 @@ namespace GameStateManagement
             _mainGestureMenu.Disabled = true;
             _backgroundGestureMenu.Disabled = true;
             _avatarGestureMenu.Disabled = true;
+            _narrationGestureMenu.Disabled = true;
         }
 
         public void EnableMainScreen()
         {
             _mainGestureMenu.Disabled = false;
         }
-
+#endregion
         public void Draw(GameTime gametime)
         {
             _backgroundGestureMenu.Draw(gametime, 0.1F);
             _avatarGestureMenu.Draw(gametime, 0.0F);
+            _narrationGestureMenu.Draw(gametime, 0.0F);
             _mainGestureMenu.Draw(gametime, 0.0F);
+           
         }
 
     }

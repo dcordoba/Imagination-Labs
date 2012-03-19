@@ -716,38 +716,38 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="narration\narratemenubar.png">
-      <Name>narratemenubar</Name>
+    <Compile Include="narration\narrate_menu_bar.png">
+      <Name>narrate_menu_bar</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="narration\playback button %28default%29.png">
-      <Name>playback button %28default%29</Name>
+    <Compile Include="narration\playback_button_idle.png">
+      <Name>playback_button_idle</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="narration\playback button %28hilite%29.png">
-      <Name>playback button %28hilite%29</Name>
+    <Compile Include="narration\playback_button_hover.png">
+      <Name>playback_button_hover</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="narration\playback button %28pushed%29.png">
-      <Name>playback button %28pushed%29</Name>
+    <Compile Include="narration\playback_button_pushed.png">
+      <Name>playback_button_pushed</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="narration\record button %28default%29.png">
-      <Name>record button %28default%29</Name>
+    <Compile Include="narration\record_button_idle.png">
+      <Name>record_button_idle</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="narration\record button %28hilite%291.png">
-      <Name>record button %28hilite%291</Name>
+    <Compile Include="narration\record_button_hover.png">
+      <Name>record_button_hover</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="narration\record button %28pushed%29.png">
-      <Name>record button %28pushed%29</Name>
+    <Compile Include="narration\record_button_pushed.png">
+      <Name>record_button_pushed</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
