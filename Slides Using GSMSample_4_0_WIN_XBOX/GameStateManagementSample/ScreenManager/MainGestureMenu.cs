@@ -85,11 +85,12 @@ namespace GameStateManagement
             int playH = C_Y((int)(1000 * ((float)play_up.Height / 2) / 480.0));
             int recordW = C_X((int)(1000 * ((float)record_up.Width / 2) / 853.0));
             int recordH = C_Y((int)(1000 * ((float)record_up.Height / 2) / 480.0));
-            int width = C_X(650);
+            int width = C_X(350);
             int height = C_Y(80);
+            
             GestureMenuScreen narrationGestureMenu = new GestureMenuScreen(new Rectangle(x_bar, y_bar, width, height), menuActivationWaitTime, "Record", skeleton, skeleton2, narration_bar, narration_bar, empty, sm);
             narrationGestureMenu.Disabled =  true;
-            //narrationGestureMenu.Disabled = false;
+           // narrationGestureMenu.Disabled = false;
             //creating gesture menu entries
           
             GestureMenuEntry playNarration = new GestureMenuEntry(play_up, play_hover, play_pushed, empty, new Rectangle(X_elem1, Y_elem, playW, playH), "narration_play");
