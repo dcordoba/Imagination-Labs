@@ -47,6 +47,7 @@ namespace GameStateManagement
     public class Character
     {
         Game game;
+        public int SkeletonId;
         //Skeleton skeleton;
         SkeletonJoints skeleton;
         KinectSensor sensor;
@@ -75,6 +76,7 @@ namespace GameStateManagement
             // TODO: Complete member initialization
             this.game = game;
             spriteBatch = batch;
+            this.SkeletonId = ScreenManager.CHARACTER_NOT_INIT;
         }
 
         public void setKinect(KinectSensor sensor)

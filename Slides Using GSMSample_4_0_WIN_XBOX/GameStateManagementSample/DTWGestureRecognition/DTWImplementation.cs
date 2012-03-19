@@ -117,7 +117,7 @@ namespace GameStateManagement.DTWGestureRecognition
         /// <param name="sender">The sender object</param>
         /// <param name="a">Skeleton 2Ddata Coord Event Args</param>
         /// Work Cited: http://kinectdtw.codeplex.com/
-        private void NuiSkeleton2DdataCoordReady(object sender, Skeleton2DdataCoordEventArgs a)
+        private void NuiSkeleton2DdataCoordReady(object sender, Skeleton2DdataCoordEventArgs a, int tracking_id)
         {
             // We need a sensible number of frames before we start attempting to match gestures against remembered sequences
             if (_video.Count > MinimumFrames)
@@ -132,7 +132,7 @@ namespace GameStateManagement.DTWGestureRecognition
                 if (s.Contains("Avatar"))
                 {
                     //To Do make sure that change avatar has a parameter for playerINdex
-                    _screenManager.CycleAvatar();
+                    _screenManager.CycleAvatar(tracking_id);
                 }
                 if (s.Contains("Next"))
                 {
